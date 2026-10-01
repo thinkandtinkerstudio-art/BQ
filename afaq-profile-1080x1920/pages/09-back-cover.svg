@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 09 Back cover — AFAQ Corporate Profile, 1080x1920. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <linearGradient id="grad-1" gradientUnits="userSpaceOnUse" x1="-60" y1="0" x2="1140" y2="0"><stop offset="0" stop-color="#0E5560" stop-opacity="1"/><stop offset="1" stop-color="#1F7580" stop-opacity="1"/></linearGradient><linearGradient id="grad-2" gradientUnits="userSpaceOnUse" x1="-60" y1="0" x2="1140" y2="0"><stop offset="0" stop-color="#A4DC3C" stop-opacity="1"/><stop offset="0.35" stop-color="#C8FB5F" stop-opacity="1"/><stop offset="0.55" stop-color="#E9FBB8" stop-opacity="1"/><stop offset="0.75" stop-color="#C8FB5F" stop-opacity="1"/><stop offset="1" stop-color="#A4DC3C" stop-opacity="1"/></linearGradient><linearGradient id="grad-3" gradientUnits="userSpaceOnUse" x1="-60" y1="0" x2="1140" y2="0"><stop offset="0" stop-color="#0E5560" stop-opacity="1"/><stop offset="1" stop-color="#1F7580" stop-opacity="1"/></linearGradient><linearGradient id="grad-4" gradientUnits="userSpaceOnUse" x1="-60" y1="0" x2="1140" y2="0"><stop offset="0" stop-color="#A4DC3C" stop-opacity="1"/><stop offset="0.35" stop-color="#C8FB5F" stop-opacity="1"/><stop offset="0.55" stop-color="#E9FBB8" stop-opacity="1"/><stop offset="0.75" stop-color="#C8FB5F" stop-opacity="1"/><stop offset="1" stop-color="#A4DC3C" stop-opacity="1"/></linearGradient><linearGradient id="grad-5" gradientUnits="userSpaceOnUse" x1="-60" y1="0" x2="1140" y2="0"><stop offset="0" stop-color="#0E5560" stop-opacity="1"/><stop offset="1" stop-color="#1F7580" stop-opacity="1"/></linearGradient><linearGradient id="grad-6" gradientUnits="userSpaceOnUse" x1="-60" y1="0" x2="1140" y2="0"><stop offset="0" stop-color="#A4DC3C" stop-opacity="1"/><stop offset="0.35" stop-color="#C8FB5F" stop-opacity="1"/><stop offset="0.55" stop-color="#E9FBB8" stop-opacity="1"/><stop offset="0.75" stop-color="#C8FB5F" stop-opacity="1"/><stop offset="1" stop-color="#A4DC3C" stop-opacity="1"/></linearGradient>
+  </defs>
+  <rect id="Background" x="0" y="0" width="1080" height="1920" fill="#053C45"/>
+  <g id="Logo-Lockup">
+    <g id="Wordmark-AFQ">
+      <path id="Letter-A" d="M 94.52 164.12 L 101.12 150.92 L 123.56 150.92 L 144.68 119.9 L 186.92 166.76" fill="none" stroke="#F5F4EB" stroke-width="17.82" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Letter-F" d="M 211.01 167.09 L 211.01 133.43 C 211.01 125.58 217.35 119.24 225.2 119.24 L 280.97 119.24 M 211.01 143 L 268.76 143" fill="none" stroke="#F5F4EB" stroke-width="17.82" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Letter-Q" d="M 304.73 133.76 C 304.73 125.56 311.38 118.91 319.58 118.91 L 363.8 118.91 C 372 118.91 378.65 125.56 378.65 133.76 L 378.65 152.24 C 378.65 160.44 372 167.09 363.8 167.09 L 319.58 167.09 C 311.38 167.09 304.73 160.44 304.73 152.24 Z M 369.08 164.12 L 390.2 178.64" fill="none" stroke="#F5F4EB" stroke-width="17.82" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text id="Tagline" x="80" y="202.23" font-family="Inter" font-size="13" font-weight="500" fill="#F5F4EB" letter-spacing="7.8">ENERGY. ENGINEERED.</text>
+  </g>
+  <g id="Ribbon-A">
+    <path id="Ribbon-Teal" d="M -20 631.5 C 200 551.5 420 771.5 640 831.5 C 840 711.5 1000 511.5 1180 451.5 L 1180 568.5 C 1000 628.5 840 828.5 640 948.5 C 420 888.5 200 668.5 -20 748.5 Z" fill="url(#grad-1)"/>
+    <path id="Ribbon-Orange" d="M -60 688 C 160 608 380 828 600 888 C 800 768 960 568 1140 508 L 1140 518 C 960 578 800 778 600 898 C 380 838 160 618 -60 698 Z" fill="#FD7E25"/>
+    <path id="Ribbon-Lime" d="M -60 560 C 160 480 380 700 600 760 C 800 640 960 440 1140 380 L 1140 510 C 960 570 800 770 600 890 C 380 830 160 610 -60 690 Z" fill="url(#grad-2)"/>
+  </g>
+  <g id="Ribbon-B">
+    <path id="Ribbon-Teal-2" d="M -20 1046 C 220 1126 440 926 640 766 C 860 826 1020 986 1180 1046 L 1180 1154 C 1020 1094 860 934 640 874 C 440 1034 220 1234 -20 1154 Z" fill="url(#grad-3)"/>
+    <path id="Ribbon-Orange-2" d="M -60 1098 C 180 1178 400 978 600 818 C 820 878 980 1038 1140 1098 L 1140 1108 C 980 1048 820 888 600 828 C 400 988 180 1188 -60 1108 Z" fill="#FD7E25"/>
+    <path id="Ribbon-Lime-2" d="M -60 980 C 180 1060 400 860 600 700 C 820 760 980 920 1140 980 L 1140 1100 C 980 1040 820 880 600 820 C 400 980 180 1180 -60 1100 Z" fill="url(#grad-4)"/>
+  </g>
+  <g id="Ribbon-C">
+    <path id="Ribbon-Teal-3" d="M -20 480.5 C 240 420.5 460 580.5 680 1060.5 C 860 1140.5 1020 1100.5 1180 1000.5 L 1180 1099.5 C 1020 1199.5 860 1239.5 680 1159.5 C 460 679.5 240 519.5 -20 579.5 Z" fill="url(#grad-5)"/>
+    <path id="Ribbon-Orange-3" d="M -60 528 C 200 468 420 628 640 1108 C 820 1188 980 1148 1140 1048 L 1140 1058 C 980 1158 820 1198 640 1118 C 420 638 200 478 -60 538 Z" fill="#FD7E25"/>
+    <path id="Ribbon-Lime-3" d="M -60 420 C 200 360 420 520 640 1000 C 820 1080 980 1040 1140 940 L 1140 1050 C 980 1150 820 1190 640 1110 C 420 630 200 470 -60 530 Z" fill="url(#grad-6)"/>
+  </g>
+  <g id="Slogan">
+    <text id="Slogan-line" x="80" y="1301.47" font-family="Inter" font-size="92" font-weight="300" fill="#F5F4EB" letter-spacing="-2.76">Innovating today,</text>
+    <text id="Slogan-line-2" x="80" y="1397.47" font-family="Inter" font-size="92" font-weight="300" fill="#F5F4EB" letter-spacing="-2.76">sustaining tomorrow.</text>
+  </g>
+  <text id="Company" x="80" y="1460.73" font-family="Inter" font-size="24" font-weight="400" fill="#F5F4EB" opacity="0.8">AFAQ for Energy &amp; Integrated Business</text>
+  <g id="Deco-Outline">
+    <path id="Deco-Outline-Edge" d="M 1018.4 1526 C 1018.4 1472.98 1061.38 1430 1114.4 1430 L 1224 1430 C 1277.02 1430 1320 1472.98 1320 1526 L 1320 1774 C 1320 1827.02 1277.02 1870 1224 1870 L 896 1870 C 842.98 1870 800 1827.02 800 1774 L 800 1675.6 C 800 1622.58 842.98 1579.6 896 1579.6 L 978.4 1579.6 C 1000.49 1579.6 1018.4 1561.69 1018.4 1539.6 Z" fill="none" stroke="#C8FB5F" stroke-width="64" stroke-linecap="butt" stroke-linejoin="round"/>
+    <path id="Deco-Outline-Body" d="M 1018.4 1526 C 1018.4 1472.98 1061.38 1430 1114.4 1430 L 1224 1430 C 1277.02 1430 1320 1472.98 1320 1526 L 1320 1774 C 1320 1827.02 1277.02 1870 1224 1870 L 896 1870 C 842.98 1870 800 1827.02 800 1774 L 800 1675.6 C 800 1622.58 842.98 1579.6 896 1579.6 L 978.4 1579.6 C 1000.49 1579.6 1018.4 1561.69 1018.4 1539.6 Z" fill="none" stroke="#C8FB5F" stroke-width="58" stroke-linecap="butt" stroke-linejoin="round"/>
+  </g>
+  <g id="Services">
+    <path id="Services-Rule" d="M 80 1742 L 80 1812" fill="none" stroke="#FD7E25" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round"/>
+    <g id="Services-List">
+      <text id="Services-List-line" x="98" y="1754.23" font-family="Inter" font-size="13" font-weight="500" fill="#F5F4EB" letter-spacing="2.6">SOLAR</text>
+      <text id="Services-List-line-2" x="98" y="1773.23" font-family="Inter" font-size="13" font-weight="500" fill="#F5F4EB" letter-spacing="2.6">STORAGE</text>
+      <text id="Services-List-line-3" x="98" y="1792.23" font-family="Inter" font-size="13" font-weight="500" fill="#F5F4EB" letter-spacing="2.6">ELECTRICAL</text>
+      <text id="Services-List-line-4" x="98" y="1811.23" font-family="Inter" font-size="13" font-weight="500" fill="#F5F4EB" letter-spacing="2.6">ENGINEERING</text>
+    </g>
+  </g>
+</svg>

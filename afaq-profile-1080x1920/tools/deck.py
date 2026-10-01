@@ -266,6 +266,14 @@ def ribbon(name, pts, thickness, teal_fill=None, teal=True, orange=True):
     kids.append(PATH("Ribbon-Lime", band_path(pts, thickness), fill=fill))
     return G(name, kids)
 
+def box_ribbon(name, x0, x1, y_bottom, thickness, rel=(0.0, -0.4, 0.5, 0.2, -0.2, -0.8, -0.6), teal_fill=None):
+    """Ribbon whose teal underside never leaves [x0, x1] x (.., y_bottom]: used inside photo frames (no clipping needed)."""
+    xs = [x0 + (x1 - 40 - x0) * i / (len(rel) - 1) for i in range(len(rel))]
+    amp = thickness * 0.55
+    base = y_bottom - 8 - 1.45 * thickness - amp * 0.5
+    pts = [(round(xx), round(base + r * amp)) for xx, r in zip(xs, rel)]
+    return ribbon(name, pts, thickness, teal_fill=teal_fill)
+
 def dark_ribbon_fill(pts):
     return LIN(pts[0][0], 0, pts[-1][0], 0, [(0, P["teal_mid"], 1), (1, P["teal_soft"], 1)])
 
@@ -300,7 +308,7 @@ def icon(name, key, x, y, size, color, sw=None):
     return G(f"Icon-{key}" if name is None else name,
              [PATH(f"Icon-{key}-{i + 1}", tx_path(d, s, x, y), stroke=color, sw=sw) for i, d in enumerate(ICONS[key])])
 
-def photo_slot(name, x, y, w, h, r=40, notch=None, dark=False, art="solar"):
+def photo_slot(name, x, y, w, h, r=40, notch=None, dark=False, art="solar", sun=None):
     """Photo placeholder: ONE shape (set an image fill on it in Figma/Illustrator) + flat vector art inside its bounds.
     dark=True (teal pages): lighter gradient + 2 px lime hairline so the frame reads against the background."""
     if dark:
@@ -319,6 +327,8 @@ def photo_slot(name, x, y, w, h, r=40, notch=None, dark=False, art="solar"):
         return not nrect or x1 < nrect[0] or x0 > nrect[2] or y1 < nrect[1] or y0 > nrect[3]
     art_els = []
     sun_left = not (notch and notch["corner"] == "tl")
+    if sun:
+        sun_left = (sun == "left")
     sr = min(w, h) * 0.085
     scx = x + (w * 0.24 if sun_left else w * 0.76)
     scy = y + h * 0.26
@@ -409,237 +419,283 @@ def photo_slot(name, x, y, w, h, r=40, notch=None, dark=False, art="solar"):
         check(e)
     return G(name, [base, G("Placeholder-Art (delete after placing photo)", art_els)])
 
-# ---------------------------------------------------------------- shared slide parts
-def header(dark, eyebrow_color=None, eyebrow_opacity=None):
-    col = P["cream"] if dark else P["teal_ink"]
-    sub = eyebrow_color or (P["cream"] if dark else P["muted"])
-    lock, _ = lockup(M, 66, 56, col)
-    eyebrow = T("Eyebrow", W - M - 420, 84, 420, "Corporate Profile 2026", 15, 500, sub, lh=20, ls=0.22, align="right",
-                case="upper", opacity=eyebrow_opacity if eyebrow_opacity is not None else (0.85 if dark else 1.0))
-    return G("Header", [lock, eyebrow])
+# ---------------------------------------------------------------- shared slide parts (layout v2: matches the client's board)
+M = 80
+CW = W - 2 * M  # 920
+FOOT_Y = 1836
+LIME_PALE_BG = "#E9FBB8"
+CARD_GREY = "#E6E6DA"
 
-def footer(section, n, dark, color=None, rule_opacity=None, text_opacity=None):
-    col = color or (P["cream"] if dark else P["muted"])
-    rule = LINE("Footer-Rule", M, FOOT_Y, W - M, FOOT_Y, color or (P["cream"] if dark else P["line"]), 1,
-                opacity=rule_opacity if rule_opacity is not None else (0.25 if dark else 1.0))
-    top = text_opacity if text_opacity is not None else (0.75 if dark else 1.0)
-    left = T("Footer-Section", M, 1822, 600, section, 16, 400, col, lh=22, opacity=top)
-    right = T("Footer-Page", W - M - 200, 1822, 200, f"{n:02d} / 08", 16, 500, col, lh=22, align="right", opacity=top)
-    return G("Footer", [rule, left, right])
+def eyebrow(num, label, dark=False, on_lime=False, y=112):
+    pill_fill = P["teal"] if on_lime else P["lime"]
+    num_col = P["lime"] if on_lime else P["teal"]
+    lab_col = P["cream"] if dark else (P["teal"] if on_lime else P["muted"])
+    return G("Eyebrow", [
+        R("Eyebrow-Pill", M, y, 48, 26, pill_fill, rx=13),
+        T("Eyebrow-Number", M, y + 3, 48, num, 12, 600, num_col, lh=20, align="center"),
+        T("Eyebrow-Label", M + 64, y + 4, 700, label, 12, 500, lab_col, lh=18, ls=0.22, case="upper", opacity=0.75 if dark else 1.0),
+    ])
 
-def title(text, dark, y=300, size=76, color=None):
-    return T("Title", M, y, CW, text, size, 300, color or (P["cream"] if dark else P["teal"]), lh=round(size * 1.1), ls=-0.02)
+def footer(section, n, dark, on_lime=False):
+    col = P["cream"] if dark else P["teal"]
+    op = 0.7 if dark else 0.8
+    rule_col = P["cream"] if dark else (P["teal"] if on_lime else P["line"])
+    kids = [LINE("Footer-Rule", M, FOOT_Y, W - M, FOOT_Y, rule_col, 1, opacity=0.2 if (dark or on_lime) else 1.0),
+            wordmark(M, 1862, 18, col, name="Footer-Wordmark"),
+            LINE("Footer-Divider", M + 108, 1860, M + 108, 1882, col, 1, opacity=0.35),
+            T("Footer-Profile", M + 124, 1862, 400, "Corporate Profile 2026", 11, 500, col, lh=18, ls=0.22, case="upper", opacity=op),
+            T("Footer-Section", W - M - 520, 1862, 480, f"{section}   |   {n:02d}", 11, 500, col, lh=18, ls=0.22, case="upper", align="right", opacity=op)]
+    return G("Footer", kids)
 
-def subtitle(text, dark, y, w=880, color=None, opacity=None):
-    return T("Subtitle", M, y, w, text, 26, 400, color or (P["cream"] if dark else P["muted"]), lh=38,
-             opacity=opacity if opacity is not None else (0.85 if dark else 1.0))
+def title(text, dark, y=156, size=96, color=None, w=CW):
+    return T("Title", M, y, w, text, size, 300, color or (P["cream"] if dark else P["teal"]), lh=round(size * 1.02), ls=-0.03)
+
+def services_list(x, y, color, size=13, rule=True, rule_color=None, lh=19):
+    kids = []
+    if rule:
+        kids.append(LINE("Services-Rule", x, y + 2, x, y + 4 * lh - 4, rule_color or P["orange"], 2))
+    kids.append(T("Services-List", x + (18 if rule else 0), y, 300, "SOLAR\nSTORAGE\nELECTRICAL\nENGINEERING", size, 500, color, lh=lh, ls=0.2))
+    return G("Services", kids)
+
+def lockup_with_services(x, y, h, color, services_color=None):
+    lock, lh_ = lockup(x, y, h, color)
+    wm_w = WORDMARK_W * h / 100.0
+    div_x = x + wm_w + 40
+    kids = [lock, LINE("Lockup-Divider", div_x, y, div_x, y + h * 1.1, color, 1.5, opacity=0.6),
+            services_list(div_x + 30, y + 2, services_color or color, size=max(11, round(h * 0.2)), rule=False, lh=round(h * 0.28))]
+    return G("Logo-Lockup-Services", kids)
+
+def orange_label(x, y, w=132, h=104, text="SOLAR\nSTORAGE\nELECTRICAL\nENGINEERING", size=10):
+    return G("Label-Tab", [R("Label-Tab-Shape", x, y, w, h, P["orange"], rx=16),
+                           T("Label-Tab-Text", x + 18, y + 18, w - 30, text, size, 500, P["teal_ink"], lh=16, ls=0.18)])
+
+def notch_outline(x, y, w, h, color, sw=58, edge=P["orange"], name="Deco-Outline"):
+    d = rect_path(x, y, w, h, 96, {"corner": "tl", "w": w * 0.42, "h": h * 0.34, "r": 40})
+    return G(name, [PATH(name + "-Edge", d, stroke=edge, sw=sw + 6, cap="butt", join="round"),
+                    PATH(name + "-Body", d, stroke=color, sw=sw, cap="butt", join="round")])
 
 # ---------------------------------------------------------------- slides
 def slide_cover():
-    els = [R("Background", 0, 0, W, H, P["cream"])]
-    lock, _ = lockup(M, 96, 96, P["teal_ink"])
+    els = [R("Background", 0, 0, W, H, P["teal"])]
+    lock, _ = lockup(M, 96, 58, P["cream"])
     els.append(lock)
-    els.append(T("Eyebrow", W - M - 420, 132, 420, "Corporate Profile 2026", 18, 500, P["muted"], lh=24, ls=0.22, align="right", case="upper"))
-    head = T("Headline", M, 372, CW, "AFAQ for Energy\n& Integrated Business", 92, 300, P["teal"], lh=100, ls=-0.025)
+    els.append(G("Profile-Tab", [R("Profile-Tab-Shape", W - M - 130, 96, 130, 98, P["orange"], rx=14),
+                                 T("Profile-Tab-Text", W - M - 130 + 20, 96 + 24, 110, "CORPORATE\nPROFILE\n2026", 10, 500, P["cream"], lh=16, ls=0.16)]))
+    head = T("Headline", M, 300, 900, "AFAQ for Energy\n& Integrated\nBusiness.", 100, 300, P["cream"], lh=104, ls=-0.03)
     els.append(head)
-    y = 372 + head["h"] + 40
-    els.append(R("Accent-Rule", M, y, 64, 6, P["orange"], rx=3))
-    slog = T("Slogan", M, y + 26, CW, "Innovating today, sustaining tomorrow", 40, 300, P["teal"], lh=50)
+    y = 300 + head["h"] + 36
+    slog = T("Slogan", M, y, CW, "Innovating today, sustaining tomorrow", 42, 300, P["lime"], lh=52)
     els.append(slog)
-    y = y + 26 + slog["h"] + 18
-    scope = T("Scope", M, y, 720, "Solar power and energy storage in the Sultanate of Oman", 24, 400, P["muted"], lh=34)
-    els.append(scope)
-    py = y + scope["h"] + 48
-    ph = 1480 - py
-    notch = {"corner": "tr", "w": 312, "h": 132, "r": 24}
-    els.append(photo_slot("Photo-Hero", M, py, CW, ph, 40, notch))
-    tab_x, tab_y, tab_w, tab_h = W - M - 296, py, 296, 116
-    els.append(G("Label-Tab", [
-        R("Label-Tab-Shape", tab_x, tab_y, tab_w, tab_h, P["orange"], rx=24),
-        T("Label-Tab-Text", tab_x + 28, tab_y + 24, tab_w - 56, "SOLAR\nSTORAGE\nELECTRICAL", 16, 500, P["teal_ink"], lh=22, ls=0.18),
-    ]))
-    pts = [(-60, 1690), (160, 1700), (300, 1540), (520, 1560), (740, 1580), (820, 1760), (1140, 1690)]
-    els.append(ribbon("Ribbon", pts, 118))
-    return {"name": "01 Cover", "bg": P["cream"], "elements": els}
+    els.append(T("Scope", M, y + slog["h"] + 22, 800, "Solar power and energy storage in the Sultanate of Oman", 21, 400, P["cream"], lh=30, opacity=0.7))
+    els.append(photo_slot("Photo-Hero", M, 860, CW, 740, 40, {"corner": "tr", "w": 246, "h": 170, "r": 30}, dark=False))
+    pts = [(330, 2000), (420, 1880), (560, 1700), (760, 1600), (920, 1560), (1040, 1520), (1180, 1420)]
+    els.append(ribbon("Ribbon", pts, 230))
+    els.append(services_list(M, 1760, P["cream"]))
+    return {"name": "01 Cover", "bg": P["teal"], "elements": els}
 
 def slide_about():
-    dark = True
-    els = [R("Background", 0, 0, W, H, P["teal"]), header(dark)]
-    t = title("About AFAQ", dark)
+    dark = False
+    els = [R("Background", 0, 0, W, H, P["cream"]), eyebrow("01", "About AFAQ")]
+    t = title("About AFAQ.", dark)
     els.append(t)
-    els.append(R("Accent-Rule", M, 300 + t["h"] + 22, 80, 6, P["lime"], rx=3))
-    y = 300 + t["h"] + 22 + 6 + 44
-    paras = [
-        "AFAQ for Energy & Integrated Business is an Omani company based in Muscat. It works in solar power, energy storage and the electrical systems that go with them.",
-        "The company designs photovoltaic systems, supplies their components, installs them and brings them into operation, at sizes ranging from building systems to project plants.",
-        "AFAQ works directly with facility owners, and with contractors and developers inside their own projects.",
-    ]
-    for i, p in enumerate(paras):
-        el = T(f"Body-{i + 1}", M, y, CW, p, 26, 400, P["cream"], lh=40, opacity=0.9)
-        els.append(el)
-        y += el["h"] + 26
-    py = y + 34
-    ph = 1744 - py
-    notch = {"corner": "bl", "w": 324, "h": 150, "r": 24}
-    els.append(photo_slot("Photo-Site", M, py, CW, ph, 40, notch, dark=True, art="storage"))
-    tab_w, tab_h = 308, 134
-    tab_x, tab_y = M, py + ph - tab_h
-    els.append(G("Services-Tab", [
-        R("Services-Tab-Shape", tab_x, tab_y, tab_w, tab_h, P["lime"], rx=24),
-        T("Services-Tab-Text", tab_x + 28, tab_y + 22, tab_w - 56, "SOLAR\nSTORAGE\nELECTRICAL\nENGINEERING", 15, 500, P["teal"], lh=22, ls=0.18),
+    y = 156 + t["h"] + 36
+    p1 = T("Body-1", M, y, 760, "AFAQ for Energy & Integrated Business is an Omani company based in Muscat. It works in solar power, energy storage and the electrical systems that go with them.", 27, 400, P["teal"], lh=40)
+    els.append(p1)
+    y += p1["h"] + 34
+    col_w = (CW - 60) / 2
+    p2 = T("Body-2", M, y, col_w, "The company designs photovoltaic systems, supplies their components, installs them and brings them into operation, at sizes ranging from building systems to project plants.", 17, 400, P["muted"], lh=26)
+    p3 = T("Body-3", M + col_w + 60, y, col_w, "AFAQ works directly with facility owners, and with contractors and developers inside their own projects.", 17, 400, P["muted"], lh=26)
+    els += [p2, p3]
+    py = y + max(p2["h"], p3["h"]) + 56
+    ph = 1776 - py
+    els.append(photo_slot("Photo-Array", M, py, CW, ph, 36, dark=False, art="solar", sun="right"))
+    # lime statement panel overlapping the photo's top-left
+    panel_w, panel_h = 520, 400
+    els.append(G("Statement-Panel", [
+        R("Statement-Shape", M, py, panel_w, panel_h, P["lime"], rx=36),
+        T("Statement-Text", M + 44, py + 44, panel_w - 80, "Energy.\nEngineered.", 72, 300, P["teal"], lh=76, ls=-0.03),
+        lockup_with_services(M + 44, py + 44 + 152 + 60, 44, P["teal"]),
     ]))
+    els.append(orange_label(W - M - 36 - 132, py + 36))
+    els.append(box_ribbon("Ribbon", M, W - M, py + ph, 96))
     els.append(footer("About AFAQ", 2, dark))
-    return {"name": "02 About AFAQ", "bg": P["teal"], "elements": els}
+    return {"name": "02 About AFAQ", "bg": P["cream"], "elements": els}
 
 def slide_components():
     dark = False
-    els = [R("Background", 0, 0, W, H, P["cream"]), header(dark)]
-    t = title("System components", dark)
+    els = [R("Background", 0, 0, W, H, P["cream"]), eyebrow("02", "System components")]
+    t = title("System components.", dark, size=86)
     els.append(t)
-    sub = subtitle("A photovoltaic system is built from four components. AFAQ holds a direct supply agreement with a main supplier for each.", dark, 300 + t["h"] + 20)
+    sub = T("Subtitle", M, 156 + t["h"] + 40, 480, "A photovoltaic system is built from four components. AFAQ holds a direct supply agreement with a main supplier for each.", 24, 400, P["teal"], lh=34, opacity=0.85)
     els.append(sub)
+    py = 156 + t["h"] + 36
+    ph = 920 - py
+    notch_h = sub["h"] + 60
+    els.append(photo_slot("Photo-Plant", M, py, CW, ph, 36, {"corner": "tl", "w": 560, "h": notch_h, "r": 30}, dark=False, art="grid"))
+    els.append(box_ribbon("Ribbon", M, W - M, py + ph, 80, rel=(0.3, -0.5, 0.4, 0.1, -0.4, -0.9, -0.7)))
     comps = [
         ("01", "PV modules", "Selected according to the mounting area available and the conditions on site.", "Main suppliers", "AACE · Ronma", "pv-module"),
         ("02", "Battery energy storage", "Sized on the loads to be covered and the autonomy required.", "Main supplier", "Goshin", "battery"),
         ("03", "Inverters and power conversion", "Selected according to the array configuration and the connection requirements of the grid operator.", "Main supplier", "Star Charge", "inverter"),
         ("04", "Plant infrastructure", "Mounting structures, foundations, DC and AC cabling, and connection and protection panels, specified to suit the site.", None, None, "infrastructure"),
     ]
-    y = 300 + t["h"] + 20 + sub["h"] + 56
-    PAD = 36
-    def card_h(note, lab):
-        n = T("m", M + 40, 0, 640, note, 22, 400, "#000000", lh=32)
-        return 126 + n["h"] + (14 + 24 + 30 if lab else 0) + PAD
-    heights = [card_h(n, l) for _, _, n, l, _, _ in comps]
-    gap = round(min(48, max(24, (1744 - y - sum(heights)) / (len(comps) - 1))))
+    y0, gap = 964, 24
+    cw = (CW - gap) / 2
+    ch = (1776 - y0 - gap) / 2
     for i, (num, name, note, lab, sup, ic) in enumerate(comps):
-        ch = heights[i]
-        kids = [R("Card-Shape", M, y, CW, ch, P["white"], rx=28),
-                T("Number", M + 40, y + 34, 80, num, 22, 600, P["orange_deep"], lh=28),
-                C("Icon-Disc", W - M - 40 - 44, y + 34 + 44, 44, P["lime"]),
-                icon("Icon", ic, W - M - 40 - 44 - 24, y + 34 + 44 - 24, 48, P["teal"]),
-                T("Card-Title", M + 40, y + 74, 640, name, 32, 600, P["teal"], lh=40)]
-        note_el = T("Card-Note", M + 40, y + 126, 640, note, 22, 400, P["muted"], lh=32)
-        kids.append(note_el)
+        x = M + (i % 2) * (cw + gap)
+        y = y0 + (i // 2) * (ch + gap)
+        dark_card = (i == 3)
+        fill = P["teal"] if dark_card else CARD_GREY
+        shape = (PATH("Card-Shape", rect_path(x, y, cw, ch, 28, {"corner": "br", "w": 150, "h": 84, "r": 22}), fill=fill) if dark_card
+                 else R("Card-Shape", x, y, cw, ch, fill, rx=28))
+        tcol = P["cream"] if dark_card else P["teal"]
+        bcol = P["cream"] if dark_card else P["muted"]
+        kids = [shape,
+                T("Number", x + 32, y + 36, 200, num, 60, 300, tcol, lh=64, ls=-0.02),
+                C("Icon-Disc", x + cw - 32 - 28, y + 36 + 28, 28, P["lime"]),
+                icon("Icon", ic, x + cw - 32 - 28 - 14, y + 36 + 28 - 14, 28, P["teal"], sw=2.2),
+                ]
+        tt = T("Card-Title", x + 32, y + 120, cw - 64, name, 25, 400, tcol, lh=32)
+        kids.append(tt)
+        nb = T("Card-Note", x + 32, y + 120 + tt["h"] + 10, cw - 64, note, 15, 400, bcol, lh=23, opacity=0.8 if dark_card else 1.0)
+        kids.append(nb)
         if lab:
-            ly = y + 126 + note_el["h"] + 14
-            kids.append(T("Supplier-Label", M + 40, ly, 400, lab, 13, 500, P["muted"], lh=18, ls=0.16, case="upper"))
-            kids.append(T("Supplier", M + 40, ly + 24, 600, sup, 22, 500, P["teal"], lh=30))
+            ly = y + ch - 32 - 22 - 20 - 18
+            kids.append(LINE("Card-Divider", x + 32, ly - 18, x + cw - 32, ly - 18, P["teal"], 1, opacity=0.15))
+            kids.append(T("Supplier-Label", x + 32, ly, 300, lab, 11, 500, bcol, lh=16, ls=0.18, case="upper"))
+            kids.append(T("Supplier", x + 32, ly + 20, cw - 64, sup, 17, 500, tcol, lh=24))
         els.append(G(f"Card-{num}", kids))
-        y += ch + gap
     els.append(footer("System components", 3, dark))
     return {"name": "03 System components", "bg": P["cream"], "elements": els}
 
 def slide_scope():
     dark = False
-    els = [R("Background", 0, 0, W, H, P["lime"]), header(False, eyebrow_color=P["teal"], eyebrow_opacity=0.8)]
-    t = title("Scope of work", dark)
+    els = [R("Background", 0, 0, W, H, P["cream"]), eyebrow("03", "Scope of work")]
+    t = title("Scope of\nwork.", dark)
     els.append(t)
-    sub = subtitle("The project sets the scope, from supply alone to full operation.", dark, 300 + t["h"] + 20, color=P["teal"], opacity=0.85)
+    sub = T("Subtitle", M, 156 + t["h"] + 40, 560, "The project sets the scope, from supply alone to full operation.", 24, 400, P["teal"], lh=34, opacity=0.85)
     els.append(sub)
+    rpts = [(700, -60), (860, 60), (960, 260), (1030, 420), (1080, 520), (1120, 580), (1160, 640)]
+    els.insert(1, ribbon("Ribbon", rpts, 110))
     steps = [
-        ("01", "Study and design", "Load analysis and consumption data, a site survey, system sizing and placement, and the expected annual yield.", "A report covering system capacity, expected annual yield and estimated cost."),
-        ("02", "Supply", "PV modules, batteries, inverters and electrical equipment, with manufacturer warranties.", "A component list with specifications, source and warranty terms."),
-        ("03", "Installation and connection", "Installation, electrical works, and grid-tied, off-grid or hybrid connection.", "A working system and a testing and commissioning record."),
-        ("04", "Operation and monitoring", "Performance monitoring and maintenance under an operation and maintenance contract.", "A performance report comparing actual output against the design figure."),
+        ("01", "Study and design", "Load analysis and consumption data, a site survey, system sizing and placement, and the expected annual yield.", "a report covering system capacity, expected annual yield and estimated cost.", "clipboard"),
+        ("02", "Supply", "PV modules, batteries, inverters and electrical equipment, with manufacturer warranties.", "a component list with specifications, source and warranty terms.", "boxes"),
+        ("03", "Installation and connection", "Installation, electrical works, and grid-tied, off-grid or hybrid connection.", "a working system and a testing and commissioning record.", "infrastructure"),
+        ("04", "Operation and monitoring", "Performance monitoring and maintenance under an operation and maintenance contract.", "a performance report comparing actual output against the design figure.", "inverter"),
     ]
-    y = 300 + t["h"] + 20 + sub["h"] + 60
-    cx, tx, tw = M + 28, M + 92, CW - 92
-    def step_height(body, deliv):
-        b = T("m", tx, 0, tw, body, 24, 400, "#000000", lh=34)
-        dl = T("m", tx + 28, 0, tw - 56, deliv, 20, 400, "#000000", lh=28)
-        return 56 + b["h"] + 18 + (44 + dl["h"] + 22)
-    natural = sum(step_height(b, d) for _, _, b, d in steps)
-    gap = round(max(44, (1744 - y - natural) / (len(steps) - 1) - 8))
-    step_tops = []
-    for num, name, body, deliv in steps:
-        step_tops.append(y)
-        kids = [C("Node", cx, y + 22, 28, P["teal"]),
-                T("Node-Number", cx - 28, y + 22 - 13, 56, num, 19, 600, P["lime"], lh=26, align="center"),
-                T("Step-Title", tx, y, tw, name, 32, 600, P["teal"], lh=44)]
-        b = T("Step-Body", tx, y + 56, tw, body, 24, 400, P["teal"], lh=34, opacity=0.85)
+    y0 = 156 + t["h"] + 40 + sub["h"] + 72
+    cx = M + 34
+    tx = M + 130
+    tw = W - M - tx
+    label_w = text_width("Deliverable:", 15, 600) + 12
+    def step_h(body, deliv):
+        b = T("m", tx, 0, 560, body, 15, 400, "#000000", lh=23)
+        dl = T("m", 0, 0, tw - 60 - label_w - 28, deliv, 15, 400, "#000000", lh=23)
+        return 64 + b["h"] + 18 + 18 + dl["h"] + 18
+    hs = [step_h(b, d) for _, _, b, d, _ in steps]
+    gap = (1776 - y0 - sum(hs)) / (len(steps) - 1)
+    ys = []
+    yy = y0
+    for hh in hs:
+        ys.append(round(yy)); yy += hh + gap
+    for i, (num, name, body, deliv, ic) in enumerate(steps):
+        y = ys[i]
+        kids = [C("Node", cx, y + 34, 34, P["lime"]),
+                T("Node-Number", cx - 34, y + 34 - 13, 68, num, 17, 600, P["teal"], lh=26, align="center"),
+                icon("Icon", ic, tx, y + 18, 30, P["teal"], sw=2.2),
+                T("Step-Title", tx + 46, y + 14, tw - 46, name, 28, 400, P["teal"], lh=36)]
+        b = T("Step-Body", tx, y + 64, 560, body, 15, 400, P["muted"], lh=23)
         kids.append(b)
-        by = y + 56 + b["h"] + 18
-        dl = T("Deliverable-Text", tx + 28, by + 44, tw - 56, deliv, 20, 400, P["teal"], lh=28)
-        bh = 44 + dl["h"] + 22
-        kids.insert(3, R("Deliverable-Box", tx, by, tw, bh, P["cream"], rx=18))
-        kids.append(T("Deliverable-Label", tx + 28, by + 18, 300, "Deliverable", 13, 500, P["orange_deep"], lh=18, ls=0.16, case="upper"))
+        by = y + 64 + b["h"] + 18
+        dl = T("Deliverable-Text", tx + 60 + label_w, by + 18, tw - 60 - label_w - 28, deliv, 15, 400, P["teal"], lh=23)
+        bh = 18 + dl["h"] + 18
+        kids.append(R("Deliverable-Box", tx, by, tw, bh, LIME_PALE_BG, rx=18))
+        kids.append(PATH("Deliverable-Check", f"M {tx + 26} {by + 29} L {tx + 33} {by + 36} L {tx + 46} {by + 23}", stroke=P["lime_deep"], sw=2.4))
+        kids.append(T("Deliverable-Label", tx + 60, by + 18, label_w, "Deliverable:", 15, 600, P["teal"], lh=23))
         kids.append(dl)
         els.append(G(f"Step-{num}", kids))
-        y = round(by + bh + gap)
-    conns = [LINE(f"Connector-{i + 1}", cx, step_tops[i] + 22 + 36, cx, step_tops[i + 1] + 22 - 36, P["teal"], 2, opacity=0.35)
-             for i in range(len(step_tops) - 1)]
-    els.insert(2, G("Connectors", conns))
-    els.append(footer("Scope of work", 4, False, color=P["teal"], rule_opacity=0.25, text_opacity=0.8))
-    return {"name": "04 Scope of work", "bg": P["lime"], "elements": els}
+        if i < len(steps) - 1:
+            els.append(LINE(f"Connector-{i + 1}", cx, y + 34 + 40, cx, ys[i + 1] + 34 - 40, P["lime_deep"], 2, opacity=0.5))
+    els.append(footer("Scope of work", 4, dark))
+    return {"name": "04 Scope of work", "bg": P["cream"], "elements": els}
 
 def slide_ways():
-    dark = True
-    els = [R("Background", 0, 0, W, H, P["teal"]), header(dark)]
-    t = title("Ways of working", dark)
+    els = [R("Background", 0, 0, W, H, P["lime"]), eyebrow("04", "Ways of working", on_lime=True)]
+    t = title("Ways of\nworking.", False)
     els.append(t)
     cards = [
-        ("01", "Supply and installation for projects", "One party responsible for design, supply, installation and commissioning.", "clipboard"),
-        ("02", "Component supply", "Supply to the specification and quantities of the project, for contractors and installation companies.", "boxes"),
+        ("01", "Supply and installation for projects", "One party responsible for design, supply, installation and commissioning.", "clipboard", True),
+        ("02", "Component supply", "Supply to the specification and quantities of the project, for contractors and installation companies.", "boxes", False),
     ]
-    y = 300 + t["h"] + 72
-    ch, tab_w, tab_h = 312, 168, 52
-    for num, name, body, ic in cards:
-        # lime folder tab with the board's concave 22 px fillet where it meets the body; 2 px under the body hides the seam
-        tab = PATH("Tab-Fill", rounded_polygon(
-            [(M, y), (M + tab_w, y), (M + tab_w, y + tab_h), (M + tab_w + 22, y + tab_h), (M + tab_w + 22, y + tab_h + 2), (M, y + tab_h + 2)],
-            [26, 26, 22, 0, 0, 0]), fill=P["lime"])
-        body_shape = PATH("Card-Body", rounded_polygon(
-            [(M, y + tab_h), (M + CW, y + tab_h), (M + CW, y + ch), (M, y + ch)], [0, 32, 32, 32]), fill=P["teal_mid"])
-        tt = T("Card-Title", M + 48, y + 112, 640, name, 32, 600, P["cream"], lh=40)
-        kids = [tab, body_shape,
-                T("Number", M, y + 13, tab_w, num, 20, 600, P["teal"], lh=26, align="center"),
+    y = 520
+    ch, gap = 320, 28
+    for num, name, body, ic, notched in cards:
+        if notched:
+            shape = PATH("Card-Shape", rect_path(M, y, CW, ch, 36, {"corner": "tl", "w": 220, "h": 160, "r": 30}), fill=P["teal"])
+        else:
+            shape = R("Card-Shape", M, y, CW, ch, P["teal"], rx=36)
+        tt = T("Card-Title", M + 260, y + 44, 520, name, 36, 300, P["cream"], lh=42)
+        kids = [shape,
+                T("Number", M + 40, y + 36, 160, num, 64, 300, P["teal"] if notched else P["lime"], lh=70, ls=-0.02),
                 tt,
-                T("Card-Body-Text", M + 48, y + 112 + tt["h"] + 16, 680, body, 24, 400, P["cream"], lh=34, opacity=0.85),
-                icon("Icon", ic, W - M - 48 - 72, y + 146, 72, P["lime"], sw=4)]
+                T("Card-Body-Text", M + 260, y + 44 + tt["h"] + 18, 520, body, 20, 400, P["cream"], lh=30, opacity=0.8),
+                C("Icon-Disc", W - M - 40 - 30, y + 44 + 30, 30, P["lime"]),
+                icon("Icon", ic, W - M - 40 - 30 - 14, y + 44 + 30 - 14, 28, P["teal"], sw=2.2)]
         els.append(G(f"Card-{num}", kids))
-        y += ch + 44
-    pts = [(-60, 1310), (200, 1290), (380, 1490), (600, 1480), (820, 1470), (900, 1280), (1140, 1330)]
-    els.append(ribbon("Ribbon", pts, 190, teal_fill=dark_ribbon_fill(pts)))
-    els.append(footer("Ways of working", 5, dark))
-    return {"name": "05 Ways of working", "bg": P["teal"], "elements": els}
+        y += ch + gap
+    els.append(notch_outline(770, 1340, 520, 440, P["teal"]))
+    els.append(lockup_with_services(M, 1660, 64, P["teal"]))
+    els.append(footer("Ways of working", 5, False, on_lime=True))
+    return {"name": "05 Ways of working", "bg": P["lime"], "elements": els}
 
 def slide_uses():
     dark = False
-    els = [R("Background", 0, 0, W, H, P["cream"]), header(dark)]
-    t = title("Where the\nsystems are used", dark)
+    els = [R("Background", 0, 0, W, H, P["cream"]), eyebrow("05", "Where the systems are used")]
+    t = title("Where the\nsystems are used.", dark, size=90)
     els.append(t)
-    sub = subtitle("The pattern of consumption shapes the system more than the type of business does.", dark, 300 + t["h"] + 20)
-    els.append(sub)
+    py = 156 + t["h"] + 44
+    panel_h = 800
+    sub = T("Statement", M + 40, py + 44, 640, "The pattern of consumption shapes the system more than the type of business does.", 40, 300, P["teal"], lh=50, ls=-0.02)
+    img_y = py + 44 + sub["h"] + 36
+    els.append(G("Statement-Panel", [R("Statement-Shape", M, py, CW, panel_h, P["lime"], rx=36), sub]))
+    els.append(photo_slot("Photo-Site", M + 20, img_y, CW - 40, py + panel_h - 20 - img_y, 28, dark=False, art="solar"))
+    els.append(orange_label(W - M - 20 - 24 - 124, img_y + 24, w=124, h=96))
     blocks = [
-        ("Sites that consume\nduring the day", "Offices, retail centres, hotels, factories, schools and residential compounds. Their heaviest load falls within sunlight hours.", "sun"),
+        ("Sites that consume during the day", "Offices, retail centres, hotels, factories, schools and residential compounds. Their heaviest load falls within sunlight hours.", "sun"),
         ("Sites with continuous loads", "Hospitals, cold stores, production lines and data centres. The system works alongside the backup already in place, cutting generator running hours and fuel use.", "continuous"),
         ("Sites away from the grid", "Farms, irrigation pumps, camps and work sites that run on diesel.", "off-grid"),
         ("Projects under construction", "Contractors and developers delivering the energy scope within a live project.", "construction"),
     ]
-    y0 = 300 + t["h"] + 20 + sub["h"] + 56
-    cw, gap = (CW - 30) / 2, 30
-    chh = 440
-    titles = [T("m", 0, 0, cw - 80, n, 28, 600, "#000000", lh=36) for n, _, _ in blocks]
-    title_h = max(tt["h"] for tt in titles)  # shared so side-by-side bodies share a baseline
+    y0 = py + panel_h + 36
+    gap = 24
+    cw = (CW - gap) / 2
+    ch = (1776 - y0 - gap) / 2
+    titles = [T("m", 0, 0, cw - 64, n, 23, 400, "#000000", lh=30) for n, _, _ in blocks]
+    th = max(x["h"] for x in titles)
     for i, (name, body, ic) in enumerate(blocks):
         x = M + (i % 2) * (cw + gap)
-        y = y0 + (i // 2) * (chh + gap)
-        kids = [R("Card-Shape", x, y, cw, chh, P["white"], rx=28),
-                C("Icon-Disc", x + 40 + 44, y + 40 + 44, 44, P["lime"]),
-                icon("Icon", ic, x + 40 + 44 - 24, y + 40 + 44 - 24, 48, P["teal"]),
-                T("Card-Title", x + 40, y + 156, cw - 80, name, 28, 600, P["teal"], lh=36),
-                T("Card-Body", x + 40, y + 156 + title_h + 14, cw - 80, body, 21, 400, P["muted"], lh=31)]
+        y = y0 + (i // 2) * (ch + gap)
+        kids = [R("Card-Shape", x, y, cw, ch, CARD_GREY, rx=28),
+                C("Icon-Disc", x + 32 + 26, y + 32 + 26, 26, P["lime"]),
+                icon("Icon", ic, x + 32 + 26 - 13, y + 32 + 26 - 13, 26, P["teal"], sw=2.2),
+                T("Card-Title", x + 32, y + 118, cw - 64, name, 23, 400, P["teal"], lh=30),
+                T("Card-Body", x + 32, y + 118 + th + 10, cw - 64, body, 14, 400, P["muted"], lh=21)]
         els.append(G(f"Card-{i + 1}", kids))
-    pts = [(-60, 1600), (200, 1580), (380, 1660), (600, 1650), (820, 1640), (900, 1560), (1140, 1600)]
-    els.append(ribbon("Ribbon", pts, 94))
     els.append(footer("Where the systems are used", 6, dark))
     return {"name": "06 Where the systems are used", "bg": P["cream"], "elements": els}
 
 def slide_brings():
     dark = True
-    els = [R("Background", 0, 0, W, H, P["teal"]), header(dark)]
-    t = title("What AFAQ brings", dark)
+    els = [R("Background", 0, 0, W, H, P["teal"]), eyebrow("06", "What AFAQ brings", dark=True)]
+    t = title("What AFAQ\nbrings.", dark)
     els.append(t)
+    py = 156 + t["h"] + 44
+    ph = 1170 - py
+    els.append(photo_slot("Photo-Storage", M, py, CW, ph, 36, {"corner": "tl", "w": 190, "h": 136, "r": 30}, dark=True, art="storage"))
+    els.append(orange_label(M, py, w=160, h=108))
+    rpts = [(-60, 940), (200, 900), (400, 980), (600, 960), (800, 920), (950, 860), (1140, 880)]
+    els.append(ribbon("Ribbon", rpts, 110, teal_fill=dark_ribbon_fill(rpts)))
     items = [
         ("Supply from a factory in Oman", "AACE modules are manufactured in Oman, which shortens supply time compared with importing.", "factory"),
         ("Warranty handled inside Oman", "AFAQ processes module warranty claims locally, without sending them to a manufacturer abroad.", "shield"),
@@ -647,51 +703,62 @@ def slide_brings():
         ("Direct supply agreements", "Written agreements with module, battery and inverter suppliers, covering availability and manufacturer warranties.", "document"),
         ("Delivery team", "An engineering team for design and supervision, and a field crew for installation and commissioning.", "team"),
     ]
-    y = 300 + t["h"] + 64
+    y = 1240
+    row_h = (1776 - y) / len(items)
     for i, (name, body, ic) in enumerate(items):
-        kids = [T("Number", M, y + 8, 60, f"{i + 1:02d}", 20, 600, P["lime"], lh=26),
-                icon("Icon", ic, W - M - 44, y + 2, 44, P["lime"], sw=2.6)]
-        tt = T("Item-Title", M + 84, y, 760, name, 32, 600, P["cream"], lh=40)
-        kids.append(tt)
-        b = T("Item-Body", M + 84, y + tt["h"] + 8, 760, body, 22, 400, P["cream"], lh=32, opacity=0.8)
-        kids.append(b)
-        ly = y + tt["h"] + 8 + b["h"] + 26
+        ry = round(y + i * row_h)
+        kids = [icon("Icon", ic, M, ry + 6, 24, P["lime"], sw=2),
+                T("Item-Title", M + 44, ry, 300, name, 23, 400, P["cream"], lh=30),
+                T("Item-Body", M + 420, ry + 4, CW - 420, body, 14, 400, P["cream"], lh=21, opacity=0.7)]
         if i < len(items) - 1:
-            kids.append(LINE("Divider", M, ly, W - M, ly, P["cream"], 1, opacity=0.15))
+            kids.append(LINE("Divider", M, round(ry + row_h - 10), W - M, round(ry + row_h - 10), P["cream"], 1, opacity=0.12))
         els.append(G(f"Item-{i + 1:02d}", kids))
-        y = ly + 27
-    py = y + 30
-    els.append(photo_slot("Photo-Strip", M, py, CW, 1744 - py, 32, dark=True, art="grid"))
     els.append(footer("What AFAQ brings", 7, dark))
     return {"name": "07 What AFAQ brings", "bg": P["teal"], "elements": els}
 
 def slide_contact():
-    dark = True
-    els = [R("Background", 0, 0, W, H, P["teal"]), header(dark)]
-    slog = T("Slogan", M, 340, CW, "Innovating today,\nsustaining tomorrow", 80, 300, P["lime"], lh=90, ls=-0.02)
-    els.append(slog)
-    y = 340 + slog["h"] + 48
-    els.append(T("Contact-Title", M, y, CW, "Contact", 26, 500, P["cream"], lh=34, opacity=0.7))
-    y += 34 + 36
+    dark = False
+    els = [R("Background", 0, 0, W, H, P["cream"])]
+    py, ph = 92, 730
+    els.append(photo_slot("Photo-Farm", M, py, CW, ph, 36, {"corner": "tl", "w": 450, "h": 200, "r": 34}, dark=False, art="solar"))
+    els.append(eyebrow("07", "Contact", y=100))
+    els.append(title("Contact.", dark, y=140, size=80, w=420))
+    rpts = [(-60, 760), (180, 740), (380, 800), (580, 790), (760, 760), (920, 700), (1140, 720)]
+    els.append(ribbon("Ribbon", rpts, 110))
     rows = [("Phone", "+968 9190 7789", "phone"), ("Email", "afaq@gmail.com", "mail"), ("Address", "Al Khuwair, behind Zakher Mall, Muscat", "pin")]
-    for lab, val, ic in rows:
-        kids = [C("Icon-Disc", M + 34, y + 34, 34, P["lime"]),
-                icon("Icon", ic, M + 34 - 16, y + 34 - 16, 32, P["teal"], sw=2.2),
-                T("Label", M + 100, y, 500, lab, 14, 500, P["cream"], lh=20, ls=0.16, case="upper", opacity=0.6),
-                T("Value", M + 100, y + 26, 820, val, 32, 500, P["cream"], lh=42)]
+    y = 1120
+    for i, (lab, val, ic) in enumerate(rows):
+        kids = [C("Icon-Disc", M + 32, y + 40, 32, P["lime"]),
+                icon("Icon", ic, M + 32 - 14, y + 40 - 14, 28, P["teal"], sw=2),
+                T("Label", M + 100, y + 6, 400, lab, 12, 500, P["muted"], lh=18, ls=0.2, case="upper"),
+                T("Value", M + 100, y + 30, 800, val, 38, 400, P["teal"], lh=48)]
+        if i < len(rows) - 1:
+            kids.append(LINE("Divider", M, y + 118, W - M, y + 118, P["line"], 1))
         els.append(G(f"Contact-{lab}", kids))
-        y += 68 + 48
-    y += 40
-    els.append(LINE("Rule", M, y, W - M, y, P["cream"], 1, opacity=0.2))
-    y += 56
-    lock, _ = lockup(M, y, 110, P["cream"], P["lime"])
-    els.append(lock)
-    pts = [(-60, 1410), (180, 1450), (340, 1330), (560, 1350), (780, 1370), (880, 1550), (1140, 1470)]
-    els.append(ribbon("Ribbon", pts, 118, teal_fill=dark_ribbon_fill(pts)))
-    els.append(footer("AFAQ for Energy & Integrated Business", 8, dark))
-    return {"name": "08 Contact", "bg": P["teal"], "elements": els}
+        y += 150
+    els.append(lockup_with_services(M, 1640, 64, P["teal"]))
+    els.append(footer("Contact", 8, dark))
+    return {"name": "08 Contact", "bg": P["cream"], "elements": els}
 
-SLIDES = [slide_cover, slide_about, slide_components, slide_scope, slide_ways, slide_uses, slide_brings, slide_contact]
+def slide_back():
+    els = [R("Background", 0, 0, W, H, P["teal"])]
+    lock, _ = lockup(M, 110, 66, P["cream"])
+    els.append(lock)
+    # ribbon field: three bands crossing (page clips the ends)
+    a = [(-60, 560), (160, 480), (380, 700), (600, 760), (800, 640), (960, 440), (1140, 380)]
+    b = [(-60, 980), (180, 1060), (400, 860), (600, 700), (820, 760), (980, 920), (1140, 980)]
+    c = [(-60, 420), (200, 360), (420, 520), (640, 1000), (820, 1080), (980, 1040), (1140, 940)]
+    els.append(ribbon("Ribbon-A", a, 130, teal_fill=dark_ribbon_fill(a)))
+    els.append(ribbon("Ribbon-B", b, 120, teal_fill=dark_ribbon_fill(b)))
+    els.append(ribbon("Ribbon-C", c, 110, teal_fill=dark_ribbon_fill(c)))
+    slog = T("Slogan", M, 1220, CW, "Innovating today,\nsustaining tomorrow.", 92, 300, P["cream"], lh=96, ls=-0.03)
+    els.append(slog)
+    els.append(T("Company", M, 1220 + slog["h"] + 24, 760, "AFAQ for Energy & Integrated Business", 24, 400, P["cream"], lh=32, opacity=0.8))
+    els.append(notch_outline(800, 1430, 520, 440, P["lime"], edge=P["lime"]))
+    els.append(services_list(M, 1740, P["cream"]))
+    return {"name": "09 Back cover", "bg": P["teal"], "elements": els}
+
+SLIDES = [slide_cover, slide_about, slide_components, slide_scope, slide_ways, slide_uses, slide_brings, slide_contact, slide_back]
 
 # ---------------------------------------------------------------- SVG writer
 class SvgWriter:

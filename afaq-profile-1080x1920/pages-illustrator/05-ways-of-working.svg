@@ -1,60 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 05 Ways of working — AFAQ Corporate Profile, 1080x1920. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
-  <defs>
-    <linearGradient id="grad-1" gradientUnits="userSpaceOnUse" x1="-60" y1="0" x2="1140" y2="0"><stop offset="0" stop-color="#0E5560" stop-opacity="1"/><stop offset="1" stop-color="#1F7580" stop-opacity="1"/></linearGradient><linearGradient id="grad-2" gradientUnits="userSpaceOnUse" x1="-60" y1="0" x2="1140" y2="0"><stop offset="0" stop-color="#A4DC3C" stop-opacity="1"/><stop offset="0.35" stop-color="#C8FB5F" stop-opacity="1"/><stop offset="0.55" stop-color="#E9FBB8" stop-opacity="1"/><stop offset="0.75" stop-color="#C8FB5F" stop-opacity="1"/><stop offset="1" stop-color="#A4DC3C" stop-opacity="1"/></linearGradient>
-  </defs>
-  <rect id="Background" x="0" y="0" width="1080" height="1920" fill="#053C45"/>
-  <g id="Header">
-    <g id="Logo-Lockup">
-      <g id="Wordmark-AFQ">
-        <path id="Letter-A" d="M 84.32 111.92 L 89.92 100.72 L 108.96 100.72 L 126.88 74.4 L 162.72 114.16" fill="none" stroke="#F5F4EB" stroke-width="15.12" stroke-linecap="round" stroke-linejoin="round"/>
-        <path id="Letter-F" d="M 183.16 114.44 L 183.16 85.88 C 183.16 79.22 188.54 73.84 195.2 73.84 L 242.52 73.84 M 183.16 94 L 232.16 94" fill="none" stroke="#F5F4EB" stroke-width="15.12" stroke-linecap="round" stroke-linejoin="round"/>
-        <path id="Letter-Q" d="M 262.68 86.16 C 262.68 79.2 268.32 73.56 275.28 73.56 L 312.8 73.56 C 319.76 73.56 325.4 79.2 325.4 86.16 L 325.4 101.84 C 325.4 108.8 319.76 114.44 312.8 114.44 L 275.28 114.44 C 268.32 114.44 262.68 108.8 262.68 101.84 Z M 317.28 111.92 L 335.2 124.24" fill="none" stroke="#F5F4EB" stroke-width="15.12" stroke-linecap="round" stroke-linejoin="round"/>
-      </g>
-      <text id="Tagline" x="72" y="145" font-family="Inter-Medium" font-size="11" font-weight="500" fill="#F5F4EB" letter-spacing="6.6">ENERGY. ENGINEERED.</text>
-    </g>
-    <text id="Eyebrow" x="1011.3" y="99.46" font-family="Inter-Medium" font-size="15" font-weight="500" fill="#F5F4EB" letter-spacing="3.3" text-anchor="end" opacity="0.85">CORPORATE PROFILE 2026</text>
+  <rect id="Background" x="0" y="0" width="1080" height="1920" fill="#C8FB5F"/>
+  <g id="Eyebrow">
+    <rect id="Eyebrow-Pill" x="80" y="112" width="48" height="26" rx="13" fill="#053C45"/>
+    <text id="Eyebrow-Number" x="104" y="129.37" font-family="Inter-SemiBold" font-size="12" font-weight="600" fill="#C8FB5F" text-anchor="middle">04</text>
+    <text id="Eyebrow-Label" x="144" y="129.37" font-family="Inter-Medium" font-size="12" font-weight="500" fill="#053C45" letter-spacing="2.64">WAYS OF WORKING</text>
   </g>
-  <text id="Title" x="72" y="369.65" font-family="Inter-Light" font-size="76" font-weight="300" fill="#F5F4EB" letter-spacing="-1.52">Ways of working</text>
+  <g id="Title">
+    <text id="Title-line" x="80" y="239.92" font-family="Inter-Light" font-size="96" font-weight="300" fill="#053C45" letter-spacing="-2.88">Ways of</text>
+    <text id="Title-line-2" x="80" y="337.92" font-family="Inter-Light" font-size="96" font-weight="300" fill="#053C45" letter-spacing="-2.88">working.</text>
+  </g>
   <g id="Card-01">
-    <path id="Tab-Fill" d="M 72 482 C 72 467.64 83.64 456 98 456 L 214 456 C 228.36 456 240 467.64 240 482 L 240 486 C 240 498.15 249.85 508 262 508 L 262 508 L 262 510 L 72 510 Z" fill="#C8FB5F"/>
-    <path id="Card-Body" d="M 72 508 L 976 508 C 993.67 508 1008 522.33 1008 540 L 1008 736 C 1008 753.67 993.67 768 976 768 L 104 768 C 86.33 768 72 753.67 72 736 Z" fill="#0E5560"/>
-    <text id="Number" x="156" y="489.28" font-family="Inter-SemiBold" font-size="20" font-weight="600" fill="#053C45" text-anchor="middle">01</text>
-    <text id="Card-Title" x="120" y="599.64" font-family="Inter-SemiBold" font-size="32" font-weight="600" fill="#F5F4EB">Supply and installation for projects</text>
-    <g id="Card-Body-Text">
-      <text id="Card-Body-Text-line" x="120" y="649.73" font-family="Inter-Regular" font-size="24" font-weight="400" fill="#F5F4EB" opacity="0.85">One party responsible for design, supply, installation and</text>
-      <text id="Card-Body-Text-line-2" x="120" y="683.73" font-family="Inter-Regular" font-size="24" font-weight="400" fill="#F5F4EB" opacity="0.85">commissioning.</text>
+    <path id="Card-Shape" d="M 300 556 C 300 536.12 316.12 520 336 520 L 964 520 C 983.88 520 1000 536.12 1000 556 L 1000 804 C 1000 823.88 983.88 840 964 840 L 116 840 C 96.12 840 80 823.88 80 804 L 80 716 C 80 696.12 96.12 680 116 680 L 270 680 C 286.57 680 300 666.57 300 650 Z" fill="#053C45"/>
+    <text id="Number" x="120" y="614.28" font-family="Inter-Light" font-size="64" font-weight="300" fill="#053C45" letter-spacing="-1.28">01</text>
+    <g id="Card-Title">
+      <text id="Card-Title-line" x="340" y="598.1" font-family="Inter-Light" font-size="36" font-weight="300" fill="#F5F4EB">Supply and installation for</text>
+      <text id="Card-Title-line-2" x="340" y="640.1" font-family="Inter-Light" font-size="36" font-weight="300" fill="#F5F4EB">projects</text>
     </g>
+    <g id="Card-Body-Text">
+      <text id="Card-Body-Text-line" x="340" y="688.28" font-family="Inter-Regular" font-size="20" font-weight="400" fill="#F5F4EB" opacity="0.8">One party responsible for design, supply, installation</text>
+      <text id="Card-Body-Text-line-2" x="340" y="718.28" font-family="Inter-Regular" font-size="20" font-weight="400" fill="#F5F4EB" opacity="0.8">and commissioning.</text>
+    </g>
+    <circle id="Icon-Disc" cx="930" cy="594" r="30" fill="#C8FB5F"/>
     <g id="Icon">
-      <path id="Icon-clipboard-1" d="M 903 618.5 C 903 616.01 905.01 614 907.5 614 L 940.5 614 C 942.99 614 945 616.01 945 618.5 L 945 663.5 C 945 665.99 942.99 668 940.5 668 L 907.5 668 C 905.01 668 903 665.99 903 663.5 Z" fill="none" stroke="#C8FB5F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-      <path id="Icon-clipboard-2" d="M 915 611 C 915 609.35 916.35 608 918 608 L 930 608 C 931.65 608 933 609.35 933 611 L 933 615.5 C 933 617.15 931.65 618.5 930 618.5 L 918 618.5 C 916.35 618.5 915 617.15 915 615.5 Z" fill="none" stroke="#C8FB5F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-      <path id="Icon-clipboard-3" d="M 912 642.5 L 919.5 650 L 936 632" fill="none" stroke="#C8FB5F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-clipboard-1" d="M 921.83 586.42 C 921.83 585.45 922.62 584.67 923.58 584.67 L 936.42 584.67 C 937.38 584.67 938.17 585.45 938.17 586.42 L 938.17 603.92 C 938.17 604.88 937.38 605.67 936.42 605.67 L 923.58 605.67 C 922.62 605.67 921.83 604.88 921.83 603.92 Z" fill="none" stroke="#053C45" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-clipboard-2" d="M 926.5 583.5 C 926.5 582.86 927.02 582.33 927.67 582.33 L 932.33 582.33 C 932.98 582.33 933.5 582.86 933.5 583.5 L 933.5 585.25 C 933.5 585.89 932.98 586.42 932.33 586.42 L 927.67 586.42 C 927.02 586.42 926.5 585.89 926.5 585.25 Z" fill="none" stroke="#053C45" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-clipboard-3" d="M 925.33 595.75 L 928.25 598.67 L 934.67 591.67" fill="none" stroke="#053C45" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
   </g>
   <g id="Card-02">
-    <path id="Tab-Fill-2" d="M 72 838 C 72 823.64 83.64 812 98 812 L 214 812 C 228.36 812 240 823.64 240 838 L 240 842 C 240 854.15 249.85 864 262 864 L 262 864 L 262 866 L 72 866 Z" fill="#C8FB5F"/>
-    <path id="Card-Body-2" d="M 72 864 L 976 864 C 993.67 864 1008 878.33 1008 896 L 1008 1092 C 1008 1109.67 993.67 1124 976 1124 L 104 1124 C 86.33 1124 72 1109.67 72 1092 Z" fill="#0E5560"/>
-    <text id="Number-2" x="156" y="845.28" font-family="Inter-SemiBold" font-size="20" font-weight="600" fill="#053C45" text-anchor="middle">02</text>
-    <text id="Card-Title-2" x="120" y="955.64" font-family="Inter-SemiBold" font-size="32" font-weight="600" fill="#F5F4EB">Component supply</text>
+    <rect id="Card-Shape-2" x="80" y="868" width="920" height="320" rx="36" fill="#053C45"/>
+    <text id="Number-2" x="120" y="962.28" font-family="Inter-Light" font-size="64" font-weight="300" fill="#C8FB5F" letter-spacing="-1.28">02</text>
+    <text id="Card-Title-2" x="340" y="946.1" font-family="Inter-Light" font-size="36" font-weight="300" fill="#F5F4EB">Component supply</text>
     <g id="Card-Body-Text-2">
-      <text id="Card-Body-Text-line-3" x="120" y="1005.73" font-family="Inter-Regular" font-size="24" font-weight="400" fill="#F5F4EB" opacity="0.85">Supply to the specification and quantities of the project,</text>
-      <text id="Card-Body-Text-line-4" x="120" y="1039.73" font-family="Inter-Regular" font-size="24" font-weight="400" fill="#F5F4EB" opacity="0.85">for contractors and installation companies.</text>
+      <text id="Card-Body-Text-line-3" x="340" y="994.28" font-family="Inter-Regular" font-size="20" font-weight="400" fill="#F5F4EB" opacity="0.8">Supply to the specification and quantities of the</text>
+      <text id="Card-Body-Text-line-4" x="340" y="1024.28" font-family="Inter-Regular" font-size="20" font-weight="400" fill="#F5F4EB" opacity="0.8">project, for contractors and installation companies.</text>
     </g>
+    <circle id="Icon-Disc-2" cx="930" cy="942" r="30" fill="#C8FB5F"/>
     <g id="Icon-2">
-      <path id="Icon-boxes-1" d="M 895.5 1000 C 895.5 998.35 896.85 997 898.5 997 L 919.5 997 C 921.15 997 922.5 998.35 922.5 1000 L 922.5 1018 C 922.5 1019.65 921.15 1021 919.5 1021 L 898.5 1021 C 896.85 1021 895.5 1019.65 895.5 1018 Z" fill="none" stroke="#C8FB5F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-      <path id="Icon-boxes-2" d="M 925.5 1000 C 925.5 998.35 926.85 997 928.5 997 L 949.5 997 C 951.15 997 952.5 998.35 952.5 1000 L 952.5 1018 C 952.5 1019.65 951.15 1021 949.5 1021 L 928.5 1021 C 926.85 1021 925.5 1019.65 925.5 1018 Z" fill="none" stroke="#C8FB5F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-      <path id="Icon-boxes-3" d="M 910.5 973 C 910.5 971.35 911.85 970 913.5 970 L 934.5 970 C 936.15 970 937.5 971.35 937.5 973 L 937.5 991 C 937.5 992.65 936.15 994 934.5 994 L 913.5 994 C 911.85 994 910.5 992.65 910.5 991 Z" fill="none" stroke="#C8FB5F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-boxes-1" d="M 918.92 944.33 C 918.92 943.69 919.44 943.17 920.08 943.17 L 928.25 943.17 C 928.89 943.17 929.42 943.69 929.42 944.33 L 929.42 951.33 C 929.42 951.98 928.89 952.5 928.25 952.5 L 920.08 952.5 C 919.44 952.5 918.92 951.98 918.92 951.33 Z" fill="none" stroke="#053C45" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-boxes-2" d="M 930.58 944.33 C 930.58 943.69 931.11 943.17 931.75 943.17 L 939.92 943.17 C 940.56 943.17 941.08 943.69 941.08 944.33 L 941.08 951.33 C 941.08 951.98 940.56 952.5 939.92 952.5 L 931.75 952.5 C 931.11 952.5 930.58 951.98 930.58 951.33 Z" fill="none" stroke="#053C45" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-boxes-3" d="M 924.75 933.83 C 924.75 933.19 925.27 932.67 925.92 932.67 L 934.08 932.67 C 934.73 932.67 935.25 933.19 935.25 933.83 L 935.25 940.83 C 935.25 941.48 934.73 942 934.08 942 L 925.92 942 C 925.27 942 924.75 941.48 924.75 940.83 Z" fill="none" stroke="#053C45" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
   </g>
-  <g id="Ribbon">
-    <path id="Ribbon-Teal" d="M -20 1414.5 C 240 1394.5 420 1594.5 640 1584.5 C 860 1574.5 940 1384.5 1180 1434.5 L 1180 1605.5 C 940 1555.5 860 1745.5 640 1755.5 C 420 1765.5 240 1565.5 -20 1585.5 Z" fill="url(#grad-1)"/>
-    <path id="Ribbon-Orange" d="M -60 1498 C 200 1478 380 1678 600 1668 C 820 1658 900 1468 1140 1518 L 1140 1528 C 900 1478 820 1668 600 1678 C 380 1688 200 1488 -60 1508 Z" fill="#FD7E25"/>
-    <path id="Ribbon-Lime" d="M -60 1310 C 200 1290 380 1490 600 1480 C 820 1470 900 1280 1140 1330 L 1140 1520 C 900 1470 820 1660 600 1670 C 380 1680 200 1480 -60 1500 Z" fill="url(#grad-2)"/>
+  <g id="Deco-Outline">
+    <path id="Deco-Outline-Edge" d="M 988.4 1436 C 988.4 1382.98 1031.38 1340 1084.4 1340 L 1194 1340 C 1247.02 1340 1290 1382.98 1290 1436 L 1290 1684 C 1290 1737.02 1247.02 1780 1194 1780 L 866 1780 C 812.98 1780 770 1737.02 770 1684 L 770 1585.6 C 770 1532.58 812.98 1489.6 866 1489.6 L 948.4 1489.6 C 970.49 1489.6 988.4 1471.69 988.4 1449.6 Z" fill="none" stroke="#FD7E25" stroke-width="64" stroke-linecap="butt" stroke-linejoin="round"/>
+    <path id="Deco-Outline-Body" d="M 988.4 1436 C 988.4 1382.98 1031.38 1340 1084.4 1340 L 1194 1340 C 1247.02 1340 1290 1382.98 1290 1436 L 1290 1684 C 1290 1737.02 1247.02 1780 1194 1780 L 866 1780 C 812.98 1780 770 1737.02 770 1684 L 770 1585.6 C 770 1532.58 812.98 1489.6 866 1489.6 L 948.4 1489.6 C 970.49 1489.6 988.4 1471.69 988.4 1449.6 Z" fill="none" stroke="#053C45" stroke-width="58" stroke-linecap="butt" stroke-linejoin="round"/>
+  </g>
+  <g id="Logo-Lockup-Services">
+    <g id="Logo-Lockup">
+      <g id="Wordmark-AFQ">
+        <path id="Letter-A" d="M 94.08 1712.48 L 100.48 1699.68 L 122.24 1699.68 L 142.72 1669.6 L 183.68 1715.04" fill="none" stroke="#053C45" stroke-width="17.28" stroke-linecap="round" stroke-linejoin="round"/>
+        <path id="Letter-F" d="M 207.04 1715.36 L 207.04 1682.72 C 207.04 1675.1 213.18 1668.96 220.8 1668.96 L 274.88 1668.96 M 207.04 1692 L 263.04 1692" fill="none" stroke="#053C45" stroke-width="17.28" stroke-linecap="round" stroke-linejoin="round"/>
+        <path id="Letter-Q" d="M 297.92 1683.04 C 297.92 1675.08 304.36 1668.64 312.32 1668.64 L 355.2 1668.64 C 363.16 1668.64 369.6 1675.08 369.6 1683.04 L 369.6 1700.96 C 369.6 1708.92 363.16 1715.36 355.2 1715.36 L 312.32 1715.36 C 304.36 1715.36 297.92 1708.92 297.92 1700.96 Z M 360.32 1712.48 L 380.8 1726.56" fill="none" stroke="#053C45" stroke-width="17.28" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text id="Tagline" x="80" y="1749.37" font-family="Inter-Medium" font-size="12" font-weight="500" fill="#053C45" letter-spacing="7.2">ENERGY. ENGINEERED.</text>
+    </g>
+    <path id="Lockup-Divider" d="M 429.76 1660 L 429.76 1730.4" fill="none" stroke="#053C45" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.6"/>
+    <g id="Services">
+      <g id="Services-List">
+        <text id="Services-List-line" x="459.76" y="1675.73" font-family="Inter-Medium" font-size="13" font-weight="500" fill="#053C45" letter-spacing="2.6">SOLAR</text>
+        <text id="Services-List-line-2" x="459.76" y="1693.73" font-family="Inter-Medium" font-size="13" font-weight="500" fill="#053C45" letter-spacing="2.6">STORAGE</text>
+        <text id="Services-List-line-3" x="459.76" y="1711.73" font-family="Inter-Medium" font-size="13" font-weight="500" fill="#053C45" letter-spacing="2.6">ELECTRICAL</text>
+        <text id="Services-List-line-4" x="459.76" y="1729.73" font-family="Inter-Medium" font-size="13" font-weight="500" fill="#053C45" letter-spacing="2.6">ENGINEERING</text>
+      </g>
+    </g>
   </g>
   <g id="Footer">
-    <path id="Footer-Rule" d="M 72 1800 L 1008 1800" fill="none" stroke="#F5F4EB" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.25"/>
-    <text id="Footer-Section" x="72" y="1838.82" font-family="Inter-Regular" font-size="16" font-weight="400" fill="#F5F4EB" opacity="0.75">Ways of working</text>
-    <text id="Footer-Page" x="1008" y="1838.82" font-family="Inter-Medium" font-size="16" font-weight="500" fill="#F5F4EB" text-anchor="end" opacity="0.75">05 / 08</text>
+    <path id="Footer-Rule" d="M 80 1836 L 1000 1836" fill="none" stroke="#053C45" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.2"/>
+    <g id="Footer-Wordmark">
+      <path id="Letter-A-2" d="M 83.96 1876.76 L 85.76 1873.16 L 91.88 1873.16 L 97.64 1864.7 L 109.16 1877.48" fill="none" stroke="#053C45" stroke-width="4.86" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Letter-F-2" d="M 115.73 1877.57 L 115.73 1868.39 C 115.73 1866.25 117.46 1864.52 119.6 1864.52 L 134.81 1864.52 M 115.73 1871 L 131.48 1871" fill="none" stroke="#053C45" stroke-width="4.86" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Letter-Q-2" d="M 141.29 1868.48 C 141.29 1866.24 143.1 1864.43 145.34 1864.43 L 157.4 1864.43 C 159.64 1864.43 161.45 1866.24 161.45 1868.48 L 161.45 1873.52 C 161.45 1875.76 159.64 1877.57 157.4 1877.57 L 145.34 1877.57 C 143.1 1877.57 141.29 1875.76 141.29 1873.52 Z M 158.84 1876.76 L 164.6 1880.72" fill="none" stroke="#053C45" stroke-width="4.86" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <path id="Footer-Divider" d="M 188 1860 L 188 1882" fill="none" stroke="#053C45" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+    <text id="Footer-Profile" x="204" y="1875" font-family="Inter-Medium" font-size="11" font-weight="500" fill="#053C45" letter-spacing="2.42" opacity="0.8">CORPORATE PROFILE 2026</text>
+    <text id="Footer-Section" x="962.42" y="1875" font-family="Inter-Medium" font-size="11" font-weight="500" fill="#053C45" letter-spacing="2.42" text-anchor="end" opacity="0.8">WAYS OF WORKING   |   05</text>
   </g>
 </svg>

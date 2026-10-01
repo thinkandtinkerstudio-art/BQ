@@ -2,7 +2,7 @@
 
 > **ملخص بالعربي**
 >
-> - ده إعادة بناء كاملة للبروفايل (8 صفحات) بمقاس **1080 × 1920** بنفس جرافيكس البراند (AFQ): اللايم، التيل الغامق، الكريمي، البرتقالي، الريبون بثلاث طبقات، التابات المدوّرة، اللوجو المرسوم فيكتور، والأيقونات.
+> - ده إعادة بناء كاملة للبروفايل (9 صفحات، بنفس الـ layout اللي بعتّه: eyebrow chips، عناوين كبيرة بنقطة، صور بـ notch، الريبون عابر الصورة، كروت بأرقام، لوحة لايم، الـ notch outline، وغلاف خلفي) بمقاس **1080 × 1920** بنفس جرافيكس البراند (AFQ): اللايم، التيل الغامق، الكريمي، البرتقالي، الريبون بثلاث طبقات، التابات المدوّرة، اللوجو المرسوم فيكتور، والأيقونات.
 > - **الخلفيات مش هتطلع سودة**: كل شكل ليه لون صريح (hex) جوه الـ SVG، مفيش CSS ولا `<style>` ولا متغيرات ولا transform.
 > - **مفيش ماسكات خالص**: مكان الصورة شكل واحد اسمه `Photo-…__set-image-fill` — تختاره في فيجما وتعمله Fill → Image وتحذف جروب `Placeholder-Art`. دي أنظف طريقة من الماسك ومش بتضرب.
 > - **النصوص كلها قابلة للتعديل** (`<text>`، خط Inter) والأشكال كلها فيكتور، مفيش حاجة Raster.
@@ -19,9 +19,9 @@
 
 | Folder | Contents |
 |---|---|
-| `pages/` | One SVG per page, `01-cover.svg` … `08-contact.svg`, each exactly **1080 × 1920**. Inline hex fills only, editable `<text>` (font-family `Inter`), absolute `M/L/C/Z` paths, no masks, no clipPath, no CSS, no transforms, no rasters. **Use these for Figma.** |
+| `pages/` | One SVG per page, `01-cover.svg` … `09-back-cover.svg`, each exactly **1080 × 1920**. Inline hex fills only, editable `<text>` (font-family `Inter`), absolute `M/L/C/Z` paths, no masks, no clipPath, no CSS, no transforms, no rasters. **Use these for Figma.** |
 | `landscape/` | The **1920 × 1080 (landscape) edition**: `pages/`, `pages-illustrator/`, `previews/`, `spec/`, `figma/` (same structure as the root), plus `AFAQ-Corporate-Profile-1920x1080.ai` and `.pdf`. |
-| `AFAQ-Corporate-Profile-1080x1920.ai` / `.pdf` | Portrait edition as an editable vector Illustrator/PDF file (8 pages = 8 artboards). |
+| `AFAQ-Corporate-Profile-1080x1920.ai` / `.pdf` | Portrait edition as an editable vector Illustrator/PDF file (9 pages = 9 artboards). |
 | `pages-illustrator/` | The same eight pages with PostScript font names (`Inter-Light`, `Inter-Regular`, `Inter-Medium`, `Inter-SemiBold`) so Illustrator resolves every weight. **Use these for Illustrator.** |
 | `previews/` | PNG render of each page, `contact-sheet.png`, and `deck-preview.pdf` (8 pages at 1080 × 1920 px). |
 | `assets/logo/` | AFQ wordmark and "ENERGY. ENGINEERED." lockup in teal / cream / lime / white. |
@@ -51,7 +51,7 @@
 
 ## Import into Adobe Illustrator
 
-**Option A — the .ai file (whole deck, 8 artboards).**
+**Option A — the .ai file (whole deck, 9 portrait / 8 landscape artboards).**
 1. Install the four fonts in `fonts/` (or any Inter build).
 2. File → Open `landscape/AFAQ-Corporate-Profile-1920x1080.ai` (portrait: `AFAQ-Corporate-Profile-1080x1920.ai`). In the "PDF Import Options" dialog set the page range to **All** so every page becomes its own artboard (Illustrator 2020 or later; older versions open one page at a time). Illustrator treats the file as PDF content: every shape is an editable path, gradients are native, and all text is live point text in Inter Light/Regular/Medium/Semi Bold. The `.pdf` next to it is byte-identical and opens the same way.
 3. The file has no layer names (PDF has no layers); if you want named layers, use Option B.
@@ -98,6 +98,10 @@ Edit copy, colours or layout in `tools/deck.py` (portrait) or `tools/deck_landsc
 - The PDF contains **no embedded raster images** — both photo areas are empty placeholders — so there was nothing to extract; the deck provides proper photo slots instead.
 - The PDF used IBM Plex Sans and a navy/green scheme. Per your request the deck follows the AFQ brand boards instead (geometric sans, lime/teal/cream/orange, ribbons and tab panels) and is laid out at 1080 × 1920.
 - Only two strings come from the boards rather than the PDF: "ENERGY. ENGINEERED." (tagline) and the services list "SOLAR / STORAGE / ELECTRICAL / ENGINEERING" in the label tabs. The "Deliverable:" sentences are shown as a label plus the sentence; everything else is the PDF copy word for word.
+
+## Layout
+
+The portrait deck follows the client's layout board (`source/brand-references/afq-layout-board.webp`): numbered eyebrow chips, large light titles ending in a full stop, notched photo frames crossed by the ribbon, number-led cards (the fourth in dark teal with a cut corner), a lime statement panel, dark cards with a cut tab, the decorative notch outline, and a back cover with the ribbon knot. The landscape edition still uses the earlier 16:9 composition; tell me if it should be re-laid out on the same board.
 
 ## Open questions
 

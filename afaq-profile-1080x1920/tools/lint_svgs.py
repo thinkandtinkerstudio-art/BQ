@@ -74,7 +74,7 @@ def bounds_lint(path):
         return min(nums[0::2]) - pad, min(nums[1::2]) - pad, max(nums[0::2]) + pad, max(nums[1::2]) + pad
     for el in root.iter():
         tag = el.tag.replace(NS, ""); i = el.get("id", "")
-        if i.startswith("Ribbon"):
+        if i.startswith(("Ribbon", "Deco")):
             continue
         if tag == "rect":
             b = (float(el.get("x")), float(el.get("y")), float(el.get("x")) + float(el.get("width")), float(el.get("y")) + float(el.get("height")))

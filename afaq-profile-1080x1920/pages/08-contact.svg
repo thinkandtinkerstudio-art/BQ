@@ -2,68 +2,123 @@
 <!-- 08 Contact — AFAQ Corporate Profile, 1080x1920. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
   <defs>
-    <linearGradient id="grad-1" gradientUnits="userSpaceOnUse" x1="-60" y1="0" x2="1140" y2="0"><stop offset="0" stop-color="#0E5560" stop-opacity="1"/><stop offset="1" stop-color="#1F7580" stop-opacity="1"/></linearGradient><linearGradient id="grad-2" gradientUnits="userSpaceOnUse" x1="-60" y1="0" x2="1140" y2="0"><stop offset="0" stop-color="#A4DC3C" stop-opacity="1"/><stop offset="0.35" stop-color="#C8FB5F" stop-opacity="1"/><stop offset="0.55" stop-color="#E9FBB8" stop-opacity="1"/><stop offset="0.75" stop-color="#C8FB5F" stop-opacity="1"/><stop offset="1" stop-color="#A4DC3C" stop-opacity="1"/></linearGradient>
+    <linearGradient id="grad-1" gradientUnits="userSpaceOnUse" x1="0" y1="92" x2="0" y2="822"><stop offset="0" stop-color="#022C32" stop-opacity="1"/><stop offset="1" stop-color="#0E5560" stop-opacity="1"/></linearGradient><linearGradient id="grad-2" gradientUnits="userSpaceOnUse" x1="-60" y1="0" x2="1140" y2="0"><stop offset="0" stop-color="#A4DC3C" stop-opacity="1"/><stop offset="0.35" stop-color="#C8FB5F" stop-opacity="1"/><stop offset="0.55" stop-color="#E9FBB8" stop-opacity="1"/><stop offset="0.75" stop-color="#C8FB5F" stop-opacity="1"/><stop offset="1" stop-color="#A4DC3C" stop-opacity="1"/></linearGradient>
   </defs>
-  <rect id="Background" x="0" y="0" width="1080" height="1920" fill="#053C45"/>
-  <g id="Header">
-    <g id="Logo-Lockup">
-      <g id="Wordmark-AFQ">
-        <path id="Letter-A" d="M 84.32 111.92 L 89.92 100.72 L 108.96 100.72 L 126.88 74.4 L 162.72 114.16" fill="none" stroke="#F5F4EB" stroke-width="15.12" stroke-linecap="round" stroke-linejoin="round"/>
-        <path id="Letter-F" d="M 183.16 114.44 L 183.16 85.88 C 183.16 79.22 188.54 73.84 195.2 73.84 L 242.52 73.84 M 183.16 94 L 232.16 94" fill="none" stroke="#F5F4EB" stroke-width="15.12" stroke-linecap="round" stroke-linejoin="round"/>
-        <path id="Letter-Q" d="M 262.68 86.16 C 262.68 79.2 268.32 73.56 275.28 73.56 L 312.8 73.56 C 319.76 73.56 325.4 79.2 325.4 86.16 L 325.4 101.84 C 325.4 108.8 319.76 114.44 312.8 114.44 L 275.28 114.44 C 268.32 114.44 262.68 108.8 262.68 101.84 Z M 317.28 111.92 L 335.2 124.24" fill="none" stroke="#F5F4EB" stroke-width="15.12" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect id="Background" x="0" y="0" width="1080" height="1920" fill="#F5F4EB"/>
+  <g id="Photo-Farm">
+    <path id="Photo-Farm__set-image-fill" d="M 530 128 C 530 108.12 546.12 92 566 92 L 964 92 C 983.88 92 1000 108.12 1000 128 L 1000 786 C 1000 805.88 983.88 822 964 822 L 116 822 C 96.12 822 80 805.88 80 786 L 80 328 C 80 308.12 96.12 292 116 292 L 496 292 C 514.78 292 530 276.78 530 258 Z" fill="url(#grad-1)"/>
+    <g id="Placeholder-Art--delete-after-placing-photo">
+      <circle id="Sun-Glow" cx="779.2" cy="281.8" r="117.89" fill="#FD7E25" opacity="0.18"/>
+      <circle id="Sun" cx="779.2" cy="281.8" r="62.05" fill="#FD7E25"/>
+      <path id="Mountains-Far" d="M 80 581.1 L 245.6 442.4 L 383.6 478.9 L 558.4 398.6 L 724 471.6 L 871.2 427.8 L 1000 486.2 L 1000 581.1 Z" fill="#1F7580" opacity="0.55"/>
+      <path id="Mountains-Near" d="M 80 581.1 L 190.4 493.5 L 356 544.6 L 503.2 471.6 L 668.8 537.3 L 816 500.8 L 1000 551.9 L 1000 581.1 Z" fill="#053C45" opacity="0.9"/>
+      <g id="Solar-Array">
+        <path id="Panel-1-1" d="M 145.79 573.08 C 146.15 571.46 147.78 570.15 149.44 570.15 L 246.87 570.15 C 248.52 570.15 249.58 571.46 249.22 573.08 L 240.07 614.67 C 239.72 616.29 238.09 617.6 236.43 617.6 L 139 617.6 C 137.34 617.6 136.29 616.29 136.64 614.67 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-1-line" d="M 198.15 570.15 L 187.71 617.6" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-1-2" d="M 263.22 573.08 C 263.58 571.46 265.21 570.15 266.87 570.15 L 364.3 570.15 C 365.95 570.15 367.01 571.46 366.65 573.08 L 357.5 614.67 C 357.15 616.29 355.51 617.6 353.86 617.6 L 256.43 617.6 C 254.77 617.6 253.72 616.29 254.07 614.67 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-2-line" d="M 315.58 570.15 L 305.14 617.6" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-1-3" d="M 380.65 573.08 C 381.01 571.46 382.64 570.15 384.3 570.15 L 481.72 570.15 C 483.38 570.15 484.44 571.46 484.08 573.08 L 474.93 614.67 C 474.57 616.29 472.94 617.6 471.29 617.6 L 373.86 617.6 C 372.2 617.6 371.15 616.29 371.5 614.67 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-3-line" d="M 433.01 570.15 L 422.57 617.6" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-1-4" d="M 498.08 573.08 C 498.44 571.46 500.07 570.15 501.72 570.15 L 599.15 570.15 C 600.81 570.15 601.86 571.46 601.51 573.08 L 592.36 614.67 C 592 616.29 590.37 617.6 588.71 617.6 L 491.29 617.6 C 489.63 617.6 488.57 616.29 488.93 614.67 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-4-line" d="M 550.44 570.15 L 540 617.6" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-1-5" d="M 615.51 573.08 C 615.86 571.46 617.5 570.15 619.15 570.15 L 716.58 570.15 C 718.24 570.15 719.29 571.46 718.94 573.08 L 709.79 614.67 C 709.43 616.29 707.8 617.6 706.14 617.6 L 608.71 617.6 C 607.06 617.6 606 616.29 606.36 614.67 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-5-line" d="M 667.87 570.15 L 657.43 617.6" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-1-6" d="M 732.94 573.08 C 733.29 571.46 734.93 570.15 736.58 570.15 L 834.01 570.15 C 835.67 570.15 836.72 571.46 836.37 573.08 L 827.22 614.67 C 826.86 616.29 825.23 617.6 823.57 617.6 L 726.14 617.6 C 724.49 617.6 723.43 616.29 723.79 614.67 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-6-line" d="M 785.3 570.15 L 774.86 617.6" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-1-7" d="M 850.37 573.08 C 850.72 571.46 852.35 570.15 854.01 570.15 L 951.44 570.15 C 953.1 570.15 954.15 571.46 953.79 573.08 L 944.64 614.67 C 944.29 616.29 942.66 617.6 941 617.6 L 843.57 617.6 C 841.91 617.6 840.86 616.29 841.22 614.67 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-7-line" d="M 902.72 570.15 L 892.29 617.6" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-2-1" d="M 147.4 638.78 C 147.76 637.16 149.39 635.85 151.04 635.85 L 263.05 635.85 C 264.7 635.85 265.76 637.16 265.4 638.78 L 254.64 687.67 C 254.29 689.29 252.66 690.6 251 690.6 L 139 690.6 C 137.34 690.6 136.29 689.29 136.64 687.67 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-2-1-line" d="M 207.04 635.85 L 195 690.6" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-2-2" d="M 285.4 638.78 C 285.76 637.16 287.39 635.85 289.05 635.85 L 401.05 635.85 C 402.7 635.85 403.76 637.16 403.4 638.78 L 392.64 687.67 C 392.29 689.29 390.66 690.6 389 690.6 L 277 690.6 C 275.34 690.6 274.29 689.29 274.64 687.67 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-2-2-line" d="M 345.05 635.85 L 333 690.6" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-2-3" d="M 423.4 638.78 C 423.76 637.16 425.39 635.85 427.05 635.85 L 539.04 635.85 C 540.7 635.85 541.76 637.16 541.4 638.78 L 530.64 687.67 C 530.29 689.29 528.66 690.6 527 690.6 L 415 690.6 C 413.34 690.6 412.29 689.29 412.64 687.67 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-2-3-line" d="M 483.05 635.85 L 471 690.6" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-2-4" d="M 561.4 638.78 C 561.76 637.16 563.39 635.85 565.04 635.85 L 677.04 635.85 C 678.7 635.85 679.76 637.16 679.4 638.78 L 668.64 687.67 C 668.29 689.29 666.66 690.6 665 690.6 L 553 690.6 C 551.34 690.6 550.29 689.29 550.64 687.67 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-2-4-line" d="M 621.04 635.85 L 609 690.6" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-2-5" d="M 699.4 638.78 C 699.76 637.16 701.39 635.85 703.04 635.85 L 815.04 635.85 C 816.7 635.85 817.76 637.16 817.4 638.78 L 806.64 687.67 C 806.29 689.29 804.66 690.6 803 690.6 L 691 690.6 C 689.34 690.6 688.29 689.29 688.64 687.67 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-2-5-line" d="M 759.04 635.85 L 747 690.6" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-2-6" d="M 837.4 638.78 C 837.76 637.16 839.39 635.85 841.04 635.85 L 953.04 635.85 C 954.7 635.85 955.76 637.16 955.4 638.78 L 944.64 687.67 C 944.29 689.29 942.66 690.6 941 690.6 L 829 690.6 C 827.34 690.6 826.29 689.29 826.64 687.67 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-2-6-line" d="M 897.04 635.85 L 885 690.6" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-3-1" d="M 149.81 711.78 C 150.17 710.16 151.8 708.85 153.45 708.85 L 288.25 708.85 C 289.91 708.85 290.97 710.16 290.61 711.78 L 277.44 771.62 C 277.09 773.24 275.46 774.55 273.8 774.55 L 139 774.55 C 137.34 774.55 136.29 773.24 136.64 771.62 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-3-1-line" d="M 220.85 708.85 L 206.4 774.55" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-3-2" d="M 316.61 711.78 C 316.97 710.16 318.6 708.85 320.25 708.85 L 455.05 708.85 C 456.71 708.85 457.77 710.16 457.41 711.78 L 444.24 771.62 C 443.89 773.24 442.26 774.55 440.6 774.55 L 305.8 774.55 C 304.14 774.55 303.09 773.24 303.44 771.62 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-3-2-line" d="M 387.65 708.85 L 373.2 774.55" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-3-3" d="M 483.41 711.78 C 483.77 710.16 485.4 708.85 487.05 708.85 L 621.85 708.85 C 623.51 708.85 624.57 710.16 624.21 711.78 L 611.04 771.62 C 610.69 773.24 609.06 774.55 607.4 774.55 L 472.6 774.55 C 470.94 774.55 469.89 773.24 470.24 771.62 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-3-3-line" d="M 554.45 708.85 L 540 774.55" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-3-4" d="M 650.21 711.78 C 650.57 710.16 652.2 708.85 653.85 708.85 L 788.65 708.85 C 790.31 708.85 791.37 710.16 791.01 711.78 L 777.84 771.62 C 777.49 773.24 775.86 774.55 774.2 774.55 L 639.4 774.55 C 637.74 774.55 636.69 773.24 637.04 771.62 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-3-4-line" d="M 721.25 708.85 L 706.8 774.55" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-3-5" d="M 817.01 711.78 C 817.37 710.16 819 708.85 820.65 708.85 L 955.45 708.85 C 957.11 708.85 958.17 710.16 957.81 711.78 L 944.64 771.62 C 944.29 773.24 942.66 774.55 941 774.55 L 806.2 774.55 C 804.54 774.55 803.49 773.24 803.84 771.62 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-3-5-line" d="M 888.05 708.85 L 873.6 774.55" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
       </g>
-      <text id="Tagline" x="72" y="145" font-family="Inter" font-size="11" font-weight="500" fill="#F5F4EB" letter-spacing="6.6">ENERGY. ENGINEERED.</text>
     </g>
-    <text id="Eyebrow" x="1011.3" y="99.46" font-family="Inter" font-size="15" font-weight="500" fill="#F5F4EB" letter-spacing="3.3" text-anchor="end" opacity="0.85">CORPORATE PROFILE 2026</text>
   </g>
-  <g id="Slogan">
-    <text id="Slogan-line" x="72" y="414.1" font-family="Inter" font-size="80" font-weight="300" fill="#C8FB5F" letter-spacing="-1.6">Innovating today,</text>
-    <text id="Slogan-line-2" x="72" y="504.1" font-family="Inter" font-size="80" font-weight="300" fill="#C8FB5F" letter-spacing="-1.6">sustaining tomorrow</text>
+  <g id="Eyebrow">
+    <rect id="Eyebrow-Pill" x="80" y="100" width="48" height="26" rx="13" fill="#C8FB5F"/>
+    <text id="Eyebrow-Number" x="104" y="117.37" font-family="Inter" font-size="12" font-weight="600" fill="#053C45" text-anchor="middle">07</text>
+    <text id="Eyebrow-Label" x="144" y="117.37" font-family="Inter" font-size="12" font-weight="500" fill="#5A7175" letter-spacing="2.64">CONTACT</text>
   </g>
-  <text id="Contact-Title" x="72" y="594.46" font-family="Inter" font-size="26" font-weight="500" fill="#F5F4EB" opacity="0.7">Contact</text>
+  <text id="Title" x="80" y="210.1" font-family="Inter" font-size="80" font-weight="300" fill="#053C45" letter-spacing="-2.4">Contact.</text>
+  <g id="Ribbon">
+    <path id="Ribbon-Teal" d="M -20 820.5 C 220 800.5 420 860.5 620 850.5 C 800 820.5 960 760.5 1180 780.5 L 1180 879.5 C 960 859.5 800 919.5 620 949.5 C 420 959.5 220 899.5 -20 919.5 Z" fill="#053C45"/>
+    <path id="Ribbon-Orange" d="M -60 868 C 180 848 380 908 580 898 C 760 868 920 808 1140 828 L 1140 838 C 920 818 760 878 580 908 C 380 918 180 858 -60 878 Z" fill="#FD7E25"/>
+    <path id="Ribbon-Lime" d="M -60 760 C 180 740 380 800 580 790 C 760 760 920 700 1140 720 L 1140 830 C 920 810 760 870 580 900 C 380 910 180 850 -60 870 Z" fill="url(#grad-2)"/>
+  </g>
   <g id="Contact-Phone">
-    <circle id="Icon-Disc" cx="106" cy="672" r="34" fill="#C8FB5F"/>
+    <circle id="Icon-Disc" cx="112" cy="1160" r="32" fill="#C8FB5F"/>
     <g id="Icon">
-      <path id="Icon-phone-1" d="M 99.33 660.67 C 99.33 659.33 100 659.33 101.33 659.33 L 104 659.33 L 106 664.67 L 103.33 666.67 C 104.67 670.67 107.33 673.33 111.33 674.67 L 113.33 672 L 118.67 674 L 118.67 676.67 C 118.67 678 118.67 678.67 117.33 678.67 C 107.33 678.67 99.33 670.67 99.33 660.67 Z" fill="none" stroke="#053C45" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-phone-1" d="M 106.17 1150.08 C 106.17 1148.92 106.75 1148.92 107.92 1148.92 L 110.25 1148.92 L 112 1153.58 L 109.67 1155.33 C 110.83 1158.83 113.17 1161.17 116.67 1162.33 L 118.42 1160 L 123.08 1161.75 L 123.08 1164.08 C 123.08 1165.25 123.08 1165.83 121.92 1165.83 C 113.17 1165.83 106.17 1158.83 106.17 1150.08 Z" fill="none" stroke="#053C45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <text id="Label" x="172" y="653.09" font-family="Inter" font-size="14" font-weight="500" fill="#F5F4EB" letter-spacing="2.24" opacity="0.6">PHONE</text>
-    <text id="Value" x="172" y="696.64" font-family="Inter" font-size="32" font-weight="500" fill="#F5F4EB">+968 9190 7789</text>
+    <text id="Label" x="180" y="1139.37" font-family="Inter" font-size="12" font-weight="500" fill="#5A7175" letter-spacing="2.4">PHONE</text>
+    <text id="Value" x="180" y="1187.82" font-family="Inter" font-size="38" font-weight="400" fill="#053C45">+968 9190 7789</text>
+    <path id="Divider" d="M 80 1238 L 1000 1238" fill="none" stroke="#D9DCCF" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
   </g>
   <g id="Contact-Email">
-    <circle id="Icon-Disc-2" cx="106" cy="788" r="34" fill="#C8FB5F"/>
+    <circle id="Icon-Disc-2" cx="112" cy="1310" r="32" fill="#C8FB5F"/>
     <g id="Icon-2">
-      <path id="Icon-mail-1" d="M 93.33 780.67 C 93.33 779.56 94.23 778.67 95.33 778.67 L 116.67 778.67 C 117.77 778.67 118.67 779.56 118.67 780.67 L 118.67 795.33 C 118.67 796.44 117.77 797.33 116.67 797.33 L 95.33 797.33 C 94.23 797.33 93.33 796.44 93.33 795.33 Z" fill="none" stroke="#053C45" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-      <path id="Icon-mail-2" d="M 93.33 780.67 L 106 790 L 118.67 780.67" fill="none" stroke="#053C45" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-mail-1" d="M 100.92 1303.58 C 100.92 1302.62 101.7 1301.83 102.67 1301.83 L 121.33 1301.83 C 122.3 1301.83 123.08 1302.62 123.08 1303.58 L 123.08 1316.42 C 123.08 1317.38 122.3 1318.17 121.33 1318.17 L 102.67 1318.17 C 101.7 1318.17 100.92 1317.38 100.92 1316.42 Z" fill="none" stroke="#053C45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-mail-2" d="M 100.92 1303.58 L 112 1311.75 L 123.08 1303.58" fill="none" stroke="#053C45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <text id="Label-2" x="172" y="769.09" font-family="Inter" font-size="14" font-weight="500" fill="#F5F4EB" letter-spacing="2.24" opacity="0.6">EMAIL</text>
-    <text id="Value-2" x="172" y="812.64" font-family="Inter" font-size="32" font-weight="500" fill="#F5F4EB">afaq@gmail.com</text>
+    <text id="Label-2" x="180" y="1289.37" font-family="Inter" font-size="12" font-weight="500" fill="#5A7175" letter-spacing="2.4">EMAIL</text>
+    <text id="Value-2" x="180" y="1337.82" font-family="Inter" font-size="38" font-weight="400" fill="#053C45">afaq@gmail.com</text>
+    <path id="Divider-2" d="M 80 1388 L 1000 1388" fill="none" stroke="#D9DCCF" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
   </g>
   <g id="Contact-Address">
-    <circle id="Icon-Disc-3" cx="106" cy="904" r="34" fill="#C8FB5F"/>
+    <circle id="Icon-Disc-3" cx="112" cy="1460" r="32" fill="#C8FB5F"/>
     <g id="Icon-3">
-      <path id="Icon-pin-1" d="M 106 916.67 C 106 916.67 96 906.67 96 900 C 96 894.67 100.67 890.67 106 890.67 C 111.33 890.67 116 894.67 116 900 C 116 906.67 106 916.67 106 916.67 Z" fill="none" stroke="#053C45" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-      <path id="Icon-pin-2" d="M 109.33 900 C 109.33 901.84 107.84 903.33 106 903.33 C 104.16 903.33 102.67 901.84 102.67 900 C 102.67 898.16 104.16 896.67 106 896.67 C 107.84 896.67 109.33 898.16 109.33 900 Z" fill="none" stroke="#053C45" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-pin-1" d="M 112 1471.08 C 112 1471.08 103.25 1462.33 103.25 1456.5 C 103.25 1451.83 107.33 1448.33 112 1448.33 C 116.67 1448.33 120.75 1451.83 120.75 1456.5 C 120.75 1462.33 112 1471.08 112 1471.08 Z" fill="none" stroke="#053C45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-pin-2" d="M 114.92 1456.5 C 114.92 1458.11 113.61 1459.42 112 1459.42 C 110.39 1459.42 109.08 1458.11 109.08 1456.5 C 109.08 1454.89 110.39 1453.58 112 1453.58 C 113.61 1453.58 114.92 1454.89 114.92 1456.5 Z" fill="none" stroke="#053C45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <text id="Label-3" x="172" y="885.09" font-family="Inter" font-size="14" font-weight="500" fill="#F5F4EB" letter-spacing="2.24" opacity="0.6">ADDRESS</text>
-    <text id="Value-3" x="172" y="928.64" font-family="Inter" font-size="32" font-weight="500" fill="#F5F4EB">Al Khuwair, behind Zakher Mall, Muscat</text>
+    <text id="Label-3" x="180" y="1439.37" font-family="Inter" font-size="12" font-weight="500" fill="#5A7175" letter-spacing="2.4">ADDRESS</text>
+    <text id="Value-3" x="180" y="1487.82" font-family="Inter" font-size="38" font-weight="400" fill="#053C45">Al Khuwair, behind Zakher Mall, Muscat</text>
   </g>
-  <path id="Rule" d="M 72 1026 L 1008 1026" fill="none" stroke="#F5F4EB" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.2"/>
-  <g id="Logo-Lockup-2">
-    <g id="Wordmark-AFQ-2">
-      <path id="Letter-A-2" d="M 96.2 1172.2 L 107.2 1150.2 L 144.6 1150.2 L 179.8 1098.5 L 250.2 1176.6" fill="none" stroke="#F5F4EB" stroke-width="29.7" stroke-linecap="round" stroke-linejoin="round"/>
-      <path id="Letter-F-2" d="M 290.35 1177.15 L 290.35 1121.05 C 290.35 1107.96 300.91 1097.4 314 1097.4 L 406.95 1097.4 M 290.35 1137 L 386.6 1137" fill="none" stroke="#F5F4EB" stroke-width="29.7" stroke-linecap="round" stroke-linejoin="round"/>
-      <path id="Letter-Q-2" d="M 446.55 1121.6 C 446.55 1107.93 457.63 1096.85 471.3 1096.85 L 545 1096.85 C 558.67 1096.85 569.75 1107.93 569.75 1121.6 L 569.75 1152.4 C 569.75 1166.07 558.67 1177.15 545 1177.15 L 471.3 1177.15 C 457.63 1177.15 446.55 1166.07 446.55 1152.4 Z M 553.8 1172.2 L 589 1196.4" fill="none" stroke="#F5F4EB" stroke-width="29.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <g id="Logo-Lockup-Services">
+    <g id="Logo-Lockup">
+      <g id="Wordmark-AFQ">
+        <path id="Letter-A" d="M 94.08 1692.48 L 100.48 1679.68 L 122.24 1679.68 L 142.72 1649.6 L 183.68 1695.04" fill="none" stroke="#053C45" stroke-width="17.28" stroke-linecap="round" stroke-linejoin="round"/>
+        <path id="Letter-F" d="M 207.04 1695.36 L 207.04 1662.72 C 207.04 1655.1 213.18 1648.96 220.8 1648.96 L 274.88 1648.96 M 207.04 1672 L 263.04 1672" fill="none" stroke="#053C45" stroke-width="17.28" stroke-linecap="round" stroke-linejoin="round"/>
+        <path id="Letter-Q" d="M 297.92 1663.04 C 297.92 1655.08 304.36 1648.64 312.32 1648.64 L 355.2 1648.64 C 363.16 1648.64 369.6 1655.08 369.6 1663.04 L 369.6 1680.96 C 369.6 1688.92 363.16 1695.36 355.2 1695.36 L 312.32 1695.36 C 304.36 1695.36 297.92 1688.92 297.92 1680.96 Z M 360.32 1692.48 L 380.8 1706.56" fill="none" stroke="#053C45" stroke-width="17.28" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text id="Tagline" x="80" y="1729.37" font-family="Inter" font-size="12" font-weight="500" fill="#053C45" letter-spacing="7.2">ENERGY. ENGINEERED.</text>
     </g>
-    <text id="Tagline-2" x="72" y="1235.14" font-family="Inter" font-size="21" font-weight="500" fill="#C8FB5F" letter-spacing="12.6">ENERGY. ENGINEERED.</text>
-  </g>
-  <g id="Ribbon">
-    <path id="Ribbon-Teal" d="M -20 1474.9 C 220 1514.9 380 1394.9 600 1414.9 C 820 1434.9 920 1614.9 1180 1534.9 L 1180 1641.1 C 920 1721.1 820 1541.1 600 1521.1 C 380 1501.1 220 1621.1 -20 1581.1 Z" fill="url(#grad-1)"/>
-    <path id="Ribbon-Orange" d="M -60 1526 C 180 1566 340 1446 560 1466 C 780 1486 880 1666 1140 1586 L 1140 1596 C 880 1676 780 1496 560 1476 C 340 1456 180 1576 -60 1536 Z" fill="#FD7E25"/>
-    <path id="Ribbon-Lime" d="M -60 1410 C 180 1450 340 1330 560 1350 C 780 1370 880 1550 1140 1470 L 1140 1588 C 880 1668 780 1488 560 1468 C 340 1448 180 1568 -60 1528 Z" fill="url(#grad-2)"/>
+    <path id="Lockup-Divider" d="M 429.76 1640 L 429.76 1710.4" fill="none" stroke="#053C45" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.6"/>
+    <g id="Services">
+      <g id="Services-List">
+        <text id="Services-List-line" x="459.76" y="1655.73" font-family="Inter" font-size="13" font-weight="500" fill="#053C45" letter-spacing="2.6">SOLAR</text>
+        <text id="Services-List-line-2" x="459.76" y="1673.73" font-family="Inter" font-size="13" font-weight="500" fill="#053C45" letter-spacing="2.6">STORAGE</text>
+        <text id="Services-List-line-3" x="459.76" y="1691.73" font-family="Inter" font-size="13" font-weight="500" fill="#053C45" letter-spacing="2.6">ELECTRICAL</text>
+        <text id="Services-List-line-4" x="459.76" y="1709.73" font-family="Inter" font-size="13" font-weight="500" fill="#053C45" letter-spacing="2.6">ENGINEERING</text>
+      </g>
+    </g>
   </g>
   <g id="Footer">
-    <path id="Footer-Rule" d="M 72 1800 L 1008 1800" fill="none" stroke="#F5F4EB" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.25"/>
-    <text id="Footer-Section" x="72" y="1838.82" font-family="Inter" font-size="16" font-weight="400" fill="#F5F4EB" opacity="0.75">AFAQ for Energy &amp; Integrated Business</text>
-    <text id="Footer-Page" x="1008" y="1838.82" font-family="Inter" font-size="16" font-weight="500" fill="#F5F4EB" text-anchor="end" opacity="0.75">08 / 08</text>
+    <path id="Footer-Rule" d="M 80 1836 L 1000 1836" fill="none" stroke="#D9DCCF" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+    <g id="Footer-Wordmark">
+      <path id="Letter-A-2" d="M 83.96 1876.76 L 85.76 1873.16 L 91.88 1873.16 L 97.64 1864.7 L 109.16 1877.48" fill="none" stroke="#053C45" stroke-width="4.86" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Letter-F-2" d="M 115.73 1877.57 L 115.73 1868.39 C 115.73 1866.25 117.46 1864.52 119.6 1864.52 L 134.81 1864.52 M 115.73 1871 L 131.48 1871" fill="none" stroke="#053C45" stroke-width="4.86" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Letter-Q-2" d="M 141.29 1868.48 C 141.29 1866.24 143.1 1864.43 145.34 1864.43 L 157.4 1864.43 C 159.64 1864.43 161.45 1866.24 161.45 1868.48 L 161.45 1873.52 C 161.45 1875.76 159.64 1877.57 157.4 1877.57 L 145.34 1877.57 C 143.1 1877.57 141.29 1875.76 141.29 1873.52 Z M 158.84 1876.76 L 164.6 1880.72" fill="none" stroke="#053C45" stroke-width="4.86" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <path id="Footer-Divider" d="M 188 1860 L 188 1882" fill="none" stroke="#053C45" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+    <text id="Footer-Profile" x="204" y="1875" font-family="Inter" font-size="11" font-weight="500" fill="#053C45" letter-spacing="2.42" opacity="0.8">CORPORATE PROFILE 2026</text>
+    <text id="Footer-Section" x="962.42" y="1875" font-family="Inter" font-size="11" font-weight="500" fill="#053C45" letter-spacing="2.42" text-anchor="end" opacity="0.8">CONTACT   |   08</text>
   </g>
 </svg>
