@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 04 Scope of work — AFAQ Corporate Profile, 1920x1080. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <rect id="Background" x="0" y="0" width="1920" height="1080" fill="#C8FB5F"/>
+  <g id="Header">
+    <g id="Logo-Lockup">
+      <g id="Wordmark-AFQ">
+        <path id="Letter-A" d="M 106.56 95.36 L 111.36 85.76 L 127.68 85.76 L 143.04 63.2 L 173.76 97.28" fill="none" stroke="#03343D" stroke-width="12.96" stroke-linecap="round" stroke-linejoin="round"/>
+        <path id="Letter-F" d="M 191.28 97.52 L 191.28 73.04 C 191.28 67.33 195.89 62.72 201.6 62.72 L 242.16 62.72 M 191.28 80 L 233.28 80" fill="none" stroke="#03343D" stroke-width="12.96" stroke-linecap="round" stroke-linejoin="round"/>
+        <path id="Letter-Q" d="M 259.44 73.28 C 259.44 67.31 264.27 62.48 270.24 62.48 L 302.4 62.48 C 308.37 62.48 313.2 67.31 313.2 73.28 L 313.2 86.72 C 313.2 92.69 308.37 97.52 302.4 97.52 L 270.24 97.52 C 264.27 97.52 259.44 92.69 259.44 86.72 Z M 306.24 95.36 L 321.6 105.92" fill="none" stroke="#03343D" stroke-width="12.96" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text id="Tagline" x="96" y="127" font-family="Inter" font-size="11" font-weight="500" fill="#03343D" letter-spacing="6.12">ENERGY. ENGINEERED.</text>
+    </g>
+    <text id="Eyebrow" x="1827.08" y="85.09" font-family="Inter" font-size="14" font-weight="500" fill="#053C45" letter-spacing="3.08" text-anchor="end" opacity="0.8">CORPORATE PROFILE 2026</text>
+  </g>
+  <g id="Connectors">
+    <path id="Connector-1" d="M 152 478 L 528 478" fill="none" stroke="#053C45" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+    <path id="Connector-2" d="M 592 478 L 968 478" fill="none" stroke="#053C45" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+    <path id="Connector-3" d="M 1032 478 L 1408 478" fill="none" stroke="#053C45" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+  </g>
+  <text id="Title" x="96" y="248.28" font-family="Inter" font-size="64" font-weight="300" fill="#053C45" letter-spacing="-1.28">Scope of work</text>
+  <text id="Subtitle" x="96" y="300" font-family="Inter" font-size="22" font-weight="400" fill="#053C45" opacity="0.85">The project sets the scope, from supply alone to full operation.</text>
+  <g id="Step-01">
+    <circle id="Node" cx="120" cy="478" r="24" fill="#053C45"/>
+    <text id="Node-Number" x="120" y="483.82" font-family="Inter" font-size="16" font-weight="600" fill="#C8FB5F" text-anchor="middle">01</text>
+    <text id="Step-Title" x="96" y="554.19" font-family="Inter" font-size="28" font-weight="600" fill="#053C45">Study and design</text>
+    <g id="Step-Body">
+      <text id="Step-Body-line" x="96" y="594.28" font-family="Inter" font-size="20" font-weight="400" fill="#053C45" opacity="0.85">Load analysis and consumption data, a</text>
+      <text id="Step-Body-line-2" x="96" y="624.28" font-family="Inter" font-size="20" font-weight="400" fill="#053C45" opacity="0.85">site survey, system sizing and placement,</text>
+      <text id="Step-Body-line-3" x="96" y="654.28" font-family="Inter" font-size="20" font-weight="400" fill="#053C45" opacity="0.85">and the expected annual yield.</text>
+    </g>
+    <rect id="Deliverable-Box" x="96" y="678" width="408" height="136" rx="16" fill="#F5F4EB"/>
+    <text id="Deliverable-Label" x="120" y="706.37" font-family="Inter" font-size="12" font-weight="500" fill="#B04C0E" letter-spacing="1.92">DELIVERABLE</text>
+    <g id="Deliverable-Text">
+      <text id="Deliverable-Text-line" x="120" y="737.55" font-family="Inter" font-size="18" font-weight="400" fill="#053C45">A report covering system capacity,</text>
+      <text id="Deliverable-Text-line-2" x="120" y="763.55" font-family="Inter" font-size="18" font-weight="400" fill="#053C45">expected annual yield and estimated</text>
+      <text id="Deliverable-Text-line-3" x="120" y="789.55" font-family="Inter" font-size="18" font-weight="400" fill="#053C45">cost.</text>
+    </g>
+  </g>
+  <g id="Step-02">
+    <circle id="Node-2" cx="560" cy="478" r="24" fill="#053C45"/>
+    <text id="Node-Number-2" x="560" y="483.82" font-family="Inter" font-size="16" font-weight="600" fill="#C8FB5F" text-anchor="middle">02</text>
+    <text id="Step-Title-2" x="536" y="554.19" font-family="Inter" font-size="28" font-weight="600" fill="#053C45">Supply</text>
+    <g id="Step-Body-2">
+      <text id="Step-Body-line-4" x="536" y="594.28" font-family="Inter" font-size="20" font-weight="400" fill="#053C45" opacity="0.85">PV modules, batteries, inverters and</text>
+      <text id="Step-Body-line-5" x="536" y="624.28" font-family="Inter" font-size="20" font-weight="400" fill="#053C45" opacity="0.85">electrical equipment, with manufacturer</text>
+      <text id="Step-Body-line-6" x="536" y="654.28" font-family="Inter" font-size="20" font-weight="400" fill="#053C45" opacity="0.85">warranties.</text>
+    </g>
+    <rect id="Deliverable-Box-2" x="536" y="678" width="408" height="136" rx="16" fill="#F5F4EB"/>
+    <text id="Deliverable-Label-2" x="560" y="706.37" font-family="Inter" font-size="12" font-weight="500" fill="#B04C0E" letter-spacing="1.92">DELIVERABLE</text>
+    <g id="Deliverable-Text-2">
+      <text id="Deliverable-Text-line-4" x="560" y="737.55" font-family="Inter" font-size="18" font-weight="400" fill="#053C45">A component list with specifications,</text>
+      <text id="Deliverable-Text-line-5" x="560" y="763.55" font-family="Inter" font-size="18" font-weight="400" fill="#053C45">source and warranty terms.</text>
+    </g>
+  </g>
+  <g id="Step-03">
+    <circle id="Node-3" cx="1000" cy="478" r="24" fill="#053C45"/>
+    <text id="Node-Number-3" x="1000" y="483.82" font-family="Inter" font-size="16" font-weight="600" fill="#C8FB5F" text-anchor="middle">03</text>
+    <text id="Step-Title-3" x="976" y="554.19" font-family="Inter" font-size="28" font-weight="600" fill="#053C45">Installation and connection</text>
+    <g id="Step-Body-3">
+      <text id="Step-Body-line-7" x="976" y="594.28" font-family="Inter" font-size="20" font-weight="400" fill="#053C45" opacity="0.85">Installation, electrical works, and</text>
+      <text id="Step-Body-line-8" x="976" y="624.28" font-family="Inter" font-size="20" font-weight="400" fill="#053C45" opacity="0.85">grid-tied, off-grid or hybrid connection.</text>
+    </g>
+    <rect id="Deliverable-Box-3" x="976" y="678" width="408" height="136" rx="16" fill="#F5F4EB"/>
+    <text id="Deliverable-Label-3" x="1000" y="706.37" font-family="Inter" font-size="12" font-weight="500" fill="#B04C0E" letter-spacing="1.92">DELIVERABLE</text>
+    <g id="Deliverable-Text-3">
+      <text id="Deliverable-Text-line-6" x="1000" y="737.55" font-family="Inter" font-size="18" font-weight="400" fill="#053C45">A working system and a testing and</text>
+      <text id="Deliverable-Text-line-7" x="1000" y="763.55" font-family="Inter" font-size="18" font-weight="400" fill="#053C45">commissioning record.</text>
+    </g>
+  </g>
+  <g id="Step-04">
+    <circle id="Node-4" cx="1440" cy="478" r="24" fill="#053C45"/>
+    <text id="Node-Number-4" x="1440" y="483.82" font-family="Inter" font-size="16" font-weight="600" fill="#C8FB5F" text-anchor="middle">04</text>
+    <text id="Step-Title-4" x="1416" y="554.19" font-family="Inter" font-size="28" font-weight="600" fill="#053C45">Operation and monitoring</text>
+    <g id="Step-Body-4">
+      <text id="Step-Body-line-9" x="1416" y="594.28" font-family="Inter" font-size="20" font-weight="400" fill="#053C45" opacity="0.85">Performance monitoring and maintenance</text>
+      <text id="Step-Body-line-10" x="1416" y="624.28" font-family="Inter" font-size="20" font-weight="400" fill="#053C45" opacity="0.85">under an operation and maintenance</text>
+      <text id="Step-Body-line-11" x="1416" y="654.28" font-family="Inter" font-size="20" font-weight="400" fill="#053C45" opacity="0.85">contract.</text>
+    </g>
+    <rect id="Deliverable-Box-4" x="1416" y="678" width="408" height="136" rx="16" fill="#F5F4EB"/>
+    <text id="Deliverable-Label-4" x="1440" y="706.37" font-family="Inter" font-size="12" font-weight="500" fill="#B04C0E" letter-spacing="1.92">DELIVERABLE</text>
+    <g id="Deliverable-Text-4">
+      <text id="Deliverable-Text-line-8" x="1440" y="737.55" font-family="Inter" font-size="18" font-weight="400" fill="#053C45">A performance report comparing actual</text>
+      <text id="Deliverable-Text-line-9" x="1440" y="763.55" font-family="Inter" font-size="18" font-weight="400" fill="#053C45">output against the design figure.</text>
+    </g>
+  </g>
+  <g id="Footer">
+    <path id="Footer-Rule" d="M 96 1000 L 1824 1000" fill="none" stroke="#053C45" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.25"/>
+    <text id="Footer-Section" x="96" y="1033.46" font-family="Inter" font-size="15" font-weight="400" fill="#053C45" opacity="0.8">Scope of work</text>
+    <text id="Footer-Page" x="1824" y="1033.46" font-family="Inter" font-size="15" font-weight="500" fill="#053C45" text-anchor="end" opacity="0.8">04 / 08</text>
+  </g>
+</svg>

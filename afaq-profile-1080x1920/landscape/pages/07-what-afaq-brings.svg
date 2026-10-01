@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 07 What AFAQ brings — AFAQ Corporate Profile, 1920x1080. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="grad-1" gradientUnits="userSpaceOnUse" x1="0" y1="304" x2="0" y2="960"><stop offset="0" stop-color="#0E5560" stop-opacity="1"/><stop offset="1" stop-color="#1F7580" stop-opacity="1"/></linearGradient>
+  </defs>
+  <rect id="Background" x="0" y="0" width="1920" height="1080" fill="#053C45"/>
+  <g id="Header">
+    <g id="Logo-Lockup">
+      <g id="Wordmark-AFQ">
+        <path id="Letter-A" d="M 106.56 95.36 L 111.36 85.76 L 127.68 85.76 L 143.04 63.2 L 173.76 97.28" fill="none" stroke="#F5F4EB" stroke-width="12.96" stroke-linecap="round" stroke-linejoin="round"/>
+        <path id="Letter-F" d="M 191.28 97.52 L 191.28 73.04 C 191.28 67.33 195.89 62.72 201.6 62.72 L 242.16 62.72 M 191.28 80 L 233.28 80" fill="none" stroke="#F5F4EB" stroke-width="12.96" stroke-linecap="round" stroke-linejoin="round"/>
+        <path id="Letter-Q" d="M 259.44 73.28 C 259.44 67.31 264.27 62.48 270.24 62.48 L 302.4 62.48 C 308.37 62.48 313.2 67.31 313.2 73.28 L 313.2 86.72 C 313.2 92.69 308.37 97.52 302.4 97.52 L 270.24 97.52 C 264.27 97.52 259.44 92.69 259.44 86.72 Z M 306.24 95.36 L 321.6 105.92" fill="none" stroke="#F5F4EB" stroke-width="12.96" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text id="Tagline" x="96" y="127" font-family="Inter" font-size="11" font-weight="500" fill="#F5F4EB" letter-spacing="6.12">ENERGY. ENGINEERED.</text>
+    </g>
+    <text id="Eyebrow" x="1827.08" y="85.09" font-family="Inter" font-size="14" font-weight="500" fill="#F5F4EB" letter-spacing="3.08" text-anchor="end" opacity="0.85">CORPORATE PROFILE 2026</text>
+  </g>
+  <text id="Title" x="96" y="248.28" font-family="Inter" font-size="64" font-weight="300" fill="#F5F4EB" letter-spacing="-1.28">What AFAQ brings</text>
+  <g id="Item-01">
+    <text id="Number" x="96" y="326.18" font-family="Inter" font-size="17" font-weight="600" fill="#C8FB5F">01</text>
+    <g id="Icon">
+      <path id="Icon-factory-1" d="M 1043.75 336.25 L 1043.75 321.25 L 1051.25 325.75 L 1051.25 321.25 L 1058.75 325.75 L 1058.75 321.25 L 1066.25 325.75 L 1066.25 310.75 L 1072.25 310.75 L 1072.25 336.25 Z" fill="none" stroke="#C8FB5F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-factory-2" d="M 1049 331 L 1052 331 M 1056.5 331 L 1059.5 331 M 1064 331 L 1067 331" fill="none" stroke="#C8FB5F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text id="Item-Title" x="160" y="329.46" font-family="Inter" font-size="26" font-weight="600" fill="#F5F4EB">Supply from a factory in Oman</text>
+    <text id="Item-Body" x="160" y="362.05" font-family="Inter" font-size="18" font-weight="400" fill="#F5F4EB" opacity="0.8">AACE modules are manufactured in Oman, which shortens supply time compared with importing.</text>
+    <path id="Divider" d="M 96 385 L 1076 385" fill="none" stroke="#F5F4EB" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.15"/>
+  </g>
+  <g id="Item-02">
+    <text id="Number-2" x="96" y="424.18" font-family="Inter" font-size="17" font-weight="600" fill="#C8FB5F">02</text>
+    <g id="Icon-2">
+      <path id="Icon-shield-1" d="M 1058 405.75 L 1070 410.25 L 1070 419.25 C 1070 426.75 1064.75 432 1058 434.25 C 1051.25 432 1046 426.75 1046 419.25 L 1046 410.25 Z" fill="none" stroke="#C8FB5F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-shield-2" d="M 1052.75 420 L 1056.5 423.75 L 1063.25 416.25" fill="none" stroke="#C8FB5F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text id="Item-Title-2" x="160" y="427.46" font-family="Inter" font-size="26" font-weight="600" fill="#F5F4EB">Warranty handled inside Oman</text>
+    <text id="Item-Body-2" x="160" y="460.05" font-family="Inter" font-size="18" font-weight="400" fill="#F5F4EB" opacity="0.8">AFAQ processes module warranty claims locally, without sending them to a manufacturer abroad.</text>
+    <path id="Divider-2" d="M 96 483 L 1076 483" fill="none" stroke="#F5F4EB" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.15"/>
+  </g>
+  <g id="Item-03">
+    <text id="Number-3" x="96" y="522.18" font-family="Inter" font-size="17" font-weight="600" fill="#C8FB5F">03</text>
+    <g id="Icon-3">
+      <path id="Icon-badge-1" d="M 1066.25 513.5 C 1066.25 518.06 1062.56 521.75 1058 521.75 C 1053.44 521.75 1049.75 518.06 1049.75 513.5 C 1049.75 508.94 1053.44 505.25 1058 505.25 C 1062.56 505.25 1066.25 508.94 1066.25 513.5 Z" fill="none" stroke="#C8FB5F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-badge-2" d="M 1052.75 520.25 L 1050.5 532.25 L 1058 528.5 L 1065.5 532.25 L 1063.25 520.25" fill="none" stroke="#C8FB5F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text id="Item-Title-3" x="160" y="525.46" font-family="Inter" font-size="26" font-weight="600" fill="#F5F4EB">In-country value</text>
+    <text id="Item-Body-3" x="160" y="558.05" font-family="Inter" font-size="18" font-weight="400" fill="#F5F4EB" opacity="0.8">Modules made in Oman support local content requirements in tenders and government projects.</text>
+    <path id="Divider-3" d="M 96 581 L 1076 581" fill="none" stroke="#F5F4EB" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.15"/>
+  </g>
+  <g id="Item-04">
+    <text id="Number-4" x="96" y="620.18" font-family="Inter" font-size="17" font-weight="600" fill="#C8FB5F">04</text>
+    <g id="Icon-4">
+      <path id="Icon-document-1" d="M 1048.25 601.75 L 1061.75 601.75 L 1069.25 609.25 L 1069.25 630.25 L 1048.25 630.25 Z M 1061.75 601.75 L 1061.75 609.25 L 1069.25 609.25" fill="none" stroke="#C8FB5F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-document-2" d="M 1052.75 616.75 L 1064.75 616.75 M 1052.75 622 L 1061.75 622" fill="none" stroke="#C8FB5F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text id="Item-Title-4" x="160" y="623.46" font-family="Inter" font-size="26" font-weight="600" fill="#F5F4EB">Direct supply agreements</text>
+    <g id="Item-Body-4">
+      <text id="Item-Body-line" x="160" y="656.05" font-family="Inter" font-size="18" font-weight="400" fill="#F5F4EB" opacity="0.8">Written agreements with module, battery and inverter suppliers, covering availability and</text>
+      <text id="Item-Body-line-2" x="160" y="683.05" font-family="Inter" font-size="18" font-weight="400" fill="#F5F4EB" opacity="0.8">manufacturer warranties.</text>
+    </g>
+    <path id="Divider-4" d="M 96 706 L 1076 706" fill="none" stroke="#F5F4EB" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.15"/>
+  </g>
+  <g id="Item-05">
+    <text id="Number-5" x="96" y="745.18" font-family="Inter" font-size="17" font-weight="600" fill="#C8FB5F">05</text>
+    <g id="Icon-5">
+      <path id="Icon-team-1" d="M 1057.25 734.25 C 1057.25 736.73 1055.23 738.75 1052.75 738.75 C 1050.27 738.75 1048.25 736.73 1048.25 734.25 C 1048.25 731.77 1050.27 729.75 1052.75 729.75 C 1055.23 729.75 1057.25 731.77 1057.25 734.25 Z" fill="none" stroke="#C8FB5F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-team-2" d="M 1067.75 735.75 C 1067.75 737.82 1066.07 739.5 1064 739.5 C 1061.93 739.5 1060.25 737.82 1060.25 735.75 C 1060.25 733.68 1061.93 732 1064 732 C 1066.07 732 1067.75 733.68 1067.75 735.75 Z" fill="none" stroke="#C8FB5F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-team-3" d="M 1043.75 753.75 C 1043.75 746.25 1047.5 743.25 1052.75 743.25 C 1058 743.25 1061.75 746.25 1061.75 753.75 Z" fill="none" stroke="#C8FB5F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-team-4" d="M 1063.25 753.75 C 1067 753.75 1072.25 753.75 1072.25 753.75 C 1072.25 748.5 1070 744.75 1064.75 744.75" fill="none" stroke="#C8FB5F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text id="Item-Title-5" x="160" y="748.46" font-family="Inter" font-size="26" font-weight="600" fill="#F5F4EB">Delivery team</text>
+    <g id="Item-Body-5">
+      <text id="Item-Body-line-3" x="160" y="781.05" font-family="Inter" font-size="18" font-weight="400" fill="#F5F4EB" opacity="0.8">An engineering team for design and supervision, and a field crew for installation and</text>
+      <text id="Item-Body-line-4" x="160" y="808.05" font-family="Inter" font-size="18" font-weight="400" fill="#F5F4EB" opacity="0.8">commissioning.</text>
+    </g>
+  </g>
+  <g id="Photo-Strip">
+    <path id="Photo-Strip__set-image-fill" d="M 1172 332 C 1172 316.54 1184.54 304 1200 304 L 1796 304 C 1811.46 304 1824 316.54 1824 332 L 1824 932 C 1824 947.46 1811.46 960 1796 960 L 1200 960 C 1184.54 960 1172 947.46 1172 932 Z" fill="url(#grad-1)" stroke="#C8FB5F" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round"/>
+    <g id="Placeholder-Art--delete-after-placing-photo">
+      <circle id="Sun-Glow" cx="1328.48" cy="474.56" r="105.3" fill="#FD7E25" opacity="0.18"/>
+      <circle id="Sun" cx="1328.48" cy="474.56" r="55.42" fill="#FD7E25"/>
+      <path id="Mountains-Far" d="M 1172 743.52 L 1289.36 618.88 L 1387.16 651.68 L 1511.04 579.52 L 1628.4 645.12 L 1732.72 605.76 L 1824 658.24 L 1824 743.52 Z" fill="#1F7580" opacity="0.55"/>
+      <path id="Mountains-Near" d="M 1172 743.52 L 1250.24 664.8 L 1367.6 710.72 L 1471.92 645.12 L 1589.28 704.16 L 1693.6 671.36 L 1824 717.28 L 1824 743.52 Z" fill="#053C45" opacity="0.9"/>
+      <g id="Transmission-Line">
+        <path id="Pylon-1" d="M 1277.09 809.81 L 1240.27 926.4 M 1277.09 809.81 L 1313.91 926.4 M 1249.48 895.72 L 1304.7 895.72 M 1261.75 858.9 L 1292.43 858.9 M 1228 834.35 L 1326.18 834.35 M 1228 834.35 L 1237.2 819.01 M 1326.18 834.35 L 1316.98 819.01" fill="none" stroke="#C8FB5F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+        <path id="Pylon-2" d="M 1498 809.81 L 1461.18 926.4 M 1498 809.81 L 1534.82 926.4 M 1470.39 895.72 L 1525.61 895.72 M 1482.66 858.9 L 1513.34 858.9 M 1448.91 834.35 L 1547.09 834.35 M 1448.91 834.35 L 1458.11 819.01 M 1547.09 834.35 L 1537.89 819.01" fill="none" stroke="#C8FB5F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+        <path id="Pylon-3" d="M 1718.91 809.81 L 1682.09 926.4 M 1718.91 809.81 L 1755.73 926.4 M 1691.3 895.72 L 1746.52 895.72 M 1703.57 858.9 L 1734.25 858.9 M 1669.82 834.35 L 1768 834.35 M 1669.82 834.35 L 1679.02 819.01 M 1768 834.35 L 1758.8 819.01" fill="none" stroke="#C8FB5F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+        <path id="Cable-1" d="M 1326.18 834.35 C 1363 849.08 1412.09 849.08 1448.91 834.35" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.6"/>
+        <path id="Cable-2" d="M 1547.09 834.35 C 1583.91 849.08 1633 849.08 1669.82 834.35" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.6"/>
+      </g>
+    </g>
+  </g>
+  <g id="Footer">
+    <path id="Footer-Rule" d="M 96 1000 L 1824 1000" fill="none" stroke="#F5F4EB" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.25"/>
+    <text id="Footer-Section" x="96" y="1033.46" font-family="Inter" font-size="15" font-weight="400" fill="#F5F4EB" opacity="0.75">What AFAQ brings</text>
+    <text id="Footer-Page" x="1824" y="1033.46" font-family="Inter" font-size="15" font-weight="500" fill="#F5F4EB" text-anchor="end" opacity="0.75">07 / 08</text>
+  </g>
+</svg>

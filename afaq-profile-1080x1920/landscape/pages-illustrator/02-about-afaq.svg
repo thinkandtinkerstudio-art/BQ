@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 02 About AFAQ — AFAQ Corporate Profile, 1920x1080. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="grad-1" gradientUnits="userSpaceOnUse" x1="0" y1="160" x2="0" y2="920"><stop offset="0" stop-color="#0E5560" stop-opacity="1"/><stop offset="1" stop-color="#1F7580" stop-opacity="1"/></linearGradient>
+  </defs>
+  <rect id="Background" x="0" y="0" width="1920" height="1080" fill="#053C45"/>
+  <g id="Header">
+    <g id="Logo-Lockup">
+      <g id="Wordmark-AFQ">
+        <path id="Letter-A" d="M 106.56 95.36 L 111.36 85.76 L 127.68 85.76 L 143.04 63.2 L 173.76 97.28" fill="none" stroke="#F5F4EB" stroke-width="12.96" stroke-linecap="round" stroke-linejoin="round"/>
+        <path id="Letter-F" d="M 191.28 97.52 L 191.28 73.04 C 191.28 67.33 195.89 62.72 201.6 62.72 L 242.16 62.72 M 191.28 80 L 233.28 80" fill="none" stroke="#F5F4EB" stroke-width="12.96" stroke-linecap="round" stroke-linejoin="round"/>
+        <path id="Letter-Q" d="M 259.44 73.28 C 259.44 67.31 264.27 62.48 270.24 62.48 L 302.4 62.48 C 308.37 62.48 313.2 67.31 313.2 73.28 L 313.2 86.72 C 313.2 92.69 308.37 97.52 302.4 97.52 L 270.24 97.52 C 264.27 97.52 259.44 92.69 259.44 86.72 Z M 306.24 95.36 L 321.6 105.92" fill="none" stroke="#F5F4EB" stroke-width="12.96" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text id="Tagline" x="96" y="127" font-family="Inter-Medium" font-size="11" font-weight="500" fill="#F5F4EB" letter-spacing="6.12">ENERGY. ENGINEERED.</text>
+    </g>
+    <text id="Eyebrow" x="1827.08" y="85.09" font-family="Inter-Medium" font-size="14" font-weight="500" fill="#F5F4EB" letter-spacing="3.08" text-anchor="end" opacity="0.85">CORPORATE PROFILE 2026</text>
+  </g>
+  <text id="Title" x="96" y="248.28" font-family="Inter-Light" font-size="64" font-weight="300" fill="#F5F4EB" letter-spacing="-1.28">About AFAQ</text>
+  <rect id="Accent-Rule" x="96" y="278" width="72" height="6" rx="3" fill="#C8FB5F"/>
+  <g id="Body-1">
+    <text id="Body-1-line" x="96" y="345.87" font-family="Inter-Regular" font-size="23" font-weight="400" fill="#F5F4EB" opacity="0.9">AFAQ for Energy &amp; Integrated Business is an Omani company based in</text>
+    <text id="Body-1-line-2" x="96" y="380.87" font-family="Inter-Regular" font-size="23" font-weight="400" fill="#F5F4EB" opacity="0.9">Muscat. It works in solar power, energy storage and the electrical systems</text>
+    <text id="Body-1-line-3" x="96" y="415.87" font-family="Inter-Regular" font-size="23" font-weight="400" fill="#F5F4EB" opacity="0.9">that go with them.</text>
+  </g>
+  <g id="Body-2">
+    <text id="Body-2-line" x="96" y="472.87" font-family="Inter-Regular" font-size="23" font-weight="400" fill="#F5F4EB" opacity="0.9">The company designs photovoltaic systems, supplies their components,</text>
+    <text id="Body-2-line-2" x="96" y="507.87" font-family="Inter-Regular" font-size="23" font-weight="400" fill="#F5F4EB" opacity="0.9">installs them and brings them into operation, at sizes ranging from</text>
+    <text id="Body-2-line-3" x="96" y="542.87" font-family="Inter-Regular" font-size="23" font-weight="400" fill="#F5F4EB" opacity="0.9">building systems to project plants.</text>
+  </g>
+  <g id="Body-3">
+    <text id="Body-3-line" x="96" y="599.87" font-family="Inter-Regular" font-size="23" font-weight="400" fill="#F5F4EB" opacity="0.9">AFAQ works directly with facility owners, and with contractors and</text>
+    <text id="Body-3-line-2" x="96" y="634.87" font-family="Inter-Regular" font-size="23" font-weight="400" fill="#F5F4EB" opacity="0.9">developers inside their own projects.</text>
+  </g>
+  <g id="Photo-Site">
+    <path id="Photo-Site__set-image-fill" d="M 1016 196 C 1016 176.12 1032.12 160 1052 160 L 1788 160 C 1807.88 160 1824 176.12 1824 196 L 1824 884 C 1824 903.88 1807.88 920 1788 920 L 1352 920 C 1332.12 920 1316 903.88 1316 884 L 1316 804 C 1316 792.95 1307.05 784 1296 784 L 1052 784 C 1032.12 784 1016 767.88 1016 748 Z" fill="url(#grad-1)" stroke="#C8FB5F" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round"/>
+    <g id="Placeholder-Art--delete-after-placing-photo">
+      <circle id="Sun-Glow" cx="1209.92" cy="357.6" r="122.74" fill="#FD7E25" opacity="0.18"/>
+      <circle id="Sun" cx="1209.92" cy="357.6" r="64.6" fill="#FD7E25"/>
+      <path id="Mountains-Far" d="M 1016 669.2 L 1161.44 524.8 L 1282.64 562.8 L 1436.16 479.2 L 1581.6 555.2 L 1710.88 509.6 L 1824 570.4 L 1824 669.2 Z" fill="#1F7580" opacity="0.55"/>
+      <path id="Mountains-Near" d="M 1016 669.2 L 1112.96 578 L 1258.4 631.2 L 1387.68 555.2 L 1533.12 623.6 L 1662.4 585.6 L 1824 638.8 L 1824 669.2 Z" fill="#053C45" opacity="0.9"/>
+      <g id="Battery-Cabinets">
+        <rect id="Plinth" x="1060" y="858" width="720" height="12" rx="4" fill="#022C32" opacity="0.9"/>
+        <path id="Cabinet-3" d="M 1434 646 C 1434 640.48 1438.48 636 1444 636 L 1577 636 C 1582.52 636 1587 640.48 1587 646 L 1587 854 C 1587 859.52 1582.52 864 1577 864 L 1444 864 C 1438.48 864 1434 859.52 1434 854 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Cabinet-3-vent-1" d="M 1461.54 704.4 L 1559.46 704.4" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Cabinet-3-vent-2" d="M 1461.54 736.32 L 1559.46 736.32" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Cabinet-3-vent-3" d="M 1461.54 768.24 L 1559.46 768.24" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <circle id="Cabinet-3-led" cx="1510.5" cy="667.92" r="4" fill="#C8FB5F"/>
+        <path id="Cabinet-3-door" d="M 1510.5 690.72 L 1510.5 841.2" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.25"/>
+        <path id="Cabinet-4" d="M 1615 646 C 1615 640.48 1619.48 636 1625 636 L 1758 636 C 1763.52 636 1768 640.48 1768 646 L 1768 854 C 1768 859.52 1763.52 864 1758 864 L 1625 864 C 1619.48 864 1615 859.52 1615 854 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Cabinet-4-vent-1" d="M 1642.54 704.4 L 1740.46 704.4" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Cabinet-4-vent-2" d="M 1642.54 736.32 L 1740.46 736.32" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Cabinet-4-vent-3" d="M 1642.54 768.24 L 1740.46 768.24" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <circle id="Cabinet-4-led" cx="1691.5" cy="667.92" r="4" fill="#C8FB5F"/>
+        <path id="Cabinet-4-door" d="M 1691.5 690.72 L 1691.5 841.2" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.25"/>
+      </g>
+    </g>
+  </g>
+  <g id="Services-Tab">
+    <rect id="Services-Tab-Shape" x="1016" y="800" width="284" height="120" rx="20" fill="#C8FB5F"/>
+    <g id="Services-Tab-Text">
+      <text id="Services-Tab-Text-line" x="1040" y="832.73" font-family="Inter-Medium" font-size="13" font-weight="500" fill="#053C45" letter-spacing="2.34">SOLAR</text>
+      <text id="Services-Tab-Text-line-2" x="1040" y="852.73" font-family="Inter-Medium" font-size="13" font-weight="500" fill="#053C45" letter-spacing="2.34">STORAGE</text>
+      <text id="Services-Tab-Text-line-3" x="1040" y="872.73" font-family="Inter-Medium" font-size="13" font-weight="500" fill="#053C45" letter-spacing="2.34">ELECTRICAL</text>
+      <text id="Services-Tab-Text-line-4" x="1040" y="892.73" font-family="Inter-Medium" font-size="13" font-weight="500" fill="#053C45" letter-spacing="2.34">ENGINEERING</text>
+    </g>
+  </g>
+  <g id="Footer">
+    <path id="Footer-Rule" d="M 96 1000 L 1824 1000" fill="none" stroke="#F5F4EB" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.25"/>
+    <text id="Footer-Section" x="96" y="1033.46" font-family="Inter-Regular" font-size="15" font-weight="400" fill="#F5F4EB" opacity="0.75">About AFAQ</text>
+    <text id="Footer-Page" x="1824" y="1033.46" font-family="Inter-Medium" font-size="15" font-weight="500" fill="#F5F4EB" text-anchor="end" opacity="0.75">02 / 08</text>
+  </g>
+</svg>

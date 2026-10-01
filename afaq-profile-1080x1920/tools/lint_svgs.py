@@ -61,12 +61,14 @@ def lint(path, expect_size=None, ps_names=False):
               "gradients": len(grad_ids)}
     return errs, counts
 
-def bounds_lint(path, M=72, W=1080, H=1920):
+def bounds_lint(path):
     """Everything except ribbons must stay on the canvas; text must stay inside the 72 px margins."""
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     from deck import text_width
     errs = []
     root = ET.fromstring(open(path, encoding="utf-8").read())
+    W, H = int(root.get("width")), int(root.get("height"))
+    M = 96 if W > H else 72
     def pb(d, pad):
         nums = [float(t) for t in re.sub(r"[MLCZ]", " ", d).split()]
         return min(nums[0::2]) - pad, min(nums[1::2]) - pad, max(nums[0::2]) + pad, max(nums[1::2]) + pad
@@ -97,6 +99,14 @@ def bounds_lint(path, M=72, W=1080, H=1920):
 def figma_scripts_lint(out):
     """The embedded SPEC in figma/slides/*.js must match spec/deck-spec.json (same slide names, same element counts)."""
     errs = []
+    for sub in ("", "landscape"):
+        errs += _figma_scripts_lint(os.path.join(out, sub) if sub else out)
+    return errs
+
+def _figma_scripts_lint(out):
+    errs = []
+    if not os.path.exists(os.path.join(out, "spec", "deck-spec.json")):
+        return errs
     spec = json.load(open(os.path.join(out, "spec", "deck-spec.json")))
     def count(els):
         return sum(count(e["children"]) if e["type"] == "group" else 1 for e in els)
@@ -116,9 +126,17 @@ def figma_scripts_lint(out):
 def main():
     out = sys.argv[1] if len(sys.argv) > 1 else "/home/user/BQ/afaq-profile-1080x1920"
     total = 0
-    for f in sorted(glob.glob(os.path.join(out, "pages", "*.svg"))) + sorted(glob.glob(os.path.join(out, "pages-illustrator", "*.svg"))):
-        errs, counts = lint(f, (1080, 1920), ps_names="pages-illustrator" in f)
-        errs += bounds_lint(f)
+    page_sets = [(os.path.join(out, "pages"), (1080, 1920)), (os.path.join(out, "pages-illustrator"), (1080, 1920)),
+                 (os.path.join(out, "landscape", "pages"), (1920, 1080)), (os.path.join(out, "landscape", "pages-illustrator"), (1920, 1080))]
+    for folder, size in page_sets:
+        for f in sorted(glob.glob(os.path.join(folder, "*.svg"))):
+            errs, counts = lint(f, size, ps_names="pages-illustrator" in f)
+            errs += bounds_lint(f)
+            total += len(errs)
+            print(("OK  " if not errs else "FAIL"), os.path.relpath(f, out), counts)
+            for e in errs: print("     -", e)
+    for f in []:
+        errs, counts = lint(f)
         total += len(errs)
         print(("OK  " if not errs else "FAIL"), os.path.relpath(f, out), counts)
         for e in errs: print("     -", e)

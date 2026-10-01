@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 03 System components — AFAQ Corporate Profile, 1920x1080. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <rect id="Background" x="0" y="0" width="1920" height="1080" fill="#F5F4EB"/>
+  <g id="Header">
+    <g id="Logo-Lockup">
+      <g id="Wordmark-AFQ">
+        <path id="Letter-A" d="M 106.56 95.36 L 111.36 85.76 L 127.68 85.76 L 143.04 63.2 L 173.76 97.28" fill="none" stroke="#03343D" stroke-width="12.96" stroke-linecap="round" stroke-linejoin="round"/>
+        <path id="Letter-F" d="M 191.28 97.52 L 191.28 73.04 C 191.28 67.33 195.89 62.72 201.6 62.72 L 242.16 62.72 M 191.28 80 L 233.28 80" fill="none" stroke="#03343D" stroke-width="12.96" stroke-linecap="round" stroke-linejoin="round"/>
+        <path id="Letter-Q" d="M 259.44 73.28 C 259.44 67.31 264.27 62.48 270.24 62.48 L 302.4 62.48 C 308.37 62.48 313.2 67.31 313.2 73.28 L 313.2 86.72 C 313.2 92.69 308.37 97.52 302.4 97.52 L 270.24 97.52 C 264.27 97.52 259.44 92.69 259.44 86.72 Z M 306.24 95.36 L 321.6 105.92" fill="none" stroke="#03343D" stroke-width="12.96" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text id="Tagline" x="96" y="127" font-family="Inter" font-size="11" font-weight="500" fill="#03343D" letter-spacing="6.12">ENERGY. ENGINEERED.</text>
+    </g>
+    <text id="Eyebrow" x="1827.08" y="85.09" font-family="Inter" font-size="14" font-weight="500" fill="#5A7175" letter-spacing="3.08" text-anchor="end">CORPORATE PROFILE 2026</text>
+  </g>
+  <text id="Title" x="96" y="248.28" font-family="Inter" font-size="64" font-weight="300" fill="#053C45" letter-spacing="-1.28">System components</text>
+  <g id="Subtitle">
+    <text id="Subtitle-line" x="96" y="300" font-family="Inter" font-size="22" font-weight="400" fill="#5A7175">A photovoltaic system is built from four components. AFAQ holds a direct supply agreement</text>
+    <text id="Subtitle-line-2" x="96" y="332" font-family="Inter" font-size="22" font-weight="400" fill="#5A7175">with a main supplier for each.</text>
+  </g>
+  <g id="Card-01">
+    <rect id="Card-Shape" x="96" y="384" width="852" height="276" rx="24" fill="#FFFFFF"/>
+    <text id="Number" x="132" y="432.28" font-family="Inter" font-size="20" font-weight="600" fill="#B04C0E">01</text>
+    <circle id="Icon-Disc" cx="878" cy="446" r="34" fill="#C8FB5F"/>
+    <g id="Icon">
+      <path id="Icon-pv-module-1" d="M 862.17 436.83 C 862.17 435.45 863.28 434.33 864.67 434.33 L 891.33 434.33 C 892.72 434.33 893.83 435.45 893.83 436.83 L 893.83 455.17 C 893.83 456.55 892.72 457.67 891.33 457.67 L 864.67 457.67 C 863.28 457.67 862.17 456.55 862.17 455.17 Z" fill="none" stroke="#053C45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-pv-module-2" d="M 872.75 434.33 L 872.75 457.67 M 883.25 434.33 L 883.25 457.67 M 862.17 446 L 893.83 446" fill="none" stroke="#053C45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text id="Card-Title" x="132" y="472.46" font-family="Inter" font-size="26" font-weight="600" fill="#053C45">PV modules</text>
+    <g id="Card-Note">
+      <text id="Card-Note-line" x="132" y="508.91" font-family="Inter" font-size="19" font-weight="400" fill="#5A7175">Selected according to the mounting area available and the</text>
+      <text id="Card-Note-line-2" x="132" y="536.91" font-family="Inter" font-size="19" font-weight="400" fill="#5A7175">conditions on site.</text>
+    </g>
+    <text id="Supplier-Label" x="132" y="568.37" font-family="Inter" font-size="12" font-weight="500" fill="#5A7175" letter-spacing="1.92">MAIN SUPPLIERS</text>
+    <text id="Supplier" x="132" y="595.91" font-family="Inter" font-size="19" font-weight="500" fill="#053C45">AACE · Ronma</text>
+  </g>
+  <g id="Card-02">
+    <rect id="Card-Shape-2" x="972" y="384" width="852" height="276" rx="24" fill="#FFFFFF"/>
+    <text id="Number-2" x="1008" y="432.28" font-family="Inter" font-size="20" font-weight="600" fill="#B04C0E">02</text>
+    <circle id="Icon-Disc-2" cx="1754" cy="446" r="34" fill="#C8FB5F"/>
+    <g id="Icon-2">
+      <path id="Icon-battery-1" d="M 1738.17 440.17 C 1738.17 438.78 1739.28 437.67 1740.67 437.67 L 1762.33 437.67 C 1763.72 437.67 1764.83 438.78 1764.83 440.17 L 1764.83 451.83 C 1764.83 453.22 1763.72 454.33 1762.33 454.33 L 1740.67 454.33 C 1739.28 454.33 1738.17 453.22 1738.17 451.83 Z" fill="none" stroke="#053C45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-battery-2" d="M 1764.83 443.92 C 1764.83 443.23 1765.39 442.67 1766.08 442.67 L 1767.75 442.67 C 1768.44 442.67 1769 443.23 1769 443.92 L 1769 448.08 C 1769 448.77 1768.44 449.33 1767.75 449.33 L 1766.08 449.33 C 1765.39 449.33 1764.83 448.77 1764.83 448.08 Z" fill="none" stroke="#053C45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-battery-3" d="M 1753.17 440.17 L 1748.17 446.83 L 1752.33 446.83 L 1749.83 451.83 L 1754.83 445.17 L 1750.67 445.17 Z" fill="none" stroke="#053C45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text id="Card-Title-2" x="1008" y="472.46" font-family="Inter" font-size="26" font-weight="600" fill="#053C45">Battery energy storage</text>
+    <text id="Card-Note-2" x="1008" y="508.91" font-family="Inter" font-size="19" font-weight="400" fill="#5A7175">Sized on the loads to be covered and the autonomy required.</text>
+    <text id="Supplier-Label-2" x="1008" y="540.37" font-family="Inter" font-size="12" font-weight="500" fill="#5A7175" letter-spacing="1.92">MAIN SUPPLIER</text>
+    <text id="Supplier-2" x="1008" y="567.91" font-family="Inter" font-size="19" font-weight="500" fill="#053C45">Goshin</text>
+  </g>
+  <g id="Card-03">
+    <rect id="Card-Shape-3" x="96" y="684" width="852" height="276" rx="24" fill="#FFFFFF"/>
+    <text id="Number-3" x="132" y="732.28" font-family="Inter" font-size="20" font-weight="600" fill="#B04C0E">03</text>
+    <circle id="Icon-Disc-3" cx="878" cy="746" r="34" fill="#C8FB5F"/>
+    <g id="Icon-3">
+      <path id="Icon-inverter-1" d="M 862.17 736 C 862.17 734.62 863.28 733.5 864.67 733.5 L 891.33 733.5 C 892.72 733.5 893.83 734.62 893.83 736 L 893.83 756 C 893.83 757.38 892.72 758.5 891.33 758.5 L 864.67 758.5 C 863.28 758.5 862.17 757.38 862.17 756 Z" fill="none" stroke="#053C45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-inverter-2" d="M 867.17 746 C 869.67 746 869.67 740.17 873 740.17 C 876.33 740.17 876.33 751.83 879.67 751.83 C 883 751.83 883 746 888.83 746" fill="none" stroke="#053C45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-inverter-3" d="M 862.17 740.17 L 867.17 740.17" fill="none" stroke="#053C45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text id="Card-Title-3" x="132" y="772.46" font-family="Inter" font-size="26" font-weight="600" fill="#053C45">Inverters and power conversion</text>
+    <g id="Card-Note-3">
+      <text id="Card-Note-line-3" x="132" y="808.91" font-family="Inter" font-size="19" font-weight="400" fill="#5A7175">Selected according to the array configuration and the connection</text>
+      <text id="Card-Note-line-4" x="132" y="836.91" font-family="Inter" font-size="19" font-weight="400" fill="#5A7175">requirements of the grid operator.</text>
+    </g>
+    <text id="Supplier-Label-3" x="132" y="868.37" font-family="Inter" font-size="12" font-weight="500" fill="#5A7175" letter-spacing="1.92">MAIN SUPPLIER</text>
+    <text id="Supplier-3" x="132" y="895.91" font-family="Inter" font-size="19" font-weight="500" fill="#053C45">Star Charge</text>
+  </g>
+  <g id="Card-04">
+    <rect id="Card-Shape-4" x="972" y="684" width="852" height="276" rx="24" fill="#FFFFFF"/>
+    <text id="Number-4" x="1008" y="732.28" font-family="Inter" font-size="20" font-weight="600" fill="#B04C0E">04</text>
+    <circle id="Icon-Disc-4" cx="1754" cy="746" r="34" fill="#C8FB5F"/>
+    <g id="Icon-4">
+      <path id="Icon-infrastructure-1" d="M 1754 730.17 L 1744 761.83 M 1754 730.17 L 1764 761.83 M 1746.5 753.5 L 1761.5 753.5 M 1749.83 743.5 L 1758.17 743.5 M 1740.67 736.83 L 1767.33 736.83 M 1740.67 736.83 L 1743.17 732.67 M 1767.33 736.83 L 1764.83 732.67" fill="none" stroke="#053C45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text id="Card-Title-4" x="1008" y="772.46" font-family="Inter" font-size="26" font-weight="600" fill="#053C45">Plant infrastructure</text>
+    <g id="Card-Note-4">
+      <text id="Card-Note-line-5" x="1008" y="808.91" font-family="Inter" font-size="19" font-weight="400" fill="#5A7175">Mounting structures, foundations, DC and AC cabling, and</text>
+      <text id="Card-Note-line-6" x="1008" y="836.91" font-family="Inter" font-size="19" font-weight="400" fill="#5A7175">connection and protection panels, specified to suit the site.</text>
+    </g>
+  </g>
+  <g id="Footer">
+    <path id="Footer-Rule" d="M 96 1000 L 1824 1000" fill="none" stroke="#D9DCCF" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+    <text id="Footer-Section" x="96" y="1033.46" font-family="Inter" font-size="15" font-weight="400" fill="#5A7175">System components</text>
+    <text id="Footer-Page" x="1824" y="1033.46" font-family="Inter" font-size="15" font-weight="500" fill="#5A7175" text-anchor="end">03 / 08</text>
+  </g>
+</svg>

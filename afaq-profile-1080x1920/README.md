@@ -1,4 +1,4 @@
-# AFAQ Corporate Profile — 1080 × 1920 editable vector deck
+# AFAQ Corporate Profile — editable vector deck (1080 × 1920 and 1920 × 1080)
 
 > **ملخص بالعربي**
 >
@@ -8,7 +8,9 @@
 > - **النصوص كلها قابلة للتعديل** (`<text>`، خط Inter) والأشكال كلها فيكتور، مفيش حاجة Raster.
 > - **فيجما**: اسحب الـ 8 ملفات من `pages/` جوه الملف ده: <https://www.figma.com/design/ccLJTZvL8LndrWwdwVXDsu> (ملف فاضي اتعمل لك). كل صفحة بتدخل كـ Frame 1080×1920 بطبقات أصلية (Rect / Vector / Text) بأسماء مرتبة.
 > - الحساب خلّص **حد استخدام Figma MCP الشهري (Starter plan)** من أول أمر كتابة، فمقدرتش أرسم جواه مباشرة من هنا. بدل ما تستنى: الملف `figma/scripter-build-all.js` يبني الـ 8 صفحات **Native** جوه فيجما (Text حقيقي بـ paragraphs) عن طريق بلجن Scripter في أقل من دقيقة — الخطوات تحت.
-> - **إليستريتور**: افتح ملفات `pages-illustrator/` (نفس الصفحات بس بأسماء الخطوط PostScript عشان الأوزان تتظبط)، وثبّت خط Inter من فولدر `fonts/` الأول.
+> - **نسخة بالعرض 1920 × 1080** جاهزة في فولدر `landscape/` (نفس الـ 8 صفحات بتوزيع landscape للبريزينتيشن).
+> - **ملف إليستريتور**: `landscape/AFAQ-Corporate-Profile-1920x1080.ai` (و `.pdf` بنفس المحتوى). افتحه من Illustrator → File → Open، وفي شاشة استيراد الـ PDF اختار **All** عشان الـ 8 صفحات تدخل كـ 8 Artboards. النصوص Live وقابلة للتعديل (ثبّت خط Inter من `fonts/` الأول)، والأشكال كلها Paths والتدرجات Native.
+> - **إليستريتور (SVG)**: أو افتح ملفات `pages-illustrator/` (نفس الصفحات بس بأسماء الخطوط PostScript عشان الأوزان تتظبط)، وثبّت خط Inter من فولدر `fonts/` الأول.
 > - ملاحظة: اللوجو في الـ boards بتاعتك مكتوب **AFQ** (ثلاث حروف) فمشيت عليه حرفيًا، والاسم الكامل "AFAQ for Energy & Integrated Business" موجود في النصوص. لو عايز اللوجو AFAQ قولّي.
 
 ---
@@ -18,6 +20,8 @@
 | Folder | Contents |
 |---|---|
 | `pages/` | One SVG per page, `01-cover.svg` … `08-contact.svg`, each exactly **1080 × 1920**. Inline hex fills only, editable `<text>` (font-family `Inter`), absolute `M/L/C/Z` paths, no masks, no clipPath, no CSS, no transforms, no rasters. **Use these for Figma.** |
+| `landscape/` | The **1920 × 1080 (landscape) edition**: `pages/`, `pages-illustrator/`, `previews/`, `spec/`, `figma/` (same structure as the root), plus `AFAQ-Corporate-Profile-1920x1080.ai` and `.pdf`. |
+| `AFAQ-Corporate-Profile-1080x1920.ai` / `.pdf` | Portrait edition as an editable vector Illustrator/PDF file (8 pages = 8 artboards). |
 | `pages-illustrator/` | The same eight pages with PostScript font names (`Inter-Light`, `Inter-Regular`, `Inter-Medium`, `Inter-SemiBold`) so Illustrator resolves every weight. **Use these for Illustrator.** |
 | `previews/` | PNG render of each page, `contact-sheet.png`, and `deck-preview.pdf` (8 pages at 1080 × 1920 px). |
 | `assets/logo/` | AFQ wordmark and "ENERGY. ENGINEERED." lockup in teal / cream / lime / white. |
@@ -47,8 +51,14 @@
 
 ## Import into Adobe Illustrator
 
+**Option A — the .ai file (whole deck, 8 artboards).**
 1. Install the four fonts in `fonts/` (or any Inter build).
-2. File → Open any `pages-illustrator/*.svg`. The artboard is 1080 × 1920; groups come in named; text stays live point text; paths are editable with round caps/joins; gradients are native.
+2. File → Open `landscape/AFAQ-Corporate-Profile-1920x1080.ai` (portrait: `AFAQ-Corporate-Profile-1080x1920.ai`). In the "PDF Import Options" dialog set the page range to **All** so every page becomes its own artboard (Illustrator 2020 or later; older versions open one page at a time). Illustrator treats the file as PDF content: every shape is an editable path, gradients are native, and all text is live point text in Inter Light/Regular/Medium/Semi Bold. The `.pdf` next to it is byte-identical and opens the same way.
+3. The file has no layer names (PDF has no layers); if you want named layers, use Option B.
+
+**Option B — one SVG per page (named layers).**
+1. Install the four fonts in `fonts/` (or any Inter build).
+2. File → Open any `pages-illustrator/*.svg` (landscape: `landscape/pages-illustrator/*.svg`). The artboard is 1080 × 1920; groups come in named; text stays live point text; paths are editable with round caps/joins; gradients are native.
 3. Swatches: Window → Swatches → menu → Open Swatch Library → Other Library → `assets/palette/afaq-palette.ase`.
 4. Photos: File → Place the photo, then send it **behind** the slot shape (Object → Arrange → Send Backward until it sits directly under `Photo-…__set-image-fill`), select both, Object → Clipping Mask → Make (Ctrl/Cmd + 7). The slot shape must be on top; its gradient fill is removed automatically. Then delete the `Placeholder-Art` group.
 5. Export: the ribbons run 60 px past the artboard on both sides on purpose. Export with File → Export → Export As… and tick **Use Artboards** (or Export for Screens); do not use "fit to artwork bounds".
@@ -73,13 +83,14 @@ Type (Inter): page title Light 76/84, letter-spacing −2 %; cover headline Ligh
 ## Regenerate
 
 ```bash
-pip install pillow fonttools
-python3 tools/deck.py          # rewrites pages/, pages-illustrator/, assets/, spec/ and figma/slides + scripter script
+pip install pillow fonttools reportlab
+python3 tools/deck.py           # portrait: pages/, pages-illustrator/, assets/, spec/, figma/
+python3 tools/deck_landscape.py # landscape/ (pages, spec, figma) + the .ai/.pdf files for both orientations
 python3 tools/lint_svgs.py     # import-safety, on-canvas bounds, text-in-margins and spec↔Figma-script sync (must print ALL CLEAN)
 bash tools/render.sh           # previews/ (needs Chromium; set CHROME=/path/to/chrome)
 ```
 
-Edit copy, colours or layout in `tools/deck.py` (one function per slide) and re-run; the SVGs, the Figma scripts and the JSON spec stay in sync because they all come from the same spec. Placeholder art is asserted to stay inside its photo slot at build time.
+Edit copy, colours or layout in `tools/deck.py` (portrait) or `tools/deck_landscape.py` (landscape), one function per slide, and re-run; the SVGs, the Figma scripts and the JSON spec stay in sync because they all come from the same spec. Placeholder art is asserted to stay inside its photo slot at build time.
 
 ## Notes on the source
 
