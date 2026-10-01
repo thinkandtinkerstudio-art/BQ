@@ -24,7 +24,7 @@
     {
       "name": "Teal Ink",
       "hex": "#03343D",
-      "use": "Wordmark on light"
+      "use": "Wordmark and label text on light / orange"
     },
     {
       "name": "Teal Mid",
@@ -34,12 +34,12 @@
     {
       "name": "Teal Deep",
       "hex": "#022C32",
-      "use": "Photo placeholder gradient"
+      "use": "Photo placeholder gradient (light pages)"
     },
     {
       "name": "Teal Soft",
       "hex": "#1F7580",
-      "use": "Illustration mid-tone"
+      "use": "Illustration mid-tone, ribbon underside on dark pages"
     },
     {
       "name": "Cream",
@@ -64,12 +64,12 @@
     {
       "name": "Orange",
       "hex": "#FD7E25",
-      "use": "Labels, sun, accent rule"
+      "use": "Label blocks, sun, accent rule (shapes only)"
     },
     {
       "name": "Orange Deep",
-      "hex": "#D9641A",
-      "use": "Accent text on light"
+      "hex": "#B04C0E",
+      "use": "Accent text on white / cream (AA contrast)"
     },
     {
       "name": "Muted",

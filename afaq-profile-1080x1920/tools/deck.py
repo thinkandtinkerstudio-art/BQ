@@ -2,11 +2,13 @@
 """AFAQ Corporate Profile — single source of truth.
 
 Builds the 8-slide (1080x1920) deck spec, then writes:
-  pages/*.svg          import-safe SVG (inline fills only, editable <text>, no masks/CSS/transforms)
-  assets/**            logo, graphics, icons, palette (SVG + JSON + ASE), fonts README
-  spec/deck-spec.json  the same spec consumed by tools/figma-build.js
+  pages/*.svg              import-safe SVG for Figma (inline fills only, editable <text>, no masks/CSS/transforms)
+  pages-illustrator/*.svg  same pages with PostScript font names (Inter-Light …) so Illustrator picks the right weights
+  assets/**                logo, graphics, icons, palette (SVG + JSON + ASE)
+  spec/deck-spec.json      the spec consumed by figma/figma-build.js
+  figma/slides/*.js        self-contained use_figma scripts (one per slide) and figma/scripter-build-all.js
 """
-import json, math, os, struct, sys
+import json, math, os, re, struct
 from xml.sax.saxutils import escape
 from PIL import ImageFont
 from fontTools.ttLib import TTFont
@@ -17,6 +19,7 @@ FONT_DIR = os.environ.get("DECK_FONTS") or (os.path.join(OUT, "fonts") if os.pat
 W, H = 1080, 1920
 M = 72
 CW = W - 2 * M  # 936
+FOOT_Y = 1800   # footer rule; content must end above 1744
 K = 0.5522847498307936
 
 # ---------------------------------------------------------------- palette
@@ -24,7 +27,7 @@ P = {
     "lime": "#C8FB5F", "lime_deep": "#A4DC3C", "lime_pale": "#E9FBB8",
     "teal": "#053C45", "teal_ink": "#03343D", "teal_mid": "#0E5560", "teal_deep": "#022C32", "teal_soft": "#1F7580",
     "cream": "#F5F4EB", "cream_2": "#E8E8DC", "white": "#FFFFFF",
-    "charcoal": "#202C28", "orange": "#FD7E25", "orange_deep": "#D9641A",
+    "charcoal": "#202C28", "orange": "#FD7E25", "orange_deep": "#B04C0E",
     "muted": "#5A7175", "line": "#D9DCCF",
 }
 PALETTE_DOC = [
@@ -32,22 +35,23 @@ PALETTE_DOC = [
     ("Lime Deep", P["lime_deep"], "Ribbon shading"),
     ("Lime Pale", P["lime_pale"], "Ribbon highlight"),
     ("Teal", P["teal"], "Dark backgrounds, headlines on light"),
-    ("Teal Ink", P["teal_ink"], "Wordmark on light"),
+    ("Teal Ink", P["teal_ink"], "Wordmark and label text on light / orange"),
     ("Teal Mid", P["teal_mid"], "Cards on dark backgrounds"),
-    ("Teal Deep", P["teal_deep"], "Photo placeholder gradient"),
-    ("Teal Soft", P["teal_soft"], "Illustration mid-tone"),
+    ("Teal Deep", P["teal_deep"], "Photo placeholder gradient (light pages)"),
+    ("Teal Soft", P["teal_soft"], "Illustration mid-tone, ribbon underside on dark pages"),
     ("Cream", P["cream"], "Light backgrounds"),
     ("Cream 2", P["cream_2"], "Subtle surfaces"),
     ("White", P["white"], "Cards on light backgrounds"),
     ("Charcoal", P["charcoal"], "Panel silhouettes"),
-    ("Orange", P["orange"], "Labels, sun, accent rule"),
-    ("Orange Deep", P["orange_deep"], "Accent text on light"),
+    ("Orange", P["orange"], "Label blocks, sun, accent rule (shapes only)"),
+    ("Orange Deep", P["orange_deep"], "Accent text on white / cream (AA contrast)"),
     ("Muted", P["muted"], "Secondary text on light"),
     ("Line", P["line"], "Rules on light"),
 ]
 
 FONT_FILES = {300: "Inter-Light.ttf", 400: "Inter-Regular.ttf", 500: "Inter-Medium.ttf", 600: "Inter-SemiBold.ttf", 700: "Inter-Bold.ttf"}
 STYLE_NAMES = {300: "Light", 400: "Regular", 500: "Medium", 600: "Semi Bold", 700: "Bold"}
+PS_NAMES = {300: "Inter-Light", 400: "Inter-Regular", 500: "Inter-Medium", 600: "Inter-SemiBold", 700: "Inter-Bold"}
 
 _tt = TTFont(os.path.join(FONT_DIR, "Inter-Regular.ttf"))
 UPM = _tt["head"].unitsPerEm
@@ -69,12 +73,14 @@ def text_width(s, size, weight, ls=0.0):
     return font(weight, size).getlength(s) + ls * size * max(len(s) - 1, 0)
 
 def wrap(text, size, weight, width, ls=0.0):
+    """Greedy wrap against a slightly narrower limit so Figma's own layout never adds an extra line."""
+    limit = width - max(3.0, 0.015 * width)
     lines = []
     for para in text.split("\n"):
         cur = ""
         for word in para.split(" "):
             cand = word if not cur else cur + " " + word
-            if not cur or text_width(cand, size, weight, ls) <= width:
+            if not cur or text_width(cand, size, weight, ls) <= limit:
                 cur = cand
             else:
                 lines.append(cur)
@@ -89,14 +95,14 @@ def fmt(v):
 def pt(p):
     return f"{fmt(p[0])} {fmt(p[1])}"
 
-# ---------------------------------------------------------------- geometry (M/L/C/Z only)
+# ---------------------------------------------------------------- geometry (absolute M/L/C/Z only)
 def unit(ax, ay, bx, by):
     dx, dy = bx - ax, by - ay
     L = math.hypot(dx, dy) or 1.0
     return dx / L, dy / L
 
 def rounded_polygon(pts, radii):
-    """Closed path through pts (clockwise) with per-corner radius (convex or concave)."""
+    """Closed path through pts (clockwise) with per-corner radius; works for convex and concave (reflex) corners."""
     n = len(pts)
     if not isinstance(radii, (list, tuple)):
         radii = [radii] * n
@@ -142,7 +148,7 @@ def rect_path(x, y, w, h, r=0, notch=None):
     return rounded_polygon(pts, rad)
 
 def tab_path(x, y, w, h, tab_w, tab_h, r=28, inner_r=20, corner="tl"):
-    """Rect whose top edge sits at y+tab_h, with a tab of width tab_w rising to y at the given corner (tl or tr)."""
+    """Single silhouette: rect whose top edge sits at y+tab_h with a tab of width tab_w rising to y (tl or tr)."""
     if corner == "tl":
         pts = [(x, y), (x + tab_w, y), (x + tab_w, y + tab_h), (x + w, y + tab_h), (x + w, y + h), (x, y + h)]
         rad = [r, r, inner_r, r, r, r]
@@ -159,19 +165,15 @@ def circle_path(cx, cy, r):
             f"C {fmt(cx + k)} {fmt(cy - r)} {fmt(cx + r)} {fmt(cy - k)} {fmt(cx + r)} {fmt(cy)} Z")
 
 def band_path(pts, thickness):
-    """Ribbon band: cubic polyline pts (1+3k points) as the top edge; bottom edge shifted by thickness."""
+    """Ribbon band: cubic polyline pts (1+3k points) is the top edge; the bottom edge is the same curve shifted down."""
     top = pts
     bottom = [(px, py + thickness) for px, py in pts][::-1]
     def run(ps):
-        out = []
-        for i in range(1, len(ps), 3):
-            out.append(f"C {pt(ps[i])} {pt(ps[i + 1])} {pt(ps[i + 2])}")
-        return out
-    d = [f"M {pt(top[0])}"] + run(top) + [f"L {pt(bottom[0])}"] + run(bottom) + ["Z"]
-    return " ".join(d)
+        return [f"C {pt(ps[i])} {pt(ps[i + 1])} {pt(ps[i + 2])}" for i in range(1, len(ps), 3)]
+    return " ".join([f"M {pt(top[0])}"] + run(top) + [f"L {pt(bottom[0])}"] + run(bottom) + ["Z"])
 
 def tx_path(d, s, ox, oy):
-    """Scale+translate an M/L/C/Z absolute path string."""
+    """Scale+translate an absolute M/L/C/Z path string (so the output never needs a transform attribute)."""
     out, i, toks = [], 0, d.replace(",", " ").split()
     while i < len(toks):
         t = toks[i]
@@ -183,15 +185,12 @@ def tx_path(d, s, ox, oy):
     return " ".join(out)
 
 def path_bounds(d, pad=0.0):
-    xs, ys = [], []
-    toks = d.replace(",", " ").split()
-    i = 0
-    while i < len(toks):
-        if toks[i].isalpha():
-            i += 1
-        else:
-            xs.append(float(toks[i])); ys.append(float(toks[i + 1])); i += 2
+    nums = [float(t) for t in d.replace(",", " ").split() if not t.isalpha()]
+    xs, ys = nums[0::2], nums[1::2]
     return min(xs) - pad, min(ys) - pad, max(xs) + pad, max(ys) + pad
+
+def poly(ps):
+    return "M " + " L ".join(pt(p) for p in ps) + " Z"
 
 # ---------------------------------------------------------------- element constructors
 def T(name, x, y, w, text, size, weight=400, color="#000000", lh=None, ls=0.0, align="left", case=None, opacity=1.0):
@@ -224,40 +223,51 @@ def LIN(x1, y1, x2, y2, stops):
     return {"type": "linear", "x1": x1, "y1": y1, "x2": x2, "y2": y2, "stops": stops}
 
 # ---------------------------------------------------------------- brand graphics
-# Wordmark designed in a 304x100 box (stroke 24, round caps/joins), visual bbox 0..304 x 0..100.
-WORDMARK_W = 304
+# Wordmark traced from the brand board: heavy round-capped strokes (27 % of cap height) in a 100-high box.
+# A = arch with a stepped left foot, apex right of centre; F = large rounded shoulder, mid bar at 50 %;
+# Q = wide rounded rectangle (1.39:1) with a short down-right tail. Visual bbox ≈ 0..484 x 0..117 (tail).
+WM_SW = 27
+WORDMARK_W = 484
+_q_body = rounded_polygon([(340.5, 13.5), (452.5, 13.5), (452.5, 86.5), (340.5, 86.5)], 22.5)
 WORDMARK_LETTERS = {
-    "A": "M 12 88 L 34 32 C 40 16 60 16 66 32 L 88 88",
-    "F": "M 122 88 L 122 12 L 182 12 M 122 50 L 172 50",
-    "Q": rounded_polygon([(214, 12), (290, 12), (290, 88), (214, 88)], 30) + " M 266 64 L 292 92",
+    "A": "M 22 82 L 32 62 L 66 62 L 98 15 L 162 86",
+    "F": "M 198.5 86.5 L 198.5 35.5 C 198.5 23.6 208.1 14 220 14 L 304.5 14 M 198.5 50 L 286 50",
+    "Q": _q_body + " M 438 82 L 470 104",
 }
 
 def wordmark(x, y, h, color, name="Wordmark-AFQ"):
     s = h / 100.0
-    kids = [PATH(f"Letter-{k}", tx_path(d, s, x, y), stroke=color, sw=24 * s) for k, d in WORDMARK_LETTERS.items()]
+    kids = [PATH(f"Letter-{k}", tx_path(d, s, x, y), stroke=color, sw=WM_SW * s) for k, d in WORDMARK_LETTERS.items()]
     return G(name, kids)
 
 def lockup(x, y, h, color, tag_color=None, name="Logo-Lockup"):
-    """Wordmark + 'ENERGY. ENGINEERED.' tagline; returns group and total height."""
+    """Wordmark + 'ENERGY. ENGINEERED.' tracked to the wordmark width (as on the board). Returns (group, total height)."""
     tag_color = tag_color or color
-    tag_size = max(12, round(h * 0.2))
-    tag_y = y + h + round(h * 0.2)
-    tag = T("Tagline", x, tag_y, 900, "ENERGY. ENGINEERED.", tag_size, 500, tag_color,
-            lh=round(tag_size * 1.3), ls=0.30)
+    tag_size = max(11, round(h * 0.19))
+    text = "ENERGY. ENGINEERED."
+    target = WORDMARK_W * h / 100.0
+    base = text_width(text, tag_size, 500, 0)
+    ls = min(0.6, max(0.14, (target - base) / (tag_size * (len(text) - 1))))
+    tag_y = y + h + max(12, round(h * 0.2))
+    tag = T("Tagline", x, tag_y, 1200, text, tag_size, 500, tag_color, lh=round(tag_size * 1.3), ls=round(ls, 3))
     return G(name, [wordmark(x, y, h, color), tag]), (tag_y + tag["h"]) - y
 
-def ribbon(name, pts, thickness, lime_grad=True, teal=True, orange=True):
+def ribbon(name, pts, thickness, teal_fill=None, teal=True, orange=True):
+    """Three readable layers like the board: teal band twisting under, a continuous orange edge, the lime band on top.
+    `pts` is the lime band's TOP edge; the teal underside bottoms out at y + 1.45 * thickness."""
     kids = []
     if teal:
-        kids.append(PATH("Ribbon-Teal", band_path([(px + 26, py + thickness * 0.40) for px, py in pts], thickness * 0.78),
-                         fill=P["teal"]))
+        kids.append(PATH("Ribbon-Teal", band_path([(px + 40, py + thickness * 0.55) for px, py in pts], thickness * 0.90),
+                         fill=teal_fill or P["teal"]))
     if orange:
-        kids.append(PATH("Ribbon-Orange", band_path([(px + 10, py + thickness * 0.30) for px, py in pts], thickness * 0.70),
-                         fill=P["orange"]))
+        kids.append(PATH("Ribbon-Orange", band_path([(px, py + thickness - 2) for px, py in pts], 10), fill=P["orange"]))
     x0, x1 = pts[0][0], pts[-1][0]
-    fill = LIN(x0, 0, x1, 0, [(0, P["lime_pale"], 1), (0.45, P["lime"], 1), (1, P["lime_deep"], 1)]) if lime_grad else P["lime"]
+    fill = LIN(x0, 0, x1, 0, [(0, P["lime_deep"], 1), (0.35, P["lime"], 1), (0.55, P["lime_pale"], 1), (0.75, P["lime"], 1), (1, P["lime_deep"], 1)])
     kids.append(PATH("Ribbon-Lime", band_path(pts, thickness), fill=fill))
     return G(name, kids)
+
+def dark_ribbon_fill(pts):
+    return LIN(pts[0][0], 0, pts[-1][0], 0, [(0, P["teal_mid"], 1), (1, P["teal_soft"], 1)])
 
 # Icons in a 48x48 box, stroke 3 (scaled). Only M/L/C/Z.
 def _rr(x, y, w, h, r):
@@ -290,98 +300,151 @@ def icon(name, key, x, y, size, color, sw=None):
     return G(f"Icon-{key}" if name is None else name,
              [PATH(f"Icon-{key}-{i + 1}", tx_path(d, s, x, y), stroke=color, sw=sw) for i, d in enumerate(ICONS[key])])
 
-def photo_slot(name, x, y, w, h, r=40, notch=None):
-    """Photo placeholder: ONE shape (set an image fill on it in Figma/Illustrator) + flat vector art inside its bounds."""
-    base = PATH(name + "__set-image-fill", rect_path(x, y, w, h, r, notch),
-                fill=LIN(0, y, 0, y + h, [(0, P["teal_deep"], 1), (1, P["teal_mid"], 1)]))
-    art = []
+def photo_slot(name, x, y, w, h, r=40, notch=None, dark=False, art="solar"):
+    """Photo placeholder: ONE shape (set an image fill on it in Figma/Illustrator) + flat vector art inside its bounds.
+    dark=True (teal pages): lighter gradient + 2 px lime hairline so the frame reads against the background."""
+    if dark:
+        base = PATH(name + "__set-image-fill", rect_path(x, y, w, h, r, notch),
+                    fill=LIN(0, y, 0, y + h, [(0, P["teal_mid"], 1), (1, P["teal_soft"], 1)]), stroke=P["lime"], sw=2, cap="butt")
+    else:
+        base = PATH(name + "__set-image-fill", rect_path(x, y, w, h, r, notch),
+                    fill=LIN(0, y, 0, y + h, [(0, P["teal_deep"], 1), (1, P["teal_mid"], 1)]))
     nrect = None
     if notch:
         nw, nh, c = notch["w"], notch["h"], notch["corner"]
         nx = x if c in ("tl", "bl") else x + w - nw
         ny = y if c in ("tl", "tr") else y + h - nh
         nrect = (nx - 24, ny - 24, nx + nw + 24, ny + nh + 24)
+    def clear(x0, y0, x1, y1):
+        return not nrect or x1 < nrect[0] or x0 > nrect[2] or y1 < nrect[1] or y0 > nrect[3]
+    art_els = []
     sun_left = not (notch and notch["corner"] == "tl")
-    if notch and notch["corner"] == "tr":
-        sun_left = True
     sr = min(w, h) * 0.085
     scx = x + (w * 0.24 if sun_left else w * 0.76)
     scy = y + h * 0.26
-    art.append(C("Sun-Glow", scx, scy, sr * 1.9, P["lime"], opacity=0.16))
-    art.append(C("Sun", scx, scy, sr, P["orange"]))
-    # mountains
+    art_els.append(C("Sun-Glow", scx, scy, sr * 1.9, P["orange"], opacity=0.18))
+    art_els.append(C("Sun", scx, scy, sr, P["orange"]))
     y1, y2 = y + h * 0.42, y + h * 0.60
-    far = [(x, y2 + 6), (x + w * 0.18, y1 + h * 0.06), (x + w * 0.33, y1 + h * 0.11), (x + w * 0.52, y1),
-           (x + w * 0.70, y1 + h * 0.10), (x + w * 0.86, y1 + h * 0.04), (x + w, y1 + h * 0.12), (x + w, y2 + 6)]
-    near = [(x, y2 + 10), (x + w * 0.12, y2 - h * 0.05), (x + w * 0.30, y2 + h * 0.02), (x + w * 0.46, y2 - h * 0.08),
-            (x + w * 0.64, y2 + h * 0.01), (x + w * 0.80, y2 - h * 0.04), (x + w, y2 + 0.03 * h), (x + w, y2 + 10)]
-    def poly(ps):
-        return "M " + " L ".join(pt(p) for p in ps) + " Z"
-    art.append(PATH("Mountains-Far", poly(far), fill=P["teal_soft"], opacity=0.55))
-    art.append(PATH("Mountains-Near", poly(near), fill=P["teal"], opacity=0.9))
-    # ground band
-    art.append(R("Ground", x, y2 + 4, w, h - (y2 + 4 - y), P["teal_deep"], opacity=0.0))  # no-op spacer keeps structure (invisible)
-    art.pop()
-    # solar panel rows (parallelograms), inset so they stay inside the rounded corners
+    base_y = y2 + h * 0.07
+    far = [(x, base_y), (x + w * 0.18, y1 + h * 0.06), (x + w * 0.33, y1 + h * 0.11), (x + w * 0.52, y1),
+           (x + w * 0.70, y1 + h * 0.10), (x + w * 0.86, y1 + h * 0.04), (x + w, y1 + h * 0.12), (x + w, base_y)]
+    near = [(x, base_y), (x + w * 0.12, y2 - h * 0.05), (x + w * 0.30, y2 + h * 0.02), (x + w * 0.46, y2 - h * 0.08),
+            (x + w * 0.64, y2 + h * 0.01), (x + w * 0.80, y2 - h * 0.04), (x + w, y2 + h * 0.03), (x + w, base_y)]
+    art_els.append(PATH("Mountains-Far", poly(far), fill=P["teal_soft"], opacity=0.55))
+    art_els.append(PATH("Mountains-Near", poly(near), fill=P["teal"], opacity=0.9))
     inset = 56
-    rows = [(0.655, 0.065, 7), (0.745, 0.075, 6), (0.845, 0.09, 5)]
-    panels = []
-    for ri, (fy, fh, n) in enumerate(rows):
-        py0, ph = y + h * fy, h * fh
-        gap = 14 + ri * 6
-        avail = w - 2 * inset
-        pw = (avail - gap * (n - 1)) / n
-        skew = ph * 0.22
-        for i in range(n):
-            px0 = x + inset + i * (pw + gap)
-            pts = [(px0 + skew, py0), (px0 + pw + skew, py0), (px0 + pw, py0 + ph), (px0, py0 + ph)]
-            if nrect:
-                bx0, by0, bx1, by1 = min(p[0] for p in pts), py0, max(p[0] for p in pts), py0 + ph
-                if not (bx1 < nrect[0] or bx0 > nrect[2] or by1 < nrect[1] or by0 > nrect[3]):
+    if art == "solar":
+        panels = []
+        for ri, (fy, fh, n) in enumerate([(0.655, 0.065, 7), (0.745, 0.075, 6), (0.845, 0.09, 5)]):
+            py0, ph = y + h * fy, h * fh
+            gap = 14 + ri * 6
+            pw = (w - 2 * inset - gap * (n - 1)) / n
+            skew = ph * 0.22
+            for i in range(n):
+                px0 = x + inset + i * (pw + gap)
+                pts = [(px0 + skew, py0), (px0 + pw + skew, py0), (px0 + pw, py0 + ph), (px0, py0 + ph)]
+                if not clear(px0, py0, px0 + pw + skew, py0 + ph):
                     continue
-            panels.append(PATH(f"Panel-{ri + 1}-{i + 1}", rounded_polygon(pts, 3), fill=P["charcoal"],
-                               stroke=P["lime"], sw=1.5, opacity=0.95))
-            # cell line
-            mx = (pts[0][0] + pts[3][0]) / 2
-            panels.append(PATH(f"Panel-{ri + 1}-{i + 1}-line", f"M {fmt(pts[0][0] + pw / 2)} {fmt(py0)} L {fmt(pts[3][0] + pw / 2)} {fmt(py0 + ph)}",
-                               stroke=P["lime"], sw=1, cap="butt", opacity=0.35))
-    art.append(G("Solar-Array", panels))
-    return G(name, [base, G("Placeholder-Art (delete after placing photo)", art)])
+                panels.append(PATH(f"Panel-{ri + 1}-{i + 1}", rounded_polygon(pts, 3), fill=P["charcoal"], stroke=P["lime"], sw=1.5, opacity=0.95))
+                panels.append(PATH(f"Panel-{ri + 1}-{i + 1}-line", f"M {fmt(px0 + skew + pw / 2)} {fmt(py0)} L {fmt(px0 + pw / 2)} {fmt(py0 + ph)}",
+                                   stroke=P["lime"], sw=1, cap="butt", opacity=0.35))
+        art_els.append(G("Solar-Array", panels))
+    elif art == "storage":
+        # row of battery cabinets on a plinth
+        cabs = []
+        n = 4
+        gap = 28
+        cw_ = (w - 2 * inset - gap * (n - 1)) / n
+        ch_ = h * 0.30
+        cy0 = y + h - inset - ch_
+        cabs.append(R("Plinth", x + inset - 12, cy0 + ch_ - 6, w - 2 * inset + 24, 12, P["teal_deep"], rx=4, opacity=0.9))
+        for i in range(n):
+            cx0 = x + inset + i * (cw_ + gap)
+            if not clear(cx0, cy0, cx0 + cw_, cy0 + ch_):
+                continue
+            cabs.append(PATH(f"Cabinet-{i + 1}", _rr(cx0, cy0, cw_, ch_, 10), fill=P["charcoal"], stroke=P["lime"], sw=1.5, opacity=0.95))
+            for k in range(3):
+                vy = cy0 + ch_ * (0.30 + k * 0.14)
+                cabs.append(LINE(f"Cabinet-{i + 1}-vent-{k + 1}", cx0 + cw_ * 0.18, vy, cx0 + cw_ * 0.82, vy, P["lime"], 1.5, opacity=0.35))
+            cabs.append(C(f"Cabinet-{i + 1}-led", cx0 + cw_ * 0.5, cy0 + ch_ * 0.14, 4, P["lime"]))
+            cabs.append(LINE(f"Cabinet-{i + 1}-door", cx0 + cw_ * 0.5, cy0 + ch_ * 0.24, cx0 + cw_ * 0.5, cy0 + ch_ * 0.9, P["lime"], 1, opacity=0.25))
+        art_els.append(G("Battery-Cabinets", cabs))
+    else:  # grid: pylons with sagging cables, scaled so the arms stay inside the slot
+        grid = []
+        n = 3
+        s = min(h * 0.60 / 38.0, (w - 2 * inset) / (n * 32 + (n - 1) * 40))  # icon spans x 8..40, y 5..43
+        half = 16 * s
+        ph = 38 * s
+        py0 = y + h - inset * 0.6 - ph
+        first, last = x + inset + half, x + w - inset - half
+        tops = []
+        for i in range(n):
+            cx0 = first + i * (last - first) / (n - 1)
+            d = tx_path(ICONS["infrastructure"][0], s, cx0 - 24 * s, py0 - 5 * s)
+            grid.append(PATH(f"Pylon-{i + 1}", d, stroke=P["lime"], sw=2.5, opacity=0.85))
+            tops.append((cx0 - half, py0 + 8 * s, cx0 + half))
+        for i in range(n - 1):
+            lx, ay, _ = tops[i][2], tops[i][1], None
+            rx_, by = tops[i + 1][0], tops[i + 1][1]
+            span = rx_ - lx
+            sag = span * 0.12
+            grid.append(PATH(f"Cable-{i + 1}", f"M {fmt(lx)} {fmt(ay)} C {fmt(lx + span * 0.3)} {fmt(ay + sag)} {fmt(rx_ - span * 0.3)} {fmt(by + sag)} {fmt(rx_)} {fmt(by)}",
+                             stroke=P["lime"], sw=1.5, cap="butt", opacity=0.6))
+        art_els.append(G("Transmission-Line", grid))
+    # hard guarantee: placeholder art never leaves the slot (there is no clipping in the SVG)
+    def check(e):
+        if e["type"] == "group":
+            for c in e["children"]:
+                check(c)
+            return
+        if e["type"] == "path":
+            bx0, by0, bx1, by1 = path_bounds(e["d"], (e.get("sw") or 0) / 2)
+        elif e["type"] == "rect":
+            bx0, by0, bx1, by1 = e["x"], e["y"], e["x"] + e["w"], e["y"] + e["h"]
+        else:
+            bx0, by0, bx1, by1 = e["cx"] - e["r"], e["cy"] - e["r"], e["cx"] + e["r"], e["cy"] + e["r"]
+        if bx0 < x - 0.5 or by0 < y - 0.5 or bx1 > x + w + 0.5 or by1 > y + h + 0.5:
+            raise ValueError(f"{name}: art element {e['name']} leaves the slot: {(round(bx0), round(by0), round(bx1), round(by1))} vs {(x, y, x + w, y + h)}")
+    for e in art_els:
+        check(e)
+    return G(name, [base, G("Placeholder-Art (delete after placing photo)", art_els)])
 
 # ---------------------------------------------------------------- shared slide parts
-def header(dark):
+def header(dark, eyebrow_color=None, eyebrow_opacity=None):
     col = P["cream"] if dark else P["teal_ink"]
-    sub = P["cream"] if dark else P["muted"]
-    lock, _ = lockup(M, 72, 44, col)
-    eyebrow = T("Eyebrow", W - M - 420, 84, 420, "CORPORATE PROFILE 2026", 15, 500, sub, lh=20, ls=0.22, align="right",
-                opacity=0.85 if dark else 1.0)
+    sub = eyebrow_color or (P["cream"] if dark else P["muted"])
+    lock, _ = lockup(M, 66, 56, col)
+    eyebrow = T("Eyebrow", W - M - 420, 84, 420, "Corporate Profile 2026", 15, 500, sub, lh=20, ls=0.22, align="right",
+                case="upper", opacity=eyebrow_opacity if eyebrow_opacity is not None else (0.85 if dark else 1.0))
     return G("Header", [lock, eyebrow])
 
-def footer(section, n, dark):
-    col = P["cream"] if dark else P["muted"]
-    rule = LINE("Footer-Rule", M, 1800, W - M, 1800, P["cream"] if dark else P["line"], 1, opacity=0.25 if dark else 1.0)
-    left = T("Footer-Section", M, 1822, 600, section, 16, 400, col, lh=22, opacity=0.75 if dark else 1.0)
-    right = T("Footer-Page", W - M - 200, 1822, 200, f"{n:02d} / 08", 16, 500, col, lh=22, align="right",
-              opacity=0.75 if dark else 1.0)
+def footer(section, n, dark, color=None, rule_opacity=None, text_opacity=None):
+    col = color or (P["cream"] if dark else P["muted"])
+    rule = LINE("Footer-Rule", M, FOOT_Y, W - M, FOOT_Y, color or (P["cream"] if dark else P["line"]), 1,
+                opacity=rule_opacity if rule_opacity is not None else (0.25 if dark else 1.0))
+    top = text_opacity if text_opacity is not None else (0.75 if dark else 1.0)
+    left = T("Footer-Section", M, 1822, 600, section, 16, 400, col, lh=22, opacity=top)
+    right = T("Footer-Page", W - M - 200, 1822, 200, f"{n:02d} / 08", 16, 500, col, lh=22, align="right", opacity=top)
     return G("Footer", [rule, left, right])
 
-def title(text, dark, y=300, size=76):
-    return T("Title", M, y, CW, text, size, 300, P["cream"] if dark else P["teal"], lh=round(size * 1.1), ls=-0.02)
+def title(text, dark, y=300, size=76, color=None):
+    return T("Title", M, y, CW, text, size, 300, color or (P["cream"] if dark else P["teal"]), lh=round(size * 1.1), ls=-0.02)
 
-def subtitle(text, dark, y, w=880):
-    return T("Subtitle", M, y, w, text, 26, 400, P["cream"] if dark else P["muted"], lh=38, opacity=0.85 if dark else 1.0)
+def subtitle(text, dark, y, w=880, color=None, opacity=None):
+    return T("Subtitle", M, y, w, text, 26, 400, color or (P["cream"] if dark else P["muted"]), lh=38,
+             opacity=opacity if opacity is not None else (0.85 if dark else 1.0))
 
 # ---------------------------------------------------------------- slides
 def slide_cover():
     els = [R("Background", 0, 0, W, H, P["cream"])]
     lock, _ = lockup(M, 96, 96, P["teal_ink"])
     els.append(lock)
-    els.append(T("Eyebrow", W - M - 420, 112, 420, "CORPORATE PROFILE 2026", 18, 500, P["muted"], lh=24, ls=0.22, align="right"))
+    els.append(T("Eyebrow", W - M - 420, 132, 420, "Corporate Profile 2026", 18, 500, P["muted"], lh=24, ls=0.22, align="right", case="upper"))
     head = T("Headline", M, 372, CW, "AFAQ for Energy\n& Integrated Business", 92, 300, P["teal"], lh=100, ls=-0.025)
     els.append(head)
     y = 372 + head["h"] + 40
     els.append(R("Accent-Rule", M, y, 64, 6, P["orange"], rx=3))
-    slog = T("Slogan", M, y + 26, CW, "Innovating today, sustaining tomorrow.", 40, 300, P["teal"], lh=50)
+    slog = T("Slogan", M, y + 26, CW, "Innovating today, sustaining tomorrow", 40, 300, P["teal"], lh=50)
     els.append(slog)
     y = y + 26 + slog["h"] + 18
     scope = T("Scope", M, y, 720, "Solar power and energy storage in the Sultanate of Oman", 24, 400, P["muted"], lh=34)
@@ -393,7 +456,7 @@ def slide_cover():
     tab_x, tab_y, tab_w, tab_h = W - M - 296, py, 296, 116
     els.append(G("Label-Tab", [
         R("Label-Tab-Shape", tab_x, tab_y, tab_w, tab_h, P["orange"], rx=24),
-        T("Label-Tab-Text", tab_x + 28, tab_y + 24, tab_w - 56, "SOLAR\nSTORAGE\nELECTRICAL", 16, 500, P["white"], lh=22, ls=0.18),
+        T("Label-Tab-Text", tab_x + 28, tab_y + 24, tab_w - 56, "SOLAR\nSTORAGE\nELECTRICAL", 16, 500, P["teal_ink"], lh=22, ls=0.18),
     ]))
     pts = [(-60, 1690), (160, 1700), (300, 1540), (520, 1560), (740, 1580), (820, 1760), (1140, 1690)]
     els.append(ribbon("Ribbon", pts, 118))
@@ -418,7 +481,7 @@ def slide_about():
     py = y + 34
     ph = 1744 - py
     notch = {"corner": "bl", "w": 324, "h": 150, "r": 24}
-    els.append(photo_slot("Photo-Site", M, py, CW, ph, 40, notch))
+    els.append(photo_slot("Photo-Site", M, py, CW, ph, 40, notch, dark=True, art="storage"))
     tab_w, tab_h = 308, 134
     tab_x, tab_y = M, py + ph - tab_h
     els.append(G("Services-Tab", [
@@ -436,22 +499,29 @@ def slide_components():
     sub = subtitle("A photovoltaic system is built from four components. AFAQ holds a direct supply agreement with a main supplier for each.", dark, 300 + t["h"] + 20)
     els.append(sub)
     comps = [
-        ("01", "PV modules", "Selected according to the mounting area available and the conditions on site.", "Main suppliers", "AACE  ·  Ronma", "pv-module"),
+        ("01", "PV modules", "Selected according to the mounting area available and the conditions on site.", "Main suppliers", "AACE · Ronma", "pv-module"),
         ("02", "Battery energy storage", "Sized on the loads to be covered and the autonomy required.", "Main supplier", "Goshin", "battery"),
         ("03", "Inverters and power conversion", "Selected according to the array configuration and the connection requirements of the grid operator.", "Main supplier", "Star Charge", "inverter"),
         ("04", "Plant infrastructure", "Mounting structures, foundations, DC and AC cabling, and connection and protection panels, specified to suit the site.", None, None, "infrastructure"),
     ]
     y = 300 + t["h"] + 20 + sub["h"] + 56
-    ch, gap = 284, 24
-    for num, name, note, lab, sup, ic in comps:
-        kids = [R("Card-Shape", M, y, CW, ch, P["white"], rx=28)]
-        kids.append(T("Number", M + 40, y + 34, 80, num, 22, 600, P["orange_deep"], lh=28))
-        kids.append(icon("Icon", ic, W - M - 40 - 60, y + 32, 60, P["teal"]))
-        kids.append(T("Card-Title", M + 40, y + 74, 680, name, 30, 600, P["teal"], lh=38))
-        note_el = T("Card-Note", M + 40, y + 124, 640, note, 22, 400, P["muted"], lh=32)
+    PAD = 36
+    def card_h(note, lab):
+        n = T("m", M + 40, 0, 640, note, 22, 400, "#000000", lh=32)
+        return 126 + n["h"] + (14 + 24 + 30 if lab else 0) + PAD
+    heights = [card_h(n, l) for _, _, n, l, _, _ in comps]
+    gap = round(min(48, max(24, (1744 - y - sum(heights)) / (len(comps) - 1))))
+    for i, (num, name, note, lab, sup, ic) in enumerate(comps):
+        ch = heights[i]
+        kids = [R("Card-Shape", M, y, CW, ch, P["white"], rx=28),
+                T("Number", M + 40, y + 34, 80, num, 22, 600, P["orange_deep"], lh=28),
+                C("Icon-Disc", W - M - 40 - 44, y + 34 + 44, 44, P["lime"]),
+                icon("Icon", ic, W - M - 40 - 44 - 24, y + 34 + 44 - 24, 48, P["teal"]),
+                T("Card-Title", M + 40, y + 74, 640, name, 32, 600, P["teal"], lh=40)]
+        note_el = T("Card-Note", M + 40, y + 126, 640, note, 22, 400, P["muted"], lh=32)
         kids.append(note_el)
         if lab:
-            ly = y + 124 + max(note_el["h"], 64) + 14
+            ly = y + 126 + note_el["h"] + 14
             kids.append(T("Supplier-Label", M + 40, ly, 400, lab, 13, 500, P["muted"], lh=18, ls=0.16, case="upper"))
             kids.append(T("Supplier", M + 40, ly + 24, 600, sup, 22, 500, P["teal"], lh=30))
         els.append(G(f"Card-{num}", kids))
@@ -461,12 +531,10 @@ def slide_components():
 
 def slide_scope():
     dark = False
-    els = [R("Background", 0, 0, W, H, P["lime"])]
-    lock, _ = lockup(M, 72, 44, P["teal_ink"])
-    els.append(G("Header", [lock, T("Eyebrow", W - M - 420, 84, 420, "CORPORATE PROFILE 2026", 15, 500, P["teal"], lh=20, ls=0.22, align="right", opacity=0.8)]))
+    els = [R("Background", 0, 0, W, H, P["lime"]), header(False, eyebrow_color=P["teal"], eyebrow_opacity=0.8)]
     t = title("Scope of work", dark)
     els.append(t)
-    sub = T("Subtitle", M, 300 + t["h"] + 20, 880, "The project sets the scope, from supply alone to full operation.", 26, 400, P["teal"], lh=38, opacity=0.85)
+    sub = subtitle("The project sets the scope, from supply alone to full operation.", dark, 300 + t["h"] + 20, color=P["teal"], opacity=0.85)
     els.append(sub)
     steps = [
         ("01", "Study and design", "Load analysis and consumption data, a site survey, system sizing and placement, and the expected annual yield.", "A report covering system capacity, expected annual yield and estimated cost."),
@@ -475,17 +543,14 @@ def slide_scope():
         ("04", "Operation and monitoring", "Performance monitoring and maintenance under an operation and maintenance contract.", "A performance report comparing actual output against the design figure."),
     ]
     y = 300 + t["h"] + 20 + sub["h"] + 60
-    cx = M + 28
-    tx = M + 92
-    tw = CW - 92
-    step_tops = []
-    # measure natural heights first, then distribute the slack evenly
+    cx, tx, tw = M + 28, M + 92, CW - 92
     def step_height(body, deliv):
-        b = T("m", tx, 0, tw, body, 24, 400, "#000", lh=34)
-        dl = T("m", tx + 28, 0, tw - 56, deliv, 20, 400, "#000", lh=28)
+        b = T("m", tx, 0, tw, body, 24, 400, "#000000", lh=34)
+        dl = T("m", tx + 28, 0, tw - 56, deliv, 20, 400, "#000000", lh=28)
         return 56 + b["h"] + 18 + (44 + dl["h"] + 22)
     natural = sum(step_height(b, d) for _, _, b, d in steps)
-    gap = max(44, (1744 - y - natural) / (len(steps) - 1) - 8)
+    gap = round(max(44, (1744 - y - natural) / (len(steps) - 1) - 8))
+    step_tops = []
     for num, name, body, deliv in steps:
         step_tops.append(y)
         kids = [C("Node", cx, y + 22, 28, P["teal"]),
@@ -497,18 +562,14 @@ def slide_scope():
         dl = T("Deliverable-Text", tx + 28, by + 44, tw - 56, deliv, 20, 400, P["teal"], lh=28)
         bh = 44 + dl["h"] + 22
         kids.insert(3, R("Deliverable-Box", tx, by, tw, bh, P["cream"], rx=18))
-        kids.append(T("Deliverable-Label", tx + 28, by + 18, 300, "DELIVERABLE", 13, 500, P["orange_deep"], lh=18, ls=0.16))
+        kids.append(T("Deliverable-Label", tx + 28, by + 18, 300, "Deliverable", 13, 500, P["orange_deep"], lh=18, ls=0.16, case="upper"))
         kids.append(dl)
         els.append(G(f"Step-{num}", kids))
-        y = by + bh + gap
-    # connectors between nodes (drawn behind content order is fine: lines sit between circles)
-    conns = []
-    for i in range(len(step_tops) - 1):
-        conns.append(LINE(f"Connector-{i + 1}", cx, step_tops[i] + 22 + 36, cx, step_tops[i + 1] + 22 - 36, P["teal"], 2, opacity=0.35))
+        y = round(by + bh + gap)
+    conns = [LINE(f"Connector-{i + 1}", cx, step_tops[i] + 22 + 36, cx, step_tops[i + 1] + 22 - 36, P["teal"], 2, opacity=0.35)
+             for i in range(len(step_tops) - 1)]
     els.insert(2, G("Connectors", conns))
-    els.append(G("Footer", [LINE("Footer-Rule", M, 1800, W - M, 1800, P["teal"], 1, opacity=0.25),
-                            T("Footer-Section", M, 1822, 600, "Scope of work", 16, 400, P["teal"], lh=22, opacity=0.8),
-                            T("Footer-Page", W - M - 200, 1822, 200, "04 / 08", 16, 500, P["teal"], lh=22, align="right", opacity=0.8)]))
+    els.append(footer("Scope of work", 4, False, color=P["teal"], rule_opacity=0.25, text_opacity=0.8))
     return {"name": "04 Scope of work", "bg": P["lime"], "elements": els}
 
 def slide_ways():
@@ -521,22 +582,24 @@ def slide_ways():
         ("02", "Component supply", "Supply to the specification and quantities of the project, for contractors and installation companies.", "boxes"),
     ]
     y = 300 + t["h"] + 72
-    ch = 400
+    ch, tab_w, tab_h = 312, 168, 52
     for num, name, body, ic in cards:
-        kids = [PATH("Card-Shape", tab_path(M, y, CW, ch, 168, 52, 32, 22, "tl"), fill=P["teal_mid"]),
-                R("Tab-Fill", M, y, 168, 52 + 32, P["lime"], rx=26),
-                PATH("Card-Body", rect_path(M, y + 52, CW, ch - 52, 32), fill=P["teal_mid"]),
-                T("Number", M, y + 13, 168, num, 20, 600, P["teal"], lh=26, align="center"),
-                T("Card-Title", M + 48, y + 112, 640, name, 36, 600, P["cream"], lh=44),
-                icon("Icon", ic, W - M - 48 - 96, y + 100, 96, P["lime"], sw=5),
-                ]
-        tt = kids[4]
-        kids.append(T("Card-Body-Text", M + 48, y + 112 + tt["h"] + 20, 700, body, 26, 400, P["cream"], lh=38, opacity=0.85))
-        kids.pop(0)  # keep tab + body as two editable rounded shapes (same colour reads as one)
+        # lime folder tab with the board's concave 22 px fillet where it meets the body; 2 px under the body hides the seam
+        tab = PATH("Tab-Fill", rounded_polygon(
+            [(M, y), (M + tab_w, y), (M + tab_w, y + tab_h), (M + tab_w + 22, y + tab_h), (M + tab_w + 22, y + tab_h + 2), (M, y + tab_h + 2)],
+            [26, 26, 22, 0, 0, 0]), fill=P["lime"])
+        body_shape = PATH("Card-Body", rounded_polygon(
+            [(M, y + tab_h), (M + CW, y + tab_h), (M + CW, y + ch), (M, y + ch)], [0, 32, 32, 32]), fill=P["teal_mid"])
+        tt = T("Card-Title", M + 48, y + 112, 640, name, 32, 600, P["cream"], lh=40)
+        kids = [tab, body_shape,
+                T("Number", M, y + 13, tab_w, num, 20, 600, P["teal"], lh=26, align="center"),
+                tt,
+                T("Card-Body-Text", M + 48, y + 112 + tt["h"] + 16, 680, body, 24, 400, P["cream"], lh=34, opacity=0.85),
+                icon("Icon", ic, W - M - 48 - 72, y + 146, 72, P["lime"], sw=4)]
         els.append(G(f"Card-{num}", kids))
         y += ch + 44
-    pts = [(-60, 1430), (200, 1410), (380, 1610), (600, 1600), (820, 1590), (900, 1400), (1140, 1450)]
-    els.append(ribbon("Ribbon", pts, 150))
+    pts = [(-60, 1310), (200, 1290), (380, 1490), (600, 1480), (820, 1470), (900, 1280), (1140, 1330)]
+    els.append(ribbon("Ribbon", pts, 190, teal_fill=dark_ribbon_fill(pts)))
     els.append(footer("Ways of working", 5, dark))
     return {"name": "05 Ways of working", "bg": P["teal"], "elements": els}
 
@@ -548,25 +611,27 @@ def slide_uses():
     sub = subtitle("The pattern of consumption shapes the system more than the type of business does.", dark, 300 + t["h"] + 20)
     els.append(sub)
     blocks = [
-        ("Sites that consume during the day", "Offices, retail centres, hotels, factories, schools and residential compounds. Their heaviest load falls within sunlight hours.", "sun"),
+        ("Sites that consume\nduring the day", "Offices, retail centres, hotels, factories, schools and residential compounds. Their heaviest load falls within sunlight hours.", "sun"),
         ("Sites with continuous loads", "Hospitals, cold stores, production lines and data centres. The system works alongside the backup already in place, cutting generator running hours and fuel use.", "continuous"),
         ("Sites away from the grid", "Farms, irrigation pumps, camps and work sites that run on diesel.", "off-grid"),
         ("Projects under construction", "Contractors and developers delivering the energy scope within a live project.", "construction"),
     ]
     y0 = 300 + t["h"] + 20 + sub["h"] + 56
     cw, gap = (CW - 30) / 2, 30
-    chh = (1744 - y0 - gap) / 2
+    chh = 440
+    titles = [T("m", 0, 0, cw - 80, n, 28, 600, "#000000", lh=36) for n, _, _ in blocks]
+    title_h = max(tt["h"] for tt in titles)  # shared so side-by-side bodies share a baseline
     for i, (name, body, ic) in enumerate(blocks):
         x = M + (i % 2) * (cw + gap)
         y = y0 + (i // 2) * (chh + gap)
         kids = [R("Card-Shape", x, y, cw, chh, P["white"], rx=28),
                 C("Icon-Disc", x + 40 + 44, y + 40 + 44, 44, P["lime"]),
                 icon("Icon", ic, x + 40 + 44 - 24, y + 40 + 44 - 24, 48, P["teal"]),
-                ]
-        tt = T("Card-Title", x + 40, y + 156, cw - 80, name, 28, 600, P["teal"], lh=36)
-        kids.append(tt)
-        kids.append(T("Card-Body", x + 40, y + 156 + tt["h"] + 14, cw - 80, body, 21, 400, P["muted"], lh=31))
+                T("Card-Title", x + 40, y + 156, cw - 80, name, 28, 600, P["teal"], lh=36),
+                T("Card-Body", x + 40, y + 156 + title_h + 14, cw - 80, body, 21, 400, P["muted"], lh=31)]
         els.append(G(f"Card-{i + 1}", kids))
+    pts = [(-60, 1600), (200, 1580), (380, 1660), (600, 1650), (820, 1640), (900, 1560), (1140, 1600)]
+    els.append(ribbon("Ribbon", pts, 94))
     els.append(footer("Where the systems are used", 6, dark))
     return {"name": "06 Where the systems are used", "bg": P["cream"], "elements": els}
 
@@ -588,7 +653,7 @@ def slide_brings():
                 icon("Icon", ic, W - M - 44, y + 2, 44, P["lime"], sw=2.6)]
         tt = T("Item-Title", M + 84, y, 760, name, 32, 600, P["cream"], lh=40)
         kids.append(tt)
-        b = T("Item-Body", M + 84, y + tt["h"] + 8, 760, body, 23, 400, P["cream"], lh=33, opacity=0.8)
+        b = T("Item-Body", M + 84, y + tt["h"] + 8, 760, body, 22, 400, P["cream"], lh=32, opacity=0.8)
         kids.append(b)
         ly = y + tt["h"] + 8 + b["h"] + 26
         if i < len(items) - 1:
@@ -596,15 +661,14 @@ def slide_brings():
         els.append(G(f"Item-{i + 1:02d}", kids))
         y = ly + 27
     py = y + 30
-    ph = 1744 - py
-    els.append(photo_slot("Photo-Strip", M, py, CW, ph, 32))
+    els.append(photo_slot("Photo-Strip", M, py, CW, 1744 - py, 32, dark=True, art="grid"))
     els.append(footer("What AFAQ brings", 7, dark))
     return {"name": "07 What AFAQ brings", "bg": P["teal"], "elements": els}
 
 def slide_contact():
     dark = True
     els = [R("Background", 0, 0, W, H, P["teal"]), header(dark)]
-    slog = T("Slogan", M, 340, CW, "Innovating today,\nsustaining tomorrow.", 80, 300, P["lime"], lh=90, ls=-0.02)
+    slog = T("Slogan", M, 340, CW, "Innovating today,\nsustaining tomorrow", 80, 300, P["lime"], lh=90, ls=-0.02)
     els.append(slog)
     y = 340 + slog["h"] + 48
     els.append(T("Contact-Title", M, y, CW, "Contact", 26, 500, P["cream"], lh=34, opacity=0.7))
@@ -613,17 +677,17 @@ def slide_contact():
     for lab, val, ic in rows:
         kids = [C("Icon-Disc", M + 34, y + 34, 34, P["lime"]),
                 icon("Icon", ic, M + 34 - 16, y + 34 - 16, 32, P["teal"], sw=2.2),
-                T("Label", M + 100, y, 500, lab.upper(), 14, 500, P["cream"], lh=20, ls=0.16, opacity=0.6),
+                T("Label", M + 100, y, 500, lab, 14, 500, P["cream"], lh=20, ls=0.16, case="upper", opacity=0.6),
                 T("Value", M + 100, y + 26, 820, val, 32, 500, P["cream"], lh=42)]
         els.append(G(f"Contact-{lab}", kids))
         y += 68 + 48
     y += 40
     els.append(LINE("Rule", M, y, W - M, y, P["cream"], 1, opacity=0.2))
     y += 56
-    lock, lh_ = lockup(M, y, 110, P["cream"], P["lime"])
+    lock, _ = lockup(M, y, 110, P["cream"], P["lime"])
     els.append(lock)
-    pts = [(-60, 1500), (180, 1540), (340, 1420), (560, 1440), (780, 1460), (880, 1640), (1140, 1560)]
-    els.append(ribbon("Ribbon", pts, 118))
+    pts = [(-60, 1410), (180, 1450), (340, 1330), (560, 1350), (780, 1370), (880, 1550), (1140, 1470)]
+    els.append(ribbon("Ribbon", pts, 118, teal_fill=dark_ribbon_fill(pts)))
     els.append(footer("AFAQ for Energy & Integrated Business", 8, dark))
     return {"name": "08 Contact", "bg": P["teal"], "elements": els}
 
@@ -631,10 +695,11 @@ SLIDES = [slide_cover, slide_about, slide_components, slide_scope, slide_ways, s
 
 # ---------------------------------------------------------------- SVG writer
 class SvgWriter:
-    def __init__(self):
+    def __init__(self, ps_names=False):
         self.defs = []
         self.ids = {}
         self.gcount = 0
+        self.ps_names = ps_names
 
     def uid(self, name):
         base = "".join(ch if (ch.isalnum() or ch in "-_") else "-" for ch in name).strip("-") or "Layer"
@@ -642,7 +707,7 @@ class SvgWriter:
         self.ids[base] = n + 1
         return base if n == 0 else f"{base}-{n + 1}"
 
-    def paint(self, fill, el_bounds=None):
+    def paint(self, fill):
         if fill is None:
             return "none"
         if isinstance(fill, str):
@@ -677,10 +742,12 @@ class SvgWriter:
             size, lh = e["size"], e["lh"]
             b = baseline(size, lh)
             anchor = {"left": "start", "right": "end", "center": "middle"}[e["align"]]
-            ax = e["x"] if e["align"] == "left" else (e["x"] + e["w"] if e["align"] == "right" else e["x"] + e["w"] / 2)
+            # right-aligned tracked text: cancel the trailing letter-space so the glyphs end on the margin
+            ax = e["x"] if e["align"] == "left" else (e["x"] + e["w"] + e["ls"] * size if e["align"] == "right" else e["x"] + e["w"] / 2)
             ls = f' letter-spacing="{fmt(e["ls"] * size)}"' if e["ls"] else ""
             ta = f' text-anchor="{anchor}"' if anchor != "start" else ""
-            common = f'font-family="Inter" font-size="{fmt(size)}" font-weight="{e["weight"]}" fill="{e["color"]}"{ls}{ta}{op}'
+            family = PS_NAMES[e["weight"]] if self.ps_names else "Inter"
+            common = f'font-family="{family}" font-size="{fmt(size)}" font-weight="{e["weight"]}" fill="{e["color"]}"{ls}{ta}{op}'
             lines = e["lines"]
             if len(lines) == 1:
                 return f'{ind}<text id="{self.uid(e["name"])}" x="{fmt(ax)}" y="{fmt(e["y"] + b)}" {common}>{escape(lines[0])}</text>\n'
@@ -696,13 +763,13 @@ class SvgWriter:
                 f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">\n'
                 f'{defs}{body}</svg>\n')
 
-def write(path, content):
+def write(path, content, mode="w"):
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", encoding="utf-8") as f:
+    with open(path, mode, encoding=None if "b" in mode else "utf-8") as f:
         f.write(content)
 
-def svg_of(elements, width, height, title):
-    return SvgWriter().document(elements, width, height, title)
+def svg_of(elements, width, height, title, ps_names=False):
+    return SvgWriter(ps_names).document(elements, width, height, title)
 
 # ---------------------------------------------------------------- ASE palette (Illustrator swatches)
 def write_ase(path, swatches):
@@ -712,31 +779,31 @@ def write_ase(path, swatches):
         data = struct.pack(">H", len(name) + 1) + name_u + b"RGB " + struct.pack(">fff", r, g, b) + struct.pack(">H", 0)
         return struct.pack(">HI", 0x0001, len(data)) + data
     body = b"".join(block(n, c) for n, c, _ in swatches)
-    with open(path, "wb") as f:
-        f.write(b"ASEF" + struct.pack(">HH", 1, 0) + struct.pack(">I", len(swatches)) + body)
+    write(path, b"ASEF" + struct.pack(">HH", 1, 0) + struct.pack(">I", len(swatches)) + body, "wb")
 
 # ---------------------------------------------------------------- assets
 def build_assets():
     A = os.path.join(OUT, "assets")
-    # logo variants
     for variant, col, bg in [("teal", P["teal_ink"], None), ("cream", P["cream"], P["teal"]), ("lime", P["lime"], P["teal"]), ("white", P["white"], None)]:
         lock, h = lockup(40, 40, 120, col)
-        els = ([R("Background", 0, 0, 40 * 2 + 365, 40 * 2 + h, bg)] if bg else []) + [lock]
-        write(os.path.join(A, "logo", f"afq-lockup-{variant}.svg"), svg_of(els, 445, int(80 + h), f"AFQ lockup ({variant})"))
-        els = ([R("Background", 0, 0, 384, 180, bg)] if bg else []) + [wordmark(40, 40, 100, col)]
-        write(os.path.join(A, "logo", f"afq-wordmark-{variant}.svg"), svg_of(els, 384, 180, f"AFQ wordmark ({variant})"))
-    # ribbon
+        lw = round(WORDMARK_W * 1.2) + 80
+        els = ([R("Background", 0, 0, lw, 80 + h, bg)] if bg else []) + [lock]
+        write(os.path.join(A, "logo", f"afq-lockup-{variant}.svg"), svg_of(els, lw, int(80 + h), f"AFQ lockup ({variant})"))
+        ww = WORDMARK_W + 80
+        els = ([R("Background", 0, 0, ww, 200, bg)] if bg else []) + [wordmark(40, 40, 100, col)]
+        write(os.path.join(A, "logo", f"afq-wordmark-{variant}.svg"), svg_of(els, ww, 200, f"AFQ wordmark ({variant})"))
     pts = [(-60, 190), (160, 200), (300, 40), (520, 60), (740, 80), (820, 260), (1140, 190)]
-    write(os.path.join(A, "graphics", "ribbon-lime-teal-orange.svg"), svg_of([ribbon("Ribbon", pts, 118)], 1080, 420, "Ribbon"))
-    write(os.path.join(A, "graphics", "ribbon-lime-only.svg"), svg_of([ribbon("Ribbon", pts, 118, teal=False, orange=False)], 1080, 420, "Ribbon (lime)"))
-    # tab panel + notched photo slot samples
+    write(os.path.join(A, "graphics", "ribbon-lime-teal-orange.svg"), svg_of([ribbon("Ribbon", pts, 118)], 1080, 460, "Ribbon"))
+    write(os.path.join(A, "graphics", "ribbon-on-dark.svg"), svg_of([R("Background", 0, 0, 1080, 460, P["teal"]), ribbon("Ribbon", pts, 118, teal_fill=dark_ribbon_fill(pts))], 1080, 460, "Ribbon on dark"))
+    write(os.path.join(A, "graphics", "ribbon-lime-only.svg"), svg_of([ribbon("Ribbon", pts, 118, teal=False, orange=False)], 1080, 460, "Ribbon (lime)"))
     write(os.path.join(A, "graphics", "tab-panel.svg"), svg_of([PATH("Tab-Panel", tab_path(20, 20, 600, 360, 168, 52, 32, 22, "tl"), fill=P["teal_mid"])], 640, 400, "Tab panel"))
     write(os.path.join(A, "graphics", "tab-panel-lime.svg"), svg_of([PATH("Tab-Panel", tab_path(20, 20, 600, 360, 168, 52, 32, 22, "tr"), fill=P["lime"])], 640, 400, "Tab panel (lime)"))
     for corner in ("tl", "tr", "bl", "br"):
         els = [photo_slot("Photo-Slot", 20, 20, 900, 640, 40, {"corner": corner, "w": 300, "h": 130, "r": 24})]
         write(os.path.join(A, "graphics", f"photo-slot-notch-{corner}.svg"), svg_of(els, 940, 680, f"Photo slot (notch {corner})"))
     write(os.path.join(A, "graphics", "photo-slot-plain.svg"), svg_of([photo_slot("Photo-Slot", 20, 20, 900, 640, 40)], 940, 680, "Photo slot"))
-    # icons
+    for art in ("solar", "storage", "grid"):
+        write(os.path.join(A, "graphics", f"photo-slot-dark-{art}.svg"), svg_of([R("Background", 0, 0, 940, 680, P["teal"]), photo_slot("Photo-Slot", 20, 20, 900, 640, 40, dark=True, art=art)], 940, 680, f"Photo slot dark ({art})"))
     for key in ICONS:
         write(os.path.join(A, "icons", f"icon-{key}.svg"), svg_of([icon(None, key, 8, 8, 48, P["teal"])], 64, 64, f"Icon {key}"))
     sheet = [R("Background", 0, 0, 1000, 420, P["cream"])]
@@ -746,7 +813,6 @@ def build_assets():
         sheet.append(icon(None, key, x + 20, y + 20, 48, P["teal"]))
         sheet.append(T(f"Name-{key}", x - 20, y + 98, 128, key, 13, 500, P["muted"], lh=18, align="center"))
     write(os.path.join(A, "icons", "_icon-sheet.svg"), svg_of(sheet, 1000, 420, "Icon sheet"))
-    # palette
     pal = [R("Background", 0, 0, 1000, 680, P["white"])]
     for i, (name, col, use) in enumerate(PALETTE_DOC):
         x, y = 40 + (i % 4) * 236, 40 + (i // 4) * 156
@@ -760,6 +826,35 @@ def build_assets():
          "typography": {"family": "Inter", "styles": {"display": "Light 300", "title": "Light 300", "heading": "Semi Bold 600", "body": "Regular 400", "label": "Medium 500 (tracking +16–30%)"}}},
         indent=2))
 
+# ---------------------------------------------------------------- Figma scripts (same spec, slimmed)
+def slim(e):
+    if e["type"] == "group":
+        return {"type": "group", "name": e["name"], "children": [slim(c) for c in e["children"]]}
+    e = {k: v for k, v in e.items() if k != "lines"}
+    for k in ("x", "y", "w", "h", "cx", "cy", "r", "rx", "sw", "lh"):
+        if k in e and isinstance(e[k], float):
+            e[k] = round(e[k], 2)
+    return e
+
+def write_figma_scripts(spec):
+    builder_path = os.path.join(OUT, "figma", "figma-build.js")
+    if not os.path.exists(builder_path):
+        print("figma/figma-build.js missing — skipped Figma scripts")
+        return
+    body = open(builder_path, encoding="utf-8").read().split("// eslint-disable-next-line")[0]
+    slides = [{"name": s["name"], "bg": s["bg"], "elements": [slim(e) for e in s["elements"]]} for s in spec["slides"]]
+    for i, s in enumerate(slides):
+        one = {"canvas": spec["canvas"], "slides": [s]}
+        js = (f"// use_figma script — builds slide {s['name']} as a native 1080x1920 frame on the current page.\n"
+              f"// Generated by tools/deck.py from the same spec as pages/*.svg; readable source: figma/figma-build.js\n"
+              f"const SPEC = {json.dumps(one, separators=(',', ':'))};\n{body}\nreturn await buildDeck(SPEC);\n")
+        write(os.path.join(OUT, "figma", "slides", f"slide-{i + 1:02d}.js"), js)
+    full = {"canvas": spec["canvas"], "slides": slides}
+    write(os.path.join(OUT, "figma", "scripter-build-all.js"),
+          f"// Scripter plugin: paste everything and run. Builds all 8 slides to the right of existing content.\n"
+          f"// Generated by tools/deck.py from the same spec as pages/*.svg.\n"
+          f"const SPEC = {json.dumps(full, separators=(',', ':'))};\n{body}\nconst result = await buildDeck(SPEC);\nconsole.log(result);\n")
+
 # ---------------------------------------------------------------- main
 def main():
     spec = {"canvas": {"width": W, "height": H}, "font": {"family": "Inter", "styles": STYLE_NAMES, "metrics": {"ascent": ASC, "descent": DESC}},
@@ -769,10 +864,12 @@ def main():
         spec["slides"].append(s)
         fname = f"{i + 1:02d}-{s['name'][3:].lower().replace(' ', '-')}.svg"
         write(os.path.join(OUT, "pages", fname), svg_of(s["elements"], W, H, s["name"]))
+        write(os.path.join(OUT, "pages-illustrator", fname), svg_of(s["elements"], W, H, s["name"], ps_names=True))
         print("wrote pages/" + fname)
     write(os.path.join(OUT, "spec", "deck-spec.json"), json.dumps(spec, indent=1))
+    write_figma_scripts(spec)
     build_assets()
-    print("assets + spec written to", OUT)
+    print("assets, spec and figma scripts written to", OUT)
 
 if __name__ == "__main__":
     main()

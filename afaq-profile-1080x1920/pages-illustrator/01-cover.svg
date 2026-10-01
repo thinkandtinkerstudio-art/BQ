@@ -11,16 +11,16 @@
       <path id="Letter-F" d="M 262.56 179.04 L 262.56 130.08 C 262.56 118.66 271.78 109.44 283.2 109.44 L 364.32 109.44 M 262.56 144 L 346.56 144" fill="none" stroke="#03343D" stroke-width="25.92" stroke-linecap="round" stroke-linejoin="round"/>
       <path id="Letter-Q" d="M 398.88 130.56 C 398.88 118.63 408.55 108.96 420.48 108.96 L 484.8 108.96 C 496.73 108.96 506.4 118.63 506.4 130.56 L 506.4 157.44 C 506.4 169.37 496.73 179.04 484.8 179.04 L 420.48 179.04 C 408.55 179.04 398.88 169.37 398.88 157.44 Z M 492.48 174.72 L 523.2 195.84" fill="none" stroke="#03343D" stroke-width="25.92" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <text id="Tagline" x="72" y="229.05" font-family="Inter" font-size="18" font-weight="500" fill="#03343D" letter-spacing="10.8">ENERGY. ENGINEERED.</text>
+    <text id="Tagline" x="72" y="229.05" font-family="Inter-Medium" font-size="18" font-weight="500" fill="#03343D" letter-spacing="10.8">ENERGY. ENGINEERED.</text>
   </g>
-  <text id="Eyebrow" x="1011.96" y="150.55" font-family="Inter" font-size="18" font-weight="500" fill="#5A7175" letter-spacing="3.96" text-anchor="end">CORPORATE PROFILE 2026</text>
+  <text id="Eyebrow" x="1011.96" y="150.55" font-family="Inter-Medium" font-size="18" font-weight="500" fill="#5A7175" letter-spacing="3.96" text-anchor="end">CORPORATE PROFILE 2026</text>
   <g id="Headline">
-    <text id="Headline-line" x="72" y="455.47" font-family="Inter" font-size="92" font-weight="300" fill="#053C45" letter-spacing="-2.3">AFAQ for Energy</text>
-    <text id="Headline-line-2" x="72" y="555.47" font-family="Inter" font-size="92" font-weight="300" fill="#053C45" letter-spacing="-2.3">&amp; Integrated Business</text>
+    <text id="Headline-line" x="72" y="455.47" font-family="Inter-Light" font-size="92" font-weight="300" fill="#053C45" letter-spacing="-2.3">AFAQ for Energy</text>
+    <text id="Headline-line-2" x="72" y="555.47" font-family="Inter-Light" font-size="92" font-weight="300" fill="#053C45" letter-spacing="-2.3">&amp; Integrated Business</text>
   </g>
   <rect id="Accent-Rule" x="72" y="612" width="64" height="6" rx="3" fill="#FD7E25"/>
-  <text id="Slogan" x="72" y="677.55" font-family="Inter" font-size="40" font-weight="300" fill="#053C45">Innovating today, sustaining tomorrow</text>
-  <text id="Scope" x="72" y="731.73" font-family="Inter" font-size="24" font-weight="400" fill="#5A7175">Solar power and energy storage in the Sultanate of Oman</text>
+  <text id="Slogan" x="72" y="677.55" font-family="Inter-Light" font-size="40" font-weight="300" fill="#053C45">Innovating today, sustaining tomorrow</text>
+  <text id="Scope" x="72" y="731.73" font-family="Inter-Regular" font-size="24" font-weight="400" fill="#5A7175">Solar power and energy storage in the Sultanate of Oman</text>
   <g id="Photo-Hero">
     <path id="Photo-Hero__set-image-fill" d="M 72 828 C 72 805.91 89.91 788 112 788 L 656 788 C 678.09 788 696 805.91 696 828 L 696 896 C 696 909.25 706.75 920 720 920 L 968 920 C 990.09 920 1008 937.91 1008 960 L 1008 1440 C 1008 1462.09 990.09 1480 968 1480 L 112 1480 C 89.91 1480 72 1462.09 72 1440 Z" fill="url(#grad-1)"/>
     <g id="Placeholder-Art--delete-after-placing-photo">
@@ -71,9 +71,9 @@
   <g id="Label-Tab">
     <rect id="Label-Tab-Shape" x="712" y="788" width="296" height="116" rx="24" fill="#FD7E25"/>
     <g id="Label-Tab-Text">
-      <text id="Label-Tab-Text-line" x="740" y="828.82" font-family="Inter" font-size="16" font-weight="500" fill="#03343D" letter-spacing="2.88">SOLAR</text>
-      <text id="Label-Tab-Text-line-2" x="740" y="850.82" font-family="Inter" font-size="16" font-weight="500" fill="#03343D" letter-spacing="2.88">STORAGE</text>
-      <text id="Label-Tab-Text-line-3" x="740" y="872.82" font-family="Inter" font-size="16" font-weight="500" fill="#03343D" letter-spacing="2.88">ELECTRICAL</text>
+      <text id="Label-Tab-Text-line" x="740" y="828.82" font-family="Inter-Medium" font-size="16" font-weight="500" fill="#03343D" letter-spacing="2.88">SOLAR</text>
+      <text id="Label-Tab-Text-line-2" x="740" y="850.82" font-family="Inter-Medium" font-size="16" font-weight="500" fill="#03343D" letter-spacing="2.88">STORAGE</text>
+      <text id="Label-Tab-Text-line-3" x="740" y="872.82" font-family="Inter-Medium" font-size="16" font-weight="500" fill="#03343D" letter-spacing="2.88">ELECTRICAL</text>
     </g>
   </g>
   <g id="Ribbon">

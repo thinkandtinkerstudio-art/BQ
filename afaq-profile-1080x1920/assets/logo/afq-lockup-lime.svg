@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- AFQ lockup (lime) — AFAQ Corporate Profile, 445x255. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
-<svg xmlns="http://www.w3.org/2000/svg" width="445" height="255" viewBox="0 0 445 255">
-  <rect id="Background" x="0" y="0" width="445" height="255" fill="#053C45"/>
+<!-- AFQ lockup (lime) — AFAQ Corporate Profile, 661x254. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="661" height="254" viewBox="0 0 661 254">
+  <rect id="Background" x="0" y="0" width="661" height="254" fill="#053C45"/>
   <g id="Logo-Lockup">
     <g id="Wordmark-AFQ">
-      <path id="Letter-A" d="M 54.4 145.6 L 80.8 78.4 C 88 59.2 112 59.2 119.2 78.4 L 145.6 145.6" fill="none" stroke="#C8FB5F" stroke-width="28.8" stroke-linecap="round" stroke-linejoin="round"/>
-      <path id="Letter-F" d="M 186.4 145.6 L 186.4 54.4 L 258.4 54.4 M 186.4 100 L 246.4 100" fill="none" stroke="#C8FB5F" stroke-width="28.8" stroke-linecap="round" stroke-linejoin="round"/>
-      <path id="Letter-Q" d="M 296.8 90.4 C 296.8 70.52 312.92 54.4 332.8 54.4 L 352 54.4 C 371.88 54.4 388 70.52 388 90.4 L 388 109.6 C 388 129.48 371.88 145.6 352 145.6 L 332.8 145.6 C 312.92 145.6 296.8 129.48 296.8 109.6 Z M 359.2 116.8 L 390.4 150.4" fill="none" stroke="#C8FB5F" stroke-width="28.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Letter-A" d="M 66.4 138.4 L 78.4 114.4 L 119.2 114.4 L 157.6 58 L 234.4 143.2" fill="none" stroke="#C8FB5F" stroke-width="32.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Letter-F" d="M 278.2 143.8 L 278.2 82.6 C 278.2 68.32 289.72 56.8 304 56.8 L 405.4 56.8 M 278.2 100 L 383.2 100" fill="none" stroke="#C8FB5F" stroke-width="32.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Letter-Q" d="M 448.6 83.2 C 448.6 68.28 460.68 56.2 475.6 56.2 L 556 56.2 C 570.92 56.2 583 68.28 583 83.2 L 583 116.8 C 583 131.72 570.92 143.8 556 143.8 L 475.6 143.8 C 460.68 143.8 448.6 131.72 448.6 116.8 Z M 565.6 138.4 L 604 164.8" fill="none" stroke="#C8FB5F" stroke-width="32.4" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <text id="Tagline" x="40" y="208.23" font-family="Inter" font-size="24" font-weight="500" fill="#C8FB5F" letter-spacing="7.2">ENERGY. ENGINEERED.</text>
+    <text id="Tagline" x="40" y="207.37" font-family="Inter" font-size="23" font-weight="500" fill="#C8FB5F" letter-spacing="13.8">ENERGY. ENGINEERED.</text>
   </g>
 </svg>

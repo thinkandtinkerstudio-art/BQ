@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- AFQ wordmark (teal) — AFAQ Corporate Profile, 384x180. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
-<svg xmlns="http://www.w3.org/2000/svg" width="384" height="180" viewBox="0 0 384 180">
+<!-- AFQ wordmark (teal) — AFAQ Corporate Profile, 564x200. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="564" height="200" viewBox="0 0 564 200">
   <g id="Wordmark-AFQ">
-    <path id="Letter-A" d="M 52 128 L 74 72 C 80 56 100 56 106 72 L 128 128" fill="none" stroke="#03343D" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
-    <path id="Letter-F" d="M 162 128 L 162 52 L 222 52 M 162 90 L 212 90" fill="none" stroke="#03343D" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
-    <path id="Letter-Q" d="M 254 82 C 254 65.43 267.43 52 284 52 L 300 52 C 316.57 52 330 65.43 330 82 L 330 98 C 330 114.57 316.57 128 300 128 L 284 128 C 267.43 128 254 114.57 254 98 Z M 306 104 L 332 132" fill="none" stroke="#03343D" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Letter-A" d="M 62 122 L 72 102 L 106 102 L 138 55 L 202 126" fill="none" stroke="#03343D" stroke-width="27" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Letter-F" d="M 238.5 126.5 L 238.5 75.5 C 238.5 63.6 248.1 54 260 54 L 344.5 54 M 238.5 90 L 326 90" fill="none" stroke="#03343D" stroke-width="27" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Letter-Q" d="M 380.5 76 C 380.5 63.57 390.57 53.5 403 53.5 L 470 53.5 C 482.43 53.5 492.5 63.57 492.5 76 L 492.5 104 C 492.5 116.43 482.43 126.5 470 126.5 L 403 126.5 C 390.57 126.5 380.5 116.43 380.5 104 Z M 478 122 L 510 144" fill="none" stroke="#03343D" stroke-width="27" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>

@@ -41,9 +41,9 @@
   <rect id="Swatch-Orange" x="40" y="508" width="200" height="90" rx="16" fill="#FD7E25" stroke="#D9DCCF" stroke-width="1"/>
   <text id="Name-Orange" x="40" y="623.46" font-family="Inter" font-size="15" font-weight="600" fill="#202C28">Orange</text>
   <text id="Hex-Orange" x="40" y="643.73" font-family="Inter" font-size="13" font-weight="400" fill="#5A7175">#FD7E25</text>
-  <rect id="Swatch-Orange-Deep" x="276" y="508" width="200" height="90" rx="16" fill="#D9641A" stroke="#D9DCCF" stroke-width="1"/>
+  <rect id="Swatch-Orange-Deep" x="276" y="508" width="200" height="90" rx="16" fill="#B04C0E" stroke="#D9DCCF" stroke-width="1"/>
   <text id="Name-Orange-Deep" x="276" y="623.46" font-family="Inter" font-size="15" font-weight="600" fill="#202C28">Orange Deep</text>
-  <text id="Hex-Orange-Deep" x="276" y="643.73" font-family="Inter" font-size="13" font-weight="400" fill="#5A7175">#D9641A</text>
+  <text id="Hex-Orange-Deep" x="276" y="643.73" font-family="Inter" font-size="13" font-weight="400" fill="#5A7175">#B04C0E</text>
   <rect id="Swatch-Muted" x="512" y="508" width="200" height="90" rx="16" fill="#5A7175" stroke="#D9DCCF" stroke-width="1"/>
   <text id="Name-Muted" x="512" y="623.46" font-family="Inter" font-size="15" font-weight="600" fill="#202C28">Muted</text>
   <text id="Hex-Muted" x="512" y="643.73" font-family="Inter" font-size="13" font-weight="400" fill="#5A7175">#5A7175</text>

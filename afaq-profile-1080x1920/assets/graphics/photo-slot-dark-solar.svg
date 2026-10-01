@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Photo slot (notch bl) — AFAQ Corporate Profile, 940x680. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<!-- Photo slot dark (solar) — AFAQ Corporate Profile, 940x680. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
 <svg xmlns="http://www.w3.org/2000/svg" width="940" height="680" viewBox="0 0 940 680">
   <defs>
-    <linearGradient id="grad-1" gradientUnits="userSpaceOnUse" x1="0" y1="20" x2="0" y2="660"><stop offset="0" stop-color="#022C32" stop-opacity="1"/><stop offset="1" stop-color="#0E5560" stop-opacity="1"/></linearGradient>
+    <linearGradient id="grad-1" gradientUnits="userSpaceOnUse" x1="0" y1="20" x2="0" y2="660"><stop offset="0" stop-color="#0E5560" stop-opacity="1"/><stop offset="1" stop-color="#1F7580" stop-opacity="1"/></linearGradient>
   </defs>
+  <rect id="Background" x="0" y="0" width="940" height="680" fill="#053C45"/>
   <g id="Photo-Slot">
-    <path id="Photo-Slot__set-image-fill" d="M 20 60 C 20 37.91 37.91 20 60 20 L 880 20 C 902.09 20 920 37.91 920 60 L 920 620 C 920 642.09 902.09 660 880 660 L 360 660 C 337.91 660 320 642.09 320 620 L 320 554 C 320 540.75 309.25 530 296 530 L 60 530 C 37.91 530 20 512.09 20 490 Z" fill="url(#grad-1)"/>
+    <path id="Photo-Slot__set-image-fill" d="M 20 60 C 20 37.91 37.91 20 60 20 L 880 20 C 902.09 20 920 37.91 920 60 L 920 620 C 920 642.09 902.09 660 880 660 L 60 660 C 37.91 660 20 642.09 20 620 Z" fill="url(#grad-1)" stroke="#C8FB5F" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round"/>
     <g id="Placeholder-Art--delete-after-placing-photo">
       <circle id="Sun-Glow" cx="236" cy="186.4" r="103.36" fill="#FD7E25" opacity="0.18"/>
       <circle id="Sun" cx="236" cy="186.4" r="54.4" fill="#FD7E25"/>
@@ -26,6 +27,10 @@
         <path id="Panel-1-6-line" d="M 708.29 439.2 L 699.14 480.8" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
         <path id="Panel-1-7" d="M 771.94 442.13 C 772.29 440.51 773.92 439.2 775.58 439.2 L 870.15 439.2 C 871.81 439.2 872.86 440.51 872.51 442.13 L 864.64 477.87 C 864.29 479.49 862.66 480.8 861 480.8 L 766.43 480.8 C 764.77 480.8 763.72 479.49 764.07 477.87 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
         <path id="Panel-1-7-line" d="M 822.87 439.2 L 813.71 480.8" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-2-1" d="M 85.92 499.73 C 86.27 498.11 87.9 496.8 89.56 496.8 L 198.23 496.8 C 199.88 496.8 200.94 498.11 200.58 499.73 L 191.31 541.87 C 190.96 543.49 189.32 544.8 187.67 544.8 L 79 544.8 C 77.34 544.8 76.29 543.49 76.64 541.87 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-2-1-line" d="M 143.89 496.8 L 133.33 544.8" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-2-2" d="M 220.58 499.73 C 220.94 498.11 222.57 496.8 224.23 496.8 L 332.89 496.8 C 334.55 496.8 335.6 498.11 335.25 499.73 L 325.98 541.87 C 325.62 543.49 323.99 544.8 322.33 544.8 L 213.67 544.8 C 212.01 544.8 210.96 543.49 211.31 541.87 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-2-2-line" d="M 278.56 496.8 L 268 544.8" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
         <path id="Panel-2-3" d="M 355.25 499.73 C 355.6 498.11 357.24 496.8 358.89 496.8 L 467.56 496.8 C 469.22 496.8 470.27 498.11 469.92 499.73 L 460.64 541.87 C 460.29 543.49 458.66 544.8 457 544.8 L 348.33 544.8 C 346.68 544.8 345.62 543.49 345.98 541.87 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
         <path id="Panel-2-3-line" d="M 413.23 496.8 L 402.67 544.8" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
         <path id="Panel-2-4" d="M 489.92 499.73 C 490.27 498.11 491.9 496.8 493.56 496.8 L 602.23 496.8 C 603.88 496.8 604.94 498.11 604.58 499.73 L 595.31 541.87 C 594.96 543.49 593.32 544.8 591.67 544.8 L 483 544.8 C 481.34 544.8 480.29 543.49 480.64 541.87 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
@@ -34,6 +39,10 @@
         <path id="Panel-2-5-line" d="M 682.56 496.8 L 672 544.8" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
         <path id="Panel-2-6" d="M 759.25 499.73 C 759.6 498.11 761.24 496.8 762.89 496.8 L 871.56 496.8 C 873.22 496.8 874.27 498.11 873.92 499.73 L 864.64 541.87 C 864.29 543.49 862.66 544.8 861 544.8 L 752.33 544.8 C 750.68 544.8 749.62 543.49 749.98 541.87 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
         <path id="Panel-2-6-line" d="M 817.23 496.8 L 806.67 544.8" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-3-1" d="M 88.03 563.73 C 88.38 562.11 90.02 560.8 91.67 560.8 L 222.47 560.8 C 224.13 560.8 225.18 562.11 224.83 563.73 L 213.44 615.47 C 213.09 617.09 211.46 618.4 209.8 618.4 L 79 618.4 C 77.34 618.4 76.29 617.09 76.64 615.47 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-3-1-line" d="M 157.07 560.8 L 144.4 618.4" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-3-2" d="M 250.83 563.73 C 251.18 562.11 252.82 560.8 254.47 560.8 L 385.27 560.8 C 386.93 560.8 387.98 562.11 387.63 563.73 L 376.24 615.47 C 375.89 617.09 374.26 618.4 372.6 618.4 L 241.8 618.4 C 240.14 618.4 239.09 617.09 239.44 615.47 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-3-2-line" d="M 319.87 560.8 L 307.2 618.4" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
         <path id="Panel-3-3" d="M 413.63 563.73 C 413.98 562.11 415.62 560.8 417.27 560.8 L 548.07 560.8 C 549.73 560.8 550.78 562.11 550.43 563.73 L 539.04 615.47 C 538.69 617.09 537.06 618.4 535.4 618.4 L 404.6 618.4 C 402.94 618.4 401.89 617.09 402.24 615.47 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
         <path id="Panel-3-3-line" d="M 482.67 560.8 L 470 618.4" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
         <path id="Panel-3-4" d="M 576.43 563.73 C 576.78 562.11 578.42 560.8 580.07 560.8 L 710.87 560.8 C 712.53 560.8 713.58 562.11 713.23 563.73 L 701.84 615.47 C 701.49 617.09 699.86 618.4 698.2 618.4 L 567.4 618.4 C 565.74 618.4 564.69 617.09 565.04 615.47 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>

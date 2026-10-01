@@ -12,19 +12,19 @@
         <path id="Letter-F" d="M 183.16 114.44 L 183.16 85.88 C 183.16 79.22 188.54 73.84 195.2 73.84 L 242.52 73.84 M 183.16 94 L 232.16 94" fill="none" stroke="#F5F4EB" stroke-width="15.12" stroke-linecap="round" stroke-linejoin="round"/>
         <path id="Letter-Q" d="M 262.68 86.16 C 262.68 79.2 268.32 73.56 275.28 73.56 L 312.8 73.56 C 319.76 73.56 325.4 79.2 325.4 86.16 L 325.4 101.84 C 325.4 108.8 319.76 114.44 312.8 114.44 L 275.28 114.44 C 268.32 114.44 262.68 108.8 262.68 101.84 Z M 317.28 111.92 L 335.2 124.24" fill="none" stroke="#F5F4EB" stroke-width="15.12" stroke-linecap="round" stroke-linejoin="round"/>
       </g>
-      <text id="Tagline" x="72" y="145" font-family="Inter" font-size="11" font-weight="500" fill="#F5F4EB" letter-spacing="6.6">ENERGY. ENGINEERED.</text>
+      <text id="Tagline" x="72" y="145" font-family="Inter-Medium" font-size="11" font-weight="500" fill="#F5F4EB" letter-spacing="6.6">ENERGY. ENGINEERED.</text>
     </g>
-    <text id="Eyebrow" x="1011.3" y="99.46" font-family="Inter" font-size="15" font-weight="500" fill="#F5F4EB" letter-spacing="3.3" text-anchor="end" opacity="0.85">CORPORATE PROFILE 2026</text>
+    <text id="Eyebrow" x="1011.3" y="99.46" font-family="Inter-Medium" font-size="15" font-weight="500" fill="#F5F4EB" letter-spacing="3.3" text-anchor="end" opacity="0.85">CORPORATE PROFILE 2026</text>
   </g>
-  <text id="Title" x="72" y="369.65" font-family="Inter" font-size="76" font-weight="300" fill="#F5F4EB" letter-spacing="-1.52">Ways of working</text>
+  <text id="Title" x="72" y="369.65" font-family="Inter-Light" font-size="76" font-weight="300" fill="#F5F4EB" letter-spacing="-1.52">Ways of working</text>
   <g id="Card-01">
     <path id="Tab-Fill" d="M 72 482 C 72 467.64 83.64 456 98 456 L 214 456 C 228.36 456 240 467.64 240 482 L 240 486 C 240 498.15 249.85 508 262 508 L 262 508 L 262 510 L 72 510 Z" fill="#C8FB5F"/>
     <path id="Card-Body" d="M 72 508 L 976 508 C 993.67 508 1008 522.33 1008 540 L 1008 736 C 1008 753.67 993.67 768 976 768 L 104 768 C 86.33 768 72 753.67 72 736 Z" fill="#0E5560"/>
-    <text id="Number" x="156" y="489.28" font-family="Inter" font-size="20" font-weight="600" fill="#053C45" text-anchor="middle">01</text>
-    <text id="Card-Title" x="120" y="599.64" font-family="Inter" font-size="32" font-weight="600" fill="#F5F4EB">Supply and installation for projects</text>
+    <text id="Number" x="156" y="489.28" font-family="Inter-SemiBold" font-size="20" font-weight="600" fill="#053C45" text-anchor="middle">01</text>
+    <text id="Card-Title" x="120" y="599.64" font-family="Inter-SemiBold" font-size="32" font-weight="600" fill="#F5F4EB">Supply and installation for projects</text>
     <g id="Card-Body-Text">
-      <text id="Card-Body-Text-line" x="120" y="649.73" font-family="Inter" font-size="24" font-weight="400" fill="#F5F4EB" opacity="0.85">One party responsible for design, supply, installation and</text>
-      <text id="Card-Body-Text-line-2" x="120" y="683.73" font-family="Inter" font-size="24" font-weight="400" fill="#F5F4EB" opacity="0.85">commissioning.</text>
+      <text id="Card-Body-Text-line" x="120" y="649.73" font-family="Inter-Regular" font-size="24" font-weight="400" fill="#F5F4EB" opacity="0.85">One party responsible for design, supply, installation and</text>
+      <text id="Card-Body-Text-line-2" x="120" y="683.73" font-family="Inter-Regular" font-size="24" font-weight="400" fill="#F5F4EB" opacity="0.85">commissioning.</text>
     </g>
     <g id="Icon">
       <path id="Icon-clipboard-1" d="M 903 618.5 C 903 616.01 905.01 614 907.5 614 L 940.5 614 C 942.99 614 945 616.01 945 618.5 L 945 663.5 C 945 665.99 942.99 668 940.5 668 L 907.5 668 C 905.01 668 903 665.99 903 663.5 Z" fill="none" stroke="#C8FB5F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -35,11 +35,11 @@
   <g id="Card-02">
     <path id="Tab-Fill-2" d="M 72 838 C 72 823.64 83.64 812 98 812 L 214 812 C 228.36 812 240 823.64 240 838 L 240 842 C 240 854.15 249.85 864 262 864 L 262 864 L 262 866 L 72 866 Z" fill="#C8FB5F"/>
     <path id="Card-Body-2" d="M 72 864 L 976 864 C 993.67 864 1008 878.33 1008 896 L 1008 1092 C 1008 1109.67 993.67 1124 976 1124 L 104 1124 C 86.33 1124 72 1109.67 72 1092 Z" fill="#0E5560"/>
-    <text id="Number-2" x="156" y="845.28" font-family="Inter" font-size="20" font-weight="600" fill="#053C45" text-anchor="middle">02</text>
-    <text id="Card-Title-2" x="120" y="955.64" font-family="Inter" font-size="32" font-weight="600" fill="#F5F4EB">Component supply</text>
+    <text id="Number-2" x="156" y="845.28" font-family="Inter-SemiBold" font-size="20" font-weight="600" fill="#053C45" text-anchor="middle">02</text>
+    <text id="Card-Title-2" x="120" y="955.64" font-family="Inter-SemiBold" font-size="32" font-weight="600" fill="#F5F4EB">Component supply</text>
     <g id="Card-Body-Text-2">
-      <text id="Card-Body-Text-line-3" x="120" y="1005.73" font-family="Inter" font-size="24" font-weight="400" fill="#F5F4EB" opacity="0.85">Supply to the specification and quantities of the project,</text>
-      <text id="Card-Body-Text-line-4" x="120" y="1039.73" font-family="Inter" font-size="24" font-weight="400" fill="#F5F4EB" opacity="0.85">for contractors and installation companies.</text>
+      <text id="Card-Body-Text-line-3" x="120" y="1005.73" font-family="Inter-Regular" font-size="24" font-weight="400" fill="#F5F4EB" opacity="0.85">Supply to the specification and quantities of the project,</text>
+      <text id="Card-Body-Text-line-4" x="120" y="1039.73" font-family="Inter-Regular" font-size="24" font-weight="400" fill="#F5F4EB" opacity="0.85">for contractors and installation companies.</text>
     </g>
     <g id="Icon-2">
       <path id="Icon-boxes-1" d="M 895.5 1000 C 895.5 998.35 896.85 997 898.5 997 L 919.5 997 C 921.15 997 922.5 998.35 922.5 1000 L 922.5 1018 C 922.5 1019.65 921.15 1021 919.5 1021 L 898.5 1021 C 896.85 1021 895.5 1019.65 895.5 1018 Z" fill="none" stroke="#C8FB5F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -54,7 +54,7 @@
   </g>
   <g id="Footer">
     <path id="Footer-Rule" d="M 72 1800 L 1008 1800" fill="none" stroke="#F5F4EB" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.25"/>
-    <text id="Footer-Section" x="72" y="1838.82" font-family="Inter" font-size="16" font-weight="400" fill="#F5F4EB" opacity="0.75">Ways of working</text>
-    <text id="Footer-Page" x="1008" y="1838.82" font-family="Inter" font-size="16" font-weight="500" fill="#F5F4EB" text-anchor="end" opacity="0.75">05 / 08</text>
+    <text id="Footer-Section" x="72" y="1838.82" font-family="Inter-Regular" font-size="16" font-weight="400" fill="#F5F4EB" opacity="0.75">Ways of working</text>
+    <text id="Footer-Page" x="1008" y="1838.82" font-family="Inter-Medium" font-size="16" font-weight="500" fill="#F5F4EB" text-anchor="end" opacity="0.75">05 / 08</text>
   </g>
 </svg>

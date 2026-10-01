@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Photo slot dark (grid) — AFAQ Corporate Profile, 940x680. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="680" viewBox="0 0 940 680">
+  <defs>
+    <linearGradient id="grad-1" gradientUnits="userSpaceOnUse" x1="0" y1="20" x2="0" y2="660"><stop offset="0" stop-color="#0E5560" stop-opacity="1"/><stop offset="1" stop-color="#1F7580" stop-opacity="1"/></linearGradient>
+  </defs>
+  <rect id="Background" x="0" y="0" width="940" height="680" fill="#053C45"/>
+  <g id="Photo-Slot">
+    <path id="Photo-Slot__set-image-fill" d="M 20 60 C 20 37.91 37.91 20 60 20 L 880 20 C 902.09 20 920 37.91 920 60 L 920 620 C 920 642.09 902.09 660 880 660 L 60 660 C 37.91 660 20 642.09 20 620 Z" fill="url(#grad-1)" stroke="#C8FB5F" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round"/>
+    <g id="Placeholder-Art--delete-after-placing-photo">
+      <circle id="Sun-Glow" cx="236" cy="186.4" r="103.36" fill="#FD7E25" opacity="0.18"/>
+      <circle id="Sun" cx="236" cy="186.4" r="54.4" fill="#FD7E25"/>
+      <path id="Mountains-Far" d="M 20 448.8 L 182 327.2 L 317 359.2 L 488 288.8 L 650 352.8 L 794 314.4 L 920 365.6 L 920 448.8 Z" fill="#1F7580" opacity="0.55"/>
+      <path id="Mountains-Near" d="M 20 448.8 L 128 372 L 290 416.8 L 434 352.8 L 596 410.4 L 740 378.4 L 920 423.2 L 920 448.8 Z" fill="#053C45" opacity="0.9"/>
+      <g id="Transmission-Line">
+        <path id="Pylon-1" d="M 147.64 456.26 L 93.91 626.4 M 147.64 456.26 L 201.36 626.4 M 107.34 581.63 L 187.93 581.63 M 125.25 527.9 L 170.02 527.9 M 76 492.08 L 219.27 492.08 M 76 492.08 L 89.43 469.7 M 219.27 492.08 L 205.84 469.7" fill="none" stroke="#C8FB5F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+        <path id="Pylon-2" d="M 470 456.26 L 416.27 626.4 M 470 456.26 L 523.73 626.4 M 429.7 581.63 L 510.3 581.63 M 447.61 527.9 L 492.39 527.9 M 398.36 492.08 L 541.64 492.08 M 398.36 492.08 L 411.8 469.7 M 541.64 492.08 L 528.2 469.7" fill="none" stroke="#C8FB5F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+        <path id="Pylon-3" d="M 792.36 456.26 L 738.64 626.4 M 792.36 456.26 L 846.09 626.4 M 752.07 581.63 L 832.66 581.63 M 769.98 527.9 L 814.75 527.9 M 720.73 492.08 L 864 492.08 M 720.73 492.08 L 734.16 469.7 M 864 492.08 L 850.57 469.7" fill="none" stroke="#C8FB5F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+        <path id="Cable-1" d="M 219.27 492.08 C 273 513.57 344.64 513.57 398.36 492.08" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.6"/>
+        <path id="Cable-2" d="M 541.64 492.08 C 595.36 513.57 667 513.57 720.73 492.08" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.6"/>
+      </g>
+    </g>
+  </g>
+</svg>

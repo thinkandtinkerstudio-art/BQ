@@ -12,75 +12,75 @@
         <path id="Letter-F" d="M 183.16 114.44 L 183.16 85.88 C 183.16 79.22 188.54 73.84 195.2 73.84 L 242.52 73.84 M 183.16 94 L 232.16 94" fill="none" stroke="#F5F4EB" stroke-width="15.12" stroke-linecap="round" stroke-linejoin="round"/>
         <path id="Letter-Q" d="M 262.68 86.16 C 262.68 79.2 268.32 73.56 275.28 73.56 L 312.8 73.56 C 319.76 73.56 325.4 79.2 325.4 86.16 L 325.4 101.84 C 325.4 108.8 319.76 114.44 312.8 114.44 L 275.28 114.44 C 268.32 114.44 262.68 108.8 262.68 101.84 Z M 317.28 111.92 L 335.2 124.24" fill="none" stroke="#F5F4EB" stroke-width="15.12" stroke-linecap="round" stroke-linejoin="round"/>
       </g>
-      <text id="Tagline" x="72" y="145" font-family="Inter" font-size="11" font-weight="500" fill="#F5F4EB" letter-spacing="6.6">ENERGY. ENGINEERED.</text>
+      <text id="Tagline" x="72" y="145" font-family="Inter-Medium" font-size="11" font-weight="500" fill="#F5F4EB" letter-spacing="6.6">ENERGY. ENGINEERED.</text>
     </g>
-    <text id="Eyebrow" x="1011.3" y="99.46" font-family="Inter" font-size="15" font-weight="500" fill="#F5F4EB" letter-spacing="3.3" text-anchor="end" opacity="0.85">CORPORATE PROFILE 2026</text>
+    <text id="Eyebrow" x="1011.3" y="99.46" font-family="Inter-Medium" font-size="15" font-weight="500" fill="#F5F4EB" letter-spacing="3.3" text-anchor="end" opacity="0.85">CORPORATE PROFILE 2026</text>
   </g>
-  <text id="Title" x="72" y="369.65" font-family="Inter" font-size="76" font-weight="300" fill="#F5F4EB" letter-spacing="-1.52">What AFAQ brings</text>
+  <text id="Title" x="72" y="369.65" font-family="Inter-Light" font-size="76" font-weight="300" fill="#F5F4EB" letter-spacing="-1.52">What AFAQ brings</text>
   <g id="Item-01">
-    <text id="Number" x="72" y="476.28" font-family="Inter" font-size="20" font-weight="600" fill="#C8FB5F">01</text>
+    <text id="Number" x="72" y="476.28" font-family="Inter-SemiBold" font-size="20" font-weight="600" fill="#C8FB5F">01</text>
     <g id="Icon">
       <path id="Icon-factory-1" d="M 968.58 489.42 L 968.58 471.08 L 977.75 476.58 L 977.75 471.08 L 986.92 476.58 L 986.92 471.08 L 996.08 476.58 L 996.08 458.25 L 1003.42 458.25 L 1003.42 489.42 Z" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
       <path id="Icon-factory-2" d="M 975 483 L 978.67 483 M 984.17 483 L 987.83 483 M 993.33 483 L 997 483" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <text id="Item-Title" x="156" y="479.64" font-family="Inter" font-size="32" font-weight="600" fill="#F5F4EB">Supply from a factory in Oman</text>
+    <text id="Item-Title" x="156" y="479.64" font-family="Inter-SemiBold" font-size="32" font-weight="600" fill="#F5F4EB">Supply from a factory in Oman</text>
     <g id="Item-Body">
-      <text id="Item-Body-line" x="156" y="520" font-family="Inter" font-size="22" font-weight="400" fill="#F5F4EB" opacity="0.8">AACE modules are manufactured in Oman, which shortens supply time</text>
-      <text id="Item-Body-line-2" x="156" y="552" font-family="Inter" font-size="22" font-weight="400" fill="#F5F4EB" opacity="0.8">compared with importing.</text>
+      <text id="Item-Body-line" x="156" y="520" font-family="Inter-Regular" font-size="22" font-weight="400" fill="#F5F4EB" opacity="0.8">AACE modules are manufactured in Oman, which shortens supply time</text>
+      <text id="Item-Body-line-2" x="156" y="552" font-family="Inter-Regular" font-size="22" font-weight="400" fill="#F5F4EB" opacity="0.8">compared with importing.</text>
     </g>
     <path id="Divider" d="M 72 586 L 1008 586" fill="none" stroke="#F5F4EB" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.15"/>
   </g>
   <g id="Item-02">
-    <text id="Number-2" x="72" y="641.28" font-family="Inter" font-size="20" font-weight="600" fill="#C8FB5F">02</text>
+    <text id="Number-2" x="72" y="641.28" font-family="Inter-SemiBold" font-size="20" font-weight="600" fill="#C8FB5F">02</text>
     <g id="Icon-2">
       <path id="Icon-shield-1" d="M 986 619.58 L 1000.67 625.08 L 1000.67 636.08 C 1000.67 645.25 994.25 651.67 986 654.42 C 977.75 651.67 971.33 645.25 971.33 636.08 L 971.33 625.08 Z" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
       <path id="Icon-shield-2" d="M 979.58 637 L 984.17 641.58 L 992.42 632.42" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <text id="Item-Title-2" x="156" y="644.64" font-family="Inter" font-size="32" font-weight="600" fill="#F5F4EB">Warranty handled inside Oman</text>
+    <text id="Item-Title-2" x="156" y="644.64" font-family="Inter-SemiBold" font-size="32" font-weight="600" fill="#F5F4EB">Warranty handled inside Oman</text>
     <g id="Item-Body-2">
-      <text id="Item-Body-line-3" x="156" y="685" font-family="Inter" font-size="22" font-weight="400" fill="#F5F4EB" opacity="0.8">AFAQ processes module warranty claims locally, without sending them</text>
-      <text id="Item-Body-line-4" x="156" y="717" font-family="Inter" font-size="22" font-weight="400" fill="#F5F4EB" opacity="0.8">to a manufacturer abroad.</text>
+      <text id="Item-Body-line-3" x="156" y="685" font-family="Inter-Regular" font-size="22" font-weight="400" fill="#F5F4EB" opacity="0.8">AFAQ processes module warranty claims locally, without sending them</text>
+      <text id="Item-Body-line-4" x="156" y="717" font-family="Inter-Regular" font-size="22" font-weight="400" fill="#F5F4EB" opacity="0.8">to a manufacturer abroad.</text>
     </g>
     <path id="Divider-2" d="M 72 751 L 1008 751" fill="none" stroke="#F5F4EB" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.15"/>
   </g>
   <g id="Item-03">
-    <text id="Number-3" x="72" y="806.28" font-family="Inter" font-size="20" font-weight="600" fill="#C8FB5F">03</text>
+    <text id="Number-3" x="72" y="806.28" font-family="Inter-SemiBold" font-size="20" font-weight="600" fill="#C8FB5F">03</text>
     <g id="Icon-3">
       <path id="Icon-badge-1" d="M 996.08 796.5 C 996.08 802.07 991.57 806.58 986 806.58 C 980.43 806.58 975.92 802.07 975.92 796.5 C 975.92 790.93 980.43 786.42 986 786.42 C 991.57 786.42 996.08 790.93 996.08 796.5 Z" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
       <path id="Icon-badge-2" d="M 979.58 804.75 L 976.83 819.42 L 986 814.83 L 995.17 819.42 L 992.42 804.75" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <text id="Item-Title-3" x="156" y="809.64" font-family="Inter" font-size="32" font-weight="600" fill="#F5F4EB">In-country value</text>
+    <text id="Item-Title-3" x="156" y="809.64" font-family="Inter-SemiBold" font-size="32" font-weight="600" fill="#F5F4EB">In-country value</text>
     <g id="Item-Body-3">
-      <text id="Item-Body-line-5" x="156" y="850" font-family="Inter" font-size="22" font-weight="400" fill="#F5F4EB" opacity="0.8">Modules made in Oman support local content requirements in tenders</text>
-      <text id="Item-Body-line-6" x="156" y="882" font-family="Inter" font-size="22" font-weight="400" fill="#F5F4EB" opacity="0.8">and government projects.</text>
+      <text id="Item-Body-line-5" x="156" y="850" font-family="Inter-Regular" font-size="22" font-weight="400" fill="#F5F4EB" opacity="0.8">Modules made in Oman support local content requirements in tenders</text>
+      <text id="Item-Body-line-6" x="156" y="882" font-family="Inter-Regular" font-size="22" font-weight="400" fill="#F5F4EB" opacity="0.8">and government projects.</text>
     </g>
     <path id="Divider-3" d="M 72 916 L 1008 916" fill="none" stroke="#F5F4EB" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.15"/>
   </g>
   <g id="Item-04">
-    <text id="Number-4" x="72" y="971.28" font-family="Inter" font-size="20" font-weight="600" fill="#C8FB5F">04</text>
+    <text id="Number-4" x="72" y="971.28" font-family="Inter-SemiBold" font-size="20" font-weight="600" fill="#C8FB5F">04</text>
     <g id="Icon-4">
       <path id="Icon-document-1" d="M 974.08 949.58 L 990.58 949.58 L 999.75 958.75 L 999.75 984.42 L 974.08 984.42 Z M 990.58 949.58 L 990.58 958.75 L 999.75 958.75" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
       <path id="Icon-document-2" d="M 979.58 967.92 L 994.25 967.92 M 979.58 974.33 L 990.58 974.33" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <text id="Item-Title-4" x="156" y="974.64" font-family="Inter" font-size="32" font-weight="600" fill="#F5F4EB">Direct supply agreements</text>
+    <text id="Item-Title-4" x="156" y="974.64" font-family="Inter-SemiBold" font-size="32" font-weight="600" fill="#F5F4EB">Direct supply agreements</text>
     <g id="Item-Body-4">
-      <text id="Item-Body-line-7" x="156" y="1015" font-family="Inter" font-size="22" font-weight="400" fill="#F5F4EB" opacity="0.8">Written agreements with module, battery and inverter suppliers,</text>
-      <text id="Item-Body-line-8" x="156" y="1047" font-family="Inter" font-size="22" font-weight="400" fill="#F5F4EB" opacity="0.8">covering availability and manufacturer warranties.</text>
+      <text id="Item-Body-line-7" x="156" y="1015" font-family="Inter-Regular" font-size="22" font-weight="400" fill="#F5F4EB" opacity="0.8">Written agreements with module, battery and inverter suppliers,</text>
+      <text id="Item-Body-line-8" x="156" y="1047" font-family="Inter-Regular" font-size="22" font-weight="400" fill="#F5F4EB" opacity="0.8">covering availability and manufacturer warranties.</text>
     </g>
     <path id="Divider-4" d="M 72 1081 L 1008 1081" fill="none" stroke="#F5F4EB" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.15"/>
   </g>
   <g id="Item-05">
-    <text id="Number-5" x="72" y="1136.28" font-family="Inter" font-size="20" font-weight="600" fill="#C8FB5F">05</text>
+    <text id="Number-5" x="72" y="1136.28" font-family="Inter-SemiBold" font-size="20" font-weight="600" fill="#C8FB5F">05</text>
     <g id="Icon-5">
       <path id="Icon-team-1" d="M 985.08 1123.75 C 985.08 1126.78 982.62 1129.25 979.58 1129.25 C 976.55 1129.25 974.08 1126.78 974.08 1123.75 C 974.08 1120.72 976.55 1118.25 979.58 1118.25 C 982.62 1118.25 985.08 1120.72 985.08 1123.75 Z" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
       <path id="Icon-team-2" d="M 997.92 1125.58 C 997.92 1128.11 995.86 1130.17 993.33 1130.17 C 990.8 1130.17 988.75 1128.11 988.75 1125.58 C 988.75 1123.05 990.8 1121 993.33 1121 C 995.86 1121 997.92 1123.05 997.92 1125.58 Z" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
       <path id="Icon-team-3" d="M 968.58 1147.58 C 968.58 1138.42 973.17 1134.75 979.58 1134.75 C 986 1134.75 990.58 1138.42 990.58 1147.58 Z" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
       <path id="Icon-team-4" d="M 992.42 1147.58 C 997 1147.58 1003.42 1147.58 1003.42 1147.58 C 1003.42 1141.17 1000.67 1136.58 994.25 1136.58" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <text id="Item-Title-5" x="156" y="1139.64" font-family="Inter" font-size="32" font-weight="600" fill="#F5F4EB">Delivery team</text>
+    <text id="Item-Title-5" x="156" y="1139.64" font-family="Inter-SemiBold" font-size="32" font-weight="600" fill="#F5F4EB">Delivery team</text>
     <g id="Item-Body-5">
-      <text id="Item-Body-line-9" x="156" y="1180" font-family="Inter" font-size="22" font-weight="400" fill="#F5F4EB" opacity="0.8">An engineering team for design and supervision, and a field crew for</text>
-      <text id="Item-Body-line-10" x="156" y="1212" font-family="Inter" font-size="22" font-weight="400" fill="#F5F4EB" opacity="0.8">installation and commissioning.</text>
+      <text id="Item-Body-line-9" x="156" y="1180" font-family="Inter-Regular" font-size="22" font-weight="400" fill="#F5F4EB" opacity="0.8">An engineering team for design and supervision, and a field crew for</text>
+      <text id="Item-Body-line-10" x="156" y="1212" font-family="Inter-Regular" font-size="22" font-weight="400" fill="#F5F4EB" opacity="0.8">installation and commissioning.</text>
     </g>
   </g>
   <g id="Photo-Strip">
@@ -101,7 +101,7 @@
   </g>
   <g id="Footer">
     <path id="Footer-Rule" d="M 72 1800 L 1008 1800" fill="none" stroke="#F5F4EB" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.25"/>
-    <text id="Footer-Section" x="72" y="1838.82" font-family="Inter" font-size="16" font-weight="400" fill="#F5F4EB" opacity="0.75">What AFAQ brings</text>
-    <text id="Footer-Page" x="1008" y="1838.82" font-family="Inter" font-size="16" font-weight="500" fill="#F5F4EB" text-anchor="end" opacity="0.75">07 / 08</text>
+    <text id="Footer-Section" x="72" y="1838.82" font-family="Inter-Regular" font-size="16" font-weight="400" fill="#F5F4EB" opacity="0.75">What AFAQ brings</text>
+    <text id="Footer-Page" x="1008" y="1838.82" font-family="Inter-Medium" font-size="16" font-weight="500" fill="#F5F4EB" text-anchor="end" opacity="0.75">07 / 08</text>
   </g>
 </svg>

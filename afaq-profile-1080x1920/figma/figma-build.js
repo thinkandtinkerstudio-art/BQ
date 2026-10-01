@@ -100,8 +100,10 @@ async function buildDeck(SPEC, opts = {}) {
       node.x = x0 + node.x; node.y = y0 + node.y;
       holder.remove();
     } else {
-      // (rare) importer produced several children — keep them together as a frame
-      node = holder; parent.appendChild(holder); holder.x = x0; holder.y = y0; holder.fills = [];
+      // (rare) importer produced several children — flatten them into one vector so fills apply to the geometry
+      node = figma.flatten(kids, parent);
+      node.x = x0 + node.x; node.y = y0 + node.y;
+      holder.remove();
     }
     node.name = e.name;
     if (hasGradient && "fills" in node) node.fills = [gradientPaint(e.fill, node.x, node.y, node.width, node.height)];
@@ -120,9 +122,11 @@ async function buildDeck(SPEC, opts = {}) {
     if (e.case === "upper") t.textCase = "UPPER";
     t.fills = [solid(e.color)];
     t.opacity = e.opacity ?? 1;
-    t.resize(e.w, Math.max(e.h, e.lh));
+    t.resize(e.w + 4, Math.max(e.h, e.lh)); // +4: same wrap slack the SVG generator uses, so line breaks match
     t.textAutoResize = "HEIGHT";
-    t.x = e.x; t.y = e.y;
+    // Figma adds letter-spacing after the last glyph too; shift right-aligned tracked labels so glyphs end on the margin
+    t.x = e.x + ((e.align === "right") ? (e.ls || 0) * e.size : 0);
+    t.y = e.y;
     parent.appendChild(t);
     return t;
   }

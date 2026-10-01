@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Photo slot dark (storage) — AFAQ Corporate Profile, 940x680. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="680" viewBox="0 0 940 680">
+  <defs>
+    <linearGradient id="grad-1" gradientUnits="userSpaceOnUse" x1="0" y1="20" x2="0" y2="660"><stop offset="0" stop-color="#0E5560" stop-opacity="1"/><stop offset="1" stop-color="#1F7580" stop-opacity="1"/></linearGradient>
+  </defs>
+  <rect id="Background" x="0" y="0" width="940" height="680" fill="#053C45"/>
+  <g id="Photo-Slot">
+    <path id="Photo-Slot__set-image-fill" d="M 20 60 C 20 37.91 37.91 20 60 20 L 880 20 C 902.09 20 920 37.91 920 60 L 920 620 C 920 642.09 902.09 660 880 660 L 60 660 C 37.91 660 20 642.09 20 620 Z" fill="url(#grad-1)" stroke="#C8FB5F" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round"/>
+    <g id="Placeholder-Art--delete-after-placing-photo">
+      <circle id="Sun-Glow" cx="236" cy="186.4" r="103.36" fill="#FD7E25" opacity="0.18"/>
+      <circle id="Sun" cx="236" cy="186.4" r="54.4" fill="#FD7E25"/>
+      <path id="Mountains-Far" d="M 20 448.8 L 182 327.2 L 317 359.2 L 488 288.8 L 650 352.8 L 794 314.4 L 920 365.6 L 920 448.8 Z" fill="#1F7580" opacity="0.55"/>
+      <path id="Mountains-Near" d="M 20 448.8 L 128 372 L 290 416.8 L 434 352.8 L 596 410.4 L 740 378.4 L 920 423.2 L 920 448.8 Z" fill="#053C45" opacity="0.9"/>
+      <g id="Battery-Cabinets">
+        <rect id="Plinth" x="64" y="598" width="812" height="12" rx="4" fill="#022C32" opacity="0.9"/>
+        <path id="Cabinet-1" d="M 76 422 C 76 416.48 80.48 412 86 412 L 242 412 C 247.52 412 252 416.48 252 422 L 252 594 C 252 599.52 247.52 604 242 604 L 86 604 C 80.48 604 76 599.52 76 594 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Cabinet-1-vent-1" d="M 107.68 469.6 L 220.32 469.6" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Cabinet-1-vent-2" d="M 107.68 496.48 L 220.32 496.48" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Cabinet-1-vent-3" d="M 107.68 523.36 L 220.32 523.36" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <circle id="Cabinet-1-led" cx="164" cy="438.88" r="4" fill="#C8FB5F"/>
+        <path id="Cabinet-1-door" d="M 164 458.08 L 164 584.8" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.25"/>
+        <path id="Cabinet-2" d="M 280 422 C 280 416.48 284.48 412 290 412 L 446 412 C 451.52 412 456 416.48 456 422 L 456 594 C 456 599.52 451.52 604 446 604 L 290 604 C 284.48 604 280 599.52 280 594 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Cabinet-2-vent-1" d="M 311.68 469.6 L 424.32 469.6" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Cabinet-2-vent-2" d="M 311.68 496.48 L 424.32 496.48" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Cabinet-2-vent-3" d="M 311.68 523.36 L 424.32 523.36" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <circle id="Cabinet-2-led" cx="368" cy="438.88" r="4" fill="#C8FB5F"/>
+        <path id="Cabinet-2-door" d="M 368 458.08 L 368 584.8" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.25"/>
+        <path id="Cabinet-3" d="M 484 422 C 484 416.48 488.48 412 494 412 L 650 412 C 655.52 412 660 416.48 660 422 L 660 594 C 660 599.52 655.52 604 650 604 L 494 604 C 488.48 604 484 599.52 484 594 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Cabinet-3-vent-1" d="M 515.68 469.6 L 628.32 469.6" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Cabinet-3-vent-2" d="M 515.68 496.48 L 628.32 496.48" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Cabinet-3-vent-3" d="M 515.68 523.36 L 628.32 523.36" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <circle id="Cabinet-3-led" cx="572" cy="438.88" r="4" fill="#C8FB5F"/>
+        <path id="Cabinet-3-door" d="M 572 458.08 L 572 584.8" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.25"/>
+        <path id="Cabinet-4" d="M 688 422 C 688 416.48 692.48 412 698 412 L 854 412 C 859.52 412 864 416.48 864 422 L 864 594 C 864 599.52 859.52 604 854 604 L 698 604 C 692.48 604 688 599.52 688 594 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Cabinet-4-vent-1" d="M 719.68 469.6 L 832.32 469.6" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Cabinet-4-vent-2" d="M 719.68 496.48 L 832.32 496.48" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Cabinet-4-vent-3" d="M 719.68 523.36 L 832.32 523.36" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <circle id="Cabinet-4-led" cx="776" cy="438.88" r="4" fill="#C8FB5F"/>
+        <path id="Cabinet-4-door" d="M 776 458.08 L 776 584.8" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.25"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -7,10 +7,10 @@
   <g id="Photo-Slot">
     <path id="Photo-Slot__set-image-fill" d="M 320 60 C 320 37.91 337.91 20 360 20 L 880 20 C 902.09 20 920 37.91 920 60 L 920 620 C 920 642.09 902.09 660 880 660 L 60 660 C 37.91 660 20 642.09 20 620 L 20 190 C 20 167.91 37.91 150 60 150 L 296 150 C 309.25 150 320 139.25 320 126 Z" fill="url(#grad-1)"/>
     <g id="Placeholder-Art--delete-after-placing-photo">
-      <circle id="Sun-Glow" cx="704" cy="186.4" r="103.36" fill="#C8FB5F" opacity="0.16"/>
+      <circle id="Sun-Glow" cx="704" cy="186.4" r="103.36" fill="#FD7E25" opacity="0.18"/>
       <circle id="Sun" cx="704" cy="186.4" r="54.4" fill="#FD7E25"/>
-      <path id="Mountains-Far" d="M 20 410 L 182 327.2 L 317 359.2 L 488 288.8 L 650 352.8 L 794 314.4 L 920 365.6 L 920 410 Z" fill="#1F7580" opacity="0.55"/>
-      <path id="Mountains-Near" d="M 20 414 L 128 372 L 290 416.8 L 434 352.8 L 596 410.4 L 740 378.4 L 920 423.2 L 920 414 Z" fill="#053C45" opacity="0.9"/>
+      <path id="Mountains-Far" d="M 20 448.8 L 182 327.2 L 317 359.2 L 488 288.8 L 650 352.8 L 794 314.4 L 920 365.6 L 920 448.8 Z" fill="#1F7580" opacity="0.55"/>
+      <path id="Mountains-Near" d="M 20 448.8 L 128 372 L 290 416.8 L 434 352.8 L 596 410.4 L 740 378.4 L 920 423.2 L 920 448.8 Z" fill="#053C45" opacity="0.9"/>
       <g id="Solar-Array">
         <path id="Panel-1-1" d="M 84.51 442.13 C 84.86 440.51 86.5 439.2 88.15 439.2 L 182.72 439.2 C 184.38 439.2 185.43 440.51 185.08 442.13 L 177.22 477.87 C 176.86 479.49 175.23 480.8 173.57 480.8 L 79 480.8 C 77.34 480.8 76.29 479.49 76.64 477.87 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
         <path id="Panel-1-1-line" d="M 135.44 439.2 L 126.29 480.8" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
