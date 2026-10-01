@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Icon inverter — AFAQ Corporate Profile, 64x64. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <g id="Icon-inverter">
+    <path id="Icon-inverter-1" d="M 13 20 C 13 18.34 14.34 17 16 17 L 48 17 C 49.66 17 51 18.34 51 20 L 51 44 C 51 45.66 49.66 47 48 47 L 16 47 C 14.34 47 13 45.66 13 44 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-inverter-2" d="M 19 32 C 22 32 22 25 26 25 C 30 25 30 39 34 39 C 38 39 38 32 45 32" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-inverter-3" d="M 13 25 L 19 25" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

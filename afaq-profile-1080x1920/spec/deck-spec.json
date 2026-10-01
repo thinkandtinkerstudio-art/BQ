@@ -1,0 +1,5958 @@
+{
+ "canvas": {
+  "width": 1080,
+  "height": 1920
+ },
+ "font": {
+  "family": "Inter",
+  "styles": {
+   "300": "Light",
+   "400": "Regular",
+   "500": "Medium",
+   "600": "Semi Bold",
+   "700": "Bold"
+  },
+  "metrics": {
+   "ascent": 0.96875,
+   "descent": 0.2412109375
+  }
+ },
+ "palette": {
+  "lime": "#C8FB5F",
+  "lime_deep": "#A4DC3C",
+  "lime_pale": "#E9FBB8",
+  "teal": "#053C45",
+  "teal_ink": "#03343D",
+  "teal_mid": "#0E5560",
+  "teal_deep": "#022C32",
+  "teal_soft": "#1F7580",
+  "cream": "#F5F4EB",
+  "cream_2": "#E8E8DC",
+  "white": "#FFFFFF",
+  "charcoal": "#202C28",
+  "orange": "#FD7E25",
+  "orange_deep": "#D9641A",
+  "muted": "#5A7175",
+  "line": "#D9DCCF"
+ },
+ "slides": [
+  {
+   "name": "01 Cover",
+   "bg": "#F5F4EB",
+   "elements": [
+    {
+     "type": "rect",
+     "name": "Background",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 1920,
+     "rx": 0,
+     "fill": "#F5F4EB",
+     "opacity": 1.0,
+     "stroke": null,
+     "sw": 0
+    },
+    {
+     "type": "group",
+     "name": "Logo-Lockup",
+     "children": [
+      {
+       "type": "group",
+       "name": "Wordmark-AFQ",
+       "children": [
+        {
+         "type": "path",
+         "name": "Letter-A",
+         "d": "M 83.52 180.48 L 104.64 126.72 C 110.4 111.36 129.6 111.36 135.36 126.72 L 156.48 180.48",
+         "fill": null,
+         "stroke": "#03343D",
+         "sw": 23.04,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Letter-F",
+         "d": "M 189.12 180.48 L 189.12 107.52 L 246.72 107.52 M 189.12 144 L 237.12 144",
+         "fill": null,
+         "stroke": "#03343D",
+         "sw": 23.04,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Letter-Q",
+         "d": "M 277.44 136.32 C 277.44 120.41 290.33 107.52 306.24 107.52 L 321.6 107.52 C 337.51 107.52 350.4 120.41 350.4 136.32 L 350.4 151.68 C 350.4 167.59 337.51 180.48 321.6 180.48 L 306.24 180.48 C 290.33 180.48 277.44 167.59 277.44 151.68 Z M 327.36 157.44 L 352.32 184.32",
+         "fill": null,
+         "stroke": "#03343D",
+         "sw": 23.04,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Tagline",
+       "x": 72,
+       "y": 211,
+       "w": 900,
+       "text": "ENERGY. ENGINEERED.",
+       "lines": [
+        "ENERGY. ENGINEERED."
+       ],
+       "size": 19,
+       "weight": 500,
+       "color": "#03343D",
+       "lh": 25,
+       "ls": 0.3,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 25
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "name": "Eyebrow",
+     "x": 588,
+     "y": 112,
+     "w": 420,
+     "text": "CORPORATE PROFILE 2026",
+     "lines": [
+      "CORPORATE PROFILE 2026"
+     ],
+     "size": 18,
+     "weight": 500,
+     "color": "#5A7175",
+     "lh": 24,
+     "ls": 0.22,
+     "align": "right",
+     "case": null,
+     "opacity": 1.0,
+     "h": 24
+    },
+    {
+     "type": "text",
+     "name": "Headline",
+     "x": 72,
+     "y": 372,
+     "w": 936,
+     "text": "AFAQ for Energy\n& Integrated Business",
+     "lines": [
+      "AFAQ for Energy",
+      "& Integrated Business"
+     ],
+     "size": 92,
+     "weight": 300,
+     "color": "#053C45",
+     "lh": 100,
+     "ls": -0.025,
+     "align": "left",
+     "case": null,
+     "opacity": 1.0,
+     "h": 200
+    },
+    {
+     "type": "rect",
+     "name": "Accent-Rule",
+     "x": 72,
+     "y": 612,
+     "w": 64,
+     "h": 6,
+     "rx": 3,
+     "fill": "#FD7E25",
+     "opacity": 1.0,
+     "stroke": null,
+     "sw": 0
+    },
+    {
+     "type": "text",
+     "name": "Slogan",
+     "x": 72,
+     "y": 638,
+     "w": 936,
+     "text": "Innovating today, sustaining tomorrow.",
+     "lines": [
+      "Innovating today, sustaining tomorrow."
+     ],
+     "size": 40,
+     "weight": 300,
+     "color": "#053C45",
+     "lh": 50,
+     "ls": 0.0,
+     "align": "left",
+     "case": null,
+     "opacity": 1.0,
+     "h": 50
+    },
+    {
+     "type": "text",
+     "name": "Scope",
+     "x": 72,
+     "y": 706,
+     "w": 720,
+     "text": "Solar power and energy storage in the Sultanate of Oman",
+     "lines": [
+      "Solar power and energy storage in the Sultanate of Oman"
+     ],
+     "size": 24,
+     "weight": 400,
+     "color": "#5A7175",
+     "lh": 34,
+     "ls": 0.0,
+     "align": "left",
+     "case": null,
+     "opacity": 1.0,
+     "h": 34
+    },
+    {
+     "type": "group",
+     "name": "Photo-Hero",
+     "children": [
+      {
+       "type": "path",
+       "name": "Photo-Hero__set-image-fill",
+       "d": "M 72 828 C 72 805.91 89.91 788 112 788 L 656 788 C 678.09 788 696 805.91 696 828 L 696 896 C 696 909.25 706.75 920 720 920 L 968 920 C 990.09 920 1008 937.91 1008 960 L 1008 1440 C 1008 1462.09 990.09 1480 968 1480 L 112 1480 C 89.91 1480 72 1462.09 72 1440 Z",
+       "fill": {
+        "type": "linear",
+        "x1": 0,
+        "y1": 788,
+        "x2": 0,
+        "y2": 1480,
+        "stops": [
+         [
+          0,
+          "#022C32",
+          1
+         ],
+         [
+          1,
+          "#0E5560",
+          1
+         ]
+        ]
+       },
+       "stroke": null,
+       "sw": 0,
+       "cap": "round",
+       "join": "round",
+       "opacity": 1.0
+      },
+      {
+       "type": "group",
+       "name": "Placeholder-Art (delete after placing photo)",
+       "children": [
+        {
+         "type": "circle",
+         "name": "Sun-Glow",
+         "cx": 296.64,
+         "cy": 967.9200000000001,
+         "r": 111.75800000000001,
+         "fill": "#C8FB5F",
+         "opacity": 0.16,
+         "stroke": null,
+         "sw": 0
+        },
+        {
+         "type": "circle",
+         "name": "Sun",
+         "cx": 296.64,
+         "cy": 967.9200000000001,
+         "r": 58.82000000000001,
+         "fill": "#FD7E25",
+         "opacity": 1.0,
+         "stroke": null,
+         "sw": 0
+        },
+        {
+         "type": "path",
+         "name": "Mountains-Far",
+         "d": "M 72 1209.2 L 240.48 1120.16 L 380.88 1154.76 L 558.72 1078.64 L 727.2 1147.84 L 876.96 1106.32 L 1008 1161.68 L 1008 1209.2 Z",
+         "fill": "#1F7580",
+         "stroke": null,
+         "sw": 0,
+         "cap": "round",
+         "join": "round",
+         "opacity": 0.55
+        },
+        {
+         "type": "path",
+         "name": "Mountains-Near",
+         "d": "M 72 1213.2 L 184.32 1168.6 L 352.8 1217.04 L 502.56 1147.84 L 671.04 1210.12 L 820.8 1175.52 L 1008 1223.96 L 1008 1213.2 Z",
+         "fill": "#053C45",
+         "stroke": null,
+         "sw": 0,
+         "cap": "round",
+         "join": "round",
+         "opacity": 0.9
+        },
+        {
+         "type": "group",
+         "name": "Solar-Array",
+         "children": [
+          {
+           "type": "path",
+           "name": "Panel-1-1",
+           "d": "M 137.25 1244.19 C 137.61 1242.57 139.24 1241.26 140.9 1241.26 L 240.61 1241.26 C 242.27 1241.26 243.32 1242.57 242.97 1244.19 L 234.36 1283.31 C 234 1284.93 232.37 1286.24 230.71 1286.24 L 131 1286.24 C 129.34 1286.24 128.29 1284.93 128.64 1283.31 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-1-line",
+           "d": "M 190.75 1241.26 L 180.86 1286.24",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-2",
+           "d": "M 256.97 1244.19 C 257.32 1242.57 258.95 1241.26 260.61 1241.26 L 360.32 1241.26 C 361.98 1241.26 363.04 1242.57 362.68 1244.19 L 354.07 1283.31 C 353.72 1284.93 352.09 1286.24 350.43 1286.24 L 250.71 1286.24 C 249.06 1286.24 248 1284.93 248.36 1283.31 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-2-line",
+           "d": "M 310.47 1241.26 L 300.57 1286.24",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-3",
+           "d": "M 376.68 1244.19 C 377.04 1242.57 378.67 1241.26 380.32 1241.26 L 480.04 1241.26 C 481.7 1241.26 482.75 1242.57 482.39 1244.19 L 473.79 1283.31 C 473.43 1284.93 471.8 1286.24 470.14 1286.24 L 370.43 1286.24 C 368.77 1286.24 367.72 1284.93 368.07 1283.31 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-3-line",
+           "d": "M 430.18 1241.26 L 420.29 1286.24",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-4",
+           "d": "M 496.39 1244.19 C 496.75 1242.57 498.38 1241.26 500.04 1241.26 L 599.75 1241.26 C 601.41 1241.26 602.46 1242.57 602.11 1244.19 L 593.5 1283.31 C 593.15 1284.93 591.51 1286.24 589.86 1286.24 L 490.14 1286.24 C 488.49 1286.24 487.43 1284.93 487.79 1283.31 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-4-line",
+           "d": "M 549.9 1241.26 L 540 1286.24",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-5",
+           "d": "M 616.11 1244.19 C 616.46 1242.57 618.1 1241.26 619.75 1241.26 L 719.47 1241.26 C 721.12 1241.26 722.18 1242.57 721.82 1244.19 L 713.22 1283.31 C 712.86 1284.93 711.23 1286.24 709.57 1286.24 L 609.86 1286.24 C 608.2 1286.24 607.15 1284.93 607.5 1283.31 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-5-line",
+           "d": "M 669.61 1241.26 L 659.71 1286.24",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-6",
+           "d": "M 735.82 1244.19 C 736.18 1242.57 737.81 1241.26 739.47 1241.26 L 839.18 1241.26 C 840.84 1241.26 841.89 1242.57 841.54 1244.19 L 832.93 1283.31 C 832.57 1284.93 830.94 1286.24 829.29 1286.24 L 729.57 1286.24 C 727.91 1286.24 726.86 1284.93 727.22 1283.31 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-6-line",
+           "d": "M 789.32 1241.26 L 779.43 1286.24",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-7",
+           "d": "M 855.54 1244.19 C 855.89 1242.57 857.52 1241.26 859.18 1241.26 L 958.9 1241.26 C 960.55 1241.26 961.61 1242.57 961.25 1244.19 L 952.64 1283.31 C 952.29 1284.93 950.66 1286.24 949 1286.24 L 849.29 1286.24 C 847.63 1286.24 846.57 1284.93 846.93 1283.31 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-7-line",
+           "d": "M 909.04 1241.26 L 899.14 1286.24",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-1",
+           "d": "M 138.77 1306.47 C 139.13 1304.85 140.76 1303.54 142.42 1303.54 L 257.08 1303.54 C 258.74 1303.54 259.8 1304.85 259.44 1306.47 L 249.31 1352.51 C 248.96 1354.13 247.32 1355.44 245.67 1355.44 L 131 1355.44 C 129.34 1355.44 128.29 1354.13 128.64 1352.51 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-1-line",
+           "d": "M 199.75 1303.54 L 188.33 1355.44",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-2",
+           "d": "M 279.44 1306.47 C 279.8 1304.85 281.43 1303.54 283.08 1303.54 L 397.75 1303.54 C 399.41 1303.54 400.46 1304.85 400.11 1306.47 L 389.98 1352.51 C 389.62 1354.13 387.99 1355.44 386.33 1355.44 L 271.67 1355.44 C 270.01 1355.44 268.96 1354.13 269.31 1352.51 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-2-line",
+           "d": "M 340.42 1303.54 L 329 1355.44",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-3",
+           "d": "M 420.11 1306.47 C 420.46 1304.85 422.09 1303.54 423.75 1303.54 L 538.42 1303.54 C 540.07 1303.54 541.13 1304.85 540.77 1306.47 L 530.64 1352.51 C 530.29 1354.13 528.66 1355.44 527 1355.44 L 412.33 1355.44 C 410.68 1355.44 409.62 1354.13 409.98 1352.51 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-3-line",
+           "d": "M 481.08 1303.54 L 469.67 1355.44",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-4",
+           "d": "M 560.77 1306.47 C 561.13 1304.85 562.76 1303.54 564.42 1303.54 L 679.08 1303.54 C 680.74 1303.54 681.8 1304.85 681.44 1306.47 L 671.31 1352.51 C 670.96 1354.13 669.32 1355.44 667.67 1355.44 L 553 1355.44 C 551.34 1355.44 550.29 1354.13 550.64 1352.51 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-4-line",
+           "d": "M 621.75 1303.54 L 610.33 1355.44",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-5",
+           "d": "M 701.44 1306.47 C 701.8 1304.85 703.43 1303.54 705.08 1303.54 L 819.75 1303.54 C 821.41 1303.54 822.46 1304.85 822.11 1306.47 L 811.98 1352.51 C 811.62 1354.13 809.99 1355.44 808.33 1355.44 L 693.67 1355.44 C 692.01 1355.44 690.96 1354.13 691.31 1352.51 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-5-line",
+           "d": "M 762.42 1303.54 L 751 1355.44",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-6",
+           "d": "M 842.11 1306.47 C 842.46 1304.85 844.09 1303.54 845.75 1303.54 L 960.42 1303.54 C 962.07 1303.54 963.13 1304.85 962.77 1306.47 L 952.64 1352.51 C 952.29 1354.13 950.66 1355.44 949 1355.44 L 834.33 1355.44 C 832.68 1355.44 831.62 1354.13 831.98 1352.51 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-6-line",
+           "d": "M 903.08 1303.54 L 891.67 1355.44",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-1",
+           "d": "M 141.06 1375.67 C 141.41 1374.05 143.04 1372.74 144.7 1372.74 L 282.7 1372.74 C 284.36 1372.74 285.41 1374.05 285.06 1375.67 L 272.64 1432.09 C 272.29 1433.71 270.66 1435.02 269 1435.02 L 131 1435.02 C 129.34 1435.02 128.29 1433.71 128.64 1432.09 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-1-line",
+           "d": "M 213.7 1372.74 L 200 1435.02",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-2",
+           "d": "M 311.06 1375.67 C 311.41 1374.05 313.04 1372.74 314.7 1372.74 L 452.7 1372.74 C 454.36 1372.74 455.41 1374.05 455.06 1375.67 L 442.64 1432.09 C 442.29 1433.71 440.66 1435.02 439 1435.02 L 301 1435.02 C 299.34 1435.02 298.29 1433.71 298.64 1432.09 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-2-line",
+           "d": "M 383.7 1372.74 L 370 1435.02",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-3",
+           "d": "M 481.06 1375.67 C 481.41 1374.05 483.04 1372.74 484.7 1372.74 L 622.7 1372.74 C 624.36 1372.74 625.41 1374.05 625.06 1375.67 L 612.64 1432.09 C 612.29 1433.71 610.66 1435.02 609 1435.02 L 471 1435.02 C 469.34 1435.02 468.29 1433.71 468.64 1432.09 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-3-line",
+           "d": "M 553.7 1372.74 L 540 1435.02",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-4",
+           "d": "M 651.06 1375.67 C 651.41 1374.05 653.04 1372.74 654.7 1372.74 L 792.7 1372.74 C 794.36 1372.74 795.41 1374.05 795.06 1375.67 L 782.64 1432.09 C 782.29 1433.71 780.66 1435.02 779 1435.02 L 641 1435.02 C 639.34 1435.02 638.29 1433.71 638.64 1432.09 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-4-line",
+           "d": "M 723.7 1372.74 L 710 1435.02",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-5",
+           "d": "M 821.06 1375.67 C 821.41 1374.05 823.04 1372.74 824.7 1372.74 L 962.7 1372.74 C 964.36 1372.74 965.41 1374.05 965.06 1375.67 L 952.64 1432.09 C 952.29 1433.71 950.66 1435.02 949 1435.02 L 811 1435.02 C 809.34 1435.02 808.29 1433.71 808.64 1432.09 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-5-line",
+           "d": "M 893.7 1372.74 L 880 1435.02",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Label-Tab",
+     "children": [
+      {
+       "type": "rect",
+       "name": "Label-Tab-Shape",
+       "x": 712,
+       "y": 788,
+       "w": 296,
+       "h": 116,
+       "rx": 24,
+       "fill": "#FD7E25",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "text",
+       "name": "Label-Tab-Text",
+       "x": 740,
+       "y": 812,
+       "w": 240,
+       "text": "SOLAR\nSTORAGE\nELECTRICAL",
+       "lines": [
+        "SOLAR",
+        "STORAGE",
+        "ELECTRICAL"
+       ],
+       "size": 16,
+       "weight": 500,
+       "color": "#FFFFFF",
+       "lh": 22,
+       "ls": 0.18,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 66
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Ribbon",
+     "children": [
+      {
+       "type": "path",
+       "name": "Ribbon-Teal",
+       "d": "M -34 1737.2 C 186 1747.2 326 1587.2 546 1607.2 C 766 1627.2 846 1807.2 1166 1737.2 L 1166 1829.24 C 846 1899.24 766 1719.24 546 1699.24 C 326 1679.24 186 1839.24 -34 1829.24 Z",
+       "fill": "#053C45",
+       "stroke": null,
+       "sw": 0,
+       "cap": "round",
+       "join": "round",
+       "opacity": 1.0
+      },
+      {
+       "type": "path",
+       "name": "Ribbon-Orange",
+       "d": "M -50 1725.4 C 170 1735.4 310 1575.4 530 1595.4 C 750 1615.4 830 1795.4 1150 1725.4 L 1150 1808 C 830 1878 750 1698 530 1678 C 310 1658 170 1818 -50 1808 Z",
+       "fill": "#FD7E25",
+       "stroke": null,
+       "sw": 0,
+       "cap": "round",
+       "join": "round",
+       "opacity": 1.0
+      },
+      {
+       "type": "path",
+       "name": "Ribbon-Lime",
+       "d": "M -60 1690 C 160 1700 300 1540 520 1560 C 740 1580 820 1760 1140 1690 L 1140 1808 C 820 1878 740 1698 520 1678 C 300 1658 160 1818 -60 1808 Z",
+       "fill": {
+        "type": "linear",
+        "x1": -60,
+        "y1": 0,
+        "x2": 1140,
+        "y2": 0,
+        "stops": [
+         [
+          0,
+          "#E9FBB8",
+          1
+         ],
+         [
+          0.45,
+          "#C8FB5F",
+          1
+         ],
+         [
+          1,
+          "#A4DC3C",
+          1
+         ]
+        ]
+       },
+       "stroke": null,
+       "sw": 0,
+       "cap": "round",
+       "join": "round",
+       "opacity": 1.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "02 About AFAQ",
+   "bg": "#053C45",
+   "elements": [
+    {
+     "type": "rect",
+     "name": "Background",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 1920,
+     "rx": 0,
+     "fill": "#053C45",
+     "opacity": 1.0,
+     "stroke": null,
+     "sw": 0
+    },
+    {
+     "type": "group",
+     "name": "Header",
+     "children": [
+      {
+       "type": "group",
+       "name": "Logo-Lockup",
+       "children": [
+        {
+         "type": "group",
+         "name": "Wordmark-AFQ",
+         "children": [
+          {
+           "type": "path",
+           "name": "Letter-A",
+           "d": "M 77.28 110.72 L 86.96 86.08 C 89.6 79.04 98.4 79.04 101.04 86.08 L 110.72 110.72",
+           "fill": null,
+           "stroke": "#F5F4EB",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          },
+          {
+           "type": "path",
+           "name": "Letter-F",
+           "d": "M 125.68 110.72 L 125.68 77.28 L 152.08 77.28 M 125.68 94 L 147.68 94",
+           "fill": null,
+           "stroke": "#F5F4EB",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          },
+          {
+           "type": "path",
+           "name": "Letter-Q",
+           "d": "M 166.16 90.48 C 166.16 83.19 172.07 77.28 179.36 77.28 L 186.4 77.28 C 193.69 77.28 199.6 83.19 199.6 90.48 L 199.6 97.52 C 199.6 104.81 193.69 110.72 186.4 110.72 L 179.36 110.72 C 172.07 110.72 166.16 104.81 166.16 97.52 Z M 189.04 100.16 L 200.48 112.48",
+           "fill": null,
+           "stroke": "#F5F4EB",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "name": "Tagline",
+         "x": 72,
+         "y": 125,
+         "w": 900,
+         "text": "ENERGY. ENGINEERED.",
+         "lines": [
+          "ENERGY. ENGINEERED."
+         ],
+         "size": 12,
+         "weight": 500,
+         "color": "#F5F4EB",
+         "lh": 16,
+         "ls": 0.3,
+         "align": "left",
+         "case": null,
+         "opacity": 1.0,
+         "h": 16
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Eyebrow",
+       "x": 588,
+       "y": 84,
+       "w": 420,
+       "text": "CORPORATE PROFILE 2026",
+       "lines": [
+        "CORPORATE PROFILE 2026"
+       ],
+       "size": 15,
+       "weight": 500,
+       "color": "#F5F4EB",
+       "lh": 20,
+       "ls": 0.22,
+       "align": "right",
+       "case": null,
+       "opacity": 0.85,
+       "h": 20
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "name": "Title",
+     "x": 72,
+     "y": 300,
+     "w": 936,
+     "text": "About AFAQ",
+     "lines": [
+      "About AFAQ"
+     ],
+     "size": 76,
+     "weight": 300,
+     "color": "#F5F4EB",
+     "lh": 84,
+     "ls": -0.02,
+     "align": "left",
+     "case": null,
+     "opacity": 1.0,
+     "h": 84
+    },
+    {
+     "type": "rect",
+     "name": "Accent-Rule",
+     "x": 72,
+     "y": 406,
+     "w": 80,
+     "h": 6,
+     "rx": 3,
+     "fill": "#C8FB5F",
+     "opacity": 1.0,
+     "stroke": null,
+     "sw": 0
+    },
+    {
+     "type": "text",
+     "name": "Body-1",
+     "x": 72,
+     "y": 456,
+     "w": 936,
+     "text": "AFAQ for Energy & Integrated Business is an Omani company based in Muscat. It works in solar power, energy storage and the electrical systems that go with them.",
+     "lines": [
+      "AFAQ for Energy & Integrated Business is an Omani company based in",
+      "Muscat. It works in solar power, energy storage and the electrical systems",
+      "that go with them."
+     ],
+     "size": 26,
+     "weight": 400,
+     "color": "#F5F4EB",
+     "lh": 40,
+     "ls": 0.0,
+     "align": "left",
+     "case": null,
+     "opacity": 0.9,
+     "h": 120
+    },
+    {
+     "type": "text",
+     "name": "Body-2",
+     "x": 72,
+     "y": 602,
+     "w": 936,
+     "text": "The company designs photovoltaic systems, supplies their components, installs them and brings them into operation, at sizes ranging from building systems to project plants.",
+     "lines": [
+      "The company designs photovoltaic systems, supplies their components,",
+      "installs them and brings them into operation, at sizes ranging from building",
+      "systems to project plants."
+     ],
+     "size": 26,
+     "weight": 400,
+     "color": "#F5F4EB",
+     "lh": 40,
+     "ls": 0.0,
+     "align": "left",
+     "case": null,
+     "opacity": 0.9,
+     "h": 120
+    },
+    {
+     "type": "text",
+     "name": "Body-3",
+     "x": 72,
+     "y": 748,
+     "w": 936,
+     "text": "AFAQ works directly with facility owners, and with contractors and developers inside their own projects.",
+     "lines": [
+      "AFAQ works directly with facility owners, and with contractors and",
+      "developers inside their own projects."
+     ],
+     "size": 26,
+     "weight": 400,
+     "color": "#F5F4EB",
+     "lh": 40,
+     "ls": 0.0,
+     "align": "left",
+     "case": null,
+     "opacity": 0.9,
+     "h": 80
+    },
+    {
+     "type": "group",
+     "name": "Photo-Site",
+     "children": [
+      {
+       "type": "path",
+       "name": "Photo-Site__set-image-fill",
+       "d": "M 72 928 C 72 905.91 89.91 888 112 888 L 968 888 C 990.09 888 1008 905.91 1008 928 L 1008 1704 C 1008 1726.09 990.09 1744 968 1744 L 436 1744 C 413.91 1744 396 1726.09 396 1704 L 396 1618 C 396 1604.75 385.25 1594 372 1594 L 112 1594 C 89.91 1594 72 1576.09 72 1554 Z",
+       "fill": {
+        "type": "linear",
+        "x1": 0,
+        "y1": 888,
+        "x2": 0,
+        "y2": 1744,
+        "stops": [
+         [
+          0,
+          "#022C32",
+          1
+         ],
+         [
+          1,
+          "#0E5560",
+          1
+         ]
+        ]
+       },
+       "stroke": null,
+       "sw": 0,
+       "cap": "round",
+       "join": "round",
+       "opacity": 1.0
+      },
+      {
+       "type": "group",
+       "name": "Placeholder-Art (delete after placing photo)",
+       "children": [
+        {
+         "type": "circle",
+         "name": "Sun-Glow",
+         "cx": 296.64,
+         "cy": 1110.56,
+         "r": 138.244,
+         "fill": "#C8FB5F",
+         "opacity": 0.16,
+         "stroke": null,
+         "sw": 0
+        },
+        {
+         "type": "circle",
+         "name": "Sun",
+         "cx": 296.64,
+         "cy": 1110.56,
+         "r": 72.76,
+         "fill": "#FD7E25",
+         "opacity": 1.0,
+         "stroke": null,
+         "sw": 0
+        },
+        {
+         "type": "path",
+         "name": "Mountains-Far",
+         "d": "M 72 1407.6 L 240.48 1298.88 L 380.88 1341.68 L 558.72 1247.52 L 727.2 1333.12 L 876.96 1281.76 L 1008 1350.24 L 1008 1407.6 Z",
+         "fill": "#1F7580",
+         "stroke": null,
+         "sw": 0,
+         "cap": "round",
+         "join": "round",
+         "opacity": 0.55
+        },
+        {
+         "type": "path",
+         "name": "Mountains-Near",
+         "d": "M 72 1411.6 L 184.32 1358.8 L 352.8 1418.72 L 502.56 1333.12 L 671.04 1410.16 L 820.8 1367.36 L 1008 1427.28 L 1008 1411.6 Z",
+         "fill": "#053C45",
+         "stroke": null,
+         "sw": 0,
+         "cap": "round",
+         "join": "round",
+         "opacity": 0.9
+        },
+        {
+         "type": "group",
+         "name": "Solar-Array",
+         "children": [
+          {
+           "type": "path",
+           "name": "Panel-1-1",
+           "d": "M 139.6 1451.61 C 139.95 1449.99 141.58 1448.68 143.24 1448.68 L 242.96 1448.68 C 244.61 1448.68 245.67 1449.99 245.31 1451.61 L 234.36 1501.39 C 234 1503.01 232.37 1504.32 230.71 1504.32 L 131 1504.32 C 129.34 1504.32 128.29 1503.01 128.64 1501.39 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-1-line",
+           "d": "M 193.1 1448.68 L 180.86 1504.32",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-2",
+           "d": "M 259.31 1451.61 C 259.67 1449.99 261.3 1448.68 262.96 1448.68 L 362.67 1448.68 C 364.33 1448.68 365.38 1449.99 365.02 1451.61 L 354.07 1501.39 C 353.72 1503.01 352.09 1504.32 350.43 1504.32 L 250.71 1504.32 C 249.06 1504.32 248 1503.01 248.36 1501.39 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-2-line",
+           "d": "M 312.81 1448.68 L 300.57 1504.32",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-3",
+           "d": "M 379.02 1451.61 C 379.38 1449.99 381.01 1448.68 382.67 1448.68 L 482.38 1448.68 C 484.04 1448.68 485.1 1449.99 484.74 1451.61 L 473.79 1501.39 C 473.43 1503.01 471.8 1504.32 470.14 1504.32 L 370.43 1504.32 C 368.77 1504.32 367.72 1503.01 368.07 1501.39 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-3-line",
+           "d": "M 432.53 1448.68 L 420.29 1504.32",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-4",
+           "d": "M 498.74 1451.61 C 499.1 1449.99 500.73 1448.68 502.38 1448.68 L 602.1 1448.68 C 603.75 1448.68 604.81 1449.99 604.45 1451.61 L 593.5 1501.39 C 593.15 1503.01 591.51 1504.32 589.86 1504.32 L 490.14 1504.32 C 488.49 1504.32 487.43 1503.01 487.79 1501.39 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-4-line",
+           "d": "M 552.24 1448.68 L 540 1504.32",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-5",
+           "d": "M 618.45 1451.61 C 618.81 1449.99 620.44 1448.68 622.1 1448.68 L 721.81 1448.68 C 723.47 1448.68 724.52 1449.99 724.17 1451.61 L 713.22 1501.39 C 712.86 1503.01 711.23 1504.32 709.57 1504.32 L 609.86 1504.32 C 608.2 1504.32 607.15 1503.01 607.5 1501.39 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-5-line",
+           "d": "M 671.96 1448.68 L 659.71 1504.32",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-6",
+           "d": "M 738.17 1451.61 C 738.52 1449.99 740.16 1448.68 741.81 1448.68 L 841.53 1448.68 C 843.18 1448.68 844.24 1449.99 843.88 1451.61 L 832.93 1501.39 C 832.57 1503.01 830.94 1504.32 829.29 1504.32 L 729.57 1504.32 C 727.91 1504.32 726.86 1503.01 727.22 1501.39 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-6-line",
+           "d": "M 791.67 1448.68 L 779.43 1504.32",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-7",
+           "d": "M 857.88 1451.61 C 858.24 1449.99 859.87 1448.68 861.53 1448.68 L 961.24 1448.68 C 962.9 1448.68 963.95 1449.99 963.6 1451.61 L 952.64 1501.39 C 952.29 1503.01 950.66 1504.32 949 1504.32 L 849.29 1504.32 C 847.63 1504.32 846.57 1503.01 846.93 1501.39 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-7-line",
+           "d": "M 911.38 1448.68 L 899.14 1504.32",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-4",
+           "d": "M 563.48 1528.65 C 563.84 1527.03 565.47 1525.72 567.12 1525.72 L 681.79 1525.72 C 683.45 1525.72 684.5 1527.03 684.15 1528.65 L 671.31 1586.99 C 670.96 1588.61 669.32 1589.92 667.67 1589.92 L 553 1589.92 C 551.34 1589.92 550.29 1588.61 550.64 1586.99 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-4-line",
+           "d": "M 624.46 1525.72 L 610.33 1589.92",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-5",
+           "d": "M 704.15 1528.65 C 704.5 1527.03 706.13 1525.72 707.79 1525.72 L 822.46 1525.72 C 824.11 1525.72 825.17 1527.03 824.81 1528.65 L 811.98 1586.99 C 811.62 1588.61 809.99 1589.92 808.33 1589.92 L 693.67 1589.92 C 692.01 1589.92 690.96 1588.61 691.31 1586.99 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-5-line",
+           "d": "M 765.12 1525.72 L 751 1589.92",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-6",
+           "d": "M 844.81 1528.65 C 845.17 1527.03 846.8 1525.72 848.46 1525.72 L 963.12 1525.72 C 964.78 1525.72 965.84 1527.03 965.48 1528.65 L 952.64 1586.99 C 952.29 1588.61 950.66 1589.92 949 1589.92 L 834.33 1589.92 C 832.68 1589.92 831.62 1588.61 831.98 1586.99 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-6-line",
+           "d": "M 905.79 1525.72 L 891.67 1589.92",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-3",
+           "d": "M 484.3 1614.25 C 484.66 1612.63 486.29 1611.32 487.95 1611.32 L 625.95 1611.32 C 627.61 1611.32 628.66 1612.63 628.3 1614.25 L 612.64 1685.43 C 612.29 1687.05 610.66 1688.36 609 1688.36 L 471 1688.36 C 469.34 1688.36 468.29 1687.05 468.64 1685.43 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-3-line",
+           "d": "M 556.95 1611.32 L 540 1688.36",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-4",
+           "d": "M 654.3 1614.25 C 654.66 1612.63 656.29 1611.32 657.95 1611.32 L 795.95 1611.32 C 797.61 1611.32 798.66 1612.63 798.3 1614.25 L 782.64 1685.43 C 782.29 1687.05 780.66 1688.36 779 1688.36 L 641 1688.36 C 639.34 1688.36 638.29 1687.05 638.64 1685.43 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-4-line",
+           "d": "M 726.95 1611.32 L 710 1688.36",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-5",
+           "d": "M 824.3 1614.25 C 824.66 1612.63 826.29 1611.32 827.95 1611.32 L 965.95 1611.32 C 967.61 1611.32 968.66 1612.63 968.3 1614.25 L 952.64 1685.43 C 952.29 1687.05 950.66 1688.36 949 1688.36 L 811 1688.36 C 809.34 1688.36 808.29 1687.05 808.64 1685.43 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-5-line",
+           "d": "M 896.95 1611.32 L 880 1688.36",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Services-Tab",
+     "children": [
+      {
+       "type": "rect",
+       "name": "Services-Tab-Shape",
+       "x": 72,
+       "y": 1610,
+       "w": 308,
+       "h": 134,
+       "rx": 24,
+       "fill": "#C8FB5F",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "text",
+       "name": "Services-Tab-Text",
+       "x": 100,
+       "y": 1632,
+       "w": 252,
+       "text": "SOLAR\nSTORAGE\nELECTRICAL\nENGINEERING",
+       "lines": [
+        "SOLAR",
+        "STORAGE",
+        "ELECTRICAL",
+        "ENGINEERING"
+       ],
+       "size": 15,
+       "weight": 500,
+       "color": "#053C45",
+       "lh": 22,
+       "ls": 0.18,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 88
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Footer",
+     "children": [
+      {
+       "type": "path",
+       "name": "Footer-Rule",
+       "d": "M 72 1800 L 1008 1800",
+       "fill": null,
+       "stroke": "#F5F4EB",
+       "sw": 1,
+       "cap": "butt",
+       "join": "round",
+       "opacity": 0.25
+      },
+      {
+       "type": "text",
+       "name": "Footer-Section",
+       "x": 72,
+       "y": 1822,
+       "w": 600,
+       "text": "About AFAQ",
+       "lines": [
+        "About AFAQ"
+       ],
+       "size": 16,
+       "weight": 400,
+       "color": "#F5F4EB",
+       "lh": 22,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 0.75,
+       "h": 22
+      },
+      {
+       "type": "text",
+       "name": "Footer-Page",
+       "x": 808,
+       "y": 1822,
+       "w": 200,
+       "text": "02 / 08",
+       "lines": [
+        "02 / 08"
+       ],
+       "size": 16,
+       "weight": 500,
+       "color": "#F5F4EB",
+       "lh": 22,
+       "ls": 0.0,
+       "align": "right",
+       "case": null,
+       "opacity": 0.75,
+       "h": 22
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "03 System components",
+   "bg": "#F5F4EB",
+   "elements": [
+    {
+     "type": "rect",
+     "name": "Background",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 1920,
+     "rx": 0,
+     "fill": "#F5F4EB",
+     "opacity": 1.0,
+     "stroke": null,
+     "sw": 0
+    },
+    {
+     "type": "group",
+     "name": "Header",
+     "children": [
+      {
+       "type": "group",
+       "name": "Logo-Lockup",
+       "children": [
+        {
+         "type": "group",
+         "name": "Wordmark-AFQ",
+         "children": [
+          {
+           "type": "path",
+           "name": "Letter-A",
+           "d": "M 77.28 110.72 L 86.96 86.08 C 89.6 79.04 98.4 79.04 101.04 86.08 L 110.72 110.72",
+           "fill": null,
+           "stroke": "#03343D",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          },
+          {
+           "type": "path",
+           "name": "Letter-F",
+           "d": "M 125.68 110.72 L 125.68 77.28 L 152.08 77.28 M 125.68 94 L 147.68 94",
+           "fill": null,
+           "stroke": "#03343D",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          },
+          {
+           "type": "path",
+           "name": "Letter-Q",
+           "d": "M 166.16 90.48 C 166.16 83.19 172.07 77.28 179.36 77.28 L 186.4 77.28 C 193.69 77.28 199.6 83.19 199.6 90.48 L 199.6 97.52 C 199.6 104.81 193.69 110.72 186.4 110.72 L 179.36 110.72 C 172.07 110.72 166.16 104.81 166.16 97.52 Z M 189.04 100.16 L 200.48 112.48",
+           "fill": null,
+           "stroke": "#03343D",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "name": "Tagline",
+         "x": 72,
+         "y": 125,
+         "w": 900,
+         "text": "ENERGY. ENGINEERED.",
+         "lines": [
+          "ENERGY. ENGINEERED."
+         ],
+         "size": 12,
+         "weight": 500,
+         "color": "#03343D",
+         "lh": 16,
+         "ls": 0.3,
+         "align": "left",
+         "case": null,
+         "opacity": 1.0,
+         "h": 16
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Eyebrow",
+       "x": 588,
+       "y": 84,
+       "w": 420,
+       "text": "CORPORATE PROFILE 2026",
+       "lines": [
+        "CORPORATE PROFILE 2026"
+       ],
+       "size": 15,
+       "weight": 500,
+       "color": "#5A7175",
+       "lh": 20,
+       "ls": 0.22,
+       "align": "right",
+       "case": null,
+       "opacity": 1.0,
+       "h": 20
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "name": "Title",
+     "x": 72,
+     "y": 300,
+     "w": 936,
+     "text": "System components",
+     "lines": [
+      "System components"
+     ],
+     "size": 76,
+     "weight": 300,
+     "color": "#053C45",
+     "lh": 84,
+     "ls": -0.02,
+     "align": "left",
+     "case": null,
+     "opacity": 1.0,
+     "h": 84
+    },
+    {
+     "type": "text",
+     "name": "Subtitle",
+     "x": 72,
+     "y": 404,
+     "w": 880,
+     "text": "A photovoltaic system is built from four components. AFAQ holds a direct supply agreement with a main supplier for each.",
+     "lines": [
+      "A photovoltaic system is built from four components. AFAQ holds a",
+      "direct supply agreement with a main supplier for each."
+     ],
+     "size": 26,
+     "weight": 400,
+     "color": "#5A7175",
+     "lh": 38,
+     "ls": 0.0,
+     "align": "left",
+     "case": null,
+     "opacity": 1.0,
+     "h": 76
+    },
+    {
+     "type": "group",
+     "name": "Card-01",
+     "children": [
+      {
+       "type": "rect",
+       "name": "Card-Shape",
+       "x": 72,
+       "y": 536,
+       "w": 936,
+       "h": 284,
+       "rx": 28,
+       "fill": "#FFFFFF",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "text",
+       "name": "Number",
+       "x": 112,
+       "y": 570,
+       "w": 80,
+       "text": "01",
+       "lines": [
+        "01"
+       ],
+       "size": 22,
+       "weight": 600,
+       "color": "#D9641A",
+       "lh": 28,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 28
+      },
+      {
+       "type": "group",
+       "name": "Icon",
+       "children": [
+        {
+         "type": "path",
+         "name": "Icon-pv-module-1",
+         "d": "M 914.25 584.25 C 914.25 582.17 915.92 580.5 918 580.5 L 958 580.5 C 960.08 580.5 961.75 582.17 961.75 584.25 L 961.75 611.75 C 961.75 613.83 960.08 615.5 958 615.5 L 918 615.5 C 915.92 615.5 914.25 613.83 914.25 611.75 Z",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 3.75,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-pv-module-2",
+         "d": "M 930.12 580.5 L 930.12 615.5 M 945.88 580.5 L 945.88 615.5 M 914.25 598 L 961.75 598",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 3.75,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Card-Title",
+       "x": 112,
+       "y": 610,
+       "w": 680,
+       "text": "PV modules",
+       "lines": [
+        "PV modules"
+       ],
+       "size": 30,
+       "weight": 600,
+       "color": "#053C45",
+       "lh": 38,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 38
+      },
+      {
+       "type": "text",
+       "name": "Card-Note",
+       "x": 112,
+       "y": 660,
+       "w": 640,
+       "text": "Selected according to the mounting area available and the conditions on site.",
+       "lines": [
+        "Selected according to the mounting area available and the",
+        "conditions on site."
+       ],
+       "size": 22,
+       "weight": 400,
+       "color": "#5A7175",
+       "lh": 32,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 64
+      },
+      {
+       "type": "text",
+       "name": "Supplier-Label",
+       "x": 112,
+       "y": 738,
+       "w": 400,
+       "text": "Main suppliers",
+       "lines": [
+        "MAIN SUPPLIERS"
+       ],
+       "size": 13,
+       "weight": 500,
+       "color": "#5A7175",
+       "lh": 18,
+       "ls": 0.16,
+       "align": "left",
+       "case": "upper",
+       "opacity": 1.0,
+       "h": 18
+      },
+      {
+       "type": "text",
+       "name": "Supplier",
+       "x": 112,
+       "y": 762,
+       "w": 600,
+       "text": "AACE  \u00b7  Ronma",
+       "lines": [
+        "AACE  \u00b7  Ronma"
+       ],
+       "size": 22,
+       "weight": 500,
+       "color": "#053C45",
+       "lh": 30,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 30
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Card-02",
+     "children": [
+      {
+       "type": "rect",
+       "name": "Card-Shape",
+       "x": 72,
+       "y": 844,
+       "w": 936,
+       "h": 284,
+       "rx": 28,
+       "fill": "#FFFFFF",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "text",
+       "name": "Number",
+       "x": 112,
+       "y": 878,
+       "w": 80,
+       "text": "02",
+       "lines": [
+        "02"
+       ],
+       "size": 22,
+       "weight": 600,
+       "color": "#D9641A",
+       "lh": 28,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 28
+      },
+      {
+       "type": "group",
+       "name": "Icon",
+       "children": [
+        {
+         "type": "path",
+         "name": "Icon-battery-1",
+         "d": "M 914.25 897.25 C 914.25 895.17 915.92 893.5 918 893.5 L 950.5 893.5 C 952.58 893.5 954.25 895.17 954.25 897.25 L 954.25 914.75 C 954.25 916.83 952.58 918.5 950.5 918.5 L 918 918.5 C 915.92 918.5 914.25 916.83 914.25 914.75 Z",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 3.75,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-battery-2",
+         "d": "M 954.25 902.88 C 954.25 901.84 955.09 901 956.12 901 L 958.62 901 C 959.66 901 960.5 901.84 960.5 902.88 L 960.5 909.12 C 960.5 910.16 959.66 911 958.62 911 L 956.12 911 C 955.09 911 954.25 910.16 954.25 909.12 Z",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 3.75,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-battery-3",
+         "d": "M 936.75 897.25 L 929.25 907.25 L 935.5 907.25 L 931.75 914.75 L 939.25 904.75 L 933 904.75 Z",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 3.75,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Card-Title",
+       "x": 112,
+       "y": 918,
+       "w": 680,
+       "text": "Battery energy storage",
+       "lines": [
+        "Battery energy storage"
+       ],
+       "size": 30,
+       "weight": 600,
+       "color": "#053C45",
+       "lh": 38,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 38
+      },
+      {
+       "type": "text",
+       "name": "Card-Note",
+       "x": 112,
+       "y": 968,
+       "w": 640,
+       "text": "Sized on the loads to be covered and the autonomy required.",
+       "lines": [
+        "Sized on the loads to be covered and the autonomy required."
+       ],
+       "size": 22,
+       "weight": 400,
+       "color": "#5A7175",
+       "lh": 32,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 32
+      },
+      {
+       "type": "text",
+       "name": "Supplier-Label",
+       "x": 112,
+       "y": 1046,
+       "w": 400,
+       "text": "Main supplier",
+       "lines": [
+        "MAIN SUPPLIER"
+       ],
+       "size": 13,
+       "weight": 500,
+       "color": "#5A7175",
+       "lh": 18,
+       "ls": 0.16,
+       "align": "left",
+       "case": "upper",
+       "opacity": 1.0,
+       "h": 18
+      },
+      {
+       "type": "text",
+       "name": "Supplier",
+       "x": 112,
+       "y": 1070,
+       "w": 600,
+       "text": "Goshin",
+       "lines": [
+        "Goshin"
+       ],
+       "size": 22,
+       "weight": 500,
+       "color": "#053C45",
+       "lh": 30,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 30
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Card-03",
+     "children": [
+      {
+       "type": "rect",
+       "name": "Card-Shape",
+       "x": 72,
+       "y": 1152,
+       "w": 936,
+       "h": 284,
+       "rx": 28,
+       "fill": "#FFFFFF",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "text",
+       "name": "Number",
+       "x": 112,
+       "y": 1186,
+       "w": 80,
+       "text": "03",
+       "lines": [
+        "03"
+       ],
+       "size": 22,
+       "weight": 600,
+       "color": "#D9641A",
+       "lh": 28,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 28
+      },
+      {
+       "type": "group",
+       "name": "Icon",
+       "children": [
+        {
+         "type": "path",
+         "name": "Icon-inverter-1",
+         "d": "M 914.25 1199 C 914.25 1196.92 915.92 1195.25 918 1195.25 L 958 1195.25 C 960.08 1195.25 961.75 1196.92 961.75 1199 L 961.75 1229 C 961.75 1231.08 960.08 1232.75 958 1232.75 L 918 1232.75 C 915.92 1232.75 914.25 1231.08 914.25 1229 Z",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 3.75,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-inverter-2",
+         "d": "M 921.75 1214 C 925.5 1214 925.5 1205.25 930.5 1205.25 C 935.5 1205.25 935.5 1222.75 940.5 1222.75 C 945.5 1222.75 945.5 1214 954.25 1214",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 3.75,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-inverter-3",
+         "d": "M 914.25 1205.25 L 921.75 1205.25",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 3.75,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Card-Title",
+       "x": 112,
+       "y": 1226,
+       "w": 680,
+       "text": "Inverters and power conversion",
+       "lines": [
+        "Inverters and power conversion"
+       ],
+       "size": 30,
+       "weight": 600,
+       "color": "#053C45",
+       "lh": 38,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 38
+      },
+      {
+       "type": "text",
+       "name": "Card-Note",
+       "x": 112,
+       "y": 1276,
+       "w": 640,
+       "text": "Selected according to the array configuration and the connection requirements of the grid operator.",
+       "lines": [
+        "Selected according to the array configuration and the",
+        "connection requirements of the grid operator."
+       ],
+       "size": 22,
+       "weight": 400,
+       "color": "#5A7175",
+       "lh": 32,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 64
+      },
+      {
+       "type": "text",
+       "name": "Supplier-Label",
+       "x": 112,
+       "y": 1354,
+       "w": 400,
+       "text": "Main supplier",
+       "lines": [
+        "MAIN SUPPLIER"
+       ],
+       "size": 13,
+       "weight": 500,
+       "color": "#5A7175",
+       "lh": 18,
+       "ls": 0.16,
+       "align": "left",
+       "case": "upper",
+       "opacity": 1.0,
+       "h": 18
+      },
+      {
+       "type": "text",
+       "name": "Supplier",
+       "x": 112,
+       "y": 1378,
+       "w": 600,
+       "text": "Star Charge",
+       "lines": [
+        "Star Charge"
+       ],
+       "size": 22,
+       "weight": 500,
+       "color": "#053C45",
+       "lh": 30,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 30
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Card-04",
+     "children": [
+      {
+       "type": "rect",
+       "name": "Card-Shape",
+       "x": 72,
+       "y": 1460,
+       "w": 936,
+       "h": 284,
+       "rx": 28,
+       "fill": "#FFFFFF",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "text",
+       "name": "Number",
+       "x": 112,
+       "y": 1494,
+       "w": 80,
+       "text": "04",
+       "lines": [
+        "04"
+       ],
+       "size": 22,
+       "weight": 600,
+       "color": "#D9641A",
+       "lh": 28,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 28
+      },
+      {
+       "type": "group",
+       "name": "Icon",
+       "children": [
+        {
+         "type": "path",
+         "name": "Icon-infrastructure-1",
+         "d": "M 938 1498.25 L 923 1545.75 M 938 1498.25 L 953 1545.75 M 926.75 1533.25 L 949.25 1533.25 M 931.75 1518.25 L 944.25 1518.25 M 918 1508.25 L 958 1508.25 M 918 1508.25 L 921.75 1502 M 958 1508.25 L 954.25 1502",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 3.75,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Card-Title",
+       "x": 112,
+       "y": 1534,
+       "w": 680,
+       "text": "Plant infrastructure",
+       "lines": [
+        "Plant infrastructure"
+       ],
+       "size": 30,
+       "weight": 600,
+       "color": "#053C45",
+       "lh": 38,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 38
+      },
+      {
+       "type": "text",
+       "name": "Card-Note",
+       "x": 112,
+       "y": 1584,
+       "w": 640,
+       "text": "Mounting structures, foundations, DC and AC cabling, and connection and protection panels, specified to suit the site.",
+       "lines": [
+        "Mounting structures, foundations, DC and AC cabling, and",
+        "connection and protection panels, specified to suit the site."
+       ],
+       "size": 22,
+       "weight": 400,
+       "color": "#5A7175",
+       "lh": 32,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 64
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Footer",
+     "children": [
+      {
+       "type": "path",
+       "name": "Footer-Rule",
+       "d": "M 72 1800 L 1008 1800",
+       "fill": null,
+       "stroke": "#D9DCCF",
+       "sw": 1,
+       "cap": "butt",
+       "join": "round",
+       "opacity": 1.0
+      },
+      {
+       "type": "text",
+       "name": "Footer-Section",
+       "x": 72,
+       "y": 1822,
+       "w": 600,
+       "text": "System components",
+       "lines": [
+        "System components"
+       ],
+       "size": 16,
+       "weight": 400,
+       "color": "#5A7175",
+       "lh": 22,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 22
+      },
+      {
+       "type": "text",
+       "name": "Footer-Page",
+       "x": 808,
+       "y": 1822,
+       "w": 200,
+       "text": "03 / 08",
+       "lines": [
+        "03 / 08"
+       ],
+       "size": 16,
+       "weight": 500,
+       "color": "#5A7175",
+       "lh": 22,
+       "ls": 0.0,
+       "align": "right",
+       "case": null,
+       "opacity": 1.0,
+       "h": 22
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "04 Scope of work",
+   "bg": "#C8FB5F",
+   "elements": [
+    {
+     "type": "rect",
+     "name": "Background",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 1920,
+     "rx": 0,
+     "fill": "#C8FB5F",
+     "opacity": 1.0,
+     "stroke": null,
+     "sw": 0
+    },
+    {
+     "type": "group",
+     "name": "Header",
+     "children": [
+      {
+       "type": "group",
+       "name": "Logo-Lockup",
+       "children": [
+        {
+         "type": "group",
+         "name": "Wordmark-AFQ",
+         "children": [
+          {
+           "type": "path",
+           "name": "Letter-A",
+           "d": "M 77.28 110.72 L 86.96 86.08 C 89.6 79.04 98.4 79.04 101.04 86.08 L 110.72 110.72",
+           "fill": null,
+           "stroke": "#03343D",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          },
+          {
+           "type": "path",
+           "name": "Letter-F",
+           "d": "M 125.68 110.72 L 125.68 77.28 L 152.08 77.28 M 125.68 94 L 147.68 94",
+           "fill": null,
+           "stroke": "#03343D",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          },
+          {
+           "type": "path",
+           "name": "Letter-Q",
+           "d": "M 166.16 90.48 C 166.16 83.19 172.07 77.28 179.36 77.28 L 186.4 77.28 C 193.69 77.28 199.6 83.19 199.6 90.48 L 199.6 97.52 C 199.6 104.81 193.69 110.72 186.4 110.72 L 179.36 110.72 C 172.07 110.72 166.16 104.81 166.16 97.52 Z M 189.04 100.16 L 200.48 112.48",
+           "fill": null,
+           "stroke": "#03343D",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "name": "Tagline",
+         "x": 72,
+         "y": 125,
+         "w": 900,
+         "text": "ENERGY. ENGINEERED.",
+         "lines": [
+          "ENERGY. ENGINEERED."
+         ],
+         "size": 12,
+         "weight": 500,
+         "color": "#03343D",
+         "lh": 16,
+         "ls": 0.3,
+         "align": "left",
+         "case": null,
+         "opacity": 1.0,
+         "h": 16
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Eyebrow",
+       "x": 588,
+       "y": 84,
+       "w": 420,
+       "text": "CORPORATE PROFILE 2026",
+       "lines": [
+        "CORPORATE PROFILE 2026"
+       ],
+       "size": 15,
+       "weight": 500,
+       "color": "#053C45",
+       "lh": 20,
+       "ls": 0.22,
+       "align": "right",
+       "case": null,
+       "opacity": 0.8,
+       "h": 20
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Connectors",
+     "children": [
+      {
+       "type": "path",
+       "name": "Connector-1",
+       "d": "M 100 560 L 100 826.67",
+       "fill": null,
+       "stroke": "#053C45",
+       "sw": 2,
+       "cap": "butt",
+       "join": "round",
+       "opacity": 0.35
+      },
+      {
+       "type": "path",
+       "name": "Connector-2",
+       "d": "M 100 898.67 L 100 1165.33",
+       "fill": null,
+       "stroke": "#053C45",
+       "sw": 2,
+       "cap": "butt",
+       "join": "round",
+       "opacity": 0.35
+      },
+      {
+       "type": "path",
+       "name": "Connector-3",
+       "d": "M 100 1237.33 L 100 1470",
+       "fill": null,
+       "stroke": "#053C45",
+       "sw": 2,
+       "cap": "butt",
+       "join": "round",
+       "opacity": 0.35
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "name": "Title",
+     "x": 72,
+     "y": 300,
+     "w": 936,
+     "text": "Scope of work",
+     "lines": [
+      "Scope of work"
+     ],
+     "size": 76,
+     "weight": 300,
+     "color": "#053C45",
+     "lh": 84,
+     "ls": -0.02,
+     "align": "left",
+     "case": null,
+     "opacity": 1.0,
+     "h": 84
+    },
+    {
+     "type": "text",
+     "name": "Subtitle",
+     "x": 72,
+     "y": 404,
+     "w": 880,
+     "text": "The project sets the scope, from supply alone to full operation.",
+     "lines": [
+      "The project sets the scope, from supply alone to full operation."
+     ],
+     "size": 26,
+     "weight": 400,
+     "color": "#053C45",
+     "lh": 38,
+     "ls": 0.0,
+     "align": "left",
+     "case": null,
+     "opacity": 0.85,
+     "h": 38
+    },
+    {
+     "type": "group",
+     "name": "Step-01",
+     "children": [
+      {
+       "type": "circle",
+       "name": "Node",
+       "cx": 100,
+       "cy": 524,
+       "r": 28,
+       "fill": "#053C45",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "text",
+       "name": "Node-Number",
+       "x": 72,
+       "y": 511,
+       "w": 56,
+       "text": "01",
+       "lines": [
+        "01"
+       ],
+       "size": 19,
+       "weight": 600,
+       "color": "#C8FB5F",
+       "lh": 26,
+       "ls": 0.0,
+       "align": "center",
+       "case": null,
+       "opacity": 1.0,
+       "h": 26
+      },
+      {
+       "type": "text",
+       "name": "Step-Title",
+       "x": 164,
+       "y": 502,
+       "w": 844,
+       "text": "Study and design",
+       "lines": [
+        "Study and design"
+       ],
+       "size": 32,
+       "weight": 600,
+       "color": "#053C45",
+       "lh": 44,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 44
+      },
+      {
+       "type": "rect",
+       "name": "Deliverable-Box",
+       "x": 164,
+       "y": 644,
+       "w": 844,
+       "h": 94,
+       "rx": 18,
+       "fill": "#F5F4EB",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "text",
+       "name": "Step-Body",
+       "x": 164,
+       "y": 558,
+       "w": 844,
+       "text": "Load analysis and consumption data, a site survey, system sizing and placement, and the expected annual yield.",
+       "lines": [
+        "Load analysis and consumption data, a site survey, system sizing and",
+        "placement, and the expected annual yield."
+       ],
+       "size": 24,
+       "weight": 400,
+       "color": "#053C45",
+       "lh": 34,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 0.85,
+       "h": 68
+      },
+      {
+       "type": "text",
+       "name": "Deliverable-Label",
+       "x": 192,
+       "y": 662,
+       "w": 300,
+       "text": "DELIVERABLE",
+       "lines": [
+        "DELIVERABLE"
+       ],
+       "size": 13,
+       "weight": 500,
+       "color": "#D9641A",
+       "lh": 18,
+       "ls": 0.16,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 18
+      },
+      {
+       "type": "text",
+       "name": "Deliverable-Text",
+       "x": 192,
+       "y": 688,
+       "w": 788,
+       "text": "A report covering system capacity, expected annual yield and estimated cost.",
+       "lines": [
+        "A report covering system capacity, expected annual yield and estimated cost."
+       ],
+       "size": 20,
+       "weight": 400,
+       "color": "#053C45",
+       "lh": 28,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 28
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Step-02",
+     "children": [
+      {
+       "type": "circle",
+       "name": "Node",
+       "cx": 100,
+       "cy": 862.6666666666666,
+       "r": 28,
+       "fill": "#053C45",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "text",
+       "name": "Node-Number",
+       "x": 72,
+       "y": 849.6666666666666,
+       "w": 56,
+       "text": "02",
+       "lines": [
+        "02"
+       ],
+       "size": 19,
+       "weight": 600,
+       "color": "#C8FB5F",
+       "lh": 26,
+       "ls": 0.0,
+       "align": "center",
+       "case": null,
+       "opacity": 1.0,
+       "h": 26
+      },
+      {
+       "type": "text",
+       "name": "Step-Title",
+       "x": 164,
+       "y": 840.6666666666666,
+       "w": 844,
+       "text": "Supply",
+       "lines": [
+        "Supply"
+       ],
+       "size": 32,
+       "weight": 600,
+       "color": "#053C45",
+       "lh": 44,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 44
+      },
+      {
+       "type": "rect",
+       "name": "Deliverable-Box",
+       "x": 164,
+       "y": 982.6666666666666,
+       "w": 844,
+       "h": 94,
+       "rx": 18,
+       "fill": "#F5F4EB",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "text",
+       "name": "Step-Body",
+       "x": 164,
+       "y": 896.6666666666666,
+       "w": 844,
+       "text": "PV modules, batteries, inverters and electrical equipment, with manufacturer warranties.",
+       "lines": [
+        "PV modules, batteries, inverters and electrical equipment, with",
+        "manufacturer warranties."
+       ],
+       "size": 24,
+       "weight": 400,
+       "color": "#053C45",
+       "lh": 34,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 0.85,
+       "h": 68
+      },
+      {
+       "type": "text",
+       "name": "Deliverable-Label",
+       "x": 192,
+       "y": 1000.6666666666666,
+       "w": 300,
+       "text": "DELIVERABLE",
+       "lines": [
+        "DELIVERABLE"
+       ],
+       "size": 13,
+       "weight": 500,
+       "color": "#D9641A",
+       "lh": 18,
+       "ls": 0.16,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 18
+      },
+      {
+       "type": "text",
+       "name": "Deliverable-Text",
+       "x": 192,
+       "y": 1026.6666666666665,
+       "w": 788,
+       "text": "A component list with specifications, source and warranty terms.",
+       "lines": [
+        "A component list with specifications, source and warranty terms."
+       ],
+       "size": 20,
+       "weight": 400,
+       "color": "#053C45",
+       "lh": 28,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 28
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Step-03",
+     "children": [
+      {
+       "type": "circle",
+       "name": "Node",
+       "cx": 100,
+       "cy": 1201.3333333333333,
+       "r": 28,
+       "fill": "#053C45",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "text",
+       "name": "Node-Number",
+       "x": 72,
+       "y": 1188.3333333333333,
+       "w": 56,
+       "text": "03",
+       "lines": [
+        "03"
+       ],
+       "size": 19,
+       "weight": 600,
+       "color": "#C8FB5F",
+       "lh": 26,
+       "ls": 0.0,
+       "align": "center",
+       "case": null,
+       "opacity": 1.0,
+       "h": 26
+      },
+      {
+       "type": "text",
+       "name": "Step-Title",
+       "x": 164,
+       "y": 1179.3333333333333,
+       "w": 844,
+       "text": "Installation and connection",
+       "lines": [
+        "Installation and connection"
+       ],
+       "size": 32,
+       "weight": 600,
+       "color": "#053C45",
+       "lh": 44,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 44
+      },
+      {
+       "type": "rect",
+       "name": "Deliverable-Box",
+       "x": 164,
+       "y": 1287.3333333333333,
+       "w": 844,
+       "h": 94,
+       "rx": 18,
+       "fill": "#F5F4EB",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "text",
+       "name": "Step-Body",
+       "x": 164,
+       "y": 1235.3333333333333,
+       "w": 844,
+       "text": "Installation, electrical works, and grid-tied, off-grid or hybrid connection.",
+       "lines": [
+        "Installation, electrical works, and grid-tied, off-grid or hybrid connection."
+       ],
+       "size": 24,
+       "weight": 400,
+       "color": "#053C45",
+       "lh": 34,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 0.85,
+       "h": 34
+      },
+      {
+       "type": "text",
+       "name": "Deliverable-Label",
+       "x": 192,
+       "y": 1305.3333333333333,
+       "w": 300,
+       "text": "DELIVERABLE",
+       "lines": [
+        "DELIVERABLE"
+       ],
+       "size": 13,
+       "weight": 500,
+       "color": "#D9641A",
+       "lh": 18,
+       "ls": 0.16,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 18
+      },
+      {
+       "type": "text",
+       "name": "Deliverable-Text",
+       "x": 192,
+       "y": 1331.3333333333333,
+       "w": 788,
+       "text": "A working system and a testing and commissioning record.",
+       "lines": [
+        "A working system and a testing and commissioning record."
+       ],
+       "size": 20,
+       "weight": 400,
+       "color": "#053C45",
+       "lh": 28,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 28
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Step-04",
+     "children": [
+      {
+       "type": "circle",
+       "name": "Node",
+       "cx": 100,
+       "cy": 1506.0,
+       "r": 28,
+       "fill": "#053C45",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "text",
+       "name": "Node-Number",
+       "x": 72,
+       "y": 1493.0,
+       "w": 56,
+       "text": "04",
+       "lines": [
+        "04"
+       ],
+       "size": 19,
+       "weight": 600,
+       "color": "#C8FB5F",
+       "lh": 26,
+       "ls": 0.0,
+       "align": "center",
+       "case": null,
+       "opacity": 1.0,
+       "h": 26
+      },
+      {
+       "type": "text",
+       "name": "Step-Title",
+       "x": 164,
+       "y": 1484.0,
+       "w": 844,
+       "text": "Operation and monitoring",
+       "lines": [
+        "Operation and monitoring"
+       ],
+       "size": 32,
+       "weight": 600,
+       "color": "#053C45",
+       "lh": 44,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 44
+      },
+      {
+       "type": "rect",
+       "name": "Deliverable-Box",
+       "x": 164,
+       "y": 1626.0,
+       "w": 844,
+       "h": 94,
+       "rx": 18,
+       "fill": "#F5F4EB",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "text",
+       "name": "Step-Body",
+       "x": 164,
+       "y": 1540.0,
+       "w": 844,
+       "text": "Performance monitoring and maintenance under an operation and maintenance contract.",
+       "lines": [
+        "Performance monitoring and maintenance under an operation and",
+        "maintenance contract."
+       ],
+       "size": 24,
+       "weight": 400,
+       "color": "#053C45",
+       "lh": 34,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 0.85,
+       "h": 68
+      },
+      {
+       "type": "text",
+       "name": "Deliverable-Label",
+       "x": 192,
+       "y": 1644.0,
+       "w": 300,
+       "text": "DELIVERABLE",
+       "lines": [
+        "DELIVERABLE"
+       ],
+       "size": 13,
+       "weight": 500,
+       "color": "#D9641A",
+       "lh": 18,
+       "ls": 0.16,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 18
+      },
+      {
+       "type": "text",
+       "name": "Deliverable-Text",
+       "x": 192,
+       "y": 1670.0,
+       "w": 788,
+       "text": "A performance report comparing actual output against the design figure.",
+       "lines": [
+        "A performance report comparing actual output against the design figure."
+       ],
+       "size": 20,
+       "weight": 400,
+       "color": "#053C45",
+       "lh": 28,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 28
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Footer",
+     "children": [
+      {
+       "type": "path",
+       "name": "Footer-Rule",
+       "d": "M 72 1800 L 1008 1800",
+       "fill": null,
+       "stroke": "#053C45",
+       "sw": 1,
+       "cap": "butt",
+       "join": "round",
+       "opacity": 0.25
+      },
+      {
+       "type": "text",
+       "name": "Footer-Section",
+       "x": 72,
+       "y": 1822,
+       "w": 600,
+       "text": "Scope of work",
+       "lines": [
+        "Scope of work"
+       ],
+       "size": 16,
+       "weight": 400,
+       "color": "#053C45",
+       "lh": 22,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 0.8,
+       "h": 22
+      },
+      {
+       "type": "text",
+       "name": "Footer-Page",
+       "x": 808,
+       "y": 1822,
+       "w": 200,
+       "text": "04 / 08",
+       "lines": [
+        "04 / 08"
+       ],
+       "size": 16,
+       "weight": 500,
+       "color": "#053C45",
+       "lh": 22,
+       "ls": 0.0,
+       "align": "right",
+       "case": null,
+       "opacity": 0.8,
+       "h": 22
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "05 Ways of working",
+   "bg": "#053C45",
+   "elements": [
+    {
+     "type": "rect",
+     "name": "Background",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 1920,
+     "rx": 0,
+     "fill": "#053C45",
+     "opacity": 1.0,
+     "stroke": null,
+     "sw": 0
+    },
+    {
+     "type": "group",
+     "name": "Header",
+     "children": [
+      {
+       "type": "group",
+       "name": "Logo-Lockup",
+       "children": [
+        {
+         "type": "group",
+         "name": "Wordmark-AFQ",
+         "children": [
+          {
+           "type": "path",
+           "name": "Letter-A",
+           "d": "M 77.28 110.72 L 86.96 86.08 C 89.6 79.04 98.4 79.04 101.04 86.08 L 110.72 110.72",
+           "fill": null,
+           "stroke": "#F5F4EB",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          },
+          {
+           "type": "path",
+           "name": "Letter-F",
+           "d": "M 125.68 110.72 L 125.68 77.28 L 152.08 77.28 M 125.68 94 L 147.68 94",
+           "fill": null,
+           "stroke": "#F5F4EB",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          },
+          {
+           "type": "path",
+           "name": "Letter-Q",
+           "d": "M 166.16 90.48 C 166.16 83.19 172.07 77.28 179.36 77.28 L 186.4 77.28 C 193.69 77.28 199.6 83.19 199.6 90.48 L 199.6 97.52 C 199.6 104.81 193.69 110.72 186.4 110.72 L 179.36 110.72 C 172.07 110.72 166.16 104.81 166.16 97.52 Z M 189.04 100.16 L 200.48 112.48",
+           "fill": null,
+           "stroke": "#F5F4EB",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "name": "Tagline",
+         "x": 72,
+         "y": 125,
+         "w": 900,
+         "text": "ENERGY. ENGINEERED.",
+         "lines": [
+          "ENERGY. ENGINEERED."
+         ],
+         "size": 12,
+         "weight": 500,
+         "color": "#F5F4EB",
+         "lh": 16,
+         "ls": 0.3,
+         "align": "left",
+         "case": null,
+         "opacity": 1.0,
+         "h": 16
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Eyebrow",
+       "x": 588,
+       "y": 84,
+       "w": 420,
+       "text": "CORPORATE PROFILE 2026",
+       "lines": [
+        "CORPORATE PROFILE 2026"
+       ],
+       "size": 15,
+       "weight": 500,
+       "color": "#F5F4EB",
+       "lh": 20,
+       "ls": 0.22,
+       "align": "right",
+       "case": null,
+       "opacity": 0.85,
+       "h": 20
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "name": "Title",
+     "x": 72,
+     "y": 300,
+     "w": 936,
+     "text": "Ways of working",
+     "lines": [
+      "Ways of working"
+     ],
+     "size": 76,
+     "weight": 300,
+     "color": "#F5F4EB",
+     "lh": 84,
+     "ls": -0.02,
+     "align": "left",
+     "case": null,
+     "opacity": 1.0,
+     "h": 84
+    },
+    {
+     "type": "group",
+     "name": "Card-01",
+     "children": [
+      {
+       "type": "rect",
+       "name": "Tab-Fill",
+       "x": 72,
+       "y": 456,
+       "w": 168,
+       "h": 84,
+       "rx": 26,
+       "fill": "#C8FB5F",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "path",
+       "name": "Card-Body",
+       "d": "M 72 540 C 72 522.33 86.33 508 104 508 L 976 508 C 993.67 508 1008 522.33 1008 540 L 1008 824 C 1008 841.67 993.67 856 976 856 L 104 856 C 86.33 856 72 841.67 72 824 Z",
+       "fill": "#0E5560",
+       "stroke": null,
+       "sw": 0,
+       "cap": "round",
+       "join": "round",
+       "opacity": 1.0
+      },
+      {
+       "type": "text",
+       "name": "Number",
+       "x": 72,
+       "y": 469,
+       "w": 168,
+       "text": "01",
+       "lines": [
+        "01"
+       ],
+       "size": 20,
+       "weight": 600,
+       "color": "#053C45",
+       "lh": 26,
+       "ls": 0.0,
+       "align": "center",
+       "case": null,
+       "opacity": 1.0,
+       "h": 26
+      },
+      {
+       "type": "text",
+       "name": "Card-Title",
+       "x": 120,
+       "y": 568,
+       "w": 640,
+       "text": "Supply and installation for projects",
+       "lines": [
+        "Supply and installation for projects"
+       ],
+       "size": 36,
+       "weight": 600,
+       "color": "#F5F4EB",
+       "lh": 44,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 44
+      },
+      {
+       "type": "group",
+       "name": "Icon",
+       "children": [
+        {
+         "type": "path",
+         "name": "Icon-clipboard-1",
+         "d": "M 884 578 C 884 574.68 886.68 572 890 572 L 934 572 C 937.32 572 940 574.68 940 578 L 940 638 C 940 641.32 937.32 644 934 644 L 890 644 C 886.68 644 884 641.32 884 638 Z",
+         "fill": null,
+         "stroke": "#C8FB5F",
+         "sw": 5,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-clipboard-2",
+         "d": "M 900 568 C 900 565.8 901.8 564 904 564 L 920 564 C 922.2 564 924 565.8 924 568 L 924 574 C 924 576.2 922.2 578 920 578 L 904 578 C 901.8 578 900 576.2 900 574 Z",
+         "fill": null,
+         "stroke": "#C8FB5F",
+         "sw": 5,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-clipboard-3",
+         "d": "M 896 610 L 906 620 L 928 596",
+         "fill": null,
+         "stroke": "#C8FB5F",
+         "sw": 5,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Card-Body-Text",
+       "x": 120,
+       "y": 632,
+       "w": 700,
+       "text": "One party responsible for design, supply, installation and commissioning.",
+       "lines": [
+        "One party responsible for design, supply, installation and",
+        "commissioning."
+       ],
+       "size": 26,
+       "weight": 400,
+       "color": "#F5F4EB",
+       "lh": 38,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 0.85,
+       "h": 76
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Card-02",
+     "children": [
+      {
+       "type": "rect",
+       "name": "Tab-Fill",
+       "x": 72,
+       "y": 900,
+       "w": 168,
+       "h": 84,
+       "rx": 26,
+       "fill": "#C8FB5F",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "path",
+       "name": "Card-Body",
+       "d": "M 72 984 C 72 966.33 86.33 952 104 952 L 976 952 C 993.67 952 1008 966.33 1008 984 L 1008 1268 C 1008 1285.67 993.67 1300 976 1300 L 104 1300 C 86.33 1300 72 1285.67 72 1268 Z",
+       "fill": "#0E5560",
+       "stroke": null,
+       "sw": 0,
+       "cap": "round",
+       "join": "round",
+       "opacity": 1.0
+      },
+      {
+       "type": "text",
+       "name": "Number",
+       "x": 72,
+       "y": 913,
+       "w": 168,
+       "text": "02",
+       "lines": [
+        "02"
+       ],
+       "size": 20,
+       "weight": 600,
+       "color": "#053C45",
+       "lh": 26,
+       "ls": 0.0,
+       "align": "center",
+       "case": null,
+       "opacity": 1.0,
+       "h": 26
+      },
+      {
+       "type": "text",
+       "name": "Card-Title",
+       "x": 120,
+       "y": 1012,
+       "w": 640,
+       "text": "Component supply",
+       "lines": [
+        "Component supply"
+       ],
+       "size": 36,
+       "weight": 600,
+       "color": "#F5F4EB",
+       "lh": 44,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 44
+      },
+      {
+       "type": "group",
+       "name": "Icon",
+       "children": [
+        {
+         "type": "path",
+         "name": "Icon-boxes-1",
+         "d": "M 874 1056 C 874 1053.8 875.8 1052 878 1052 L 906 1052 C 908.2 1052 910 1053.8 910 1056 L 910 1080 C 910 1082.2 908.2 1084 906 1084 L 878 1084 C 875.8 1084 874 1082.2 874 1080 Z",
+         "fill": null,
+         "stroke": "#C8FB5F",
+         "sw": 5,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-boxes-2",
+         "d": "M 914 1056 C 914 1053.8 915.8 1052 918 1052 L 946 1052 C 948.2 1052 950 1053.8 950 1056 L 950 1080 C 950 1082.2 948.2 1084 946 1084 L 918 1084 C 915.8 1084 914 1082.2 914 1080 Z",
+         "fill": null,
+         "stroke": "#C8FB5F",
+         "sw": 5,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-boxes-3",
+         "d": "M 894 1020 C 894 1017.8 895.8 1016 898 1016 L 926 1016 C 928.2 1016 930 1017.8 930 1020 L 930 1044 C 930 1046.2 928.2 1048 926 1048 L 898 1048 C 895.8 1048 894 1046.2 894 1044 Z",
+         "fill": null,
+         "stroke": "#C8FB5F",
+         "sw": 5,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Card-Body-Text",
+       "x": 120,
+       "y": 1076,
+       "w": 700,
+       "text": "Supply to the specification and quantities of the project, for contractors and installation companies.",
+       "lines": [
+        "Supply to the specification and quantities of the project,",
+        "for contractors and installation companies."
+       ],
+       "size": 26,
+       "weight": 400,
+       "color": "#F5F4EB",
+       "lh": 38,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 0.85,
+       "h": 76
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Ribbon",
+     "children": [
+      {
+       "type": "path",
+       "name": "Ribbon-Teal",
+       "d": "M -34 1490 C 226 1470 406 1670 626 1660 C 846 1650 926 1460 1166 1510 L 1166 1627 C 926 1577 846 1767 626 1777 C 406 1787 226 1587 -34 1607 Z",
+       "fill": "#053C45",
+       "stroke": null,
+       "sw": 0,
+       "cap": "round",
+       "join": "round",
+       "opacity": 1.0
+      },
+      {
+       "type": "path",
+       "name": "Ribbon-Orange",
+       "d": "M -50 1475 C 210 1455 390 1655 610 1645 C 830 1635 910 1445 1150 1495 L 1150 1600 C 910 1550 830 1740 610 1750 C 390 1760 210 1560 -50 1580 Z",
+       "fill": "#FD7E25",
+       "stroke": null,
+       "sw": 0,
+       "cap": "round",
+       "join": "round",
+       "opacity": 1.0
+      },
+      {
+       "type": "path",
+       "name": "Ribbon-Lime",
+       "d": "M -60 1430 C 200 1410 380 1610 600 1600 C 820 1590 900 1400 1140 1450 L 1140 1600 C 900 1550 820 1740 600 1750 C 380 1760 200 1560 -60 1580 Z",
+       "fill": {
+        "type": "linear",
+        "x1": -60,
+        "y1": 0,
+        "x2": 1140,
+        "y2": 0,
+        "stops": [
+         [
+          0,
+          "#E9FBB8",
+          1
+         ],
+         [
+          0.45,
+          "#C8FB5F",
+          1
+         ],
+         [
+          1,
+          "#A4DC3C",
+          1
+         ]
+        ]
+       },
+       "stroke": null,
+       "sw": 0,
+       "cap": "round",
+       "join": "round",
+       "opacity": 1.0
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Footer",
+     "children": [
+      {
+       "type": "path",
+       "name": "Footer-Rule",
+       "d": "M 72 1800 L 1008 1800",
+       "fill": null,
+       "stroke": "#F5F4EB",
+       "sw": 1,
+       "cap": "butt",
+       "join": "round",
+       "opacity": 0.25
+      },
+      {
+       "type": "text",
+       "name": "Footer-Section",
+       "x": 72,
+       "y": 1822,
+       "w": 600,
+       "text": "Ways of working",
+       "lines": [
+        "Ways of working"
+       ],
+       "size": 16,
+       "weight": 400,
+       "color": "#F5F4EB",
+       "lh": 22,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 0.75,
+       "h": 22
+      },
+      {
+       "type": "text",
+       "name": "Footer-Page",
+       "x": 808,
+       "y": 1822,
+       "w": 200,
+       "text": "05 / 08",
+       "lines": [
+        "05 / 08"
+       ],
+       "size": 16,
+       "weight": 500,
+       "color": "#F5F4EB",
+       "lh": 22,
+       "ls": 0.0,
+       "align": "right",
+       "case": null,
+       "opacity": 0.75,
+       "h": 22
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "06 Where the systems are used",
+   "bg": "#F5F4EB",
+   "elements": [
+    {
+     "type": "rect",
+     "name": "Background",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 1920,
+     "rx": 0,
+     "fill": "#F5F4EB",
+     "opacity": 1.0,
+     "stroke": null,
+     "sw": 0
+    },
+    {
+     "type": "group",
+     "name": "Header",
+     "children": [
+      {
+       "type": "group",
+       "name": "Logo-Lockup",
+       "children": [
+        {
+         "type": "group",
+         "name": "Wordmark-AFQ",
+         "children": [
+          {
+           "type": "path",
+           "name": "Letter-A",
+           "d": "M 77.28 110.72 L 86.96 86.08 C 89.6 79.04 98.4 79.04 101.04 86.08 L 110.72 110.72",
+           "fill": null,
+           "stroke": "#03343D",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          },
+          {
+           "type": "path",
+           "name": "Letter-F",
+           "d": "M 125.68 110.72 L 125.68 77.28 L 152.08 77.28 M 125.68 94 L 147.68 94",
+           "fill": null,
+           "stroke": "#03343D",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          },
+          {
+           "type": "path",
+           "name": "Letter-Q",
+           "d": "M 166.16 90.48 C 166.16 83.19 172.07 77.28 179.36 77.28 L 186.4 77.28 C 193.69 77.28 199.6 83.19 199.6 90.48 L 199.6 97.52 C 199.6 104.81 193.69 110.72 186.4 110.72 L 179.36 110.72 C 172.07 110.72 166.16 104.81 166.16 97.52 Z M 189.04 100.16 L 200.48 112.48",
+           "fill": null,
+           "stroke": "#03343D",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "name": "Tagline",
+         "x": 72,
+         "y": 125,
+         "w": 900,
+         "text": "ENERGY. ENGINEERED.",
+         "lines": [
+          "ENERGY. ENGINEERED."
+         ],
+         "size": 12,
+         "weight": 500,
+         "color": "#03343D",
+         "lh": 16,
+         "ls": 0.3,
+         "align": "left",
+         "case": null,
+         "opacity": 1.0,
+         "h": 16
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Eyebrow",
+       "x": 588,
+       "y": 84,
+       "w": 420,
+       "text": "CORPORATE PROFILE 2026",
+       "lines": [
+        "CORPORATE PROFILE 2026"
+       ],
+       "size": 15,
+       "weight": 500,
+       "color": "#5A7175",
+       "lh": 20,
+       "ls": 0.22,
+       "align": "right",
+       "case": null,
+       "opacity": 1.0,
+       "h": 20
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "name": "Title",
+     "x": 72,
+     "y": 300,
+     "w": 936,
+     "text": "Where the\nsystems are used",
+     "lines": [
+      "Where the",
+      "systems are used"
+     ],
+     "size": 76,
+     "weight": 300,
+     "color": "#053C45",
+     "lh": 84,
+     "ls": -0.02,
+     "align": "left",
+     "case": null,
+     "opacity": 1.0,
+     "h": 168
+    },
+    {
+     "type": "text",
+     "name": "Subtitle",
+     "x": 72,
+     "y": 488,
+     "w": 880,
+     "text": "The pattern of consumption shapes the system more than the type of business does.",
+     "lines": [
+      "The pattern of consumption shapes the system more than the type of",
+      "business does."
+     ],
+     "size": 26,
+     "weight": 400,
+     "color": "#5A7175",
+     "lh": 38,
+     "ls": 0.0,
+     "align": "left",
+     "case": null,
+     "opacity": 1.0,
+     "h": 76
+    },
+    {
+     "type": "group",
+     "name": "Card-1",
+     "children": [
+      {
+       "type": "rect",
+       "name": "Card-Shape",
+       "x": 72.0,
+       "y": 620.0,
+       "w": 453.0,
+       "h": 547.0,
+       "rx": 28,
+       "fill": "#FFFFFF",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "circle",
+       "name": "Icon-Disc",
+       "cx": 156.0,
+       "cy": 704.0,
+       "r": 44,
+       "fill": "#C8FB5F",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "group",
+       "name": "Icon",
+       "children": [
+        {
+         "type": "path",
+         "name": "Icon-sun-1",
+         "d": "M 164 704 C 164 708.42 160.42 712 156 712 C 151.58 712 148 708.42 148 704 C 148 699.58 151.58 696 156 696 C 160.42 696 164 699.58 164 704 Z",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 3.0,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-sun-2",
+         "d": "M 156 685 L 156 690 M 156 718 L 156 723 M 137 704 L 142 704 M 170 704 L 175 704 M 142.6 690.6 L 146.1 694.1 M 165.9 713.9 L 169.4 717.4 M 142.6 717.4 L 146.1 713.9 M 165.9 694.1 L 169.4 690.6",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 3.0,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Card-Title",
+       "x": 112.0,
+       "y": 776.0,
+       "w": 373.0,
+       "text": "Sites that consume during the day",
+       "lines": [
+        "Sites that consume during",
+        "the day"
+       ],
+       "size": 28,
+       "weight": 600,
+       "color": "#053C45",
+       "lh": 36,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 72
+      },
+      {
+       "type": "text",
+       "name": "Card-Body",
+       "x": 112.0,
+       "y": 862.0,
+       "w": 373.0,
+       "text": "Offices, retail centres, hotels, factories, schools and residential compounds. Their heaviest load falls within sunlight hours.",
+       "lines": [
+        "Offices, retail centres, hotels,",
+        "factories, schools and residential",
+        "compounds. Their heaviest load falls",
+        "within sunlight hours."
+       ],
+       "size": 21,
+       "weight": 400,
+       "color": "#5A7175",
+       "lh": 31,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 124
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Card-2",
+     "children": [
+      {
+       "type": "rect",
+       "name": "Card-Shape",
+       "x": 555.0,
+       "y": 620.0,
+       "w": 453.0,
+       "h": 547.0,
+       "rx": 28,
+       "fill": "#FFFFFF",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "circle",
+       "name": "Icon-Disc",
+       "cx": 639.0,
+       "cy": 704.0,
+       "r": 44,
+       "fill": "#C8FB5F",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "group",
+       "name": "Icon",
+       "children": [
+        {
+         "type": "path",
+         "name": "Icon-continuous-1",
+         "d": "M 657 704 C 657 713.94 648.94 722 639 722 C 629.06 722 621 713.94 621 704 C 621 694.06 629.06 686 639 686 C 648.94 686 657 694.06 657 704 Z",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 3.0,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-continuous-2",
+         "d": "M 639 693 L 639 704 L 647 709",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 3.0,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Card-Title",
+       "x": 595.0,
+       "y": 776.0,
+       "w": 373.0,
+       "text": "Sites with continuous loads",
+       "lines": [
+        "Sites with continuous loads"
+       ],
+       "size": 28,
+       "weight": 600,
+       "color": "#053C45",
+       "lh": 36,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 36
+      },
+      {
+       "type": "text",
+       "name": "Card-Body",
+       "x": 595.0,
+       "y": 826.0,
+       "w": 373.0,
+       "text": "Hospitals, cold stores, production lines and data centres. The system works alongside the backup already in place, cutting generator running hours and fuel use.",
+       "lines": [
+        "Hospitals, cold stores, production",
+        "lines and data centres. The system",
+        "works alongside the backup already",
+        "in place, cutting generator running",
+        "hours and fuel use."
+       ],
+       "size": 21,
+       "weight": 400,
+       "color": "#5A7175",
+       "lh": 31,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 155
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Card-3",
+     "children": [
+      {
+       "type": "rect",
+       "name": "Card-Shape",
+       "x": 72.0,
+       "y": 1197.0,
+       "w": 453.0,
+       "h": 547.0,
+       "rx": 28,
+       "fill": "#FFFFFF",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "circle",
+       "name": "Icon-Disc",
+       "cx": 156.0,
+       "cy": 1281.0,
+       "r": 44,
+       "fill": "#C8FB5F",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "group",
+       "name": "Icon",
+       "children": [
+        {
+         "type": "path",
+         "name": "Icon-off-grid-1",
+         "d": "M 137 1297 L 156 1266 L 175 1297 Z M 156 1297 L 156 1287 L 161 1297",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 3.0,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-off-grid-2",
+         "d": "M 143 1297 L 169 1297",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 3.0,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Card-Title",
+       "x": 112.0,
+       "y": 1353.0,
+       "w": 373.0,
+       "text": "Sites away from the grid",
+       "lines": [
+        "Sites away from the grid"
+       ],
+       "size": 28,
+       "weight": 600,
+       "color": "#053C45",
+       "lh": 36,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 36
+      },
+      {
+       "type": "text",
+       "name": "Card-Body",
+       "x": 112.0,
+       "y": 1403.0,
+       "w": 373.0,
+       "text": "Farms, irrigation pumps, camps and work sites that run on diesel.",
+       "lines": [
+        "Farms, irrigation pumps, camps and",
+        "work sites that run on diesel."
+       ],
+       "size": 21,
+       "weight": 400,
+       "color": "#5A7175",
+       "lh": 31,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 62
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Card-4",
+     "children": [
+      {
+       "type": "rect",
+       "name": "Card-Shape",
+       "x": 555.0,
+       "y": 1197.0,
+       "w": 453.0,
+       "h": 547.0,
+       "rx": 28,
+       "fill": "#FFFFFF",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "circle",
+       "name": "Icon-Disc",
+       "cx": 639.0,
+       "cy": 1281.0,
+       "r": 44,
+       "fill": "#C8FB5F",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "group",
+       "name": "Icon",
+       "children": [
+        {
+         "type": "path",
+         "name": "Icon-construction-1",
+         "d": "M 625 1300 L 625 1270 L 655 1270 M 625 1276 L 635 1270 M 649 1270 L 649 1281 M 645 1281 L 653 1281 M 649 1281 L 649 1285 C 649 1288 645 1288 645 1285",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 3.0,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-construction-2",
+         "d": "M 620 1300 L 630 1300",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 3.0,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Card-Title",
+       "x": 595.0,
+       "y": 1353.0,
+       "w": 373.0,
+       "text": "Projects under construction",
+       "lines": [
+        "Projects under",
+        "construction"
+       ],
+       "size": 28,
+       "weight": 600,
+       "color": "#053C45",
+       "lh": 36,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 72
+      },
+      {
+       "type": "text",
+       "name": "Card-Body",
+       "x": 595.0,
+       "y": 1439.0,
+       "w": 373.0,
+       "text": "Contractors and developers delivering the energy scope within a live project.",
+       "lines": [
+        "Contractors and developers",
+        "delivering the energy scope within a",
+        "live project."
+       ],
+       "size": 21,
+       "weight": 400,
+       "color": "#5A7175",
+       "lh": 31,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 93
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Footer",
+     "children": [
+      {
+       "type": "path",
+       "name": "Footer-Rule",
+       "d": "M 72 1800 L 1008 1800",
+       "fill": null,
+       "stroke": "#D9DCCF",
+       "sw": 1,
+       "cap": "butt",
+       "join": "round",
+       "opacity": 1.0
+      },
+      {
+       "type": "text",
+       "name": "Footer-Section",
+       "x": 72,
+       "y": 1822,
+       "w": 600,
+       "text": "Where the systems are used",
+       "lines": [
+        "Where the systems are used"
+       ],
+       "size": 16,
+       "weight": 400,
+       "color": "#5A7175",
+       "lh": 22,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 22
+      },
+      {
+       "type": "text",
+       "name": "Footer-Page",
+       "x": 808,
+       "y": 1822,
+       "w": 200,
+       "text": "06 / 08",
+       "lines": [
+        "06 / 08"
+       ],
+       "size": 16,
+       "weight": 500,
+       "color": "#5A7175",
+       "lh": 22,
+       "ls": 0.0,
+       "align": "right",
+       "case": null,
+       "opacity": 1.0,
+       "h": 22
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "07 What AFAQ brings",
+   "bg": "#053C45",
+   "elements": [
+    {
+     "type": "rect",
+     "name": "Background",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 1920,
+     "rx": 0,
+     "fill": "#053C45",
+     "opacity": 1.0,
+     "stroke": null,
+     "sw": 0
+    },
+    {
+     "type": "group",
+     "name": "Header",
+     "children": [
+      {
+       "type": "group",
+       "name": "Logo-Lockup",
+       "children": [
+        {
+         "type": "group",
+         "name": "Wordmark-AFQ",
+         "children": [
+          {
+           "type": "path",
+           "name": "Letter-A",
+           "d": "M 77.28 110.72 L 86.96 86.08 C 89.6 79.04 98.4 79.04 101.04 86.08 L 110.72 110.72",
+           "fill": null,
+           "stroke": "#F5F4EB",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          },
+          {
+           "type": "path",
+           "name": "Letter-F",
+           "d": "M 125.68 110.72 L 125.68 77.28 L 152.08 77.28 M 125.68 94 L 147.68 94",
+           "fill": null,
+           "stroke": "#F5F4EB",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          },
+          {
+           "type": "path",
+           "name": "Letter-Q",
+           "d": "M 166.16 90.48 C 166.16 83.19 172.07 77.28 179.36 77.28 L 186.4 77.28 C 193.69 77.28 199.6 83.19 199.6 90.48 L 199.6 97.52 C 199.6 104.81 193.69 110.72 186.4 110.72 L 179.36 110.72 C 172.07 110.72 166.16 104.81 166.16 97.52 Z M 189.04 100.16 L 200.48 112.48",
+           "fill": null,
+           "stroke": "#F5F4EB",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "name": "Tagline",
+         "x": 72,
+         "y": 125,
+         "w": 900,
+         "text": "ENERGY. ENGINEERED.",
+         "lines": [
+          "ENERGY. ENGINEERED."
+         ],
+         "size": 12,
+         "weight": 500,
+         "color": "#F5F4EB",
+         "lh": 16,
+         "ls": 0.3,
+         "align": "left",
+         "case": null,
+         "opacity": 1.0,
+         "h": 16
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Eyebrow",
+       "x": 588,
+       "y": 84,
+       "w": 420,
+       "text": "CORPORATE PROFILE 2026",
+       "lines": [
+        "CORPORATE PROFILE 2026"
+       ],
+       "size": 15,
+       "weight": 500,
+       "color": "#F5F4EB",
+       "lh": 20,
+       "ls": 0.22,
+       "align": "right",
+       "case": null,
+       "opacity": 0.85,
+       "h": 20
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "name": "Title",
+     "x": 72,
+     "y": 300,
+     "w": 936,
+     "text": "What AFAQ brings",
+     "lines": [
+      "What AFAQ brings"
+     ],
+     "size": 76,
+     "weight": 300,
+     "color": "#F5F4EB",
+     "lh": 84,
+     "ls": -0.02,
+     "align": "left",
+     "case": null,
+     "opacity": 1.0,
+     "h": 84
+    },
+    {
+     "type": "group",
+     "name": "Item-01",
+     "children": [
+      {
+       "type": "text",
+       "name": "Number",
+       "x": 72,
+       "y": 456,
+       "w": 60,
+       "text": "01",
+       "lines": [
+        "01"
+       ],
+       "size": 20,
+       "weight": 600,
+       "color": "#C8FB5F",
+       "lh": 26,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 26
+      },
+      {
+       "type": "group",
+       "name": "Icon",
+       "children": [
+        {
+         "type": "path",
+         "name": "Icon-factory-1",
+         "d": "M 968.58 489.42 L 968.58 471.08 L 977.75 476.58 L 977.75 471.08 L 986.92 476.58 L 986.92 471.08 L 996.08 476.58 L 996.08 458.25 L 1003.42 458.25 L 1003.42 489.42 Z",
+         "fill": null,
+         "stroke": "#C8FB5F",
+         "sw": 2.6,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-factory-2",
+         "d": "M 975 483 L 978.67 483 M 984.17 483 L 987.83 483 M 993.33 483 L 997 483",
+         "fill": null,
+         "stroke": "#C8FB5F",
+         "sw": 2.6,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Item-Title",
+       "x": 156,
+       "y": 448,
+       "w": 760,
+       "text": "Supply from a factory in Oman",
+       "lines": [
+        "Supply from a factory in Oman"
+       ],
+       "size": 32,
+       "weight": 600,
+       "color": "#F5F4EB",
+       "lh": 40,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 40
+      },
+      {
+       "type": "text",
+       "name": "Item-Body",
+       "x": 156,
+       "y": 496,
+       "w": 760,
+       "text": "AACE modules are manufactured in Oman, which shortens supply time compared with importing.",
+       "lines": [
+        "AACE modules are manufactured in Oman, which shortens supply",
+        "time compared with importing."
+       ],
+       "size": 23,
+       "weight": 400,
+       "color": "#F5F4EB",
+       "lh": 33,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 0.8,
+       "h": 66
+      },
+      {
+       "type": "path",
+       "name": "Divider",
+       "d": "M 72 588 L 1008 588",
+       "fill": null,
+       "stroke": "#F5F4EB",
+       "sw": 1,
+       "cap": "butt",
+       "join": "round",
+       "opacity": 0.15
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Item-02",
+     "children": [
+      {
+       "type": "text",
+       "name": "Number",
+       "x": 72,
+       "y": 623,
+       "w": 60,
+       "text": "02",
+       "lines": [
+        "02"
+       ],
+       "size": 20,
+       "weight": 600,
+       "color": "#C8FB5F",
+       "lh": 26,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 26
+      },
+      {
+       "type": "group",
+       "name": "Icon",
+       "children": [
+        {
+         "type": "path",
+         "name": "Icon-shield-1",
+         "d": "M 986 621.58 L 1000.67 627.08 L 1000.67 638.08 C 1000.67 647.25 994.25 653.67 986 656.42 C 977.75 653.67 971.33 647.25 971.33 638.08 L 971.33 627.08 Z",
+         "fill": null,
+         "stroke": "#C8FB5F",
+         "sw": 2.6,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-shield-2",
+         "d": "M 979.58 639 L 984.17 643.58 L 992.42 634.42",
+         "fill": null,
+         "stroke": "#C8FB5F",
+         "sw": 2.6,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Item-Title",
+       "x": 156,
+       "y": 615,
+       "w": 760,
+       "text": "Warranty handled inside Oman",
+       "lines": [
+        "Warranty handled inside Oman"
+       ],
+       "size": 32,
+       "weight": 600,
+       "color": "#F5F4EB",
+       "lh": 40,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 40
+      },
+      {
+       "type": "text",
+       "name": "Item-Body",
+       "x": 156,
+       "y": 663,
+       "w": 760,
+       "text": "AFAQ processes module warranty claims locally, without sending them to a manufacturer abroad.",
+       "lines": [
+        "AFAQ processes module warranty claims locally, without sending",
+        "them to a manufacturer abroad."
+       ],
+       "size": 23,
+       "weight": 400,
+       "color": "#F5F4EB",
+       "lh": 33,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 0.8,
+       "h": 66
+      },
+      {
+       "type": "path",
+       "name": "Divider",
+       "d": "M 72 755 L 1008 755",
+       "fill": null,
+       "stroke": "#F5F4EB",
+       "sw": 1,
+       "cap": "butt",
+       "join": "round",
+       "opacity": 0.15
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Item-03",
+     "children": [
+      {
+       "type": "text",
+       "name": "Number",
+       "x": 72,
+       "y": 790,
+       "w": 60,
+       "text": "03",
+       "lines": [
+        "03"
+       ],
+       "size": 20,
+       "weight": 600,
+       "color": "#C8FB5F",
+       "lh": 26,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 26
+      },
+      {
+       "type": "group",
+       "name": "Icon",
+       "children": [
+        {
+         "type": "path",
+         "name": "Icon-badge-1",
+         "d": "M 996.08 800.5 C 996.08 806.07 991.57 810.58 986 810.58 C 980.43 810.58 975.92 806.07 975.92 800.5 C 975.92 794.93 980.43 790.42 986 790.42 C 991.57 790.42 996.08 794.93 996.08 800.5 Z",
+         "fill": null,
+         "stroke": "#C8FB5F",
+         "sw": 2.6,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-badge-2",
+         "d": "M 979.58 808.75 L 976.83 823.42 L 986 818.83 L 995.17 823.42 L 992.42 808.75",
+         "fill": null,
+         "stroke": "#C8FB5F",
+         "sw": 2.6,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Item-Title",
+       "x": 156,
+       "y": 782,
+       "w": 760,
+       "text": "In-country value",
+       "lines": [
+        "In-country value"
+       ],
+       "size": 32,
+       "weight": 600,
+       "color": "#F5F4EB",
+       "lh": 40,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 40
+      },
+      {
+       "type": "text",
+       "name": "Item-Body",
+       "x": 156,
+       "y": 830,
+       "w": 760,
+       "text": "Modules made in Oman support local content requirements in tenders and government projects.",
+       "lines": [
+        "Modules made in Oman support local content requirements in tenders",
+        "and government projects."
+       ],
+       "size": 23,
+       "weight": 400,
+       "color": "#F5F4EB",
+       "lh": 33,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 0.8,
+       "h": 66
+      },
+      {
+       "type": "path",
+       "name": "Divider",
+       "d": "M 72 922 L 1008 922",
+       "fill": null,
+       "stroke": "#F5F4EB",
+       "sw": 1,
+       "cap": "butt",
+       "join": "round",
+       "opacity": 0.15
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Item-04",
+     "children": [
+      {
+       "type": "text",
+       "name": "Number",
+       "x": 72,
+       "y": 957,
+       "w": 60,
+       "text": "04",
+       "lines": [
+        "04"
+       ],
+       "size": 20,
+       "weight": 600,
+       "color": "#C8FB5F",
+       "lh": 26,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 26
+      },
+      {
+       "type": "group",
+       "name": "Icon",
+       "children": [
+        {
+         "type": "path",
+         "name": "Icon-document-1",
+         "d": "M 974.08 955.58 L 990.58 955.58 L 999.75 964.75 L 999.75 990.42 L 974.08 990.42 Z M 990.58 955.58 L 990.58 964.75 L 999.75 964.75",
+         "fill": null,
+         "stroke": "#C8FB5F",
+         "sw": 2.6,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-document-2",
+         "d": "M 979.58 973.92 L 994.25 973.92 M 979.58 980.33 L 990.58 980.33",
+         "fill": null,
+         "stroke": "#C8FB5F",
+         "sw": 2.6,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Item-Title",
+       "x": 156,
+       "y": 949,
+       "w": 760,
+       "text": "Direct supply agreements",
+       "lines": [
+        "Direct supply agreements"
+       ],
+       "size": 32,
+       "weight": 600,
+       "color": "#F5F4EB",
+       "lh": 40,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 40
+      },
+      {
+       "type": "text",
+       "name": "Item-Body",
+       "x": 156,
+       "y": 997,
+       "w": 760,
+       "text": "Written agreements with module, battery and inverter suppliers, covering availability and manufacturer warranties.",
+       "lines": [
+        "Written agreements with module, battery and inverter suppliers,",
+        "covering availability and manufacturer warranties."
+       ],
+       "size": 23,
+       "weight": 400,
+       "color": "#F5F4EB",
+       "lh": 33,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 0.8,
+       "h": 66
+      },
+      {
+       "type": "path",
+       "name": "Divider",
+       "d": "M 72 1089 L 1008 1089",
+       "fill": null,
+       "stroke": "#F5F4EB",
+       "sw": 1,
+       "cap": "butt",
+       "join": "round",
+       "opacity": 0.15
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Item-05",
+     "children": [
+      {
+       "type": "text",
+       "name": "Number",
+       "x": 72,
+       "y": 1124,
+       "w": 60,
+       "text": "05",
+       "lines": [
+        "05"
+       ],
+       "size": 20,
+       "weight": 600,
+       "color": "#C8FB5F",
+       "lh": 26,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 26
+      },
+      {
+       "type": "group",
+       "name": "Icon",
+       "children": [
+        {
+         "type": "path",
+         "name": "Icon-team-1",
+         "d": "M 985.08 1131.75 C 985.08 1134.78 982.62 1137.25 979.58 1137.25 C 976.55 1137.25 974.08 1134.78 974.08 1131.75 C 974.08 1128.72 976.55 1126.25 979.58 1126.25 C 982.62 1126.25 985.08 1128.72 985.08 1131.75 Z",
+         "fill": null,
+         "stroke": "#C8FB5F",
+         "sw": 2.6,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-team-2",
+         "d": "M 997.92 1133.58 C 997.92 1136.11 995.86 1138.17 993.33 1138.17 C 990.8 1138.17 988.75 1136.11 988.75 1133.58 C 988.75 1131.05 990.8 1129 993.33 1129 C 995.86 1129 997.92 1131.05 997.92 1133.58 Z",
+         "fill": null,
+         "stroke": "#C8FB5F",
+         "sw": 2.6,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-team-3",
+         "d": "M 968.58 1155.58 C 968.58 1146.42 973.17 1142.75 979.58 1142.75 C 986 1142.75 990.58 1146.42 990.58 1155.58 Z",
+         "fill": null,
+         "stroke": "#C8FB5F",
+         "sw": 2.6,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-team-4",
+         "d": "M 992.42 1155.58 C 997 1155.58 1003.42 1155.58 1003.42 1155.58 C 1003.42 1149.17 1000.67 1144.58 994.25 1144.58",
+         "fill": null,
+         "stroke": "#C8FB5F",
+         "sw": 2.6,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Item-Title",
+       "x": 156,
+       "y": 1116,
+       "w": 760,
+       "text": "Delivery team",
+       "lines": [
+        "Delivery team"
+       ],
+       "size": 32,
+       "weight": 600,
+       "color": "#F5F4EB",
+       "lh": 40,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 40
+      },
+      {
+       "type": "text",
+       "name": "Item-Body",
+       "x": 156,
+       "y": 1164,
+       "w": 760,
+       "text": "An engineering team for design and supervision, and a field crew for installation and commissioning.",
+       "lines": [
+        "An engineering team for design and supervision, and a field crew for",
+        "installation and commissioning."
+       ],
+       "size": 23,
+       "weight": 400,
+       "color": "#F5F4EB",
+       "lh": 33,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 0.8,
+       "h": 66
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Photo-Strip",
+     "children": [
+      {
+       "type": "path",
+       "name": "Photo-Strip__set-image-fill",
+       "d": "M 72 1345 C 72 1327.33 86.33 1313 104 1313 L 976 1313 C 993.67 1313 1008 1327.33 1008 1345 L 1008 1712 C 1008 1729.67 993.67 1744 976 1744 L 104 1744 C 86.33 1744 72 1729.67 72 1712 Z",
+       "fill": {
+        "type": "linear",
+        "x1": 0,
+        "y1": 1313,
+        "x2": 0,
+        "y2": 1744,
+        "stops": [
+         [
+          0,
+          "#022C32",
+          1
+         ],
+         [
+          1,
+          "#0E5560",
+          1
+         ]
+        ]
+       },
+       "stroke": null,
+       "sw": 0,
+       "cap": "round",
+       "join": "round",
+       "opacity": 1.0
+      },
+      {
+       "type": "group",
+       "name": "Placeholder-Art (delete after placing photo)",
+       "children": [
+        {
+         "type": "circle",
+         "name": "Sun-Glow",
+         "cx": 296.64,
+         "cy": 1425.06,
+         "r": 69.60650000000001,
+         "fill": "#C8FB5F",
+         "opacity": 0.16,
+         "stroke": null,
+         "sw": 0
+        },
+        {
+         "type": "circle",
+         "name": "Sun",
+         "cx": 296.64,
+         "cy": 1425.06,
+         "r": 36.635000000000005,
+         "fill": "#FD7E25",
+         "opacity": 1.0,
+         "stroke": null,
+         "sw": 0
+        },
+        {
+         "type": "path",
+         "name": "Mountains-Far",
+         "d": "M 72 1577.6 L 240.48 1519.88 L 380.88 1541.43 L 558.72 1494.02 L 727.2 1537.12 L 876.96 1511.26 L 1008 1545.74 L 1008 1577.6 Z",
+         "fill": "#1F7580",
+         "stroke": null,
+         "sw": 0,
+         "cap": "round",
+         "join": "round",
+         "opacity": 0.55
+        },
+        {
+         "type": "path",
+         "name": "Mountains-Near",
+         "d": "M 72 1581.6 L 184.32 1550.05 L 352.8 1580.22 L 502.56 1537.12 L 671.04 1575.91 L 820.8 1554.36 L 1008 1584.53 L 1008 1581.6 Z",
+         "fill": "#053C45",
+         "stroke": null,
+         "sw": 0,
+         "cap": "round",
+         "join": "round",
+         "opacity": 0.9
+        },
+        {
+         "type": "group",
+         "name": "Solar-Array",
+         "children": [
+          {
+           "type": "path",
+           "name": "Panel-1-1",
+           "d": "M 133.52 1598.23 C 133.87 1596.62 135.51 1595.31 137.16 1595.31 L 236.88 1595.31 C 238.53 1595.31 239.59 1596.62 239.23 1598.23 L 234.36 1620.39 C 234 1622.01 232.37 1623.32 230.71 1623.32 L 131 1623.32 C 129.34 1623.32 128.29 1622.01 128.64 1620.39 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-1-line",
+           "d": "M 187.02 1595.31 L 180.86 1623.32",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-2",
+           "d": "M 253.23 1598.23 C 253.59 1596.62 255.22 1595.31 256.88 1595.31 L 356.59 1595.31 C 358.25 1595.31 359.3 1596.62 358.95 1598.23 L 354.07 1620.39 C 353.72 1622.01 352.09 1623.32 350.43 1623.32 L 250.71 1623.32 C 249.06 1623.32 248 1622.01 248.36 1620.39 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-2-line",
+           "d": "M 306.73 1595.31 L 300.57 1623.32",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-3",
+           "d": "M 372.95 1598.23 C 373.3 1596.62 374.94 1595.31 376.59 1595.31 L 476.31 1595.31 C 477.96 1595.31 479.02 1596.62 478.66 1598.23 L 473.79 1620.39 C 473.43 1622.01 471.8 1623.32 470.14 1623.32 L 370.43 1623.32 C 368.77 1623.32 367.72 1622.01 368.07 1620.39 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-3-line",
+           "d": "M 426.45 1595.31 L 420.29 1623.32",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-4",
+           "d": "M 492.66 1598.23 C 493.02 1596.62 494.65 1595.31 496.31 1595.31 L 596.02 1595.31 C 597.68 1595.31 598.73 1596.62 598.38 1598.23 L 593.5 1620.39 C 593.15 1622.01 591.51 1623.32 589.86 1623.32 L 490.14 1623.32 C 488.49 1623.32 487.43 1622.01 487.79 1620.39 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-4-line",
+           "d": "M 546.16 1595.31 L 540 1623.32",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-5",
+           "d": "M 612.38 1598.23 C 612.73 1596.62 614.36 1595.31 616.02 1595.31 L 715.73 1595.31 C 717.39 1595.31 718.45 1596.62 718.09 1598.23 L 713.22 1620.39 C 712.86 1622.01 711.23 1623.32 709.57 1623.32 L 609.86 1623.32 C 608.2 1623.32 607.15 1622.01 607.5 1620.39 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-5-line",
+           "d": "M 665.88 1595.31 L 659.71 1623.32",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-6",
+           "d": "M 732.09 1598.23 C 732.45 1596.62 734.08 1595.31 735.73 1595.31 L 835.45 1595.31 C 837.11 1595.31 838.16 1596.62 837.8 1598.23 L 832.93 1620.39 C 832.57 1622.01 830.94 1623.32 829.29 1623.32 L 729.57 1623.32 C 727.91 1623.32 726.86 1622.01 727.22 1620.39 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-6-line",
+           "d": "M 785.59 1595.31 L 779.43 1623.32",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-7",
+           "d": "M 851.8 1598.23 C 852.16 1596.62 853.79 1595.31 855.45 1595.31 L 955.16 1595.31 C 956.82 1595.31 957.87 1596.62 957.52 1598.23 L 952.64 1620.39 C 952.29 1622.01 950.66 1623.32 949 1623.32 L 849.29 1623.32 C 847.63 1623.32 846.57 1622.01 846.93 1620.39 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-1-7-line",
+           "d": "M 905.31 1595.31 L 899.14 1623.32",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-1",
+           "d": "M 134.47 1637.02 C 134.82 1635.41 136.45 1634.1 138.11 1634.1 L 252.78 1634.1 C 254.44 1634.1 255.49 1635.41 255.13 1637.02 L 249.31 1663.49 C 248.96 1665.11 247.32 1666.42 245.67 1666.42 L 131 1666.42 C 129.34 1666.42 128.29 1665.11 128.64 1663.49 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-1-line",
+           "d": "M 195.44 1634.1 L 188.33 1666.42",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-2",
+           "d": "M 275.13 1637.02 C 275.49 1635.41 277.12 1634.1 278.78 1634.1 L 393.44 1634.1 C 395.1 1634.1 396.16 1635.41 395.8 1637.02 L 389.98 1663.49 C 389.62 1665.11 387.99 1666.42 386.33 1666.42 L 271.67 1666.42 C 270.01 1666.42 268.96 1665.11 269.31 1663.49 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-2-line",
+           "d": "M 336.11 1634.1 L 329 1666.42",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-3",
+           "d": "M 415.8 1637.02 C 416.16 1635.41 417.79 1634.1 419.44 1634.1 L 534.11 1634.1 C 535.77 1634.1 536.82 1635.41 536.47 1637.02 L 530.64 1663.49 C 530.29 1665.11 528.66 1666.42 527 1666.42 L 412.33 1666.42 C 410.68 1666.42 409.62 1665.11 409.98 1663.49 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-3-line",
+           "d": "M 476.78 1634.1 L 469.67 1666.42",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-4",
+           "d": "M 556.47 1637.02 C 556.82 1635.41 558.45 1634.1 560.11 1634.1 L 674.78 1634.1 C 676.44 1634.1 677.49 1635.41 677.13 1637.02 L 671.31 1663.49 C 670.96 1665.11 669.32 1666.42 667.67 1666.42 L 553 1666.42 C 551.34 1666.42 550.29 1665.11 550.64 1663.49 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-4-line",
+           "d": "M 617.44 1634.1 L 610.33 1666.42",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-5",
+           "d": "M 697.13 1637.02 C 697.49 1635.41 699.12 1634.1 700.78 1634.1 L 815.44 1634.1 C 817.1 1634.1 818.16 1635.41 817.8 1637.02 L 811.98 1663.49 C 811.62 1665.11 809.99 1666.42 808.33 1666.42 L 693.67 1666.42 C 692.01 1666.42 690.96 1665.11 691.31 1663.49 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-5-line",
+           "d": "M 758.11 1634.1 L 751 1666.42",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-6",
+           "d": "M 837.8 1637.02 C 838.16 1635.41 839.79 1634.1 841.44 1634.1 L 956.11 1634.1 C 957.77 1634.1 958.82 1635.41 958.47 1637.02 L 952.64 1663.49 C 952.29 1665.11 950.66 1666.42 949 1666.42 L 834.33 1666.42 C 832.68 1666.42 831.62 1665.11 831.98 1663.49 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-2-6-line",
+           "d": "M 898.78 1634.1 L 891.67 1666.42",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-1",
+           "d": "M 135.89 1680.12 C 136.25 1678.51 137.88 1677.19 139.53 1677.19 L 277.53 1677.19 C 279.19 1677.19 280.25 1678.51 279.89 1680.12 L 272.64 1713.06 C 272.29 1714.67 270.66 1715.98 269 1715.98 L 131 1715.98 C 129.34 1715.98 128.29 1714.67 128.64 1713.06 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-1-line",
+           "d": "M 208.53 1677.19 L 200 1715.98",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-2",
+           "d": "M 305.89 1680.12 C 306.25 1678.51 307.88 1677.19 309.53 1677.19 L 447.53 1677.19 C 449.19 1677.19 450.25 1678.51 449.89 1680.12 L 442.64 1713.06 C 442.29 1714.67 440.66 1715.98 439 1715.98 L 301 1715.98 C 299.34 1715.98 298.29 1714.67 298.64 1713.06 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-2-line",
+           "d": "M 378.53 1677.19 L 370 1715.98",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-3",
+           "d": "M 475.89 1680.12 C 476.25 1678.51 477.88 1677.19 479.53 1677.19 L 617.53 1677.19 C 619.19 1677.19 620.25 1678.51 619.89 1680.12 L 612.64 1713.06 C 612.29 1714.67 610.66 1715.98 609 1715.98 L 471 1715.98 C 469.34 1715.98 468.29 1714.67 468.64 1713.06 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-3-line",
+           "d": "M 548.53 1677.19 L 540 1715.98",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-4",
+           "d": "M 645.89 1680.12 C 646.25 1678.51 647.88 1677.19 649.53 1677.19 L 787.53 1677.19 C 789.19 1677.19 790.25 1678.51 789.89 1680.12 L 782.64 1713.06 C 782.29 1714.67 780.66 1715.98 779 1715.98 L 641 1715.98 C 639.34 1715.98 638.29 1714.67 638.64 1713.06 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-4-line",
+           "d": "M 718.53 1677.19 L 710 1715.98",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-5",
+           "d": "M 815.89 1680.12 C 816.25 1678.51 817.88 1677.19 819.53 1677.19 L 957.53 1677.19 C 959.19 1677.19 960.25 1678.51 959.89 1680.12 L 952.64 1713.06 C 952.29 1714.67 950.66 1715.98 949 1715.98 L 811 1715.98 C 809.34 1715.98 808.29 1714.67 808.64 1713.06 Z",
+           "fill": "#202C28",
+           "stroke": "#C8FB5F",
+           "sw": 1.5,
+           "cap": "round",
+           "join": "round",
+           "opacity": 0.95
+          },
+          {
+           "type": "path",
+           "name": "Panel-3-5-line",
+           "d": "M 888.53 1677.19 L 880 1715.98",
+           "fill": null,
+           "stroke": "#C8FB5F",
+           "sw": 1,
+           "cap": "butt",
+           "join": "round",
+           "opacity": 0.35
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Footer",
+     "children": [
+      {
+       "type": "path",
+       "name": "Footer-Rule",
+       "d": "M 72 1800 L 1008 1800",
+       "fill": null,
+       "stroke": "#F5F4EB",
+       "sw": 1,
+       "cap": "butt",
+       "join": "round",
+       "opacity": 0.25
+      },
+      {
+       "type": "text",
+       "name": "Footer-Section",
+       "x": 72,
+       "y": 1822,
+       "w": 600,
+       "text": "What AFAQ brings",
+       "lines": [
+        "What AFAQ brings"
+       ],
+       "size": 16,
+       "weight": 400,
+       "color": "#F5F4EB",
+       "lh": 22,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 0.75,
+       "h": 22
+      },
+      {
+       "type": "text",
+       "name": "Footer-Page",
+       "x": 808,
+       "y": 1822,
+       "w": 200,
+       "text": "07 / 08",
+       "lines": [
+        "07 / 08"
+       ],
+       "size": 16,
+       "weight": 500,
+       "color": "#F5F4EB",
+       "lh": 22,
+       "ls": 0.0,
+       "align": "right",
+       "case": null,
+       "opacity": 0.75,
+       "h": 22
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "08 Contact",
+   "bg": "#053C45",
+   "elements": [
+    {
+     "type": "rect",
+     "name": "Background",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 1920,
+     "rx": 0,
+     "fill": "#053C45",
+     "opacity": 1.0,
+     "stroke": null,
+     "sw": 0
+    },
+    {
+     "type": "group",
+     "name": "Header",
+     "children": [
+      {
+       "type": "group",
+       "name": "Logo-Lockup",
+       "children": [
+        {
+         "type": "group",
+         "name": "Wordmark-AFQ",
+         "children": [
+          {
+           "type": "path",
+           "name": "Letter-A",
+           "d": "M 77.28 110.72 L 86.96 86.08 C 89.6 79.04 98.4 79.04 101.04 86.08 L 110.72 110.72",
+           "fill": null,
+           "stroke": "#F5F4EB",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          },
+          {
+           "type": "path",
+           "name": "Letter-F",
+           "d": "M 125.68 110.72 L 125.68 77.28 L 152.08 77.28 M 125.68 94 L 147.68 94",
+           "fill": null,
+           "stroke": "#F5F4EB",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          },
+          {
+           "type": "path",
+           "name": "Letter-Q",
+           "d": "M 166.16 90.48 C 166.16 83.19 172.07 77.28 179.36 77.28 L 186.4 77.28 C 193.69 77.28 199.6 83.19 199.6 90.48 L 199.6 97.52 C 199.6 104.81 193.69 110.72 186.4 110.72 L 179.36 110.72 C 172.07 110.72 166.16 104.81 166.16 97.52 Z M 189.04 100.16 L 200.48 112.48",
+           "fill": null,
+           "stroke": "#F5F4EB",
+           "sw": 10.56,
+           "cap": "round",
+           "join": "round",
+           "opacity": 1.0
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "name": "Tagline",
+         "x": 72,
+         "y": 125,
+         "w": 900,
+         "text": "ENERGY. ENGINEERED.",
+         "lines": [
+          "ENERGY. ENGINEERED."
+         ],
+         "size": 12,
+         "weight": 500,
+         "color": "#F5F4EB",
+         "lh": 16,
+         "ls": 0.3,
+         "align": "left",
+         "case": null,
+         "opacity": 1.0,
+         "h": 16
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Eyebrow",
+       "x": 588,
+       "y": 84,
+       "w": 420,
+       "text": "CORPORATE PROFILE 2026",
+       "lines": [
+        "CORPORATE PROFILE 2026"
+       ],
+       "size": 15,
+       "weight": 500,
+       "color": "#F5F4EB",
+       "lh": 20,
+       "ls": 0.22,
+       "align": "right",
+       "case": null,
+       "opacity": 0.85,
+       "h": 20
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "name": "Slogan",
+     "x": 72,
+     "y": 340,
+     "w": 936,
+     "text": "Innovating today,\nsustaining tomorrow.",
+     "lines": [
+      "Innovating today,",
+      "sustaining tomorrow."
+     ],
+     "size": 80,
+     "weight": 300,
+     "color": "#C8FB5F",
+     "lh": 90,
+     "ls": -0.02,
+     "align": "left",
+     "case": null,
+     "opacity": 1.0,
+     "h": 180
+    },
+    {
+     "type": "text",
+     "name": "Contact-Title",
+     "x": 72,
+     "y": 568,
+     "w": 936,
+     "text": "Contact",
+     "lines": [
+      "Contact"
+     ],
+     "size": 26,
+     "weight": 500,
+     "color": "#F5F4EB",
+     "lh": 34,
+     "ls": 0.0,
+     "align": "left",
+     "case": null,
+     "opacity": 0.7,
+     "h": 34
+    },
+    {
+     "type": "group",
+     "name": "Contact-Phone",
+     "children": [
+      {
+       "type": "circle",
+       "name": "Icon-Disc",
+       "cx": 106,
+       "cy": 672,
+       "r": 34,
+       "fill": "#C8FB5F",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "group",
+       "name": "Icon",
+       "children": [
+        {
+         "type": "path",
+         "name": "Icon-phone-1",
+         "d": "M 99.33 660.67 C 99.33 659.33 100 659.33 101.33 659.33 L 104 659.33 L 106 664.67 L 103.33 666.67 C 104.67 670.67 107.33 673.33 111.33 674.67 L 113.33 672 L 118.67 674 L 118.67 676.67 C 118.67 678 118.67 678.67 117.33 678.67 C 107.33 678.67 99.33 670.67 99.33 660.67 Z",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 2.2,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Label",
+       "x": 172,
+       "y": 638,
+       "w": 500,
+       "text": "PHONE",
+       "lines": [
+        "PHONE"
+       ],
+       "size": 14,
+       "weight": 500,
+       "color": "#F5F4EB",
+       "lh": 20,
+       "ls": 0.16,
+       "align": "left",
+       "case": null,
+       "opacity": 0.6,
+       "h": 20
+      },
+      {
+       "type": "text",
+       "name": "Value",
+       "x": 172,
+       "y": 664,
+       "w": 820,
+       "text": "+968 9190 7789",
+       "lines": [
+        "+968 9190 7789"
+       ],
+       "size": 32,
+       "weight": 500,
+       "color": "#F5F4EB",
+       "lh": 42,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 42
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Contact-Email",
+     "children": [
+      {
+       "type": "circle",
+       "name": "Icon-Disc",
+       "cx": 106,
+       "cy": 788,
+       "r": 34,
+       "fill": "#C8FB5F",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "group",
+       "name": "Icon",
+       "children": [
+        {
+         "type": "path",
+         "name": "Icon-mail-1",
+         "d": "M 93.33 780.67 C 93.33 779.56 94.23 778.67 95.33 778.67 L 116.67 778.67 C 117.77 778.67 118.67 779.56 118.67 780.67 L 118.67 795.33 C 118.67 796.44 117.77 797.33 116.67 797.33 L 95.33 797.33 C 94.23 797.33 93.33 796.44 93.33 795.33 Z",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 2.2,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-mail-2",
+         "d": "M 93.33 780.67 L 106 790 L 118.67 780.67",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 2.2,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Label",
+       "x": 172,
+       "y": 754,
+       "w": 500,
+       "text": "EMAIL",
+       "lines": [
+        "EMAIL"
+       ],
+       "size": 14,
+       "weight": 500,
+       "color": "#F5F4EB",
+       "lh": 20,
+       "ls": 0.16,
+       "align": "left",
+       "case": null,
+       "opacity": 0.6,
+       "h": 20
+      },
+      {
+       "type": "text",
+       "name": "Value",
+       "x": 172,
+       "y": 780,
+       "w": 820,
+       "text": "afaq@gmail.com",
+       "lines": [
+        "afaq@gmail.com"
+       ],
+       "size": 32,
+       "weight": 500,
+       "color": "#F5F4EB",
+       "lh": 42,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 42
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Contact-Address",
+     "children": [
+      {
+       "type": "circle",
+       "name": "Icon-Disc",
+       "cx": 106,
+       "cy": 904,
+       "r": 34,
+       "fill": "#C8FB5F",
+       "opacity": 1.0,
+       "stroke": null,
+       "sw": 0
+      },
+      {
+       "type": "group",
+       "name": "Icon",
+       "children": [
+        {
+         "type": "path",
+         "name": "Icon-pin-1",
+         "d": "M 106 916.67 C 106 916.67 96 906.67 96 900 C 96 894.67 100.67 890.67 106 890.67 C 111.33 890.67 116 894.67 116 900 C 116 906.67 106 916.67 106 916.67 Z",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 2.2,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Icon-pin-2",
+         "d": "M 109.33 900 C 109.33 901.84 107.84 903.33 106 903.33 C 104.16 903.33 102.67 901.84 102.67 900 C 102.67 898.16 104.16 896.67 106 896.67 C 107.84 896.67 109.33 898.16 109.33 900 Z",
+         "fill": null,
+         "stroke": "#053C45",
+         "sw": 2.2,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Label",
+       "x": 172,
+       "y": 870,
+       "w": 500,
+       "text": "ADDRESS",
+       "lines": [
+        "ADDRESS"
+       ],
+       "size": 14,
+       "weight": 500,
+       "color": "#F5F4EB",
+       "lh": 20,
+       "ls": 0.16,
+       "align": "left",
+       "case": null,
+       "opacity": 0.6,
+       "h": 20
+      },
+      {
+       "type": "text",
+       "name": "Value",
+       "x": 172,
+       "y": 896,
+       "w": 820,
+       "text": "Al Khuwair, behind Zakher Mall, Muscat",
+       "lines": [
+        "Al Khuwair, behind Zakher Mall, Muscat"
+       ],
+       "size": 32,
+       "weight": 500,
+       "color": "#F5F4EB",
+       "lh": 42,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 42
+      }
+     ]
+    },
+    {
+     "type": "path",
+     "name": "Rule",
+     "d": "M 72 1026 L 1008 1026",
+     "fill": null,
+     "stroke": "#F5F4EB",
+     "sw": 1,
+     "cap": "butt",
+     "join": "round",
+     "opacity": 0.2
+    },
+    {
+     "type": "group",
+     "name": "Logo-Lockup",
+     "children": [
+      {
+       "type": "group",
+       "name": "Wordmark-AFQ",
+       "children": [
+        {
+         "type": "path",
+         "name": "Letter-A",
+         "d": "M 85.2 1178.8 L 109.4 1117.2 C 116 1099.6 138 1099.6 144.6 1117.2 L 168.8 1178.8",
+         "fill": null,
+         "stroke": "#F5F4EB",
+         "sw": 26.400000000000002,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Letter-F",
+         "d": "M 206.2 1178.8 L 206.2 1095.2 L 272.2 1095.2 M 206.2 1137 L 261.2 1137",
+         "fill": null,
+         "stroke": "#F5F4EB",
+         "sw": 26.400000000000002,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        },
+        {
+         "type": "path",
+         "name": "Letter-Q",
+         "d": "M 307.4 1128.2 C 307.4 1109.97 322.17 1095.2 340.4 1095.2 L 358 1095.2 C 376.23 1095.2 391 1109.97 391 1128.2 L 391 1145.8 C 391 1164.03 376.23 1178.8 358 1178.8 L 340.4 1178.8 C 322.17 1178.8 307.4 1164.03 307.4 1145.8 Z M 364.6 1152.4 L 393.2 1183.2",
+         "fill": null,
+         "stroke": "#F5F4EB",
+         "sw": 26.400000000000002,
+         "cap": "round",
+         "join": "round",
+         "opacity": 1.0
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "Tagline",
+       "x": 72,
+       "y": 1214,
+       "w": 900,
+       "text": "ENERGY. ENGINEERED.",
+       "lines": [
+        "ENERGY. ENGINEERED."
+       ],
+       "size": 22,
+       "weight": 500,
+       "color": "#C8FB5F",
+       "lh": 29,
+       "ls": 0.3,
+       "align": "left",
+       "case": null,
+       "opacity": 1.0,
+       "h": 29
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Ribbon",
+     "children": [
+      {
+       "type": "path",
+       "name": "Ribbon-Teal",
+       "d": "M -34 1547.2 C 206 1587.2 366 1467.2 586 1487.2 C 806 1507.2 906 1687.2 1166 1607.2 L 1166 1699.24 C 906 1779.24 806 1599.24 586 1579.24 C 366 1559.24 206 1679.24 -34 1639.24 Z",
+       "fill": "#053C45",
+       "stroke": null,
+       "sw": 0,
+       "cap": "round",
+       "join": "round",
+       "opacity": 1.0
+      },
+      {
+       "type": "path",
+       "name": "Ribbon-Orange",
+       "d": "M -50 1535.4 C 190 1575.4 350 1455.4 570 1475.4 C 790 1495.4 890 1675.4 1150 1595.4 L 1150 1678 C 890 1758 790 1578 570 1558 C 350 1538 190 1658 -50 1618 Z",
+       "fill": "#FD7E25",
+       "stroke": null,
+       "sw": 0,
+       "cap": "round",
+       "join": "round",
+       "opacity": 1.0
+      },
+      {
+       "type": "path",
+       "name": "Ribbon-Lime",
+       "d": "M -60 1500 C 180 1540 340 1420 560 1440 C 780 1460 880 1640 1140 1560 L 1140 1678 C 880 1758 780 1578 560 1558 C 340 1538 180 1658 -60 1618 Z",
+       "fill": {
+        "type": "linear",
+        "x1": -60,
+        "y1": 0,
+        "x2": 1140,
+        "y2": 0,
+        "stops": [
+         [
+          0,
+          "#E9FBB8",
+          1
+         ],
+         [
+          0.45,
+          "#C8FB5F",
+          1
+         ],
+         [
+          1,
+          "#A4DC3C",
+          1
+         ]
+        ]
+       },
+       "stroke": null,
+       "sw": 0,
+       "cap": "round",
+       "join": "round",
+       "opacity": 1.0
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "name": "Footer",
+     "children": [
+      {
+       "type": "path",
+       "name": "Footer-Rule",
+       "d": "M 72 1800 L 1008 1800",
+       "fill": null,
+       "stroke": "#F5F4EB",
+       "sw": 1,
+       "cap": "butt",
+       "join": "round",
+       "opacity": 0.25
+      },
+      {
+       "type": "text",
+       "name": "Footer-Section",
+       "x": 72,
+       "y": 1822,
+       "w": 600,
+       "text": "AFAQ for Energy & Integrated Business",
+       "lines": [
+        "AFAQ for Energy & Integrated Business"
+       ],
+       "size": 16,
+       "weight": 400,
+       "color": "#F5F4EB",
+       "lh": 22,
+       "ls": 0.0,
+       "align": "left",
+       "case": null,
+       "opacity": 0.75,
+       "h": 22
+      },
+      {
+       "type": "text",
+       "name": "Footer-Page",
+       "x": 808,
+       "y": 1822,
+       "w": 200,
+       "text": "08 / 08",
+       "lines": [
+        "08 / 08"
+       ],
+       "size": 16,
+       "weight": 500,
+       "color": "#F5F4EB",
+       "lh": 22,
+       "ls": 0.0,
+       "align": "right",
+       "case": null,
+       "opacity": 0.75,
+       "h": 22
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

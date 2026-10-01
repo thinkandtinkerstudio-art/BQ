@@ -1,0 +1,95 @@
+{
+  "brand": "AFAQ for Energy & Integrated Business",
+  "colors": [
+    {
+      "name": "Lime",
+      "hex": "#C8FB5F",
+      "use": "Primary accent, ribbons, tabs, highlights"
+    },
+    {
+      "name": "Lime Deep",
+      "hex": "#A4DC3C",
+      "use": "Ribbon shading"
+    },
+    {
+      "name": "Lime Pale",
+      "hex": "#E9FBB8",
+      "use": "Ribbon highlight"
+    },
+    {
+      "name": "Teal",
+      "hex": "#053C45",
+      "use": "Dark backgrounds, headlines on light"
+    },
+    {
+      "name": "Teal Ink",
+      "hex": "#03343D",
+      "use": "Wordmark on light"
+    },
+    {
+      "name": "Teal Mid",
+      "hex": "#0E5560",
+      "use": "Cards on dark backgrounds"
+    },
+    {
+      "name": "Teal Deep",
+      "hex": "#022C32",
+      "use": "Photo placeholder gradient"
+    },
+    {
+      "name": "Teal Soft",
+      "hex": "#1F7580",
+      "use": "Illustration mid-tone"
+    },
+    {
+      "name": "Cream",
+      "hex": "#F5F4EB",
+      "use": "Light backgrounds"
+    },
+    {
+      "name": "Cream 2",
+      "hex": "#E8E8DC",
+      "use": "Subtle surfaces"
+    },
+    {
+      "name": "White",
+      "hex": "#FFFFFF",
+      "use": "Cards on light backgrounds"
+    },
+    {
+      "name": "Charcoal",
+      "hex": "#202C28",
+      "use": "Panel silhouettes"
+    },
+    {
+      "name": "Orange",
+      "hex": "#FD7E25",
+      "use": "Labels, sun, accent rule"
+    },
+    {
+      "name": "Orange Deep",
+      "hex": "#D9641A",
+      "use": "Accent text on light"
+    },
+    {
+      "name": "Muted",
+      "hex": "#5A7175",
+      "use": "Secondary text on light"
+    },
+    {
+      "name": "Line",
+      "hex": "#D9DCCF",
+      "use": "Rules on light"
+    }
+  ],
+  "typography": {
+    "family": "Inter",
+    "styles": {
+      "display": "Light 300",
+      "title": "Light 300",
+      "heading": "Semi Bold 600",
+      "body": "Regular 400",
+      "label": "Medium 500 (tracking +16\u201330%)"
+    }
+  }
+}

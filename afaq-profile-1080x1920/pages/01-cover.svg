@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 01 Cover — AFAQ Corporate Profile, 1080x1920. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <linearGradient id="grad-1" gradientUnits="userSpaceOnUse" x1="0" y1="788" x2="0" y2="1480"><stop offset="0" stop-color="#022C32" stop-opacity="1"/><stop offset="1" stop-color="#0E5560" stop-opacity="1"/></linearGradient><linearGradient id="grad-2" gradientUnits="userSpaceOnUse" x1="-60" y1="0" x2="1140" y2="0"><stop offset="0" stop-color="#E9FBB8" stop-opacity="1"/><stop offset="0.45" stop-color="#C8FB5F" stop-opacity="1"/><stop offset="1" stop-color="#A4DC3C" stop-opacity="1"/></linearGradient>
+  </defs>
+  <rect id="Background" x="0" y="0" width="1080" height="1920" fill="#F5F4EB"/>
+  <g id="Logo-Lockup">
+    <g id="Wordmark-AFQ">
+      <path id="Letter-A" d="M 83.52 180.48 L 104.64 126.72 C 110.4 111.36 129.6 111.36 135.36 126.72 L 156.48 180.48" fill="none" stroke="#03343D" stroke-width="23.04" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Letter-F" d="M 189.12 180.48 L 189.12 107.52 L 246.72 107.52 M 189.12 144 L 237.12 144" fill="none" stroke="#03343D" stroke-width="23.04" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Letter-Q" d="M 277.44 136.32 C 277.44 120.41 290.33 107.52 306.24 107.52 L 321.6 107.52 C 337.51 107.52 350.4 120.41 350.4 136.32 L 350.4 151.68 C 350.4 167.59 337.51 180.48 321.6 180.48 L 306.24 180.48 C 290.33 180.48 277.44 167.59 277.44 151.68 Z M 327.36 157.44 L 352.32 184.32" fill="none" stroke="#03343D" stroke-width="23.04" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text id="Tagline" x="72" y="230.41" font-family="Inter" font-size="19" font-weight="500" fill="#03343D" letter-spacing="5.7">ENERGY. ENGINEERED.</text>
+  </g>
+  <text id="Eyebrow" x="1008" y="130.55" font-family="Inter" font-size="18" font-weight="500" fill="#5A7175" letter-spacing="3.96" text-anchor="end">CORPORATE PROFILE 2026</text>
+  <g id="Headline">
+    <text id="Headline-line" x="72" y="455.47" font-family="Inter" font-size="92" font-weight="300" fill="#053C45" letter-spacing="-2.3">AFAQ for Energy</text>
+    <text id="Headline-line-2" x="72" y="555.47" font-family="Inter" font-size="92" font-weight="300" fill="#053C45" letter-spacing="-2.3">&amp; Integrated Business</text>
+  </g>
+  <rect id="Accent-Rule" x="72" y="612" width="64" height="6" rx="3" fill="#FD7E25"/>
+  <text id="Slogan" x="72" y="677.55" font-family="Inter" font-size="40" font-weight="300" fill="#053C45">Innovating today, sustaining tomorrow.</text>
+  <text id="Scope" x="72" y="731.73" font-family="Inter" font-size="24" font-weight="400" fill="#5A7175">Solar power and energy storage in the Sultanate of Oman</text>
+  <g id="Photo-Hero">
+    <path id="Photo-Hero__set-image-fill" d="M 72 828 C 72 805.91 89.91 788 112 788 L 656 788 C 678.09 788 696 805.91 696 828 L 696 896 C 696 909.25 706.75 920 720 920 L 968 920 C 990.09 920 1008 937.91 1008 960 L 1008 1440 C 1008 1462.09 990.09 1480 968 1480 L 112 1480 C 89.91 1480 72 1462.09 72 1440 Z" fill="url(#grad-1)"/>
+    <g id="Placeholder-Art--delete-after-placing-photo">
+      <circle id="Sun-Glow" cx="296.64" cy="967.92" r="111.76" fill="#C8FB5F" opacity="0.16"/>
+      <circle id="Sun" cx="296.64" cy="967.92" r="58.82" fill="#FD7E25"/>
+      <path id="Mountains-Far" d="M 72 1209.2 L 240.48 1120.16 L 380.88 1154.76 L 558.72 1078.64 L 727.2 1147.84 L 876.96 1106.32 L 1008 1161.68 L 1008 1209.2 Z" fill="#1F7580" opacity="0.55"/>
+      <path id="Mountains-Near" d="M 72 1213.2 L 184.32 1168.6 L 352.8 1217.04 L 502.56 1147.84 L 671.04 1210.12 L 820.8 1175.52 L 1008 1223.96 L 1008 1213.2 Z" fill="#053C45" opacity="0.9"/>
+      <g id="Solar-Array">
+        <path id="Panel-1-1" d="M 137.25 1244.19 C 137.61 1242.57 139.24 1241.26 140.9 1241.26 L 240.61 1241.26 C 242.27 1241.26 243.32 1242.57 242.97 1244.19 L 234.36 1283.31 C 234 1284.93 232.37 1286.24 230.71 1286.24 L 131 1286.24 C 129.34 1286.24 128.29 1284.93 128.64 1283.31 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-1-line" d="M 190.75 1241.26 L 180.86 1286.24" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-1-2" d="M 256.97 1244.19 C 257.32 1242.57 258.95 1241.26 260.61 1241.26 L 360.32 1241.26 C 361.98 1241.26 363.04 1242.57 362.68 1244.19 L 354.07 1283.31 C 353.72 1284.93 352.09 1286.24 350.43 1286.24 L 250.71 1286.24 C 249.06 1286.24 248 1284.93 248.36 1283.31 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-2-line" d="M 310.47 1241.26 L 300.57 1286.24" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-1-3" d="M 376.68 1244.19 C 377.04 1242.57 378.67 1241.26 380.32 1241.26 L 480.04 1241.26 C 481.7 1241.26 482.75 1242.57 482.39 1244.19 L 473.79 1283.31 C 473.43 1284.93 471.8 1286.24 470.14 1286.24 L 370.43 1286.24 C 368.77 1286.24 367.72 1284.93 368.07 1283.31 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-3-line" d="M 430.18 1241.26 L 420.29 1286.24" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-1-4" d="M 496.39 1244.19 C 496.75 1242.57 498.38 1241.26 500.04 1241.26 L 599.75 1241.26 C 601.41 1241.26 602.46 1242.57 602.11 1244.19 L 593.5 1283.31 C 593.15 1284.93 591.51 1286.24 589.86 1286.24 L 490.14 1286.24 C 488.49 1286.24 487.43 1284.93 487.79 1283.31 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-4-line" d="M 549.9 1241.26 L 540 1286.24" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-1-5" d="M 616.11 1244.19 C 616.46 1242.57 618.1 1241.26 619.75 1241.26 L 719.47 1241.26 C 721.12 1241.26 722.18 1242.57 721.82 1244.19 L 713.22 1283.31 C 712.86 1284.93 711.23 1286.24 709.57 1286.24 L 609.86 1286.24 C 608.2 1286.24 607.15 1284.93 607.5 1283.31 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-5-line" d="M 669.61 1241.26 L 659.71 1286.24" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-1-6" d="M 735.82 1244.19 C 736.18 1242.57 737.81 1241.26 739.47 1241.26 L 839.18 1241.26 C 840.84 1241.26 841.89 1242.57 841.54 1244.19 L 832.93 1283.31 C 832.57 1284.93 830.94 1286.24 829.29 1286.24 L 729.57 1286.24 C 727.91 1286.24 726.86 1284.93 727.22 1283.31 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-6-line" d="M 789.32 1241.26 L 779.43 1286.24" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-1-7" d="M 855.54 1244.19 C 855.89 1242.57 857.52 1241.26 859.18 1241.26 L 958.9 1241.26 C 960.55 1241.26 961.61 1242.57 961.25 1244.19 L 952.64 1283.31 C 952.29 1284.93 950.66 1286.24 949 1286.24 L 849.29 1286.24 C 847.63 1286.24 846.57 1284.93 846.93 1283.31 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-7-line" d="M 909.04 1241.26 L 899.14 1286.24" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-2-1" d="M 138.77 1306.47 C 139.13 1304.85 140.76 1303.54 142.42 1303.54 L 257.08 1303.54 C 258.74 1303.54 259.8 1304.85 259.44 1306.47 L 249.31 1352.51 C 248.96 1354.13 247.32 1355.44 245.67 1355.44 L 131 1355.44 C 129.34 1355.44 128.29 1354.13 128.64 1352.51 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-2-1-line" d="M 199.75 1303.54 L 188.33 1355.44" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-2-2" d="M 279.44 1306.47 C 279.8 1304.85 281.43 1303.54 283.08 1303.54 L 397.75 1303.54 C 399.41 1303.54 400.46 1304.85 400.11 1306.47 L 389.98 1352.51 C 389.62 1354.13 387.99 1355.44 386.33 1355.44 L 271.67 1355.44 C 270.01 1355.44 268.96 1354.13 269.31 1352.51 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-2-2-line" d="M 340.42 1303.54 L 329 1355.44" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-2-3" d="M 420.11 1306.47 C 420.46 1304.85 422.09 1303.54 423.75 1303.54 L 538.42 1303.54 C 540.07 1303.54 541.13 1304.85 540.77 1306.47 L 530.64 1352.51 C 530.29 1354.13 528.66 1355.44 527 1355.44 L 412.33 1355.44 C 410.68 1355.44 409.62 1354.13 409.98 1352.51 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-2-3-line" d="M 481.08 1303.54 L 469.67 1355.44" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-2-4" d="M 560.77 1306.47 C 561.13 1304.85 562.76 1303.54 564.42 1303.54 L 679.08 1303.54 C 680.74 1303.54 681.8 1304.85 681.44 1306.47 L 671.31 1352.51 C 670.96 1354.13 669.32 1355.44 667.67 1355.44 L 553 1355.44 C 551.34 1355.44 550.29 1354.13 550.64 1352.51 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-2-4-line" d="M 621.75 1303.54 L 610.33 1355.44" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-2-5" d="M 701.44 1306.47 C 701.8 1304.85 703.43 1303.54 705.08 1303.54 L 819.75 1303.54 C 821.41 1303.54 822.46 1304.85 822.11 1306.47 L 811.98 1352.51 C 811.62 1354.13 809.99 1355.44 808.33 1355.44 L 693.67 1355.44 C 692.01 1355.44 690.96 1354.13 691.31 1352.51 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-2-5-line" d="M 762.42 1303.54 L 751 1355.44" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-2-6" d="M 842.11 1306.47 C 842.46 1304.85 844.09 1303.54 845.75 1303.54 L 960.42 1303.54 C 962.07 1303.54 963.13 1304.85 962.77 1306.47 L 952.64 1352.51 C 952.29 1354.13 950.66 1355.44 949 1355.44 L 834.33 1355.44 C 832.68 1355.44 831.62 1354.13 831.98 1352.51 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-2-6-line" d="M 903.08 1303.54 L 891.67 1355.44" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-3-1" d="M 141.06 1375.67 C 141.41 1374.05 143.04 1372.74 144.7 1372.74 L 282.7 1372.74 C 284.36 1372.74 285.41 1374.05 285.06 1375.67 L 272.64 1432.09 C 272.29 1433.71 270.66 1435.02 269 1435.02 L 131 1435.02 C 129.34 1435.02 128.29 1433.71 128.64 1432.09 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-3-1-line" d="M 213.7 1372.74 L 200 1435.02" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-3-2" d="M 311.06 1375.67 C 311.41 1374.05 313.04 1372.74 314.7 1372.74 L 452.7 1372.74 C 454.36 1372.74 455.41 1374.05 455.06 1375.67 L 442.64 1432.09 C 442.29 1433.71 440.66 1435.02 439 1435.02 L 301 1435.02 C 299.34 1435.02 298.29 1433.71 298.64 1432.09 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-3-2-line" d="M 383.7 1372.74 L 370 1435.02" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-3-3" d="M 481.06 1375.67 C 481.41 1374.05 483.04 1372.74 484.7 1372.74 L 622.7 1372.74 C 624.36 1372.74 625.41 1374.05 625.06 1375.67 L 612.64 1432.09 C 612.29 1433.71 610.66 1435.02 609 1435.02 L 471 1435.02 C 469.34 1435.02 468.29 1433.71 468.64 1432.09 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-3-3-line" d="M 553.7 1372.74 L 540 1435.02" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-3-4" d="M 651.06 1375.67 C 651.41 1374.05 653.04 1372.74 654.7 1372.74 L 792.7 1372.74 C 794.36 1372.74 795.41 1374.05 795.06 1375.67 L 782.64 1432.09 C 782.29 1433.71 780.66 1435.02 779 1435.02 L 641 1435.02 C 639.34 1435.02 638.29 1433.71 638.64 1432.09 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-3-4-line" d="M 723.7 1372.74 L 710 1435.02" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-3-5" d="M 821.06 1375.67 C 821.41 1374.05 823.04 1372.74 824.7 1372.74 L 962.7 1372.74 C 964.36 1372.74 965.41 1374.05 965.06 1375.67 L 952.64 1432.09 C 952.29 1433.71 950.66 1435.02 949 1435.02 L 811 1435.02 C 809.34 1435.02 808.29 1433.71 808.64 1432.09 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-3-5-line" d="M 893.7 1372.74 L 880 1435.02" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+      </g>
+    </g>
+  </g>
+  <g id="Label-Tab">
+    <rect id="Label-Tab-Shape" x="712" y="788" width="296" height="116" rx="24" fill="#FD7E25"/>
+    <g id="Label-Tab-Text">
+      <text id="Label-Tab-Text-line" x="740" y="828.82" font-family="Inter" font-size="16" font-weight="500" fill="#FFFFFF" letter-spacing="2.88">SOLAR</text>
+      <text id="Label-Tab-Text-line-2" x="740" y="850.82" font-family="Inter" font-size="16" font-weight="500" fill="#FFFFFF" letter-spacing="2.88">STORAGE</text>
+      <text id="Label-Tab-Text-line-3" x="740" y="872.82" font-family="Inter" font-size="16" font-weight="500" fill="#FFFFFF" letter-spacing="2.88">ELECTRICAL</text>
+    </g>
+  </g>
+  <g id="Ribbon">
+    <path id="Ribbon-Teal" d="M -34 1737.2 C 186 1747.2 326 1587.2 546 1607.2 C 766 1627.2 846 1807.2 1166 1737.2 L 1166 1829.24 C 846 1899.24 766 1719.24 546 1699.24 C 326 1679.24 186 1839.24 -34 1829.24 Z" fill="#053C45"/>
+    <path id="Ribbon-Orange" d="M -50 1725.4 C 170 1735.4 310 1575.4 530 1595.4 C 750 1615.4 830 1795.4 1150 1725.4 L 1150 1808 C 830 1878 750 1698 530 1678 C 310 1658 170 1818 -50 1808 Z" fill="#FD7E25"/>
+    <path id="Ribbon-Lime" d="M -60 1690 C 160 1700 300 1540 520 1560 C 740 1580 820 1760 1140 1690 L 1140 1808 C 820 1878 740 1698 520 1678 C 300 1658 160 1818 -60 1808 Z" fill="url(#grad-2)"/>
+  </g>
+</svg>

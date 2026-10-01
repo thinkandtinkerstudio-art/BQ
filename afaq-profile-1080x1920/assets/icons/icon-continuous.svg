@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Icon continuous — AFAQ Corporate Profile, 64x64. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <g id="Icon-continuous">
+    <path id="Icon-continuous-1" d="M 50 32 C 50 41.94 41.94 50 32 50 C 22.06 50 14 41.94 14 32 C 14 22.06 22.06 14 32 14 C 41.94 14 50 22.06 50 32 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-continuous-2" d="M 32 21 L 32 32 L 40 37" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

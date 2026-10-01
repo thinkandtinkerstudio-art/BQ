@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Palette — AFAQ Corporate Profile, 1000x680. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="680" viewBox="0 0 1000 680">
+  <rect id="Background" x="0" y="0" width="1000" height="680" fill="#FFFFFF"/>
+  <rect id="Swatch-Lime" x="40" y="40" width="200" height="90" rx="16" fill="#C8FB5F" stroke="#D9DCCF" stroke-width="1"/>
+  <text id="Name-Lime" x="40" y="155.46" font-family="Inter" font-size="15" font-weight="600" fill="#202C28">Lime</text>
+  <text id="Hex-Lime" x="40" y="175.73" font-family="Inter" font-size="13" font-weight="400" fill="#5A7175">#C8FB5F</text>
+  <rect id="Swatch-Lime-Deep" x="276" y="40" width="200" height="90" rx="16" fill="#A4DC3C" stroke="#D9DCCF" stroke-width="1"/>
+  <text id="Name-Lime-Deep" x="276" y="155.46" font-family="Inter" font-size="15" font-weight="600" fill="#202C28">Lime Deep</text>
+  <text id="Hex-Lime-Deep" x="276" y="175.73" font-family="Inter" font-size="13" font-weight="400" fill="#5A7175">#A4DC3C</text>
+  <rect id="Swatch-Lime-Pale" x="512" y="40" width="200" height="90" rx="16" fill="#E9FBB8" stroke="#D9DCCF" stroke-width="1"/>
+  <text id="Name-Lime-Pale" x="512" y="155.46" font-family="Inter" font-size="15" font-weight="600" fill="#202C28">Lime Pale</text>
+  <text id="Hex-Lime-Pale" x="512" y="175.73" font-family="Inter" font-size="13" font-weight="400" fill="#5A7175">#E9FBB8</text>
+  <rect id="Swatch-Teal" x="748" y="40" width="200" height="90" rx="16" fill="#053C45" stroke="#D9DCCF" stroke-width="1"/>
+  <text id="Name-Teal" x="748" y="155.46" font-family="Inter" font-size="15" font-weight="600" fill="#202C28">Teal</text>
+  <text id="Hex-Teal" x="748" y="175.73" font-family="Inter" font-size="13" font-weight="400" fill="#5A7175">#053C45</text>
+  <rect id="Swatch-Teal-Ink" x="40" y="196" width="200" height="90" rx="16" fill="#03343D" stroke="#D9DCCF" stroke-width="1"/>
+  <text id="Name-Teal-Ink" x="40" y="311.46" font-family="Inter" font-size="15" font-weight="600" fill="#202C28">Teal Ink</text>
+  <text id="Hex-Teal-Ink" x="40" y="331.73" font-family="Inter" font-size="13" font-weight="400" fill="#5A7175">#03343D</text>
+  <rect id="Swatch-Teal-Mid" x="276" y="196" width="200" height="90" rx="16" fill="#0E5560" stroke="#D9DCCF" stroke-width="1"/>
+  <text id="Name-Teal-Mid" x="276" y="311.46" font-family="Inter" font-size="15" font-weight="600" fill="#202C28">Teal Mid</text>
+  <text id="Hex-Teal-Mid" x="276" y="331.73" font-family="Inter" font-size="13" font-weight="400" fill="#5A7175">#0E5560</text>
+  <rect id="Swatch-Teal-Deep" x="512" y="196" width="200" height="90" rx="16" fill="#022C32" stroke="#D9DCCF" stroke-width="1"/>
+  <text id="Name-Teal-Deep" x="512" y="311.46" font-family="Inter" font-size="15" font-weight="600" fill="#202C28">Teal Deep</text>
+  <text id="Hex-Teal-Deep" x="512" y="331.73" font-family="Inter" font-size="13" font-weight="400" fill="#5A7175">#022C32</text>
+  <rect id="Swatch-Teal-Soft" x="748" y="196" width="200" height="90" rx="16" fill="#1F7580" stroke="#D9DCCF" stroke-width="1"/>
+  <text id="Name-Teal-Soft" x="748" y="311.46" font-family="Inter" font-size="15" font-weight="600" fill="#202C28">Teal Soft</text>
+  <text id="Hex-Teal-Soft" x="748" y="331.73" font-family="Inter" font-size="13" font-weight="400" fill="#5A7175">#1F7580</text>
+  <rect id="Swatch-Cream" x="40" y="352" width="200" height="90" rx="16" fill="#F5F4EB" stroke="#D9DCCF" stroke-width="1"/>
+  <text id="Name-Cream" x="40" y="467.46" font-family="Inter" font-size="15" font-weight="600" fill="#202C28">Cream</text>
+  <text id="Hex-Cream" x="40" y="487.73" font-family="Inter" font-size="13" font-weight="400" fill="#5A7175">#F5F4EB</text>
+  <rect id="Swatch-Cream-2" x="276" y="352" width="200" height="90" rx="16" fill="#E8E8DC" stroke="#D9DCCF" stroke-width="1"/>
+  <text id="Name-Cream-2" x="276" y="467.46" font-family="Inter" font-size="15" font-weight="600" fill="#202C28">Cream 2</text>
+  <text id="Hex-Cream-2" x="276" y="487.73" font-family="Inter" font-size="13" font-weight="400" fill="#5A7175">#E8E8DC</text>
+  <rect id="Swatch-White" x="512" y="352" width="200" height="90" rx="16" fill="#FFFFFF" stroke="#D9DCCF" stroke-width="1"/>
+  <text id="Name-White" x="512" y="467.46" font-family="Inter" font-size="15" font-weight="600" fill="#202C28">White</text>
+  <text id="Hex-White" x="512" y="487.73" font-family="Inter" font-size="13" font-weight="400" fill="#5A7175">#FFFFFF</text>
+  <rect id="Swatch-Charcoal" x="748" y="352" width="200" height="90" rx="16" fill="#202C28" stroke="#D9DCCF" stroke-width="1"/>
+  <text id="Name-Charcoal" x="748" y="467.46" font-family="Inter" font-size="15" font-weight="600" fill="#202C28">Charcoal</text>
+  <text id="Hex-Charcoal" x="748" y="487.73" font-family="Inter" font-size="13" font-weight="400" fill="#5A7175">#202C28</text>
+  <rect id="Swatch-Orange" x="40" y="508" width="200" height="90" rx="16" fill="#FD7E25" stroke="#D9DCCF" stroke-width="1"/>
+  <text id="Name-Orange" x="40" y="623.46" font-family="Inter" font-size="15" font-weight="600" fill="#202C28">Orange</text>
+  <text id="Hex-Orange" x="40" y="643.73" font-family="Inter" font-size="13" font-weight="400" fill="#5A7175">#FD7E25</text>
+  <rect id="Swatch-Orange-Deep" x="276" y="508" width="200" height="90" rx="16" fill="#D9641A" stroke="#D9DCCF" stroke-width="1"/>
+  <text id="Name-Orange-Deep" x="276" y="623.46" font-family="Inter" font-size="15" font-weight="600" fill="#202C28">Orange Deep</text>
+  <text id="Hex-Orange-Deep" x="276" y="643.73" font-family="Inter" font-size="13" font-weight="400" fill="#5A7175">#D9641A</text>
+  <rect id="Swatch-Muted" x="512" y="508" width="200" height="90" rx="16" fill="#5A7175" stroke="#D9DCCF" stroke-width="1"/>
+  <text id="Name-Muted" x="512" y="623.46" font-family="Inter" font-size="15" font-weight="600" fill="#202C28">Muted</text>
+  <text id="Hex-Muted" x="512" y="643.73" font-family="Inter" font-size="13" font-weight="400" fill="#5A7175">#5A7175</text>
+  <rect id="Swatch-Line" x="748" y="508" width="200" height="90" rx="16" fill="#D9DCCF" stroke="#D9DCCF" stroke-width="1"/>
+  <text id="Name-Line" x="748" y="623.46" font-family="Inter" font-size="15" font-weight="600" fill="#202C28">Line</text>
+  <text id="Hex-Line" x="748" y="643.73" font-family="Inter" font-size="13" font-weight="400" fill="#5A7175">#D9DCCF</text>
+</svg>

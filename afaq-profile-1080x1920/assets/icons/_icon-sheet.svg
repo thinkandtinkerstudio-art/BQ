@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Icon sheet — AFAQ Corporate Profile, 1000x420. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420">
+  <rect id="Background" x="0" y="0" width="1000" height="420" fill="#F5F4EB"/>
+  <circle id="Disc-pv-module" cx="84" cy="84" r="44" fill="#C8FB5F"/>
+  <g id="Icon-pv-module">
+    <path id="Icon-pv-module-1" d="M 65 73 C 65 71.34 66.34 70 68 70 L 100 70 C 101.66 70 103 71.34 103 73 L 103 95 C 103 96.66 101.66 98 100 98 L 68 98 C 66.34 98 65 96.66 65 95 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-pv-module-2" d="M 77.7 70 L 77.7 98 M 90.3 70 L 90.3 98 M 65 84 L 103 84" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text id="Name-pv-module" x="84" y="151.73" font-family="Inter" font-size="13" font-weight="500" fill="#5A7175" text-anchor="middle">pv-module</text>
+  <circle id="Disc-battery" cx="240" cy="84" r="44" fill="#C8FB5F"/>
+  <g id="Icon-battery">
+    <path id="Icon-battery-1" d="M 221 77 C 221 75.34 222.34 74 224 74 L 250 74 C 251.66 74 253 75.34 253 77 L 253 91 C 253 92.66 251.66 94 250 94 L 224 94 C 222.34 94 221 92.66 221 91 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-battery-2" d="M 253 81.5 C 253 80.67 253.67 80 254.5 80 L 256.5 80 C 257.33 80 258 80.67 258 81.5 L 258 86.5 C 258 87.33 257.33 88 256.5 88 L 254.5 88 C 253.67 88 253 87.33 253 86.5 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-battery-3" d="M 239 77 L 233 85 L 238 85 L 235 91 L 241 83 L 236 83 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text id="Name-battery" x="240" y="151.73" font-family="Inter" font-size="13" font-weight="500" fill="#5A7175" text-anchor="middle">battery</text>
+  <circle id="Disc-inverter" cx="396" cy="84" r="44" fill="#C8FB5F"/>
+  <g id="Icon-inverter">
+    <path id="Icon-inverter-1" d="M 377 72 C 377 70.34 378.34 69 380 69 L 412 69 C 413.66 69 415 70.34 415 72 L 415 96 C 415 97.66 413.66 99 412 99 L 380 99 C 378.34 99 377 97.66 377 96 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-inverter-2" d="M 383 84 C 386 84 386 77 390 77 C 394 77 394 91 398 91 C 402 91 402 84 409 84" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-inverter-3" d="M 377 77 L 383 77" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text id="Name-inverter" x="396" y="151.73" font-family="Inter" font-size="13" font-weight="500" fill="#5A7175" text-anchor="middle">inverter</text>
+  <circle id="Disc-infrastructure" cx="552" cy="84" r="44" fill="#C8FB5F"/>
+  <g id="Icon-infrastructure">
+    <path id="Icon-infrastructure-1" d="M 552 65 L 540 103 M 552 65 L 564 103 M 543 93 L 561 93 M 547 81 L 557 81 M 536 73 L 568 73 M 536 73 L 539 68 M 568 73 L 565 68" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text id="Name-infrastructure" x="552" y="151.73" font-family="Inter" font-size="13" font-weight="500" fill="#5A7175" text-anchor="middle">infrastructure</text>
+  <circle id="Disc-sun" cx="708" cy="84" r="44" fill="#C8FB5F"/>
+  <g id="Icon-sun">
+    <path id="Icon-sun-1" d="M 716 84 C 716 88.42 712.42 92 708 92 C 703.58 92 700 88.42 700 84 C 700 79.58 703.58 76 708 76 C 712.42 76 716 79.58 716 84 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-sun-2" d="M 708 65 L 708 70 M 708 98 L 708 103 M 689 84 L 694 84 M 722 84 L 727 84 M 694.6 70.6 L 698.1 74.1 M 717.9 93.9 L 721.4 97.4 M 694.6 97.4 L 698.1 93.9 M 717.9 74.1 L 721.4 70.6" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text id="Name-sun" x="708" y="151.73" font-family="Inter" font-size="13" font-weight="500" fill="#5A7175" text-anchor="middle">sun</text>
+  <circle id="Disc-continuous" cx="864" cy="84" r="44" fill="#C8FB5F"/>
+  <g id="Icon-continuous">
+    <path id="Icon-continuous-1" d="M 882 84 C 882 93.94 873.94 102 864 102 C 854.06 102 846 93.94 846 84 C 846 74.06 854.06 66 864 66 C 873.94 66 882 74.06 882 84 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-continuous-2" d="M 864 73 L 864 84 L 872 89" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text id="Name-continuous" x="864" y="151.73" font-family="Inter" font-size="13" font-weight="500" fill="#5A7175" text-anchor="middle">continuous</text>
+  <circle id="Disc-off-grid" cx="84" cy="214" r="44" fill="#C8FB5F"/>
+  <g id="Icon-off-grid">
+    <path id="Icon-off-grid-1" d="M 65 230 L 84 199 L 103 230 Z M 84 230 L 84 220 L 89 230" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-off-grid-2" d="M 71 230 L 97 230" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text id="Name-off-grid" x="84" y="281.73" font-family="Inter" font-size="13" font-weight="500" fill="#5A7175" text-anchor="middle">off-grid</text>
+  <circle id="Disc-construction" cx="240" cy="214" r="44" fill="#C8FB5F"/>
+  <g id="Icon-construction">
+    <path id="Icon-construction-1" d="M 226 233 L 226 203 L 256 203 M 226 209 L 236 203 M 250 203 L 250 214 M 246 214 L 254 214 M 250 214 L 250 218 C 250 221 246 221 246 218" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-construction-2" d="M 221 233 L 231 233" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text id="Name-construction" x="240" y="281.73" font-family="Inter" font-size="13" font-weight="500" fill="#5A7175" text-anchor="middle">construction</text>
+  <circle id="Disc-clipboard" cx="396" cy="214" r="44" fill="#C8FB5F"/>
+  <g id="Icon-clipboard">
+    <path id="Icon-clipboard-1" d="M 382 201 C 382 199.34 383.34 198 385 198 L 407 198 C 408.66 198 410 199.34 410 201 L 410 231 C 410 232.66 408.66 234 407 234 L 385 234 C 383.34 234 382 232.66 382 231 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-clipboard-2" d="M 390 196 C 390 194.9 390.9 194 392 194 L 400 194 C 401.1 194 402 194.9 402 196 L 402 199 C 402 200.1 401.1 201 400 201 L 392 201 C 390.9 201 390 200.1 390 199 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-clipboard-3" d="M 388 217 L 393 222 L 404 210" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text id="Name-clipboard" x="396" y="281.73" font-family="Inter" font-size="13" font-weight="500" fill="#5A7175" text-anchor="middle">clipboard</text>
+  <circle id="Disc-boxes" cx="552" cy="214" r="44" fill="#C8FB5F"/>
+  <g id="Icon-boxes">
+    <path id="Icon-boxes-1" d="M 533 218 C 533 216.9 533.9 216 535 216 L 549 216 C 550.1 216 551 216.9 551 218 L 551 230 C 551 231.1 550.1 232 549 232 L 535 232 C 533.9 232 533 231.1 533 230 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-boxes-2" d="M 553 218 C 553 216.9 553.9 216 555 216 L 569 216 C 570.1 216 571 216.9 571 218 L 571 230 C 571 231.1 570.1 232 569 232 L 555 232 C 553.9 232 553 231.1 553 230 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-boxes-3" d="M 543 200 C 543 198.9 543.9 198 545 198 L 559 198 C 560.1 198 561 198.9 561 200 L 561 212 C 561 213.1 560.1 214 559 214 L 545 214 C 543.9 214 543 213.1 543 212 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text id="Name-boxes" x="552" y="281.73" font-family="Inter" font-size="13" font-weight="500" fill="#5A7175" text-anchor="middle">boxes</text>
+  <circle id="Disc-factory" cx="708" cy="214" r="44" fill="#C8FB5F"/>
+  <g id="Icon-factory">
+    <path id="Icon-factory-1" d="M 689 233 L 689 213 L 699 219 L 699 213 L 709 219 L 709 213 L 719 219 L 719 199 L 727 199 L 727 233 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-factory-2" d="M 696 226 L 700 226 M 706 226 L 710 226 M 716 226 L 720 226" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text id="Name-factory" x="708" y="281.73" font-family="Inter" font-size="13" font-weight="500" fill="#5A7175" text-anchor="middle">factory</text>
+  <circle id="Disc-shield" cx="864" cy="214" r="44" fill="#C8FB5F"/>
+  <g id="Icon-shield">
+    <path id="Icon-shield-1" d="M 864 195 L 880 201 L 880 213 C 880 223 873 230 864 233 C 855 230 848 223 848 213 L 848 201 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-shield-2" d="M 857 214 L 862 219 L 871 209" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text id="Name-shield" x="864" y="281.73" font-family="Inter" font-size="13" font-weight="500" fill="#5A7175" text-anchor="middle">shield</text>
+  <circle id="Disc-badge" cx="84" cy="344" r="44" fill="#C8FB5F"/>
+  <g id="Icon-badge">
+    <path id="Icon-badge-1" d="M 95 338 C 95 344.08 90.08 349 84 349 C 77.92 349 73 344.08 73 338 C 73 331.92 77.92 327 84 327 C 90.08 327 95 331.92 95 338 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-badge-2" d="M 77 347 L 74 363 L 84 358 L 94 363 L 91 347" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text id="Name-badge" x="84" y="411.73" font-family="Inter" font-size="13" font-weight="500" fill="#5A7175" text-anchor="middle">badge</text>
+  <circle id="Disc-document" cx="240" cy="344" r="44" fill="#C8FB5F"/>
+  <g id="Icon-document">
+    <path id="Icon-document-1" d="M 227 325 L 245 325 L 255 335 L 255 363 L 227 363 Z M 245 325 L 245 335 L 255 335" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-document-2" d="M 233 345 L 249 345 M 233 352 L 245 352" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text id="Name-document" x="240" y="411.73" font-family="Inter" font-size="13" font-weight="500" fill="#5A7175" text-anchor="middle">document</text>
+  <circle id="Disc-team" cx="396" cy="344" r="44" fill="#C8FB5F"/>
+  <g id="Icon-team">
+    <path id="Icon-team-1" d="M 395 335 C 395 338.31 392.31 341 389 341 C 385.69 341 383 338.31 383 335 C 383 331.69 385.69 329 389 329 C 392.31 329 395 331.69 395 335 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-team-2" d="M 409 337 C 409 339.76 406.76 342 404 342 C 401.24 342 399 339.76 399 337 C 399 334.24 401.24 332 404 332 C 406.76 332 409 334.24 409 337 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-team-3" d="M 377 361 C 377 351 382 347 389 347 C 396 347 401 351 401 361 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-team-4" d="M 403 361 C 408 361 415 361 415 361 C 415 354 412 349 405 349" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text id="Name-team" x="396" y="411.73" font-family="Inter" font-size="13" font-weight="500" fill="#5A7175" text-anchor="middle">team</text>
+  <circle id="Disc-phone" cx="552" cy="344" r="44" fill="#C8FB5F"/>
+  <g id="Icon-phone">
+    <path id="Icon-phone-1" d="M 542 327 C 542 325 543 325 545 325 L 549 325 L 552 333 L 548 336 C 550 342 554 346 560 348 L 563 344 L 571 347 L 571 351 C 571 353 571 354 569 354 C 554 354 542 342 542 327 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text id="Name-phone" x="552" y="411.73" font-family="Inter" font-size="13" font-weight="500" fill="#5A7175" text-anchor="middle">phone</text>
+  <circle id="Disc-mail" cx="708" cy="344" r="44" fill="#C8FB5F"/>
+  <g id="Icon-mail">
+    <path id="Icon-mail-1" d="M 689 333 C 689 331.34 690.34 330 692 330 L 724 330 C 725.66 330 727 331.34 727 333 L 727 355 C 727 356.66 725.66 358 724 358 L 692 358 C 690.34 358 689 356.66 689 355 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-mail-2" d="M 689 333 L 708 347 L 727 333" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text id="Name-mail" x="708" y="411.73" font-family="Inter" font-size="13" font-weight="500" fill="#5A7175" text-anchor="middle">mail</text>
+  <circle id="Disc-pin" cx="864" cy="344" r="44" fill="#C8FB5F"/>
+  <g id="Icon-pin">
+    <path id="Icon-pin-1" d="M 864 363 C 864 363 849 348 849 338 C 849 330 856 324 864 324 C 872 324 879 330 879 338 C 879 348 864 363 864 363 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-pin-2" d="M 869 338 C 869 340.76 866.76 343 864 343 C 861.24 343 859 340.76 859 338 C 859 335.24 861.24 333 864 333 C 866.76 333 869 335.24 869 338 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text id="Name-pin" x="864" y="411.73" font-family="Inter" font-size="13" font-weight="500" fill="#5A7175" text-anchor="middle">pin</text>
+</svg>

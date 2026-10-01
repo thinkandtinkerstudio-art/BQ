@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Icon sun — AFAQ Corporate Profile, 64x64. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <g id="Icon-sun">
+    <path id="Icon-sun-1" d="M 40 32 C 40 36.42 36.42 40 32 40 C 27.58 40 24 36.42 24 32 C 24 27.58 27.58 24 32 24 C 36.42 24 40 27.58 40 32 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-sun-2" d="M 32 13 L 32 18 M 32 46 L 32 51 M 13 32 L 18 32 M 46 32 L 51 32 M 18.6 18.6 L 22.1 22.1 M 41.9 41.9 L 45.4 45.4 M 18.6 45.4 L 22.1 41.9 M 41.9 22.1 L 45.4 18.6" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Icon clipboard — AFAQ Corporate Profile, 64x64. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <g id="Icon-clipboard">
+    <path id="Icon-clipboard-1" d="M 18 19 C 18 17.34 19.34 16 21 16 L 43 16 C 44.66 16 46 17.34 46 19 L 46 49 C 46 50.66 44.66 52 43 52 L 21 52 C 19.34 52 18 50.66 18 49 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-clipboard-2" d="M 26 14 C 26 12.9 26.9 12 28 12 L 36 12 C 37.1 12 38 12.9 38 14 L 38 17 C 38 18.1 37.1 19 36 19 L 28 19 C 26.9 19 26 18.1 26 17 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-clipboard-3" d="M 24 35 L 29 40 L 40 28" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

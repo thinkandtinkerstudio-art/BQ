@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Ribbon — AFAQ Corporate Profile, 1080x420. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" viewBox="0 0 1080 420">
+  <defs>
+    <linearGradient id="grad-1" gradientUnits="userSpaceOnUse" x1="-60" y1="0" x2="1140" y2="0"><stop offset="0" stop-color="#E9FBB8" stop-opacity="1"/><stop offset="0.45" stop-color="#C8FB5F" stop-opacity="1"/><stop offset="1" stop-color="#A4DC3C" stop-opacity="1"/></linearGradient>
+  </defs>
+  <g id="Ribbon">
+    <path id="Ribbon-Teal" d="M -34 237.2 C 186 247.2 326 87.2 546 107.2 C 766 127.2 846 307.2 1166 237.2 L 1166 329.24 C 846 399.24 766 219.24 546 199.24 C 326 179.24 186 339.24 -34 329.24 Z" fill="#053C45"/>
+    <path id="Ribbon-Orange" d="M -50 225.4 C 170 235.4 310 75.4 530 95.4 C 750 115.4 830 295.4 1150 225.4 L 1150 308 C 830 378 750 198 530 178 C 310 158 170 318 -50 308 Z" fill="#FD7E25"/>
+    <path id="Ribbon-Lime" d="M -60 190 C 160 200 300 40 520 60 C 740 80 820 260 1140 190 L 1140 308 C 820 378 740 198 520 178 C 300 158 160 318 -60 308 Z" fill="url(#grad-1)"/>
+  </g>
+</svg>

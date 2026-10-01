@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Icon factory — AFAQ Corporate Profile, 64x64. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <g id="Icon-factory">
+    <path id="Icon-factory-1" d="M 13 51 L 13 31 L 23 37 L 23 31 L 33 37 L 33 31 L 43 37 L 43 17 L 51 17 L 51 51 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-factory-2" d="M 20 44 L 24 44 M 30 44 L 34 44 M 40 44 L 44 44" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

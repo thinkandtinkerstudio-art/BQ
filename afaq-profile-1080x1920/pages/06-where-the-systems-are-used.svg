@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 06 Where the systems are used — AFAQ Corporate Profile, 1080x1920. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <rect id="Background" x="0" y="0" width="1080" height="1920" fill="#F5F4EB"/>
+  <g id="Header">
+    <g id="Logo-Lockup">
+      <g id="Wordmark-AFQ">
+        <path id="Letter-A" d="M 77.28 110.72 L 86.96 86.08 C 89.6 79.04 98.4 79.04 101.04 86.08 L 110.72 110.72" fill="none" stroke="#03343D" stroke-width="10.56" stroke-linecap="round" stroke-linejoin="round"/>
+        <path id="Letter-F" d="M 125.68 110.72 L 125.68 77.28 L 152.08 77.28 M 125.68 94 L 147.68 94" fill="none" stroke="#03343D" stroke-width="10.56" stroke-linecap="round" stroke-linejoin="round"/>
+        <path id="Letter-Q" d="M 166.16 90.48 C 166.16 83.19 172.07 77.28 179.36 77.28 L 186.4 77.28 C 193.69 77.28 199.6 83.19 199.6 90.48 L 199.6 97.52 C 199.6 104.81 193.69 110.72 186.4 110.72 L 179.36 110.72 C 172.07 110.72 166.16 104.81 166.16 97.52 Z M 189.04 100.16 L 200.48 112.48" fill="none" stroke="#03343D" stroke-width="10.56" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text id="Tagline" x="72" y="137.37" font-family="Inter" font-size="12" font-weight="500" fill="#03343D" letter-spacing="3.6">ENERGY. ENGINEERED.</text>
+    </g>
+    <text id="Eyebrow" x="1008" y="99.46" font-family="Inter" font-size="15" font-weight="500" fill="#5A7175" letter-spacing="3.3" text-anchor="end">CORPORATE PROFILE 2026</text>
+  </g>
+  <g id="Title">
+    <text id="Title-line" x="72" y="369.65" font-family="Inter" font-size="76" font-weight="300" fill="#053C45" letter-spacing="-1.52">Where the</text>
+    <text id="Title-line-2" x="72" y="453.65" font-family="Inter" font-size="76" font-weight="300" fill="#053C45" letter-spacing="-1.52">systems are used</text>
+  </g>
+  <g id="Subtitle">
+    <text id="Subtitle-line" x="72" y="516.46" font-family="Inter" font-size="26" font-weight="400" fill="#5A7175">The pattern of consumption shapes the system more than the type of</text>
+    <text id="Subtitle-line-2" x="72" y="554.46" font-family="Inter" font-size="26" font-weight="400" fill="#5A7175">business does.</text>
+  </g>
+  <g id="Card-1">
+    <rect id="Card-Shape" x="72" y="620" width="453" height="547" rx="28" fill="#FFFFFF"/>
+    <circle id="Icon-Disc" cx="156" cy="704" r="44" fill="#C8FB5F"/>
+    <g id="Icon">
+      <path id="Icon-sun-1" d="M 164 704 C 164 708.42 160.42 712 156 712 C 151.58 712 148 708.42 148 704 C 148 699.58 151.58 696 156 696 C 160.42 696 164 699.58 164 704 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-sun-2" d="M 156 685 L 156 690 M 156 718 L 156 723 M 137 704 L 142 704 M 170 704 L 175 704 M 142.6 690.6 L 146.1 694.1 M 165.9 713.9 L 169.4 717.4 M 142.6 717.4 L 146.1 713.9 M 165.9 694.1 L 169.4 690.6" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g id="Card-Title">
+      <text id="Card-Title-line" x="112" y="804.19" font-family="Inter" font-size="28" font-weight="600" fill="#053C45">Sites that consume during</text>
+      <text id="Card-Title-line-2" x="112" y="840.19" font-family="Inter" font-size="28" font-weight="600" fill="#053C45">the day</text>
+    </g>
+    <g id="Card-Body">
+      <text id="Card-Body-line" x="112" y="885.14" font-family="Inter" font-size="21" font-weight="400" fill="#5A7175">Offices, retail centres, hotels,</text>
+      <text id="Card-Body-line-2" x="112" y="916.14" font-family="Inter" font-size="21" font-weight="400" fill="#5A7175">factories, schools and residential</text>
+      <text id="Card-Body-line-3" x="112" y="947.14" font-family="Inter" font-size="21" font-weight="400" fill="#5A7175">compounds. Their heaviest load falls</text>
+      <text id="Card-Body-line-4" x="112" y="978.14" font-family="Inter" font-size="21" font-weight="400" fill="#5A7175">within sunlight hours.</text>
+    </g>
+  </g>
+  <g id="Card-2">
+    <rect id="Card-Shape-2" x="555" y="620" width="453" height="547" rx="28" fill="#FFFFFF"/>
+    <circle id="Icon-Disc-2" cx="639" cy="704" r="44" fill="#C8FB5F"/>
+    <g id="Icon-2">
+      <path id="Icon-continuous-1" d="M 657 704 C 657 713.94 648.94 722 639 722 C 629.06 722 621 713.94 621 704 C 621 694.06 629.06 686 639 686 C 648.94 686 657 694.06 657 704 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-continuous-2" d="M 639 693 L 639 704 L 647 709" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text id="Card-Title-2" x="595" y="804.19" font-family="Inter" font-size="28" font-weight="600" fill="#053C45">Sites with continuous loads</text>
+    <g id="Card-Body-2">
+      <text id="Card-Body-line-5" x="595" y="849.14" font-family="Inter" font-size="21" font-weight="400" fill="#5A7175">Hospitals, cold stores, production</text>
+      <text id="Card-Body-line-6" x="595" y="880.14" font-family="Inter" font-size="21" font-weight="400" fill="#5A7175">lines and data centres. The system</text>
+      <text id="Card-Body-line-7" x="595" y="911.14" font-family="Inter" font-size="21" font-weight="400" fill="#5A7175">works alongside the backup already</text>
+      <text id="Card-Body-line-8" x="595" y="942.14" font-family="Inter" font-size="21" font-weight="400" fill="#5A7175">in place, cutting generator running</text>
+      <text id="Card-Body-line-9" x="595" y="973.14" font-family="Inter" font-size="21" font-weight="400" fill="#5A7175">hours and fuel use.</text>
+    </g>
+  </g>
+  <g id="Card-3">
+    <rect id="Card-Shape-3" x="72" y="1197" width="453" height="547" rx="28" fill="#FFFFFF"/>
+    <circle id="Icon-Disc-3" cx="156" cy="1281" r="44" fill="#C8FB5F"/>
+    <g id="Icon-3">
+      <path id="Icon-off-grid-1" d="M 137 1297 L 156 1266 L 175 1297 Z M 156 1297 L 156 1287 L 161 1297" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-off-grid-2" d="M 143 1297 L 169 1297" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text id="Card-Title-3" x="112" y="1381.19" font-family="Inter" font-size="28" font-weight="600" fill="#053C45">Sites away from the grid</text>
+    <g id="Card-Body-3">
+      <text id="Card-Body-line-10" x="112" y="1426.14" font-family="Inter" font-size="21" font-weight="400" fill="#5A7175">Farms, irrigation pumps, camps and</text>
+      <text id="Card-Body-line-11" x="112" y="1457.14" font-family="Inter" font-size="21" font-weight="400" fill="#5A7175">work sites that run on diesel.</text>
+    </g>
+  </g>
+  <g id="Card-4">
+    <rect id="Card-Shape-4" x="555" y="1197" width="453" height="547" rx="28" fill="#FFFFFF"/>
+    <circle id="Icon-Disc-4" cx="639" cy="1281" r="44" fill="#C8FB5F"/>
+    <g id="Icon-4">
+      <path id="Icon-construction-1" d="M 625 1300 L 625 1270 L 655 1270 M 625 1276 L 635 1270 M 649 1270 L 649 1281 M 645 1281 L 653 1281 M 649 1281 L 649 1285 C 649 1288 645 1288 645 1285" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-construction-2" d="M 620 1300 L 630 1300" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g id="Card-Title-4">
+      <text id="Card-Title-line-3" x="595" y="1381.19" font-family="Inter" font-size="28" font-weight="600" fill="#053C45">Projects under</text>
+      <text id="Card-Title-line-4" x="595" y="1417.19" font-family="Inter" font-size="28" font-weight="600" fill="#053C45">construction</text>
+    </g>
+    <g id="Card-Body-4">
+      <text id="Card-Body-line-12" x="595" y="1462.14" font-family="Inter" font-size="21" font-weight="400" fill="#5A7175">Contractors and developers</text>
+      <text id="Card-Body-line-13" x="595" y="1493.14" font-family="Inter" font-size="21" font-weight="400" fill="#5A7175">delivering the energy scope within a</text>
+      <text id="Card-Body-line-14" x="595" y="1524.14" font-family="Inter" font-size="21" font-weight="400" fill="#5A7175">live project.</text>
+    </g>
+  </g>
+  <g id="Footer">
+    <path id="Footer-Rule" d="M 72 1800 L 1008 1800" fill="none" stroke="#D9DCCF" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+    <text id="Footer-Section" x="72" y="1838.82" font-family="Inter" font-size="16" font-weight="400" fill="#5A7175">Where the systems are used</text>
+    <text id="Footer-Page" x="1008" y="1838.82" font-family="Inter" font-size="16" font-weight="500" fill="#5A7175" text-anchor="end">06 / 08</text>
+  </g>
+</svg>

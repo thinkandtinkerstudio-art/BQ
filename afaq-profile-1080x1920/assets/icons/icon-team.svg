@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Icon team — AFAQ Corporate Profile, 64x64. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <g id="Icon-team">
+    <path id="Icon-team-1" d="M 31 23 C 31 26.31 28.31 29 25 29 C 21.69 29 19 26.31 19 23 C 19 19.69 21.69 17 25 17 C 28.31 17 31 19.69 31 23 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-team-2" d="M 45 25 C 45 27.76 42.76 30 40 30 C 37.24 30 35 27.76 35 25 C 35 22.24 37.24 20 40 20 C 42.76 20 45 22.24 45 25 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-team-3" d="M 13 49 C 13 39 18 35 25 35 C 32 35 37 39 37 49 Z" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Icon-team-4" d="M 39 49 C 44 49 51 49 51 49 C 51 42 48 37 41 37" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

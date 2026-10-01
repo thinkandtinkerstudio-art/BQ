@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AFQ wordmark (lime) — AFAQ Corporate Profile, 384x180. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="180" viewBox="0 0 384 180">
+  <rect id="Background" x="0" y="0" width="384" height="180" fill="#053C45"/>
+  <g id="Wordmark-AFQ">
+    <path id="Letter-A" d="M 52 128 L 74 72 C 80 56 100 56 106 72 L 128 128" fill="none" stroke="#C8FB5F" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Letter-F" d="M 162 128 L 162 52 L 222 52 M 162 90 L 212 90" fill="none" stroke="#C8FB5F" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Letter-Q" d="M 254 82 C 254 65.43 267.43 52 284 52 L 300 52 C 316.57 52 330 65.43 330 82 L 330 98 C 330 114.57 316.57 128 300 128 L 284 128 C 267.43 128 254 114.57 254 98 Z M 306 104 L 332 132" fill="none" stroke="#C8FB5F" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

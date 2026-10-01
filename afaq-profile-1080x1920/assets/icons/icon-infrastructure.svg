@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Icon infrastructure — AFAQ Corporate Profile, 64x64. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <g id="Icon-infrastructure">
+    <path id="Icon-infrastructure-1" d="M 32 13 L 20 51 M 32 13 L 44 51 M 23 41 L 41 41 M 27 29 L 37 29 M 16 21 L 48 21 M 16 21 L 19 16 M 48 21 L 45 16" fill="none" stroke="#053C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

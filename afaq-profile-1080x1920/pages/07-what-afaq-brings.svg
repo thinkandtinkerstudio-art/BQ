@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 07 What AFAQ brings — AFAQ Corporate Profile, 1080x1920. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <linearGradient id="grad-1" gradientUnits="userSpaceOnUse" x1="0" y1="1313" x2="0" y2="1744"><stop offset="0" stop-color="#022C32" stop-opacity="1"/><stop offset="1" stop-color="#0E5560" stop-opacity="1"/></linearGradient>
+  </defs>
+  <rect id="Background" x="0" y="0" width="1080" height="1920" fill="#053C45"/>
+  <g id="Header">
+    <g id="Logo-Lockup">
+      <g id="Wordmark-AFQ">
+        <path id="Letter-A" d="M 77.28 110.72 L 86.96 86.08 C 89.6 79.04 98.4 79.04 101.04 86.08 L 110.72 110.72" fill="none" stroke="#F5F4EB" stroke-width="10.56" stroke-linecap="round" stroke-linejoin="round"/>
+        <path id="Letter-F" d="M 125.68 110.72 L 125.68 77.28 L 152.08 77.28 M 125.68 94 L 147.68 94" fill="none" stroke="#F5F4EB" stroke-width="10.56" stroke-linecap="round" stroke-linejoin="round"/>
+        <path id="Letter-Q" d="M 166.16 90.48 C 166.16 83.19 172.07 77.28 179.36 77.28 L 186.4 77.28 C 193.69 77.28 199.6 83.19 199.6 90.48 L 199.6 97.52 C 199.6 104.81 193.69 110.72 186.4 110.72 L 179.36 110.72 C 172.07 110.72 166.16 104.81 166.16 97.52 Z M 189.04 100.16 L 200.48 112.48" fill="none" stroke="#F5F4EB" stroke-width="10.56" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text id="Tagline" x="72" y="137.37" font-family="Inter" font-size="12" font-weight="500" fill="#F5F4EB" letter-spacing="3.6">ENERGY. ENGINEERED.</text>
+    </g>
+    <text id="Eyebrow" x="1008" y="99.46" font-family="Inter" font-size="15" font-weight="500" fill="#F5F4EB" letter-spacing="3.3" text-anchor="end" opacity="0.85">CORPORATE PROFILE 2026</text>
+  </g>
+  <text id="Title" x="72" y="369.65" font-family="Inter" font-size="76" font-weight="300" fill="#F5F4EB" letter-spacing="-1.52">What AFAQ brings</text>
+  <g id="Item-01">
+    <text id="Number" x="72" y="476.28" font-family="Inter" font-size="20" font-weight="600" fill="#C8FB5F">01</text>
+    <g id="Icon">
+      <path id="Icon-factory-1" d="M 968.58 489.42 L 968.58 471.08 L 977.75 476.58 L 977.75 471.08 L 986.92 476.58 L 986.92 471.08 L 996.08 476.58 L 996.08 458.25 L 1003.42 458.25 L 1003.42 489.42 Z" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-factory-2" d="M 975 483 L 978.67 483 M 984.17 483 L 987.83 483 M 993.33 483 L 997 483" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text id="Item-Title" x="156" y="479.64" font-family="Inter" font-size="32" font-weight="600" fill="#F5F4EB">Supply from a factory in Oman</text>
+    <g id="Item-Body">
+      <text id="Item-Body-line" x="156" y="520.87" font-family="Inter" font-size="23" font-weight="400" fill="#F5F4EB" opacity="0.8">AACE modules are manufactured in Oman, which shortens supply</text>
+      <text id="Item-Body-line-2" x="156" y="553.87" font-family="Inter" font-size="23" font-weight="400" fill="#F5F4EB" opacity="0.8">time compared with importing.</text>
+    </g>
+    <path id="Divider" d="M 72 588 L 1008 588" fill="none" stroke="#F5F4EB" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.15"/>
+  </g>
+  <g id="Item-02">
+    <text id="Number-2" x="72" y="643.28" font-family="Inter" font-size="20" font-weight="600" fill="#C8FB5F">02</text>
+    <g id="Icon-2">
+      <path id="Icon-shield-1" d="M 986 621.58 L 1000.67 627.08 L 1000.67 638.08 C 1000.67 647.25 994.25 653.67 986 656.42 C 977.75 653.67 971.33 647.25 971.33 638.08 L 971.33 627.08 Z" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-shield-2" d="M 979.58 639 L 984.17 643.58 L 992.42 634.42" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text id="Item-Title-2" x="156" y="646.64" font-family="Inter" font-size="32" font-weight="600" fill="#F5F4EB">Warranty handled inside Oman</text>
+    <g id="Item-Body-2">
+      <text id="Item-Body-line-3" x="156" y="687.87" font-family="Inter" font-size="23" font-weight="400" fill="#F5F4EB" opacity="0.8">AFAQ processes module warranty claims locally, without sending</text>
+      <text id="Item-Body-line-4" x="156" y="720.87" font-family="Inter" font-size="23" font-weight="400" fill="#F5F4EB" opacity="0.8">them to a manufacturer abroad.</text>
+    </g>
+    <path id="Divider-2" d="M 72 755 L 1008 755" fill="none" stroke="#F5F4EB" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.15"/>
+  </g>
+  <g id="Item-03">
+    <text id="Number-3" x="72" y="810.28" font-family="Inter" font-size="20" font-weight="600" fill="#C8FB5F">03</text>
+    <g id="Icon-3">
+      <path id="Icon-badge-1" d="M 996.08 800.5 C 996.08 806.07 991.57 810.58 986 810.58 C 980.43 810.58 975.92 806.07 975.92 800.5 C 975.92 794.93 980.43 790.42 986 790.42 C 991.57 790.42 996.08 794.93 996.08 800.5 Z" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-badge-2" d="M 979.58 808.75 L 976.83 823.42 L 986 818.83 L 995.17 823.42 L 992.42 808.75" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text id="Item-Title-3" x="156" y="813.64" font-family="Inter" font-size="32" font-weight="600" fill="#F5F4EB">In-country value</text>
+    <g id="Item-Body-3">
+      <text id="Item-Body-line-5" x="156" y="854.87" font-family="Inter" font-size="23" font-weight="400" fill="#F5F4EB" opacity="0.8">Modules made in Oman support local content requirements in tenders</text>
+      <text id="Item-Body-line-6" x="156" y="887.87" font-family="Inter" font-size="23" font-weight="400" fill="#F5F4EB" opacity="0.8">and government projects.</text>
+    </g>
+    <path id="Divider-3" d="M 72 922 L 1008 922" fill="none" stroke="#F5F4EB" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.15"/>
+  </g>
+  <g id="Item-04">
+    <text id="Number-4" x="72" y="977.28" font-family="Inter" font-size="20" font-weight="600" fill="#C8FB5F">04</text>
+    <g id="Icon-4">
+      <path id="Icon-document-1" d="M 974.08 955.58 L 990.58 955.58 L 999.75 964.75 L 999.75 990.42 L 974.08 990.42 Z M 990.58 955.58 L 990.58 964.75 L 999.75 964.75" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-document-2" d="M 979.58 973.92 L 994.25 973.92 M 979.58 980.33 L 990.58 980.33" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text id="Item-Title-4" x="156" y="980.64" font-family="Inter" font-size="32" font-weight="600" fill="#F5F4EB">Direct supply agreements</text>
+    <g id="Item-Body-4">
+      <text id="Item-Body-line-7" x="156" y="1021.87" font-family="Inter" font-size="23" font-weight="400" fill="#F5F4EB" opacity="0.8">Written agreements with module, battery and inverter suppliers,</text>
+      <text id="Item-Body-line-8" x="156" y="1054.87" font-family="Inter" font-size="23" font-weight="400" fill="#F5F4EB" opacity="0.8">covering availability and manufacturer warranties.</text>
+    </g>
+    <path id="Divider-4" d="M 72 1089 L 1008 1089" fill="none" stroke="#F5F4EB" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.15"/>
+  </g>
+  <g id="Item-05">
+    <text id="Number-5" x="72" y="1144.28" font-family="Inter" font-size="20" font-weight="600" fill="#C8FB5F">05</text>
+    <g id="Icon-5">
+      <path id="Icon-team-1" d="M 985.08 1131.75 C 985.08 1134.78 982.62 1137.25 979.58 1137.25 C 976.55 1137.25 974.08 1134.78 974.08 1131.75 C 974.08 1128.72 976.55 1126.25 979.58 1126.25 C 982.62 1126.25 985.08 1128.72 985.08 1131.75 Z" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-team-2" d="M 997.92 1133.58 C 997.92 1136.11 995.86 1138.17 993.33 1138.17 C 990.8 1138.17 988.75 1136.11 988.75 1133.58 C 988.75 1131.05 990.8 1129 993.33 1129 C 995.86 1129 997.92 1131.05 997.92 1133.58 Z" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-team-3" d="M 968.58 1155.58 C 968.58 1146.42 973.17 1142.75 979.58 1142.75 C 986 1142.75 990.58 1146.42 990.58 1155.58 Z" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-team-4" d="M 992.42 1155.58 C 997 1155.58 1003.42 1155.58 1003.42 1155.58 C 1003.42 1149.17 1000.67 1144.58 994.25 1144.58" fill="none" stroke="#C8FB5F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text id="Item-Title-5" x="156" y="1147.64" font-family="Inter" font-size="32" font-weight="600" fill="#F5F4EB">Delivery team</text>
+    <g id="Item-Body-5">
+      <text id="Item-Body-line-9" x="156" y="1188.87" font-family="Inter" font-size="23" font-weight="400" fill="#F5F4EB" opacity="0.8">An engineering team for design and supervision, and a field crew for</text>
+      <text id="Item-Body-line-10" x="156" y="1221.87" font-family="Inter" font-size="23" font-weight="400" fill="#F5F4EB" opacity="0.8">installation and commissioning.</text>
+    </g>
+  </g>
+  <g id="Photo-Strip">
+    <path id="Photo-Strip__set-image-fill" d="M 72 1345 C 72 1327.33 86.33 1313 104 1313 L 976 1313 C 993.67 1313 1008 1327.33 1008 1345 L 1008 1712 C 1008 1729.67 993.67 1744 976 1744 L 104 1744 C 86.33 1744 72 1729.67 72 1712 Z" fill="url(#grad-1)"/>
+    <g id="Placeholder-Art--delete-after-placing-photo">
+      <circle id="Sun-Glow" cx="296.64" cy="1425.06" r="69.61" fill="#C8FB5F" opacity="0.16"/>
+      <circle id="Sun" cx="296.64" cy="1425.06" r="36.64" fill="#FD7E25"/>
+      <path id="Mountains-Far" d="M 72 1577.6 L 240.48 1519.88 L 380.88 1541.43 L 558.72 1494.02 L 727.2 1537.12 L 876.96 1511.26 L 1008 1545.74 L 1008 1577.6 Z" fill="#1F7580" opacity="0.55"/>
+      <path id="Mountains-Near" d="M 72 1581.6 L 184.32 1550.05 L 352.8 1580.22 L 502.56 1537.12 L 671.04 1575.91 L 820.8 1554.36 L 1008 1584.53 L 1008 1581.6 Z" fill="#053C45" opacity="0.9"/>
+      <g id="Solar-Array">
+        <path id="Panel-1-1" d="M 133.52 1598.23 C 133.87 1596.62 135.51 1595.31 137.16 1595.31 L 236.88 1595.31 C 238.53 1595.31 239.59 1596.62 239.23 1598.23 L 234.36 1620.39 C 234 1622.01 232.37 1623.32 230.71 1623.32 L 131 1623.32 C 129.34 1623.32 128.29 1622.01 128.64 1620.39 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-1-line" d="M 187.02 1595.31 L 180.86 1623.32" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-1-2" d="M 253.23 1598.23 C 253.59 1596.62 255.22 1595.31 256.88 1595.31 L 356.59 1595.31 C 358.25 1595.31 359.3 1596.62 358.95 1598.23 L 354.07 1620.39 C 353.72 1622.01 352.09 1623.32 350.43 1623.32 L 250.71 1623.32 C 249.06 1623.32 248 1622.01 248.36 1620.39 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-2-line" d="M 306.73 1595.31 L 300.57 1623.32" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-1-3" d="M 372.95 1598.23 C 373.3 1596.62 374.94 1595.31 376.59 1595.31 L 476.31 1595.31 C 477.96 1595.31 479.02 1596.62 478.66 1598.23 L 473.79 1620.39 C 473.43 1622.01 471.8 1623.32 470.14 1623.32 L 370.43 1623.32 C 368.77 1623.32 367.72 1622.01 368.07 1620.39 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-3-line" d="M 426.45 1595.31 L 420.29 1623.32" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-1-4" d="M 492.66 1598.23 C 493.02 1596.62 494.65 1595.31 496.31 1595.31 L 596.02 1595.31 C 597.68 1595.31 598.73 1596.62 598.38 1598.23 L 593.5 1620.39 C 593.15 1622.01 591.51 1623.32 589.86 1623.32 L 490.14 1623.32 C 488.49 1623.32 487.43 1622.01 487.79 1620.39 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-4-line" d="M 546.16 1595.31 L 540 1623.32" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-1-5" d="M 612.38 1598.23 C 612.73 1596.62 614.36 1595.31 616.02 1595.31 L 715.73 1595.31 C 717.39 1595.31 718.45 1596.62 718.09 1598.23 L 713.22 1620.39 C 712.86 1622.01 711.23 1623.32 709.57 1623.32 L 609.86 1623.32 C 608.2 1623.32 607.15 1622.01 607.5 1620.39 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-5-line" d="M 665.88 1595.31 L 659.71 1623.32" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-1-6" d="M 732.09 1598.23 C 732.45 1596.62 734.08 1595.31 735.73 1595.31 L 835.45 1595.31 C 837.11 1595.31 838.16 1596.62 837.8 1598.23 L 832.93 1620.39 C 832.57 1622.01 830.94 1623.32 829.29 1623.32 L 729.57 1623.32 C 727.91 1623.32 726.86 1622.01 727.22 1620.39 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-6-line" d="M 785.59 1595.31 L 779.43 1623.32" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-1-7" d="M 851.8 1598.23 C 852.16 1596.62 853.79 1595.31 855.45 1595.31 L 955.16 1595.31 C 956.82 1595.31 957.87 1596.62 957.52 1598.23 L 952.64 1620.39 C 952.29 1622.01 950.66 1623.32 949 1623.32 L 849.29 1623.32 C 847.63 1623.32 846.57 1622.01 846.93 1620.39 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-1-7-line" d="M 905.31 1595.31 L 899.14 1623.32" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-2-1" d="M 134.47 1637.02 C 134.82 1635.41 136.45 1634.1 138.11 1634.1 L 252.78 1634.1 C 254.44 1634.1 255.49 1635.41 255.13 1637.02 L 249.31 1663.49 C 248.96 1665.11 247.32 1666.42 245.67 1666.42 L 131 1666.42 C 129.34 1666.42 128.29 1665.11 128.64 1663.49 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-2-1-line" d="M 195.44 1634.1 L 188.33 1666.42" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-2-2" d="M 275.13 1637.02 C 275.49 1635.41 277.12 1634.1 278.78 1634.1 L 393.44 1634.1 C 395.1 1634.1 396.16 1635.41 395.8 1637.02 L 389.98 1663.49 C 389.62 1665.11 387.99 1666.42 386.33 1666.42 L 271.67 1666.42 C 270.01 1666.42 268.96 1665.11 269.31 1663.49 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-2-2-line" d="M 336.11 1634.1 L 329 1666.42" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-2-3" d="M 415.8 1637.02 C 416.16 1635.41 417.79 1634.1 419.44 1634.1 L 534.11 1634.1 C 535.77 1634.1 536.82 1635.41 536.47 1637.02 L 530.64 1663.49 C 530.29 1665.11 528.66 1666.42 527 1666.42 L 412.33 1666.42 C 410.68 1666.42 409.62 1665.11 409.98 1663.49 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-2-3-line" d="M 476.78 1634.1 L 469.67 1666.42" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-2-4" d="M 556.47 1637.02 C 556.82 1635.41 558.45 1634.1 560.11 1634.1 L 674.78 1634.1 C 676.44 1634.1 677.49 1635.41 677.13 1637.02 L 671.31 1663.49 C 670.96 1665.11 669.32 1666.42 667.67 1666.42 L 553 1666.42 C 551.34 1666.42 550.29 1665.11 550.64 1663.49 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-2-4-line" d="M 617.44 1634.1 L 610.33 1666.42" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-2-5" d="M 697.13 1637.02 C 697.49 1635.41 699.12 1634.1 700.78 1634.1 L 815.44 1634.1 C 817.1 1634.1 818.16 1635.41 817.8 1637.02 L 811.98 1663.49 C 811.62 1665.11 809.99 1666.42 808.33 1666.42 L 693.67 1666.42 C 692.01 1666.42 690.96 1665.11 691.31 1663.49 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-2-5-line" d="M 758.11 1634.1 L 751 1666.42" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-2-6" d="M 837.8 1637.02 C 838.16 1635.41 839.79 1634.1 841.44 1634.1 L 956.11 1634.1 C 957.77 1634.1 958.82 1635.41 958.47 1637.02 L 952.64 1663.49 C 952.29 1665.11 950.66 1666.42 949 1666.42 L 834.33 1666.42 C 832.68 1666.42 831.62 1665.11 831.98 1663.49 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-2-6-line" d="M 898.78 1634.1 L 891.67 1666.42" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-3-1" d="M 135.89 1680.12 C 136.25 1678.51 137.88 1677.19 139.53 1677.19 L 277.53 1677.19 C 279.19 1677.19 280.25 1678.51 279.89 1680.12 L 272.64 1713.06 C 272.29 1714.67 270.66 1715.98 269 1715.98 L 131 1715.98 C 129.34 1715.98 128.29 1714.67 128.64 1713.06 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-3-1-line" d="M 208.53 1677.19 L 200 1715.98" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-3-2" d="M 305.89 1680.12 C 306.25 1678.51 307.88 1677.19 309.53 1677.19 L 447.53 1677.19 C 449.19 1677.19 450.25 1678.51 449.89 1680.12 L 442.64 1713.06 C 442.29 1714.67 440.66 1715.98 439 1715.98 L 301 1715.98 C 299.34 1715.98 298.29 1714.67 298.64 1713.06 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-3-2-line" d="M 378.53 1677.19 L 370 1715.98" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-3-3" d="M 475.89 1680.12 C 476.25 1678.51 477.88 1677.19 479.53 1677.19 L 617.53 1677.19 C 619.19 1677.19 620.25 1678.51 619.89 1680.12 L 612.64 1713.06 C 612.29 1714.67 610.66 1715.98 609 1715.98 L 471 1715.98 C 469.34 1715.98 468.29 1714.67 468.64 1713.06 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-3-3-line" d="M 548.53 1677.19 L 540 1715.98" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-3-4" d="M 645.89 1680.12 C 646.25 1678.51 647.88 1677.19 649.53 1677.19 L 787.53 1677.19 C 789.19 1677.19 790.25 1678.51 789.89 1680.12 L 782.64 1713.06 C 782.29 1714.67 780.66 1715.98 779 1715.98 L 641 1715.98 C 639.34 1715.98 638.29 1714.67 638.64 1713.06 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-3-4-line" d="M 718.53 1677.19 L 710 1715.98" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+        <path id="Panel-3-5" d="M 815.89 1680.12 C 816.25 1678.51 817.88 1677.19 819.53 1677.19 L 957.53 1677.19 C 959.19 1677.19 960.25 1678.51 959.89 1680.12 L 952.64 1713.06 C 952.29 1714.67 950.66 1715.98 949 1715.98 L 811 1715.98 C 809.34 1715.98 808.29 1714.67 808.64 1713.06 Z" fill="#202C28" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        <path id="Panel-3-5-line" d="M 888.53 1677.19 L 880 1715.98" fill="none" stroke="#C8FB5F" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+      </g>
+    </g>
+  </g>
+  <g id="Footer">
+    <path id="Footer-Rule" d="M 72 1800 L 1008 1800" fill="none" stroke="#F5F4EB" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.25"/>
+    <text id="Footer-Section" x="72" y="1838.82" font-family="Inter" font-size="16" font-weight="400" fill="#F5F4EB" opacity="0.75">What AFAQ brings</text>
+    <text id="Footer-Page" x="1008" y="1838.82" font-family="Inter" font-size="16" font-weight="500" fill="#F5F4EB" text-anchor="end" opacity="0.75">07 / 08</text>
+  </g>
+</svg>
