@@ -68,7 +68,7 @@ def bounds_lint(path):
     errs = []
     root = ET.fromstring(open(path, encoding="utf-8").read())
     W, H = int(root.get("width")), int(root.get("height"))
-    M = 96 if W > H else 72
+    M = 80
     def pb(d, pad):
         nums = [float(t) for t in re.sub(r"[MLCZ]", " ", d).split()]
         return min(nums[0::2]) - pad, min(nums[1::2]) - pad, max(nums[0::2]) + pad, max(nums[1::2]) + pad

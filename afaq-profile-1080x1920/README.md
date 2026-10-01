@@ -51,7 +51,7 @@
 
 ## Import into Adobe Illustrator
 
-**Option A — the .ai file (whole deck, 9 portrait / 8 landscape artboards).**
+**Option A — the .ai file (whole deck, 9 artboards).**
 1. Install the four fonts in `fonts/` (or any Inter build).
 2. File → Open `landscape/AFAQ-Corporate-Profile-1920x1080.ai` (portrait: `AFAQ-Corporate-Profile-1080x1920.ai`). In the "PDF Import Options" dialog set the page range to **All** so every page becomes its own artboard (Illustrator 2020 or later; older versions open one page at a time). Illustrator treats the file as PDF content: every shape is an editable path, gradients are native, and all text is live point text in Inter Light/Regular/Medium/Semi Bold. The `.pdf` next to it is byte-identical and opens the same way.
 3. The file has no layer names (PDF has no layers); if you want named layers, use Option B.
@@ -101,7 +101,7 @@ Edit copy, colours or layout in `tools/deck.py` (portrait) or `tools/deck_landsc
 
 ## Layout
 
-The portrait deck follows the client's layout board (`source/brand-references/afq-layout-board.webp`): numbered eyebrow chips, large light titles ending in a full stop, notched photo frames crossed by the ribbon, number-led cards (the fourth in dark teal with a cut corner), a lime statement panel, dark cards with a cut tab, the decorative notch outline, and a back cover with the ribbon knot. The landscape edition still uses the earlier 16:9 composition; tell me if it should be re-laid out on the same board.
+The portrait deck follows the client's layout board (`source/brand-references/afq-layout-board.webp`): numbered eyebrow chips, large light titles ending in a full stop, notched photo frames crossed by the ribbon, number-led cards (the fourth in dark teal with a cut corner), a lime statement panel, dark cards with a cut tab, the decorative notch outline, and a back cover with the ribbon knot. The landscape edition (`landscape/`, 1920 × 1080, 9 pages) is the same board re-composed for 16:9: text column left, notched photo frame right, cards in grids, the scope timeline horizontal.
 
 ## Open questions
 

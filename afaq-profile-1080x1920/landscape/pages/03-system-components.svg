@@ -1,86 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 03 System components — AFAQ Corporate Profile, 1920x1080. Editable vector: inline fills only, text as <text>, no masks/CSS/transforms. Font: Inter (300/400/500/600). -->
 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="grad-1" gradientUnits="userSpaceOnUse" x1="0" y1="337" x2="0" y2="960"><stop offset="0" stop-color="#022C32" stop-opacity="1"/><stop offset="1" stop-color="#0E5560" stop-opacity="1"/></linearGradient><linearGradient id="grad-2" gradientUnits="userSpaceOnUse" x1="80" y1="0" x2="860" y2="0"><stop offset="0" stop-color="#A4DC3C" stop-opacity="1"/><stop offset="0.35" stop-color="#C8FB5F" stop-opacity="1"/><stop offset="0.55" stop-color="#E9FBB8" stop-opacity="1"/><stop offset="0.75" stop-color="#C8FB5F" stop-opacity="1"/><stop offset="1" stop-color="#A4DC3C" stop-opacity="1"/></linearGradient>
+  </defs>
   <rect id="Background" x="0" y="0" width="1920" height="1080" fill="#F5F4EB"/>
-  <g id="Header">
-    <g id="Logo-Lockup">
-      <g id="Wordmark-AFQ">
-        <path id="Letter-A" d="M 106.56 95.36 L 111.36 85.76 L 127.68 85.76 L 143.04 63.2 L 173.76 97.28" fill="none" stroke="#03343D" stroke-width="12.96" stroke-linecap="round" stroke-linejoin="round"/>
-        <path id="Letter-F" d="M 191.28 97.52 L 191.28 73.04 C 191.28 67.33 195.89 62.72 201.6 62.72 L 242.16 62.72 M 191.28 80 L 233.28 80" fill="none" stroke="#03343D" stroke-width="12.96" stroke-linecap="round" stroke-linejoin="round"/>
-        <path id="Letter-Q" d="M 259.44 73.28 C 259.44 67.31 264.27 62.48 270.24 62.48 L 302.4 62.48 C 308.37 62.48 313.2 67.31 313.2 73.28 L 313.2 86.72 C 313.2 92.69 308.37 97.52 302.4 97.52 L 270.24 97.52 C 264.27 97.52 259.44 92.69 259.44 86.72 Z M 306.24 95.36 L 321.6 105.92" fill="none" stroke="#03343D" stroke-width="12.96" stroke-linecap="round" stroke-linejoin="round"/>
-      </g>
-      <text id="Tagline" x="96" y="127" font-family="Inter" font-size="11" font-weight="500" fill="#03343D" letter-spacing="6.12">ENERGY. ENGINEERED.</text>
-    </g>
-    <text id="Eyebrow" x="1827.08" y="85.09" font-family="Inter" font-size="14" font-weight="500" fill="#5A7175" letter-spacing="3.08" text-anchor="end">CORPORATE PROFILE 2026</text>
+  <g id="Eyebrow">
+    <rect id="Eyebrow-Pill" x="80" y="72" width="46" height="24" rx="12" fill="#C8FB5F"/>
+    <text id="Eyebrow-Number" x="103" y="88" font-family="Inter" font-size="11" font-weight="600" fill="#053C45" text-anchor="middle">02</text>
+    <text id="Eyebrow-Label" x="140" y="88" font-family="Inter" font-size="11" font-weight="500" fill="#5A7175" letter-spacing="2.42">SYSTEM COMPONENTS</text>
   </g>
-  <text id="Title" x="96" y="248.28" font-family="Inter" font-size="64" font-weight="300" fill="#053C45" letter-spacing="-1.28">System components</text>
+  <text id="Title" x="80" y="174.69" font-family="Inter" font-size="72" font-weight="300" fill="#053C45" letter-spacing="-2.16">System components.</text>
   <g id="Subtitle">
-    <text id="Subtitle-line" x="96" y="300" font-family="Inter" font-size="22" font-weight="400" fill="#5A7175">A photovoltaic system is built from four components. AFAQ holds a direct supply agreement</text>
-    <text id="Subtitle-line-2" x="96" y="332" font-family="Inter" font-size="22" font-weight="400" fill="#5A7175">with a main supplier for each.</text>
+    <text id="Subtitle-line" x="80" y="233.28" font-family="Inter" font-size="20" font-weight="400" fill="#053C45" opacity="0.85">A photovoltaic system is built from four components.</text>
+    <text id="Subtitle-line-2" x="80" y="263.28" font-family="Inter" font-size="20" font-weight="400" fill="#053C45" opacity="0.85">AFAQ holds a direct supply agreement with a main</text>
+    <text id="Subtitle-line-3" x="80" y="293.28" font-family="Inter" font-size="20" font-weight="400" fill="#053C45" opacity="0.85">supplier for each.</text>
+  </g>
+  <g id="Photo-Plant">
+    <path id="Photo-Plant__set-image-fill" d="M 80 369 C 80 351.33 94.33 337 112 337 L 868 337 C 885.67 337 900 351.33 900 369 L 900 928 C 900 945.67 885.67 960 868 960 L 112 960 C 94.33 960 80 945.67 80 928 Z" fill="url(#grad-1)"/>
+    <g id="Placeholder-Art--delete-after-placing-photo">
+      <circle id="Sun-Glow" cx="276.8" cy="498.98" r="100.61" fill="#FD7E25" opacity="0.18"/>
+      <circle id="Sun" cx="276.8" cy="498.98" r="52.96" fill="#FD7E25"/>
+      <path id="Mountains-Far" d="M 80 754.41 L 227.6 636.04 L 350.6 667.19 L 506.4 598.66 L 654 660.96 L 785.2 623.58 L 900 673.42 L 900 754.41 Z" fill="#1F7580" opacity="0.55"/>
+      <path id="Mountains-Near" d="M 80 754.41 L 178.4 679.65 L 326 723.26 L 457.2 660.96 L 604.8 717.03 L 736 685.88 L 900 729.49 L 900 754.41 Z" fill="#053C45" opacity="0.9"/>
+      <g id="Transmission-Line">
+        <path id="Pylon-1" d="M 200.36 773.54 L 152.09 926.4 M 200.36 773.54 L 248.64 926.4 M 164.16 886.17 L 236.57 886.17 M 180.25 837.9 L 220.48 837.9 M 136 805.72 L 264.73 805.72 M 136 805.72 L 148.07 785.6 M 264.73 805.72 L 252.66 785.6" fill="none" stroke="#C8FB5F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+        <path id="Pylon-2" d="M 490 773.54 L 441.73 926.4 M 490 773.54 L 538.27 926.4 M 453.8 886.17 L 526.2 886.17 M 469.89 837.9 L 510.11 837.9 M 425.64 805.72 L 554.36 805.72 M 425.64 805.72 L 437.7 785.6 M 554.36 805.72 L 542.3 785.6" fill="none" stroke="#C8FB5F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+        <path id="Pylon-3" d="M 779.64 773.54 L 731.36 926.4 M 779.64 773.54 L 827.91 926.4 M 743.43 886.17 L 815.84 886.17 M 759.52 837.9 L 799.75 837.9 M 715.27 805.72 L 844 805.72 M 715.27 805.72 L 727.34 785.6 M 844 805.72 L 831.93 785.6" fill="none" stroke="#C8FB5F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+        <path id="Cable-1" d="M 264.73 805.72 C 313 825.03 377.36 825.03 425.64 805.72" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.6"/>
+        <path id="Cable-2" d="M 554.36 805.72 C 602.64 825.03 667 825.03 715.27 805.72" fill="none" stroke="#C8FB5F" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="round" opacity="0.6"/>
+      </g>
+    </g>
+  </g>
+  <g id="Ribbon">
+    <path id="Ribbon-Teal" d="M 120 881.5 C 250 850.5 380 885.5 510 873.5 C 640 854.5 770 835.5 900 842.5 L 900 905.5 C 770 898.5 640 917.5 510 936.5 C 380 948.5 250 913.5 120 944.5 Z" fill="#053C45"/>
+    <path id="Ribbon-Orange" d="M 80 911 C 210 880 340 915 470 903 C 600 884 730 865 860 872 L 860 882 C 730 875 600 894 470 913 C 340 925 210 890 80 921 Z" fill="#FD7E25"/>
+    <path id="Ribbon-Lime" d="M 80 843 C 210 812 340 847 470 835 C 600 816 730 797 860 804 L 860 874 C 730 867 600 886 470 905 C 340 917 210 882 80 913 Z" fill="url(#grad-2)"/>
   </g>
   <g id="Card-01">
-    <rect id="Card-Shape" x="96" y="384" width="852" height="276" rx="24" fill="#FFFFFF"/>
-    <text id="Number" x="132" y="432.28" font-family="Inter" font-size="20" font-weight="600" fill="#B04C0E">01</text>
-    <circle id="Icon-Disc" cx="878" cy="446" r="34" fill="#C8FB5F"/>
+    <rect id="Card-Shape" x="960" y="80" width="428" height="428" rx="26" fill="#E6E6DA"/>
+    <text id="Number" x="990" y="156.92" font-family="Inter" font-size="52" font-weight="300" fill="#053C45" letter-spacing="-1.04">01</text>
+    <circle id="Icon-Disc" cx="1332" cy="136" r="26" fill="#C8FB5F"/>
     <g id="Icon">
-      <path id="Icon-pv-module-1" d="M 862.17 436.83 C 862.17 435.45 863.28 434.33 864.67 434.33 L 891.33 434.33 C 892.72 434.33 893.83 435.45 893.83 436.83 L 893.83 455.17 C 893.83 456.55 892.72 457.67 891.33 457.67 L 864.67 457.67 C 863.28 457.67 862.17 456.55 862.17 455.17 Z" fill="none" stroke="#053C45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-      <path id="Icon-pv-module-2" d="M 872.75 434.33 L 872.75 457.67 M 883.25 434.33 L 883.25 457.67 M 862.17 446 L 893.83 446" fill="none" stroke="#053C45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-pv-module-1" d="M 1321.71 130.04 C 1321.71 129.14 1322.43 128.42 1323.33 128.42 L 1340.67 128.42 C 1341.57 128.42 1342.29 129.14 1342.29 130.04 L 1342.29 141.96 C 1342.29 142.86 1341.57 143.58 1340.67 143.58 L 1323.33 143.58 C 1322.43 143.58 1321.71 142.86 1321.71 141.96 Z" fill="none" stroke="#053C45" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-pv-module-2" d="M 1328.59 128.42 L 1328.59 143.58 M 1335.41 128.42 L 1335.41 143.58 M 1321.71 136 L 1342.29 136" fill="none" stroke="#053C45" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <text id="Card-Title" x="132" y="472.46" font-family="Inter" font-size="26" font-weight="600" fill="#053C45">PV modules</text>
+    <text id="Card-Title" x="990" y="206" font-family="Inter" font-size="22" font-weight="400" fill="#053C45">PV modules</text>
     <g id="Card-Note">
-      <text id="Card-Note-line" x="132" y="508.91" font-family="Inter" font-size="19" font-weight="400" fill="#5A7175">Selected according to the mounting area available and the</text>
-      <text id="Card-Note-line-2" x="132" y="536.91" font-family="Inter" font-size="19" font-weight="400" fill="#5A7175">conditions on site.</text>
+      <text id="Card-Note-line" x="990" y="235.59" font-family="Inter" font-size="14" font-weight="400" fill="#5A7175">Selected according to the mounting area available and</text>
+      <text id="Card-Note-line-2" x="990" y="256.59" font-family="Inter" font-size="14" font-weight="400" fill="#5A7175">the conditions on site.</text>
     </g>
-    <text id="Supplier-Label" x="132" y="568.37" font-family="Inter" font-size="12" font-weight="500" fill="#5A7175" letter-spacing="1.92">MAIN SUPPLIERS</text>
-    <text id="Supplier" x="132" y="595.91" font-family="Inter" font-size="19" font-weight="500" fill="#053C45">AACE · Ronma</text>
+    <path id="Card-Divider" d="M 990 408 L 1358 408" fill="none" stroke="#053C45" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.15"/>
+    <text id="Supplier-Label" x="990" y="435.14" font-family="Inter" font-size="10" font-weight="500" fill="#5A7175" letter-spacing="1.8">MAIN SUPPLIERS</text>
+    <text id="Supplier" x="990" y="458.82" font-family="Inter" font-size="16" font-weight="500" fill="#053C45">AACE · Ronma</text>
   </g>
   <g id="Card-02">
-    <rect id="Card-Shape-2" x="972" y="384" width="852" height="276" rx="24" fill="#FFFFFF"/>
-    <text id="Number-2" x="1008" y="432.28" font-family="Inter" font-size="20" font-weight="600" fill="#B04C0E">02</text>
-    <circle id="Icon-Disc-2" cx="1754" cy="446" r="34" fill="#C8FB5F"/>
+    <rect id="Card-Shape-2" x="1412" y="80" width="428" height="428" rx="26" fill="#E6E6DA"/>
+    <text id="Number-2" x="1442" y="156.92" font-family="Inter" font-size="52" font-weight="300" fill="#053C45" letter-spacing="-1.04">02</text>
+    <circle id="Icon-Disc-2" cx="1784" cy="136" r="26" fill="#C8FB5F"/>
     <g id="Icon-2">
-      <path id="Icon-battery-1" d="M 1738.17 440.17 C 1738.17 438.78 1739.28 437.67 1740.67 437.67 L 1762.33 437.67 C 1763.72 437.67 1764.83 438.78 1764.83 440.17 L 1764.83 451.83 C 1764.83 453.22 1763.72 454.33 1762.33 454.33 L 1740.67 454.33 C 1739.28 454.33 1738.17 453.22 1738.17 451.83 Z" fill="none" stroke="#053C45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-      <path id="Icon-battery-2" d="M 1764.83 443.92 C 1764.83 443.23 1765.39 442.67 1766.08 442.67 L 1767.75 442.67 C 1768.44 442.67 1769 443.23 1769 443.92 L 1769 448.08 C 1769 448.77 1768.44 449.33 1767.75 449.33 L 1766.08 449.33 C 1765.39 449.33 1764.83 448.77 1764.83 448.08 Z" fill="none" stroke="#053C45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-      <path id="Icon-battery-3" d="M 1753.17 440.17 L 1748.17 446.83 L 1752.33 446.83 L 1749.83 451.83 L 1754.83 445.17 L 1750.67 445.17 Z" fill="none" stroke="#053C45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-battery-1" d="M 1773.71 132.21 C 1773.71 131.31 1774.43 130.58 1775.33 130.58 L 1789.42 130.58 C 1790.32 130.58 1791.04 131.31 1791.04 132.21 L 1791.04 139.79 C 1791.04 140.69 1790.32 141.42 1789.42 141.42 L 1775.33 141.42 C 1774.43 141.42 1773.71 140.69 1773.71 139.79 Z" fill="none" stroke="#053C45" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-battery-2" d="M 1791.04 134.65 C 1791.04 134.2 1791.4 133.83 1791.85 133.83 L 1792.94 133.83 C 1793.39 133.83 1793.75 134.2 1793.75 134.65 L 1793.75 137.35 C 1793.75 137.8 1793.39 138.17 1792.94 138.17 L 1791.85 138.17 C 1791.4 138.17 1791.04 137.8 1791.04 137.35 Z" fill="none" stroke="#053C45" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-battery-3" d="M 1783.46 132.21 L 1780.21 136.54 L 1782.92 136.54 L 1781.29 139.79 L 1784.54 135.46 L 1781.83 135.46 Z" fill="none" stroke="#053C45" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <text id="Card-Title-2" x="1008" y="472.46" font-family="Inter" font-size="26" font-weight="600" fill="#053C45">Battery energy storage</text>
-    <text id="Card-Note-2" x="1008" y="508.91" font-family="Inter" font-size="19" font-weight="400" fill="#5A7175">Sized on the loads to be covered and the autonomy required.</text>
-    <text id="Supplier-Label-2" x="1008" y="540.37" font-family="Inter" font-size="12" font-weight="500" fill="#5A7175" letter-spacing="1.92">MAIN SUPPLIER</text>
-    <text id="Supplier-2" x="1008" y="567.91" font-family="Inter" font-size="19" font-weight="500" fill="#053C45">Goshin</text>
+    <text id="Card-Title-2" x="1442" y="206" font-family="Inter" font-size="22" font-weight="400" fill="#053C45">Battery energy storage</text>
+    <g id="Card-Note-2">
+      <text id="Card-Note-line-3" x="1442" y="235.59" font-family="Inter" font-size="14" font-weight="400" fill="#5A7175">Sized on the loads to be covered and the autonomy</text>
+      <text id="Card-Note-line-4" x="1442" y="256.59" font-family="Inter" font-size="14" font-weight="400" fill="#5A7175">required.</text>
+    </g>
+    <path id="Card-Divider-2" d="M 1442 408 L 1810 408" fill="none" stroke="#053C45" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.15"/>
+    <text id="Supplier-Label-2" x="1442" y="435.14" font-family="Inter" font-size="10" font-weight="500" fill="#5A7175" letter-spacing="1.8">MAIN SUPPLIER</text>
+    <text id="Supplier-2" x="1442" y="458.82" font-family="Inter" font-size="16" font-weight="500" fill="#053C45">Goshin</text>
   </g>
   <g id="Card-03">
-    <rect id="Card-Shape-3" x="96" y="684" width="852" height="276" rx="24" fill="#FFFFFF"/>
-    <text id="Number-3" x="132" y="732.28" font-family="Inter" font-size="20" font-weight="600" fill="#B04C0E">03</text>
-    <circle id="Icon-Disc-3" cx="878" cy="746" r="34" fill="#C8FB5F"/>
+    <rect id="Card-Shape-3" x="960" y="532" width="428" height="428" rx="26" fill="#E6E6DA"/>
+    <text id="Number-3" x="990" y="608.92" font-family="Inter" font-size="52" font-weight="300" fill="#053C45" letter-spacing="-1.04">03</text>
+    <circle id="Icon-Disc-3" cx="1332" cy="588" r="26" fill="#C8FB5F"/>
     <g id="Icon-3">
-      <path id="Icon-inverter-1" d="M 862.17 736 C 862.17 734.62 863.28 733.5 864.67 733.5 L 891.33 733.5 C 892.72 733.5 893.83 734.62 893.83 736 L 893.83 756 C 893.83 757.38 892.72 758.5 891.33 758.5 L 864.67 758.5 C 863.28 758.5 862.17 757.38 862.17 756 Z" fill="none" stroke="#053C45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-      <path id="Icon-inverter-2" d="M 867.17 746 C 869.67 746 869.67 740.17 873 740.17 C 876.33 740.17 876.33 751.83 879.67 751.83 C 883 751.83 883 746 888.83 746" fill="none" stroke="#053C45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-      <path id="Icon-inverter-3" d="M 862.17 740.17 L 867.17 740.17" fill="none" stroke="#053C45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-inverter-1" d="M 1321.71 581.5 C 1321.71 580.6 1322.43 579.88 1323.33 579.88 L 1340.67 579.88 C 1341.57 579.88 1342.29 580.6 1342.29 581.5 L 1342.29 594.5 C 1342.29 595.4 1341.57 596.12 1340.67 596.12 L 1323.33 596.12 C 1322.43 596.12 1321.71 595.4 1321.71 594.5 Z" fill="none" stroke="#053C45" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-inverter-2" d="M 1324.96 588 C 1326.58 588 1326.58 584.21 1328.75 584.21 C 1330.92 584.21 1330.92 591.79 1333.08 591.79 C 1335.25 591.79 1335.25 588 1339.04 588" fill="none" stroke="#053C45" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-inverter-3" d="M 1321.71 584.21 L 1324.96 584.21" fill="none" stroke="#053C45" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <text id="Card-Title-3" x="132" y="772.46" font-family="Inter" font-size="26" font-weight="600" fill="#053C45">Inverters and power conversion</text>
+    <text id="Card-Title-3" x="990" y="658" font-family="Inter" font-size="22" font-weight="400" fill="#053C45">Inverters and power conversion</text>
     <g id="Card-Note-3">
-      <text id="Card-Note-line-3" x="132" y="808.91" font-family="Inter" font-size="19" font-weight="400" fill="#5A7175">Selected according to the array configuration and the connection</text>
-      <text id="Card-Note-line-4" x="132" y="836.91" font-family="Inter" font-size="19" font-weight="400" fill="#5A7175">requirements of the grid operator.</text>
+      <text id="Card-Note-line-5" x="990" y="687.59" font-family="Inter" font-size="14" font-weight="400" fill="#5A7175">Selected according to the array configuration and the</text>
+      <text id="Card-Note-line-6" x="990" y="708.59" font-family="Inter" font-size="14" font-weight="400" fill="#5A7175">connection requirements of the grid operator.</text>
     </g>
-    <text id="Supplier-Label-3" x="132" y="868.37" font-family="Inter" font-size="12" font-weight="500" fill="#5A7175" letter-spacing="1.92">MAIN SUPPLIER</text>
-    <text id="Supplier-3" x="132" y="895.91" font-family="Inter" font-size="19" font-weight="500" fill="#053C45">Star Charge</text>
+    <path id="Card-Divider-3" d="M 990 860 L 1358 860" fill="none" stroke="#053C45" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.15"/>
+    <text id="Supplier-Label-3" x="990" y="887.14" font-family="Inter" font-size="10" font-weight="500" fill="#5A7175" letter-spacing="1.8">MAIN SUPPLIER</text>
+    <text id="Supplier-3" x="990" y="910.82" font-family="Inter" font-size="16" font-weight="500" fill="#053C45">Star Charge</text>
   </g>
   <g id="Card-04">
-    <rect id="Card-Shape-4" x="972" y="684" width="852" height="276" rx="24" fill="#FFFFFF"/>
-    <text id="Number-4" x="1008" y="732.28" font-family="Inter" font-size="20" font-weight="600" fill="#B04C0E">04</text>
-    <circle id="Icon-Disc-4" cx="1754" cy="746" r="34" fill="#C8FB5F"/>
+    <path id="Card-Shape-4" d="M 1412 558 C 1412 543.64 1423.64 532 1438 532 L 1814 532 C 1828.36 532 1840 543.64 1840 558 L 1840 858 C 1840 872.36 1828.36 884 1814 884 L 1720 884 C 1708.95 884 1700 892.95 1700 904 L 1700 934 C 1700 948.36 1688.36 960 1674 960 L 1438 960 C 1423.64 960 1412 948.36 1412 934 Z" fill="#053C45"/>
+    <text id="Number-4" x="1442" y="608.92" font-family="Inter" font-size="52" font-weight="300" fill="#F5F4EB" letter-spacing="-1.04">04</text>
+    <circle id="Icon-Disc-4" cx="1784" cy="588" r="26" fill="#C8FB5F"/>
     <g id="Icon-4">
-      <path id="Icon-infrastructure-1" d="M 1754 730.17 L 1744 761.83 M 1754 730.17 L 1764 761.83 M 1746.5 753.5 L 1761.5 753.5 M 1749.83 743.5 L 1758.17 743.5 M 1740.67 736.83 L 1767.33 736.83 M 1740.67 736.83 L 1743.17 732.67 M 1767.33 736.83 L 1764.83 732.67" fill="none" stroke="#053C45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Icon-infrastructure-1" d="M 1784 577.71 L 1777.5 598.29 M 1784 577.71 L 1790.5 598.29 M 1779.12 592.88 L 1788.88 592.88 M 1781.29 586.38 L 1786.71 586.38 M 1775.33 582.04 L 1792.67 582.04 M 1775.33 582.04 L 1776.96 579.33 M 1792.67 582.04 L 1791.04 579.33" fill="none" stroke="#053C45" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <text id="Card-Title-4" x="1008" y="772.46" font-family="Inter" font-size="26" font-weight="600" fill="#053C45">Plant infrastructure</text>
+    <text id="Card-Title-4" x="1442" y="658" font-family="Inter" font-size="22" font-weight="400" fill="#F5F4EB">Plant infrastructure</text>
     <g id="Card-Note-4">
-      <text id="Card-Note-line-5" x="1008" y="808.91" font-family="Inter" font-size="19" font-weight="400" fill="#5A7175">Mounting structures, foundations, DC and AC cabling, and</text>
-      <text id="Card-Note-line-6" x="1008" y="836.91" font-family="Inter" font-size="19" font-weight="400" fill="#5A7175">connection and protection panels, specified to suit the site.</text>
+      <text id="Card-Note-line-7" x="1442" y="687.59" font-family="Inter" font-size="14" font-weight="400" fill="#F5F4EB" opacity="0.8">Mounting structures, foundations, DC and AC cabling,</text>
+      <text id="Card-Note-line-8" x="1442" y="708.59" font-family="Inter" font-size="14" font-weight="400" fill="#F5F4EB" opacity="0.8">and connection and protection panels, specified to</text>
+      <text id="Card-Note-line-9" x="1442" y="729.59" font-family="Inter" font-size="14" font-weight="400" fill="#F5F4EB" opacity="0.8">suit the site.</text>
     </g>
   </g>
   <g id="Footer">
-    <path id="Footer-Rule" d="M 96 1000 L 1824 1000" fill="none" stroke="#D9DCCF" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
-    <text id="Footer-Section" x="96" y="1033.46" font-family="Inter" font-size="15" font-weight="400" fill="#5A7175">System components</text>
-    <text id="Footer-Page" x="1824" y="1033.46" font-family="Inter" font-size="15" font-weight="500" fill="#5A7175" text-anchor="end">03 / 08</text>
+    <path id="Footer-Rule" d="M 80 1000 L 1840 1000" fill="none" stroke="#D9DCCF" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+    <g id="Footer-Wordmark">
+      <path id="Letter-A" d="M 83.52 1035.12 L 85.12 1031.92 L 90.56 1031.92 L 95.68 1024.4 L 105.92 1035.76" fill="none" stroke="#053C45" stroke-width="4.32" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Letter-F" d="M 111.76 1035.84 L 111.76 1027.68 C 111.76 1025.78 113.3 1024.24 115.2 1024.24 L 128.72 1024.24 M 111.76 1030 L 125.76 1030" fill="none" stroke="#053C45" stroke-width="4.32" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Letter-Q" d="M 134.48 1027.76 C 134.48 1025.77 136.09 1024.16 138.08 1024.16 L 148.8 1024.16 C 150.79 1024.16 152.4 1025.77 152.4 1027.76 L 152.4 1032.24 C 152.4 1034.23 150.79 1035.84 148.8 1035.84 L 138.08 1035.84 C 136.09 1035.84 134.48 1034.23 134.48 1032.24 Z M 150.08 1035.12 L 155.2 1038.64" fill="none" stroke="#053C45" stroke-width="4.32" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <path id="Footer-Divider" d="M 180 1020 L 180 1040" fill="none" stroke="#053C45" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" opacity="0.35"/>
+    <text id="Footer-Profile" x="196" y="1033.64" font-family="Inter" font-size="10" font-weight="500" fill="#053C45" letter-spacing="2.2" opacity="0.8">CORPORATE PROFILE 2026</text>
+    <text id="Footer-Section" x="1802.2" y="1033.64" font-family="Inter" font-size="10" font-weight="500" fill="#053C45" letter-spacing="2.2" text-anchor="end" opacity="0.8">SYSTEM COMPONENTS   |   03</text>
   </g>
 </svg>
