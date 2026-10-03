@@ -143,7 +143,7 @@ function __main() {
     };
     // AFAQ wordmark (4 letters A-F-A-Q), traced from the master artwork at 1879x336 px.
     // Figures below are on a 755-wide master so the existing construction maths keeps its scale.
-    const LOGO = {"w": 755, "h": 135.01, "base": 124.56, "qx": 555.3, "qw": 199.7, "cx": 589.86, "cy": 28.93, "cw": 118.94, "ch": 79.56, "ratio": "5.59 : 1", "nat": {"w": 1879, "h": 336}};
+    const LOGO = {"w": 755, "h": 135.01, "base": 124.56, "qx": 555.3, "qw": 199.7, "cx": 589.84, "cy": 28.90, "cw": 100.67, "ch": 60.69, "ratio": "5.59 : 1", "nat": {"w": 1879, "h": 336}};
     LOGO.path = "M 1831.78 334.97 C 1824.65 333.77 1816.66 329.69 1810.89 324.32 C 1808.04 321.67 1793.57 304.88 1778.73 287 C 1763.88 269.12 1750.34 253.23 1748.62 251.68 C 1746.9 250.13 1742.58 247.43 1739 245.68 C 1732.88 242.68 1731.86 242.5 1721.5 242.53 C 1704.42 242.57 1703.26 243.28 1677 269.85 C 1653.98 293.13 1650.25 295.88 1636.79 299.38 C 1629.32 301.33 1505.21 302.77 1487.86 301.11 C 1465.98 299.01 1448.84 293.07 1431.55 281.56 C 1413.96 269.86 1400.79 254.76 1391.51 235.63 C 1382.08 216.21 1382.5 220.25 1382.5 150 C 1382.5 80.67 1382.21 83.73 1390.39 66.47 C 1402.21 41.51 1422.52 20.71 1446.5 9 C 1465.22 -0.14 1453 0.62 1587.5 0.22 C 1673.76 -0.04 1708.98 0.18 1715.5 1.02 C 1754.86 6.09 1790.02 37.57 1801.67 78.16 L 1804.35 87.5 L 1804.99 141 C 1805.55 187.66 1805.85 195.14 1807.33 199.5 C 1810.3 208.22 1807.42 204.81 1846.94 246.24 C 1877.5 278.26 1878.5 279.86 1878.5 296.4 C 1878.49 306.9 1878.32 307.83 1875.35 313.52 C 1869.65 324.43 1858.51 332.69 1846.53 334.91 C 1840 336.12 1838.63 336.12 1831.78 334.97 Z M 575.26 308.46 C 563.09 305.18 551.14 296.09 545.41 285.75 L 542.5 280.5 L 542.5 197.47 C 542.5 117.77 542.58 114.26 544.42 109.97 C 546.64 104.81 549.18 101.39 572.91 71.5 C 620.66 11.37 617.97 14.37 629.5 8.54 C 643.25 1.6 635.84 1.94 767.09 2.23 L 885.5 2.5 L 890.39 5 C 898.19 8.98 903.55 14.38 907.45 22.18 C 910.66 28.59 911 30.06 911 37.55 C 911 43.66 910.43 47.32 908.8 51.57 C 905.74 59.56 897.85 67.87 889.78 71.6 L 883.5 74.5 L 781.5 75.01 C 668.46 75.58 678.35 74.97 664.72 82.23 C 649.54 90.32 633.31 113.29 634.2 125.41 L 634.5 129.5 L 733 130 L 831.5 130.5 L 836.77 133.42 C 848.92 140.15 855.59 151.71 854.72 164.5 C 854.46 168.37 853.33 173.58 852.2 176.15 C 849.14 183.1 840.62 191.25 833.68 193.85 C 827.95 195.99 827.53 196 741.01 196 C 680.71 196 652.5 196.34 648.88 197.12 C 644.77 198 642.67 199.23 638.95 202.95 C 632.46 209.44 632 212.26 632 245.44 C 632 270.09 631.8 273.44 629.97 279.35 C 623.26 301.08 597.92 314.56 575.26 308.46 Z M 858.27 307.64 C 839.44 300.47 828.96 281.95 832.93 262.84 C 834.35 256 837.42 251.42 864 216.36 C 879.12 196.43 884.81 189.68 889.35 186.34 C 898.52 179.57 901.65 179 930 179 C 957.22 179 963.53 178.24 972.75 173.87 C 982.13 169.41 989.37 161.94 1005.85 139.69 C 1030.33 106.64 1052.8 76.19 1074.25 47 C 1097.02 16 1103.59 8.8 1113.62 3.87 C 1120.19 0.63 1120.92 0.5 1132 0.5 C 1143.12 0.5 1143.8 0.63 1150.52 3.92 C 1157.84 7.51 1167.21 16 1172.14 23.5 C 1174.31 26.79 1211.15 80.46 1231.51 110 C 1234.36 114.12 1250.78 137.98 1268.02 163 C 1285.25 188.02 1305.87 217.95 1313.84 229.5 C 1332.12 256 1333.47 258.8 1333.44 270.01 C 1333.42 277.37 1333 279.4 1330.37 285.01 C 1325.09 296.26 1315.42 304.36 1303.54 307.45 C 1289.66 311.06 1275.34 307.9 1265.65 299.09 C 1264.08 297.67 1257.59 289.3 1251.21 280.5 C 1244.84 271.7 1237.31 261.35 1234.47 257.5 C 1231.64 253.65 1219.79 237.39 1208.16 221.36 C 1196.52 205.34 1185.14 190.55 1182.87 188.5 C 1180.6 186.45 1176.21 183.58 1173.12 182.14 L 1167.5 179.5 L 1085.33 179.72 C 1007.03 179.93 1002.93 180.03 998.11 181.86 C 990.14 184.89 983.62 190.38 976.21 200.31 C 966.47 213.34 932.57 258.9 920.27 275.5 C 906.47 294.11 899.43 301.18 890.14 305.78 C 883.54 309.04 881.81 309.45 873.64 309.71 C 865.97 309.96 863.5 309.63 858.27 307.64 Z M 29.5 307.68 C 17.81 304.68 8.13 296.78 3.16 286.18 C 0.84 281.22 0.5 279.24 0.5 270.5 C 0.5 263.96 1.01 259.29 1.97 257 C 3.51 253.34 46.91 194.94 52.36 189.19 C 54.09 187.37 58.41 184.45 61.97 182.69 L 68.45 179.5 L 98.47 178.9 C 125.85 178.36 129.02 178.11 134.42 176.15 C 141.55 173.55 148.4 169.28 152.61 164.81 C 154.32 162.99 177.98 131.8 205.19 95.5 C 232.39 59.2 257.46 25.77 260.9 21.2 C 271.85 6.66 279.86 2.64 298 2.55 C 308.85 2.5 309.87 2.68 316 5.6 C 324.78 9.78 331.1 15.75 339.83 28.12 C 348.81 40.86 371.07 72.68 401.98 117 C 414.83 135.43 431.48 159.27 438.97 170 C 446.47 180.73 461.99 202.95 473.47 219.39 C 485.42 236.49 495.43 251.89 496.87 255.39 C 498.87 260.23 499.41 263.27 499.45 270 C 499.49 277.49 499.13 279.27 496.41 285 C 492.43 293.36 488.92 297.45 481.69 302.12 C 473.32 307.53 463.11 309.69 453.17 308.14 C 437.81 305.75 433.78 302.46 415.72 277.54 C 408.53 267.62 401.43 257.93 399.96 256 C 398.48 254.07 387.67 239.23 375.94 223 C 364.2 206.77 352.78 191.75 350.55 189.62 C 348.32 187.48 343.57 184.33 340 182.62 L 333.5 179.5 L 255.31 179.22 C 188.06 178.97 176.19 179.14 170.53 180.46 C 162.24 182.38 156.98 185.06 151.41 190.19 C 149 192.41 132.28 214.05 114.26 238.27 C 96.24 262.49 78.91 285.61 75.74 289.65 C 69.13 298.08 62.82 303.09 55.1 306.03 C 48.33 308.61 36.17 309.39 29.5 307.68 Z M 1681.87 221.55 C 1696.19 217.73 1708.47 207.89 1714.75 195.18 L 1718.5 187.6 L 1718.5 148.05 L 1718.5 108.5 L 1715.71 102.53 C 1709.66 89.61 1699.15 79.99 1685.32 74.72 L 1679.5 72.5 L 1596 72.22 L 1512.5 71.93 L 1504.37 74.46 C 1489.87 78.97 1478.19 88.77 1471.77 101.81 L 1468.5 108.45 L 1468.22 146.74 C 1467.97 179.68 1468.16 185.7 1469.53 189.77 C 1474.47 204.41 1486.82 216.17 1502 220.67 C 1509.48 222.89 1509.67 222.89 1593 222.93 C 1662.31 222.97 1677.41 222.73 1681.87 221.55 Z";
     const NAT = { logo: [LOGO.w, LOGO.h], ribbonHero: [600, 760], ribbonBand: [595, 170], ribbonSweep: [360, 420], illusSunset: [900, 1100], illusAerial: [1100, 800], illusBess: [1100, 800], illusVilla: [1100, 800], illusGrid: [1100, 800] };
     const STYLE_SPEC = {
@@ -932,13 +932,23 @@ function __main() {
     __GUIDE_PAGE = pg;
     return await pg;
   }
-  // Rewrites the Brand Kit logo components (deep / paper / lime) and the two lockups with the 4-letter AFAQ
-  // wordmark. Every instance in the file (Brand Kit, profile, guideline slides) follows automatically.
+  // Rewrites the Brand Kit logo components (deep / paper / lime) with the 4-letter AFAQ wordmark, re-flows the two
+  // lockup components, then re-fits every logo / lockup instance in the file to the new proportion (an instance that
+  // was scaled carries a size override and does not follow its master on its own). Safe to re-run: heights are
+  // measured before anything changes, so a second run moves nothing.
   async function step_logo() {
     await null;
     const L = K.LOGO, out = {};
+    const ratio = L.nat.h / L.nat.w;
+    const fitH = (w) => Math.round(w * ratio * 100) / 100;
     const tones = [[K.ID.logoDeep, "deep"], [K.ID.logoPaper, "paper"], [K.ID.logoLime, "lime"]];
-    const compIds = new Set();
+    const lockupDefs = [[K.ID.lockupDeep, "Lockup (deep)", "deep"], [K.ID.lockupPaper, "Lockup (paper)", "paper"]];
+    const isAuto = (n) => "layoutMode" in n && n.layoutMode && n.layoutMode !== "NONE";
+    const mainOf = async (inst) => {
+      try { return await inst.getMainComponentAsync(); } catch (e) { return null; }
+    };
+    // 1. resolve the masters and measure the lockups BEFORE anything is rewritten
+    const comps = [], compIds = new Set();
     for (const [id, tone] of tones) {
       const comp = await __getNode(id);
       if (!comp || comp.type !== "COMPONENT") {
@@ -946,7 +956,32 @@ function __main() {
         out.__warn = true;
         continue;
       }
-      const w = comp.width > 10 ? comp.width : L.w, h = Math.round(w * L.nat.h / L.nat.w * 100) / 100;
+      comps.push([id, tone, comp]);
+      compIds.add(comp.id);
+    }
+    const findInst = async (lk) => {
+      for (const c of lk.children) {
+        if (c.type !== "INSTANCE") continue;
+        const mc = await mainOf(c);
+        if (mc && compIds.has(mc.id)) return c;
+      }
+      return null;
+    };
+    const lockups = [], prevH = new Map();
+    for (const [id, label, tone] of lockupDefs) {
+      const lk = await __getNode(id);
+      if (!lk || lk.type !== "COMPONENT") {
+        out[id] = label + ": " + (lk ? "found a " + lk.type : "missing") + " — skipped";
+        out.__warn = true;
+        continue;
+      }
+      lockups.push([id, label, tone, lk]);
+      const i = await findInst(lk);
+      if (i) prevH.set(i.id, i.height);
+    }
+    // 2. rewrite the three masters (same width as before, new height)
+    for (const [id, tone, comp] of comps) {
+      const w = comp.width > 10 ? comp.width : L.w, h = fitH(w);
       for (const c of [...comp.children]) c.remove();
       comp.resizeWithoutConstraints(w, h);
       comp.clipsContent = false;
@@ -956,40 +991,34 @@ function __main() {
       v.y = 0;
       try { v.constraints = { horizontal: "SCALE", vertical: "SCALE" }; } catch (e) {}
       try { comp.description = "AFAQ wordmark (" + tone + "). Master artwork, four letters A-F-A-Q, proportion " + L.ratio + ". Do not redraw."; } catch (e) {}
-      compIds.add(comp.id);
       out[id] = comp.name + " → AFAQ wordmark " + Math.round(w) + " \xD7 " + Math.round(h) + " (" + tone + ")";
     }
-    const isAuto = (n) => "layoutMode" in n && n.layoutMode && n.layoutMode !== "NONE";
-    for (const [id, label, fallbackTone] of [[K.ID.lockupDeep, "Lockup (deep)", "deep"], [K.ID.lockupPaper, "Lockup (paper)", "paper"]]) {
-      const lk = await __getNode(id);
-      if (!lk || lk.type !== "COMPONENT") {
-        out[id] = label + ": " + (lk ? "found a " + lk.type : "missing") + " — skipped";
-        out.__warn = true;
-        continue;
-      }
-      let inst = null;
-      for (const c of lk.children) {
-        if (c.type !== "INSTANCE") continue;
-        let mc = null;
-        try { mc = await c.getMainComponentAsync(); } catch (e) { mc = c.mainComponent; }
-        if (mc && compIds.has(mc.id)) { inst = c; break; }
-      }
+    // 3. lockups: re-fit the nested logo instance (or replace a drawn logo layer) and close the gap below it
+    const reflow = (lk, node, oldH) => {
+      const delta = Math.round((oldH - node.height) * 100) / 100;
+      if (isAuto(lk) || delta <= 0.5) return delta;
+      const bottom = node.y + oldH;
+      for (const c of lk.children) if (c !== node && c.y >= bottom - 1) c.y -= delta;
+      lk.resizeWithoutConstraints(lk.width, Math.max(node.height, lk.height - delta));
+      return delta;
+    };
+    for (const [id, label, tone, lk] of lockups) {
+      const inst = await findInst(lk);
       if (inst) {
-        if (isAuto(lk)) { out[id] = label + ": logo instance follows the component; auto-layout reflowed"; continue; }
-        const oldH = inst.width * 185 / 755, delta = Math.round((oldH - inst.height) * 100) / 100;
-        if (delta > 0.5) {
-          const bottom = inst.y + oldH;
-          for (const c of lk.children) if (c !== inst && c.y >= bottom - 1) c.y -= delta;
-          lk.resizeWithoutConstraints(lk.width, Math.max(inst.height, lk.height - delta));
-        }
-        out[id] = label + ": logo instance follows the component; layers below moved up by " + delta + " px";
+        const oldH = prevH.has(inst.id) ? prevH.get(inst.id) : inst.height;
+        const newH = fitH(inst.width);
+        if (Math.abs(inst.height - newH) > 0.05) { try { inst.resize(inst.width, newH); } catch (e) {} }
+        const delta = reflow(lk, inst, oldH);
+        out[id] = label + ": logo instance re-fitted to " + L.ratio + (isAuto(lk) ? "; auto-layout reflowed" : "; layers below moved up by " + delta + " px");
         continue;
       }
-      const cands = lk.children.filter((c) => /logo|afq|afaq|wordmark/i.test(c.name) || c.type === "VECTOR" || c.type === "BOOLEAN_OPERATION" || c.type === "GROUP")
-        .sort((a, b) => b.width * b.height - a.width * a.height);
+      const named = (c) => /logo|afq|afaq|wordmark/i.test(c.name);
+      const cands = lk.children.filter((c) => named(c) || c.type === "VECTOR" || c.type === "BOOLEAN_OPERATION" || c.type === "GROUP")
+        .sort((a, b) => (named(b) ? 1e9 : 0) + b.width * b.height - ((named(a) ? 1e9 : 0) + a.width * a.height));
       const old = cands[0];
       if (!old) { out[id] = label + ": no logo layer found — left as is"; out.__warn = true; continue; }
-      const fills = "fills" in old && Array.isArray(old.fills) && old.fills.length ? old.fills : [K.paint(fallbackTone)];
+      if (old.name === "AFAQ Wordmark") { out[id] = label + ": already converted"; continue; }
+      const fills = "fills" in old && Array.isArray(old.fills) && old.fills.length ? old.fills : [K.paint(tone)];
       const w = old.width, x = old.x, y = old.y, oldH = old.height, idx = lk.children.indexOf(old);
       const v = K.vector(lk, L.path, L.nat.w, L.nat.h, null, { name: "AFAQ Wordmark" });
       v.rescale(w / v.width);
@@ -998,12 +1027,32 @@ function __main() {
       v.y = y;
       lk.insertChild(idx, v);
       old.remove();
-      const delta = Math.round((oldH - v.height) * 100) / 100;
-      if (!isAuto(lk) && delta > 0.5) {
-        for (const c of lk.children) if (c !== v && c.y >= y + oldH - 1) c.y -= delta;
-        lk.resizeWithoutConstraints(lk.width, Math.max(v.height, lk.height - delta));
+      const delta = reflow(lk, v, oldH);
+      out[id] = label + ': replaced layer "' + old.name + '" with the AFAQ wordmark (' + Math.round(w) + " px wide); layers below moved up by " + delta + " px";
+    }
+    // 4. every instance of a logo or lockup master anywhere in the file: fit the height to the master's proportion
+    if (comps.length) {
+      try {
+        await figma.loadAllPagesAsync();
+        const masters = new Map();
+        for (const [, , comp] of comps) masters.set(comp.id, comp.height / comp.width);
+        for (const [, , , lk] of lockups) masters.set(lk.id, lk.height / lk.width);
+        const inInstance = (n) => { for (let p = n.parent; p; p = p.parent) if (p.type === "INSTANCE") return true; return false; };
+        let seen = 0, fixed = 0;
+        for (const inst of figma.root.findAllWithCriteria({ types: ["INSTANCE"] })) {
+          if (inInstance(inst)) continue;
+          const mc = await mainOf(inst);
+          if (!mc || !masters.has(mc.id)) continue;
+          seen++;
+          const target = Math.round(inst.width * masters.get(mc.id) * 100) / 100;
+          if (Math.abs(inst.height - target) <= 0.5) continue;
+          try { inst.resize(inst.width, target); fixed++; } catch (e) {}
+        }
+        out.instances = seen + " logo/lockup instance(s) in the file, " + fixed + " re-fitted to the new proportion";
+      } catch (e) {
+        out.instances = "instance pass skipped: " + __S1(e);
+        out.__warn = true;
       }
-      out[id] = label + ': replaced layer "' + old.name + '" with the AFAQ wordmark (' + Math.round(w) + " px wide)";
     }
     return await out;
   }
@@ -1396,7 +1445,7 @@ function __main() {
     const fr = { x: Math.round(lx - X), y: Math.round(ly - X), w: Math.round(LW + 2 * X), h: Math.round(LH + 2 * X) };
     for (const [n, x, y, w, h] of [["top", fr.x, fr.y, fr.w, 1], ["bottom", fr.x, fr.y + fr.h - 1, fr.w, 1], ["left", fr.x, fr.y, 1, fr.h], ["right", fr.x + fr.w - 1, fr.y, 1, fr.h]])
       K.rect(panel, { name: "Clear space / " + n, x, y, w, h, fill: "deep", fillOpacity: 0.55 });
-    K.rect(panel, { name: "Q counter (x)", x: lx + 548 * s, y: ly + 39.8 * s, w: 123 * s, h: X, fill: "lime" });
+    K.rect(panel, { name: "Q counter (x)", x: lx + K.LOGO.cx * s, y: ly + K.LOGO.cy * s, w: K.LOGO.cw * s, h: X, fill: "lime" });
     await K.logo(panel, "deep", { name: "AFAQ Logo / Deep", w: LW, x: lx, y: ly });
     async function dim(host, x, y, len, vertical, name) {
       await null;
@@ -1553,7 +1602,7 @@ function __main() {
         mid.resize(Math.round(d.x + d.width), Math.round(lk.height));
       } else {
         const lg = await K.logo(mid, "deep", { name: "AFAQ Logo / Deep", w: 250, x: 0, y: 0 });
-        const d = await K.descriptor(mid, "lime", { name: "Descriptor / On lime", h: Math.round(lg.height * 1.15), x: Math.round(lg.width + 28), y: 0 });
+        const d = await K.descriptor(mid, "lime", { name: "Descriptor / On lime", h: Math.round(lg.width * 0.28), x: Math.round(lg.width + 28), y: 0 });
         lg.y = Math.round((d.height - lg.height) / 2);
         mid.resize(Math.round(d.x + d.width), Math.round(d.height));
       }
@@ -2697,7 +2746,7 @@ function __main() {
       audit: K.audit(F)
     };
   }
-  return { steps: [["Environment check", step_env], ["Logo artwork \u2192 AFAQ", step_logo], ["Illustrations -> components", step_assets], ["Guidelines page", step_page], ["Fonts + text styles", step_init], ["G01 - Cover", step_g01], ["G02 - Contents", step_g02], ["G03 - Brand platform", step_g03], ["G04 - Logotype", step_g04], ["G05 - Logo construction", step_g05], ["G06 - Logo lockups", step_g06], ["G07 - Logo on backgrounds", step_g07], ["G08 - Colour system", step_g08], ["G09 - Typography", step_g09], ["G10 - Brand elements", step_g10], ["G11 - Iconography", step_g11], ["G12 - Tone & mood", step_g12], ["G13 - Photography", step_g13], ["G14 - Social \u2014 Instagram", step_g14], ["G15 - Social \u2014 Posts", step_g15], ["G16 - Social \u2014 X & LinkedIn", step_g16], ["G17 - Applications", step_g17], ["G18 - Back cover", step_g18], ["Arrange slides", step_arrange]], fx: function() {
+  return { steps: [["Environment check", step_env], ["Illustrations -> components", step_assets], ["Guidelines page", step_page], ["Fonts + text styles", step_init], ["Logo artwork \u2192 AFAQ", step_logo], ["G01 - Cover", step_g01], ["G02 - Contents", step_g02], ["G03 - Brand platform", step_g03], ["G04 - Logotype", step_g04], ["G05 - Logo construction", step_g05], ["G06 - Logo lockups", step_g06], ["G07 - Logo on backgrounds", step_g07], ["G08 - Colour system", step_g08], ["G09 - Typography", step_g09], ["G10 - Brand elements", step_g10], ["G11 - Iconography", step_g11], ["G12 - Tone & mood", step_g12], ["G13 - Photography", step_g13], ["G14 - Social \u2014 Instagram", step_g14], ["G15 - Social \u2014 Posts", step_g15], ["G16 - Social \u2014 X & LinkedIn", step_g16], ["G17 - Applications", step_g17], ["G18 - Back cover", step_g18], ["Arrange slides", step_arrange]], fx: function() {
     return K.fxErrors();
   } };
 }
