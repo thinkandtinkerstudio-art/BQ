@@ -1,0 +1,91 @@
+{
+  "brand": "ROVA SKIN",
+  "sizes_mm": {
+    "portrait": { "w": 60, "h": 90 },
+    "landscape": { "w": 90, "h": 60 },
+    "bleed": 3,
+    "safe": 5,
+    "corner_radius": 3
+  },
+  "field_rotation": ["burgundy", "rose", "ivory"],
+  "products": [
+    {
+      "id": "01-renew",
+      "step": "01",
+      "step_name": "RENEW",
+      "arabic": "المقشر",
+      "name": "THE RENEWAL",
+      "descriptor": "Overnight Peel",
+      "actives": null,
+      "benefits": "RENEW · SMOOTH · BRIGHTEN",
+      "benefits_style": "caps",
+      "size": "10 g",
+      "field": "burgundy"
+    },
+    {
+      "id": "02-repair",
+      "step": "02",
+      "step_name": "REPAIR",
+      "arabic": "كريم السيكا",
+      "name": "CICA RECOVERY CREAM",
+      "descriptor": "Soothing & Repair Cream",
+      "actives": null,
+      "benefits": "SOOTHE · REPAIR · RESTORE",
+      "benefits_style": "caps",
+      "size": "50 ml",
+      "field": "rose"
+    },
+    {
+      "id": "03-correct",
+      "step": "03",
+      "step_name": "CORRECT",
+      "arabic": "كريم التفتيح",
+      "name": "THE CORRECTOR",
+      "descriptor": "Brightening Cream",
+      "actives": "TRANEXAMIC ACID · ALPHA-ARBUTIN · NIACINAMIDE",
+      "benefits": "Even Tone · Radiance",
+      "benefits_style": "italic",
+      "size": "50 ml",
+      "field": "ivory"
+    },
+    {
+      "id": "04-hydrate",
+      "step": "04",
+      "step_name": "HYDRATE",
+      "arabic": "المرطب",
+      "name": "THE HYDRATOR",
+      "descriptor": "Barrier Moisturizer Cream",
+      "actives": "PANTHENOL · HYALURONIC ACID · GLYCERIN",
+      "benefits": "Hydrate · Protect · Nourish",
+      "benefits_style": "italic",
+      "size": "50 ml",
+      "field": "burgundy"
+    },
+    {
+      "id": "05-glow",
+      "step": "05",
+      "step_name": "GLOW",
+      "arabic": "سيروم النضارة",
+      "name": "THE GLOW",
+      "descriptor": "Radiance Serum",
+      "actives": "VITAMIN C · NIACINAMIDE 10% · HYALURONIC ACID",
+      "benefits": "Glow · Hydrate · Radiance",
+      "benefits_style": "italic",
+      "size": "30 ml",
+      "field": "rose"
+    },
+    {
+      "id": "06-gift",
+      "step": null,
+      "step_name": "GIFT",
+      "arabic": "الهدية",
+      "name": "LIP GLOSS",
+      "descriptor": null,
+      "actives": null,
+      "benefits": "NOURISH · SHINE",
+      "benefits_style": "caps",
+      "size": "5 ml",
+      "field": "ivory"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+[
+ {
+  "id": "01-renew",
+  "orientation": "portrait",
+  "svg": "stickers/portrait/01-renew-60x90.svg",
+  "field": "burgundy"
+ },
+ {
+  "id": "02-repair",
+  "orientation": "portrait",
+  "svg": "stickers/portrait/02-repair-60x90.svg",
+  "field": "rose"
+ },
+ {
+  "id": "03-correct",
+  "orientation": "portrait",
+  "svg": "stickers/portrait/03-correct-60x90.svg",
+  "field": "ivory"
+ },
+ {
+  "id": "04-hydrate",
+  "orientation": "portrait",
+  "svg": "stickers/portrait/04-hydrate-60x90.svg",
+  "field": "burgundy"
+ },
+ {
+  "id": "05-glow",
+  "orientation": "portrait",
+  "svg": "stickers/portrait/05-glow-60x90.svg",
+  "field": "rose"
+ },
+ {
+  "id": "06-gift",
+  "orientation": "portrait",
+  "svg": "stickers/portrait/06-gift-60x90.svg",
+  "field": "ivory"
+ },
+ {
+  "id": "01-renew",
+  "orientation": "landscape",
+  "svg": "stickers/landscape/01-renew-90x60.svg",
+  "field": "burgundy"
+ },
+ {
+  "id": "02-repair",
+  "orientation": "landscape",
+  "svg": "stickers/landscape/02-repair-90x60.svg",
+  "field": "rose"
+ },
+ {
+  "id": "03-correct",
+  "orientation": "landscape",
+  "svg": "stickers/landscape/03-correct-90x60.svg",
+  "field": "ivory"
+ },
+ {
+  "id": "04-hydrate",
+  "orientation": "landscape",
+  "svg": "stickers/landscape/04-hydrate-90x60.svg",
+  "field": "burgundy"
+ },
+ {
+  "id": "05-glow",
+  "orientation": "landscape",
+  "svg": "stickers/landscape/05-glow-90x60.svg",
+  "field": "rose"
+ },
+ {
+  "id": "06-gift",
+  "orientation": "landscape",
+  "svg": "stickers/landscape/06-gift-90x60.svg",
+  "field": "ivory"
+ }
+]
