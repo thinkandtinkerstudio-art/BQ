@@ -994,9 +994,10 @@ function __main() {
       out[id] = comp.name + " → AFAQ wordmark " + Math.round(w) + " \xD7 " + Math.round(h) + " (" + tone + ")";
     }
     // 3. lockups: re-fit the nested logo instance (or replace a drawn logo layer) and close the gap below it
+    const moved = (d) => Math.abs(d) <= 0.5 ? "no reflow needed" : "layers below moved " + (d > 0 ? "up" : "down") + " by " + Math.abs(d) + " px";
     const reflow = (lk, node, oldH) => {
       const delta = Math.round((oldH - node.height) * 100) / 100;
-      if (isAuto(lk) || delta <= 0.5) return delta;
+      if (isAuto(lk) || Math.abs(delta) <= 0.5) return delta;
       const bottom = node.y + oldH;
       for (const c of lk.children) if (c !== node && c.y >= bottom - 1) c.y -= delta;
       lk.resizeWithoutConstraints(lk.width, Math.max(node.height, lk.height - delta));
@@ -1009,7 +1010,7 @@ function __main() {
         const newH = fitH(inst.width);
         if (Math.abs(inst.height - newH) > 0.05) { try { inst.resize(inst.width, newH); } catch (e) {} }
         const delta = reflow(lk, inst, oldH);
-        out[id] = label + ": logo instance re-fitted to " + L.ratio + (isAuto(lk) ? "; auto-layout reflowed" : "; layers below moved up by " + delta + " px");
+        out[id] = label + ": logo instance re-fitted to " + L.ratio + (isAuto(lk) ? "; auto-layout reflowed" : "; " + moved(delta));
         continue;
       }
       const named = (c) => /logo|afq|afaq|wordmark/i.test(c.name);
@@ -1019,16 +1020,17 @@ function __main() {
       if (!old) { out[id] = label + ": no logo layer found — left as is"; out.__warn = true; continue; }
       if (old.name === "AFAQ Wordmark") { out[id] = label + ": already converted"; continue; }
       const fills = "fills" in old && Array.isArray(old.fills) && old.fills.length ? old.fills : [K.paint(tone)];
-      const w = old.width, x = old.x, y = old.y, oldH = old.height, idx = lk.children.indexOf(old);
+      const w = old.width, x = old.x, y = old.y, oldH = old.height, oldName = old.name, idx = lk.children.indexOf(old);
       const v = K.vector(lk, L.path, L.nat.w, L.nat.h, null, { name: "AFAQ Wordmark" });
       v.rescale(w / v.width);
       v.fills = fills;
       v.x = x;
       v.y = y;
+      try { v.constraints = { horizontal: "SCALE", vertical: "SCALE" }; } catch (e) {}
       lk.insertChild(idx, v);
       old.remove();
       const delta = reflow(lk, v, oldH);
-      out[id] = label + ': replaced layer "' + old.name + '" with the AFAQ wordmark (' + Math.round(w) + " px wide); layers below moved up by " + delta + " px";
+      out[id] = label + ': replaced layer "' + oldName + '" with the AFAQ wordmark (' + Math.round(w) + " px wide); " + moved(delta);
     }
     // 4. every instance of a logo or lockup master anywhere in the file: fit the height to the master's proportion
     if (comps.length) {
