@@ -1,0 +1,80 @@
+<style>
+  :root { --bg: var(--figma-color-bg, #fff); --fg: var(--figma-color-text, #1e2a26); --muted: var(--figma-color-text-secondary, #5b6662); --line: var(--figma-color-border, #e5e5e5); }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 12px/1.45 Inter, system-ui, sans-serif; background: var(--bg); color: var(--fg); }
+  header { display: flex; align-items: center; gap: 10px; padding: 14px 16px; background: #01434F; color: #F6F5EC; }
+  header .dot { width: 10px; height: 10px; border-radius: 5px; background: #C7FB5F; flex: none; }
+  header h1 { margin: 0; font-size: 13px; font-weight: 600; }
+  header p { margin: 0; font-size: 11px; opacity: .75; }
+  #hint { margin: 10px 16px 0; padding: 8px 10px; border-radius: 6px; background: #FFF4EC; color: #7a3a10; display: none; }
+  ol { list-style: none; margin: 0; padding: 8px 16px 72px; }
+  li { padding: 8px 0; border-bottom: 1px solid var(--line); }
+  li.sub { padding: 4px 0 4px 18px; border-bottom: 0; }
+  li.sub .name { font-weight: 500; }
+  .row { display: flex; align-items: center; gap: 8px; }
+  .st { flex: none; min-width: 52px; text-align: center; font-size: 10px; font-weight: 600; padding: 2px 6px; border-radius: 8px; background: #EBE8DE; color: #1E2A26; }
+  .ok .st { background: #C7FB5F; color: #01434F; }
+  .error .st { background: #FE7D25; color: #fff; }
+  .warn .st { background: #FFE2A8; color: #5a3a00; }
+  .run .st { background: #E4FDB2; color: #01434F; }
+  .name { font-weight: 600; }
+  details { margin-top: 4px; color: var(--muted); }
+  details pre { white-space: pre-wrap; word-break: break-word; font-size: 10px; margin: 4px 0 0; max-height: 160px; overflow: auto; user-select: text; }
+  footer { position: fixed; left: 0; right: 0; bottom: 0; padding: 10px 16px; background: var(--bg); border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+  footer span { color: var(--muted); flex: 1; }
+  button { border: 0; border-radius: 6px; padding: 7px 12px; background: #01434F; color: #F6F5EC; font-weight: 600; cursor: pointer; flex: none; }
+  button.ghost { background: #EBE8DE; color: #01434F; }
+  textarea.copy { position: fixed; left: -9999px; top: 0; }
+</style>
+<header><div class="dot"></div><div><h1>AFAQ Brand Guidelines Builder</h1><p>Building the brand-guideline slides in this file…</p></div></header>
+<div id="hint"></div>
+<ol id="log"></ol>
+<footer><span id="sum">Starting…</span><button id="copy" class="ghost">Copy log</button><button id="close">Close</button></footer>
+<script>
+  var log = document.getElementById('log');
+  var sum = document.getElementById('sum');
+  var hint = document.getElementById('hint');
+  var rows = {};
+  var lines = [];
+  var gotMessage = false;
+  var LABEL = { run: 'running', ok: 'done', error: 'error', warn: 'note' };
+  setTimeout(function () {
+    if (!gotMessage) { hint.style.display = 'block'; hint.textContent = 'No report from the plugin code yet. If this stays empty, run "AFAQ Plugin Doctor" and send a screenshot of its window.'; }
+  }, 8000);
+  onmessage = function (e) {
+    var m = e.data && e.data.pluginMessage; if (!m) return;
+    gotMessage = true; hint.style.display = 'none';
+    if (m.status !== 'run') lines.push('[' + (LABEL[m.status] || m.status) + '] ' + m.step + (m.detail ? '\n    ' + String(m.detail).split('\n').join('\n    ') : ''));
+    if (m.step === 'Done') { sum.textContent = m.detail; return; }
+    var li = rows[m.step];
+    if (!li) {
+      li = document.createElement('li');
+      li.innerHTML = '<div class="row"><span class="st"></span><span class="name"></span></div>';
+      li.querySelector('.name').textContent = m.step;
+      log.appendChild(li); rows[m.step] = li;
+    }
+    li.className = (m.status || '') + (m.sub ? ' sub' : '');
+    li.querySelector('.st').textContent = LABEL[m.status] || m.status;
+    if (m.status === 'run') sum.textContent = 'Running: ' + m.step;
+    if (m.detail) {
+      var d = li.querySelector('details');
+      if (!d) { d = document.createElement('details'); d.innerHTML = '<summary>Details</summary><pre></pre>'; li.appendChild(d); }
+      d.querySelector('pre').textContent = m.detail;
+      if (m.status === 'error' || m.status === 'warn') d.open = true;
+    }
+    li.scrollIntoView({ block: 'nearest' });
+  };
+  document.getElementById('copy').onclick = function () {
+    var ta = document.createElement('textarea'); ta.className = 'copy';
+    ta.value = document.querySelector('h1').textContent + '\n' + lines.join('\n') + '\n' + sum.textContent;
+    document.body.appendChild(ta); ta.select();
+    var ok = false; try { ok = document.execCommand('copy'); } catch (err) { ok = false; }
+    document.body.removeChild(ta);
+    this.textContent = ok ? 'Copied' : 'Copy failed';
+    var b = this; setTimeout(function () { b.textContent = 'Copy log'; }, 1500);
+  };
+  document.getElementById('close').onclick = function () {
+    this.textContent = 'Closing…';
+    parent.postMessage({ pluginMessage: { type: 'close' } }, '*');
+  };
+</script>

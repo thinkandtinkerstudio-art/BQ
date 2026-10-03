@@ -29,6 +29,7 @@
 | `assets/icons/` | 18 stroke icons (48-grid) used in the deck + `_icon-sheet.svg`. |
 | `assets/palette/` | `afaq-palette.svg` sheet, `afaq-palette.ase` (Illustrator swatches), `palette.json`. |
 | `fonts/` | Inter Light / Regular / Medium / Semi Bold (SIL OFL). Install before opening in Illustrator. |
+| `figma-plugin/afaq-brand-guidelines/` | The client's **Brand Guidelines Builder** Figma plugin (18 slides, 1920 × 1080) patched so its logo step rewrites the Brand Kit logo components with the 4-letter **AFAQ** wordmark; `assets/afaq-wordmark.svg` is the traced master. |
 | `figma/` | `figma-build.js` (Plugin-API builder), `scripter-build-all.js` (paste-and-run, all 8 slides), `slides/slide-0X.js` (one self-contained script per slide for the Figma MCP `use_figma` tool, each under 50 k chars). |
 | `spec/deck-spec.json` | The single source of truth: every element, position, size, colour and text of every page. |
 | `tools/` | `deck.py` (spec → SVG + assets + JSON + Figma scripts), `render.sh` (SVG → PNG), `lint_svgs.py` (import-safety, bounds and spec-sync checks). |
@@ -105,6 +106,6 @@ The portrait deck follows the client's layout board (`source/brand-references/af
 
 ## Open questions
 
-1. **Wordmark AFQ vs AFAQ.** The boards spell the mark AFQ; the copy says AFAQ. The deck follows the boards. Say the word and the second A is added to the lockup.
+1. ~~Wordmark AFQ vs AFAQ~~ — resolved: the client supplied the official 4-letter AFAQ artwork; both decks and the plugin now use it (traced vector, `assets/logo/`).
 2. **Slogan punctuation.** The PDF has no full stop after "Innovating today, sustaining tomorrow"; the boards end headlines with one. The deck keeps the PDF.
 3. **Photos.** Replace the three placeholder scenes (solar array, battery cabinets, transmission line) with real site photography when available; the slots are ready for image fills.
