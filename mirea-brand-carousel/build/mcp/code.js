@@ -615,7 +615,7 @@ function buildSlides(opt) {
 }
 // ─────────────────────────────────────────────────────────────────────────────
 // Figma plugin — sandbox side. Builds the MIREA brand-guidelines carousel
-// (11 frames, 1305 × 1631) from the shared scene (brand.ts + scene.ts).
+// (14 frames, 1305 × 1631) from the shared scene (brand.ts + scene.ts).
 // ─────────────────────────────────────────────────────────────────────────────
 const PANEL_WIDTH = 440;
 const RELAUNCH_COMMAND = 'bc0888f3-2b43-4bc8-89c1-abaf56262057';
