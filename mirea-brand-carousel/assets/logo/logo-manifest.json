@@ -1,0 +1,37 @@
+{
+  "mark": {
+    "name": "Symbol (laurel muse)",
+    "width": 231.83,
+    "height": 258.44,
+    "paths": 6,
+    "file": "mirea-mark.svg"
+  },
+  "stacked": {
+    "name": "Primary lockup (stacked)",
+    "width": 455.17,
+    "height": 431.36,
+    "paths": 22,
+    "file": "mirea-stacked.svg"
+  },
+  "horizontal": {
+    "name": "Horizontal lockup",
+    "width": 717.97,
+    "height": 258.45,
+    "paths": 22,
+    "file": "mirea-horizontal.svg"
+  },
+  "seal": {
+    "name": "Round seal",
+    "width": 635.55,
+    "height": 635.55,
+    "paths": 25,
+    "file": "mirea-seal.svg"
+  },
+  "badge": {
+    "name": "Oval badge (ESTD 2026)",
+    "width": 423.31,
+    "height": 639.25,
+    "paths": 30,
+    "file": "mirea-badge.svg"
+  }
+}

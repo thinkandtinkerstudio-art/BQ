@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  :root { color-scheme: light dark; }
+  html, body { margin: 0; padding: 0; }
+  body { font: 11px/1.45 Inter, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--figma-color-text, #222); background: var(--figma-color-bg, #fff); }
+  #plugin-root { padding: 14px 16px 12px; }
+  h1 { font-size: 13px; font-weight: 600; margin: 0 0 2px; letter-spacing: .02em; }
+  .sub { color: var(--figma-color-text-secondary, #666); margin: 0 0 12px; }
+  fieldset { border: 1px solid var(--figma-color-border, #e5e5e5); border-radius: 6px; padding: 8px 10px 10px; margin: 0 0 10px; }
+  legend { padding: 0 4px; color: var(--figma-color-text-secondary, #666); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; font-size: 10px; }
+  label { display: block; margin: 6px 0 2px; color: var(--figma-color-text-secondary, #666); }
+  input[type=text] { width: 100%; box-sizing: border-box; border: 1px solid var(--figma-color-border, #e5e5e5); background: var(--figma-color-bg-secondary, #f5f5f5); color: inherit; border-radius: 4px; padding: 5px 7px; font: inherit; }
+  input[type=text]:focus { outline: 1px solid var(--figma-color-border-selected, #0d99ff); }
+  .row { display: flex; gap: 8px; } .row > div { flex: 1; }
+  .check { display: flex; align-items: center; gap: 6px; margin-top: 6px; }
+  .check input { margin: 0; }
+  .hint { color: var(--figma-color-text-tertiary, #999); margin-top: 3px; }
+  .actions { display: flex; gap: 8px; align-items: center; margin: 4px 0 10px; }
+  button { font: inherit; font-weight: 600; border-radius: 6px; padding: 7px 14px; border: 1px solid var(--figma-color-border, #ddd); background: var(--figma-color-bg, #fff); color: inherit; cursor: pointer; }
+  button.primary { background: #7B5A41; color: #F9F8F3; border-color: #7B5A41; }
+  button.primary:disabled { opacity: .55; cursor: default; }
+  #log { border: 1px solid var(--figma-color-border, #e5e5e5); border-radius: 6px; max-height: 190px; overflow: auto; padding: 6px 8px; background: var(--figma-color-bg-secondary, #fafafa); }
+  .line { display: flex; gap: 8px; padding: 2px 0; border-bottom: 1px dashed var(--figma-color-border, #eee); }
+  .line:last-child { border-bottom: 0; }
+  .st { width: 44px; flex: none; font-weight: 600; text-transform: lowercase; }
+  .run .st { color: #0d99ff; } .done .st { color: #1f9d55; } .warn .st { color: #c98a10; } .error .st { color: #d33; }
+  .step { flex: none; width: 118px; font-weight: 600; }
+  .detail { color: var(--figma-color-text-secondary, #666); word-break: break-word; }
+  .swatches { display: flex; gap: 4px; margin: 8px 0 0; }
+  .swatches i { display: block; width: 100%; height: 6px; border-radius: 2px; }
+</style>
+</head>
+<body>
+<div id="plugin-root">
+  <h1>MIREA — Brand Guidelines Carousel</h1>
+  <p class="sub">11 Instagram slides · 1305 × 1631 · Condor Extended + Syne · logos, palette, type, packaging.</p>
+  <div class="swatches"><i style="background:#7B5A41"></i><i style="background:#E1C9AE"></i><i style="background:#B96E64"></i><i style="background:#B9CAD0"></i><i style="background:#342B25"></i></div>
+
+  <fieldset>
+    <legend>Slides</legend>
+    <label for="slides">Which slides to build (e.g. 1-11 or 1,3,5)</label>
+    <input type="text" id="slides" value="1-11">
+    <label for="page">Page name</label>
+    <input type="text" id="page" value="MIREA — Brand Guidelines (1305×1631)">
+    <div class="hint">Re-running replaces slides with the same name on that page; nothing else is touched.</div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Studio credit</legend>
+    <div class="row">
+      <div><label for="studio">Studio name (placeholder text)</label><input type="text" id="studio" value="THINK & TINKER STUDIO"></div>
+      <div><label for="handle">Handle (optional)</label><input type="text" id="handle" value="" placeholder="@yourstudio"></div>
+    </div>
+    <label for="logo">Studio logo — SVG or PNG (replaces the placeholder on the cover and closing slide)</label>
+    <input type="file" id="logo" accept=".svg,.png,image/svg+xml,image/png">
+    <label for="edition">Edition label</label>
+    <input type="text" id="edition" value="EDITION 01 — 2026">
+  </fieldset>
+
+  <fieldset>
+    <legend>Images</legend>
+    <div class="check"><input type="checkbox" id="fetch" checked><label for="fetch" style="margin:0">Load the paintings and packaging renders from GitHub (needs internet)</label></div>
+    <label for="base">Base URL</label>
+    <input type="text" id="base" value="https://raw.githubusercontent.com/thinkandtinkerstudio-art/BQ/claude/intelligent-noether-ecvd6c/mirea-brand-carousel/">
+    <div class="hint">Off-line: photo slots become dashed placeholders named "Photo — … — replace fill with image".</div>
+  </fieldset>
+
+  <div class="actions">
+    <button class="primary" id="build">Build carousel</button>
+    <button id="copy">Copy log</button>
+    <button id="close">Close</button>
+  </div>
+  <div id="log"></div>
+</div>
+<script>
+(function () {
+  var IMAGE_FILES = {"balustrade":"assets/images/balustrade.jpg","arches":"assets/images/arches.jpg","muse":"assets/images/muse.jpg","clouds":"assets/images/clouds.jpg","pack-milano-sand":"assets/packaging/milano-01-sand.jpg","pack-floral-rose":"assets/packaging/floral-rose-balustrade.jpg","pack-milano-blue":"assets/packaging/milano-01-blue.jpg","pack-floral-muse":"assets/packaging/floral-rose-muse.jpg"};
+  var $ = function (id) { return document.getElementById(id); };
+  var logEl = $('log'), lines = {};
+  function post(m) { parent.postMessage({ pluginMessage: m }, '*'); }
+  function addLog(step, status, detail) {
+    var key = step; var el = lines[key];
+    if (!el) { el = document.createElement('div'); el.className = 'line'; el.innerHTML = '<span class="st"></span><span class="step"></span><span class="detail"></span>'; logEl.appendChild(el); lines[key] = el; }
+    el.className = 'line ' + status;
+    el.children[0].textContent = status; el.children[1].textContent = step; el.children[2].textContent = detail || '';
+    logEl.scrollTop = logEl.scrollHeight;
+  }
+  function parseSlides(s) {
+    var out = {}; s.split(',').forEach(function (part) {
+      part = part.trim(); if (!part) return;
+      var m = part.match(/^(\d+)\s*-\s*(\d+)$/);
+      if (m) { for (var i = +m[1]; i <= +m[2]; i++) out[i] = 1; } else if (/^\d+$/.test(part)) out[+part] = 1;
+    });
+    return Object.keys(out).map(Number).filter(function (n) { return n >= 1 && n <= 11; }).sort(function (a, b) { return a - b; });
+  }
+  function readFile(file) {
+    return new Promise(function (resolve, reject) {
+      var r = new FileReader();
+      r.onerror = function () { reject(new Error('could not read ' + file.name)); };
+      if (/svg/i.test(file.type) || /\.svg$/i.test(file.name)) { r.onload = function () { resolve({ kind: 'svg', text: String(r.result) }); }; r.readAsText(file); }
+      else {
+        r.onload = function () {
+          var bytes = new Uint8Array(r.result);
+          var img = new Image(); var url = URL.createObjectURL(new Blob([bytes], { type: file.type || 'image/png' }));
+          img.onload = function () { URL.revokeObjectURL(url); resolve({ kind: 'png', bytes: bytes, width: img.naturalWidth, height: img.naturalHeight }); };
+          img.onerror = function () { URL.revokeObjectURL(url); resolve({ kind: 'png', bytes: bytes, width: 0, height: 0 }); };
+          img.src = url;
+        };
+        r.readAsArrayBuffer(file);
+      }
+    });
+  }
+  async function fetchImages(base) {
+    var out = {}, keys = Object.keys(IMAGE_FILES), ok = 0;
+    if (base && base.slice(-1) !== '/') base += '/';
+    for (var i = 0; i < keys.length; i++) {
+      var k = keys[i];
+      addLog('Images', 'run', 'downloading ' + (i + 1) + ' / ' + keys.length + ' — ' + IMAGE_FILES[k]);
+      try {
+        var res = await fetch(base + IMAGE_FILES[k], { cache: 'force-cache' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        out[k] = new Uint8Array(await res.arrayBuffer()); ok++;
+      } catch (e) { addLog('Images', 'warn', IMAGE_FILES[k] + ': ' + (e && e.message || e)); }
+    }
+    addLog('Images', ok === keys.length ? 'done' : 'warn', ok + ' / ' + keys.length + ' downloaded' + (ok < keys.length ? ' — missing ones become placeholders' : ''));
+    return out;
+  }
+  $('build').addEventListener('click', async function () {
+    var slides = parseSlides($('slides').value);
+    if (!slides.length) { addLog('Slides', 'error', 'Enter at least one slide number between 1 and 11.'); return; }
+    $('build').disabled = true;
+    logEl.innerHTML = ''; lines = {};
+    var studioLogo = null;
+    try { if ($('logo').files && $('logo').files[0]) studioLogo = await readFile($('logo').files[0]); }
+    catch (e) { addLog('Studio logo', 'warn', e.message); }
+    var images = {};
+    if ($('fetch').checked) { try { images = await fetchImages($('base').value.trim()); } catch (e) { addLog('Images', 'warn', e.message); } }
+    post({ type: 'build', options: {
+      slides: slides, pageName: $('page').value.trim(), studioName: $('studio').value.trim(), studioHandle: $('handle').value.trim(),
+      edition: $('edition').value.trim(), studioLogo: studioLogo, images: images } });
+  });
+  $('copy').addEventListener('click', function () {
+    var txt = Array.prototype.map.call(logEl.children, function (l) { return l.children[0].textContent + '\t' + l.children[1].textContent + '\t' + l.children[2].textContent; }).join('\n');
+    var ta = document.createElement('textarea'); ta.value = txt; document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+  });
+  $('close').addEventListener('click', function () { post({ type: 'close' }); });
+  window.onmessage = function (ev) {
+    var m = ev.data && ev.data.pluginMessage; if (!m) return;
+    if (m.type === 'log') addLog(m.step, m.status, m.detail);
+    if (m.type === 'done') $('build').disabled = false;
+  };
+  var root = $('plugin-root'), last = 0;
+  new ResizeObserver(function () { var h = Math.ceil(root.getBoundingClientRect().height) + 2; if (h !== last) { last = h; post({ type: 'resize', height: h }); } }).observe(root);
+})();
+</script>
+</body>
+</html>

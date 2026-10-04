@@ -1,0 +1,23 @@
+{
+  "name": "MIREA Brand Guidelines Carousel",
+  "id": "mirea-brand-guidelines-local",
+  "api": "1.0.0",
+  "main": "code.js",
+  "ui": "ui.html",
+  "editorType": [
+    "figma"
+  ],
+  "documentAccess": "dynamic-page",
+  "networkAccess": {
+    "allowedDomains": [
+      "https://raw.githubusercontent.com"
+    ],
+    "reasoning": "Downloads the packaging renders and paintings for the carousel from the project repository."
+  },
+  "relaunchButtons": [
+    {
+      "command": "build",
+      "name": "Build MIREA carousel"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+{ "compilerOptions": { "target": "ES2019", "lib": ["ES2019"], "module": "none", "strict": true, "noEmitOnError": true, "outFile": "build/scene.node.js", "types": [] },
+  "files": ["src/brand.ts", "src/logos.gen.ts", "src/scene.ts", "src/node-footer.ts"] }
