@@ -3,6 +3,7 @@
 const fs = require('fs'); const path = require('path'); const vm = require('vm');
 const variant = process.argv[2] || 'local';
 const code = fs.readFileSync(variant === 'mcp' ? path.join(__dirname, '..', 'build', 'mcp', 'code.js') : path.join(__dirname, '..', 'figma-plugin', 'mirea-brand-guidelines', 'code.js'), 'utf8');
+const SLIDE_COUNT = require(path.join(__dirname, '..', 'build', 'scene.node.js')).buildSlides().length;
 const logoMan = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'assets', 'logo', 'logo-manifest.json'), 'utf8'));
 const logos = {}; for (const id of Object.keys(logoMan)) logos[id] = fs.readFileSync(path.join(__dirname, '..', 'assets', 'logo', logoMan[id].file), 'utf8');
 let created = 0, texts = 0, svgs = 0, imagesCreated = 0; const logs = []; let uiMessages = [];
@@ -39,10 +40,10 @@ vm.createContext(ctx);
 vm.runInContext(code, ctx);
 (async () => {
   const images = {}; for (const k of ['balustrade', 'arches', 'muse', 'clouds', 'pack-milano-sand', 'pack-floral-rose', 'pack-milano-blue', 'pack-floral-muse']) images[k] = new Uint8Array([1, 2, 3]);
-  await figma.ui.onmessage({ type: 'build', options: { slides: [1,2,3,4,5,6,7,8,9,10,11], pageName: 'MIREA — test', studioName: 'THINK & TINKER STUDIO', studioHandle: '@x', edition: 'EDITION 01 — 2026',
+  await figma.ui.onmessage({ type: 'build', options: { slides: Array.from({ length: SLIDE_COUNT }, (_, i) => i + 1), pageName: 'MIREA — test', studioName: 'THINK & TINKER STUDIO', studioHandle: '@x', edition: 'EDITION 01 — 2026',
     studioLogo: { kind: 'svg', text: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100"><rect fill="#000" width="300" height="100"/></svg>' }, images, logos: variant === 'mcp' ? logos : undefined } });
   // second run with no images / png logo, to exercise the placeholders and the idempotent rebuild
-  await figma.ui.onmessage({ type: 'build', options: { slides: [1, 11], pageName: 'MIREA — test', studioName: 'ONEWORD', studioHandle: '', edition: '', studioLogo: { kind: 'png', bytes: new Uint8Array([9]), width: 400, height: 100 }, images: {} } });
+  await figma.ui.onmessage({ type: 'build', options: { slides: [1, SLIDE_COUNT], pageName: 'MIREA — test', studioName: 'ONEWORD', studioHandle: '', edition: '', studioLogo: { kind: 'png', bytes: new Uint8Array([9]), width: 400, height: 100 }, images: {} } });
   const errors = logs.filter((l) => l.status === 'error');
   const built = figma.currentPage.children.filter((c) => !c.removed);
   console.log('frames on page:', built.length, built.map((f) => f.name + ':' + f.children.length).join(' | '));
@@ -51,6 +52,6 @@ vm.runInContext(code, ctx);
   const sample = built[0].children.find((c) => c.name === 'Manifesto L');
   console.log('rotated text transform sample:', JSON.stringify(sample && sample.relativeTransform));
   if (errors.length) { console.error('ERRORS', errors); process.exit(1); }
-  if (built.length !== 11) { console.error('expected 11 frames after idempotent rebuild'); process.exit(1); }
+  if (built.length !== SLIDE_COUNT) { console.error('expected ' + SLIDE_COUNT + ' frames after idempotent rebuild, got ' + built.length); process.exit(1); }
   console.log('MOCK TEST OK (' + variant + ')');
 })().catch((e) => { console.error(e); process.exit(1); });

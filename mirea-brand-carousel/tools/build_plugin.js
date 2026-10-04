@@ -17,7 +17,8 @@ const logoFiles = JSON.stringify(Object.fromEntries(Object.keys(logoMan).map((id
 const bundle = (logos) => [read('src/brand.ts'), logos, read('src/scene.ts'), read('src/figma-main.ts')].join('\n');
 const body = bundle(logosFull);
 const bodyMcp = bundle(logoStub);
-const uiBase = read('src/ui.html').replace('__IMAGE_FILES__', imageFiles);
+const SLIDE_COUNT = require(path.join(ROOT, 'build', 'scene.node.js')).buildSlides().length;
+const uiBase = read('src/ui.html').replace('__IMAGE_FILES__', imageFiles).split('__SLIDE_COUNT__').join(String(SLIDE_COUNT));
 const ui = uiBase.replace('__LOGO_FILES__', '{}').replace('__LOGO_HINT__', '');
 const uiMcp = uiBase.replace('__LOGO_FILES__', logoFiles).replace('__LOGO_HINT__', ' The five logo vectors are always downloaded from the Base URL.');
 for (const b of [body, bodyMcp]) if (/\bimport\b|\bexport\b/.test(b.replace(/\/\/.*$/gm, '').replace(/'[^']*'|"[^"]*"/g, ''))) throw new Error('bundle must not contain import/export');
@@ -46,4 +47,4 @@ for (const [src, out] of [[path.join(local, 'code.ts'), path.join(local, 'code.j
 }
 // Figma rejects plugin code containing the sequence "eval(" in some loaders — make sure none slipped in.
 for (const f of [path.join(local, 'code.js'), path.join(mcp, 'code.ts')]) if (/\beval\s*\(/.test(fs.readFileSync(f, 'utf8'))) throw new Error('eval( found in ' + f);
-console.log('ui.html', ui.length, 'bytes · mcp ui.html', uiMcp.length, 'bytes · mcp code.ts', fs.statSync(path.join(mcp, 'code.ts')).size, 'bytes');
+console.log('slides', SLIDE_COUNT, '· ui.html', ui.length, 'bytes · mcp ui.html', uiMcp.length, 'bytes · mcp code.ts', fs.statSync(path.join(mcp, 'code.ts')).size, 'bytes');

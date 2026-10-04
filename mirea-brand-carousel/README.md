@@ -1,23 +1,23 @@
-# MIREA — Brand Guidelines Carousel (Figma plugin, 11 × 1305 × 1631)
+# MIREA — Brand Guidelines Carousel (Figma plugin, 14 × 1305 × 1631)
 
 > **ملخص بالعربي**
 >
-> - ده **Figma plugin** بيبني كاروسيل Brand Guidelines لبراند **MIREA** (Eau de Parfum) من **11 سلايد بمقاس 1305 × 1631** (بوست إنستجرام 4:5)، بنفس هوية الباكدجينج اللي بعتّه: الرملي، الكاكاو، الروز، الأزرق الباودر، اللوحات الكلاسيكية، البلاكة بالزوايا المقصوصة، النجمة ✦، والـ manifesto الرأسي.
+> - ده **Figma plugin** بيبني كاروسيل Brand Guidelines لبراند **MIREA** (Eau de Parfum) من **14 سلايد بمقاس 1305 × 1631** (بوست إنستجرام 4:5)، بنفس هوية الباكدجينج اللي بعتّه: الرملي، الكاكاو، الروز، الأزرق الباودر، اللوحات الكلاسيكية، البلاكة بالزوايا المقصوصة، النجمة ✦، والـ manifesto الرأسي.
 > - اللوجوهات الخمسة (Stacked, Horizontal, Symbol, Round seal, Oval badge) **متسحوبة فيكتور من ملف الـ PDF بتاعك** بنفس النقط، مش معاد رسمها. البالِت بنفس قيم الـ hex بالظبط من artboard الألوان.
 > - **الخط**: الكاروسيل مظبوط على **Condor Extended** (Bold للعناوين والووردمارك، Regular للـ descriptors والـ labels) و**Syne** للنصوص. البلجن بيدوّر على Condor Extended المثبّت على جهازك ويستخدمه؛ لو مش مثبّت بيكتب تحذير أصفر ويستخدم بديل مؤقت (Archivo Expanded / Syncopate / Inter). **ثبّت Condor Extended قبل ما تشغّل البلجن.** صور المعاينة في `previews/` مرسومة ببديل مفتوح (Archivo بعرض 125%) لأن Condor خط مرخّص مش معانا هنا.
 > - **لوجو الاستوديو**: مش مبعوت في الرسالة، فالسلايد 01 و11 عليهم placeholder كتابي ("THINK & TINKER STUDIO" — غيّر النص من شباك البلجن). من شباك البلجن اختار ملف **SVG أو PNG** للوجو الاستوديو وهو هيتحط مكانه تلقائيًا ويتلوّن بلون البراند.
-> - **ريفرنس "الشنطة"**: مش موجود في الرسالة ولا في الريبو، فمقدرتش أطابقه حرفيًا. التقسيم هنا كاروسيل brand-guidelines إيديتوريال: Cover ← The brand ← Logo ← Logo system ← Logo rules ← Colour ← Typography ← Graphic elements ← Packaging ← Art direction ← Closing. ابعت الريفرنس وأنا أعيد توزيع السلايدات عليه؛ كل التوزيع في ملف واحد (`src/scene.ts`).
-> - **التشغيل (Figma Desktop)**: Plugins ‹ Development ‹ **Import plugin from manifest…** واختار `figma-plugin/mirea-brand-guidelines/manifest.json`، وبعدين Plugins ‹ Development ‹ **MIREA Brand Guidelines Carousel** ‹ **Build carousel**. البلجن بيعمل صفحة `MIREA — Brand Guidelines (1305×1631)` ويبني الـ 11 فريم جنب بعض. إعادة التشغيل آمنة (بيستبدل الفريمات اللي بنفس الاسم بس).
+> - **ريفرنس "الشنطة"**: مش موجود في الرسالة ولا في الريبو، فمقدرتش أطابقه حرفيًا. التقسيم: Cover ← The brand ← Logo ← Logo system ← Logo rules ← Colour ← Typography ← Graphic elements ← **4 سلايدات باكدجينج (علبة في كل سلايد)** ← Art direction ← **سلايد خدمات الاستوديو** (كروت على ستايل كاروسيل الشنطة: Thoughtfully designed / Let's create your next branded packaging / Send us your size & quantity on WhatsApp / Start your order). كل التوزيع في ملف واحد (`src/scene.ts`).
+> - **التشغيل (Figma Desktop)**: Plugins ‹ Development ‹ **Import plugin from manifest…** واختار `figma-plugin/mirea-brand-guidelines/manifest.json`، وبعدين Plugins ‹ Development ‹ **MIREA Brand Guidelines Carousel** ‹ **Build carousel**. البلجن بيعمل صفحة `MIREA — Brand Guidelines (1305×1631)` ويبني الـ 14 فريم جنب بعض. إعادة التشغيل آمنة (بيستبدل الفريمات اللي بنفس الاسم بس).
 > - **الصور** (اللوحات الأربعة ورندر الدايلاينز الأربعة) البلجن بيحمّلها من GitHub وقت التشغيل (الخيار شغّال افتراضيًا). لو مفيش إنترنت، أماكن الصور بتطلع فريمات متقطعة اسمها `Photo — … — replace fill with image`: اختارها و Fill ← Image.
 > - **نسخة في مكتبة حساب Figma**: نفس البلجن متضاف في حسابك (team "Abdulrahman Taha's team") باسم **MIREA Brand Guidelines Carousel** — رابط التجربة في آخر الملف ده.
-> - **التصدير**: اختار الـ 11 فريم ← Export ← PNG ‹ 1x (1305 × 1631) أو JPG.
+> - **التصدير**: اختار الـ 14 فريم ← Export ← PNG ‹ 1x (1305 × 1631) أو JPG.
 > - **التحميل**: `downloads/mirea-brand-guidelines-plugin.zip` (البلجن بس) و `downloads/mirea-brand-carousel-complete.zip` (كل حاجة).
 
 ---
 
 ## What it is
 
-A Figma plugin that builds the MIREA brand-guidelines carousel — **11 frames, 1305 × 1631 px** (Instagram 4:5 post) — as native, editable Figma layers (frames, rectangles, vectors and real text), using the brand's own assets:
+A Figma plugin that builds the MIREA brand-guidelines carousel — **14 frames, 1305 × 1631 px** (Instagram 4:5 post) — as native, editable Figma layers (frames, rectangles, vectors and real text), using the brand's own assets:
 
 | # | Slide | Content |
 |---|---|---|
@@ -29,9 +29,9 @@ A Figma plugin that builds the MIREA brand-guidelines carousel — **11 frames, 
 | 06 | Colour palette | 5 primaries + 5 neutral tints with HEX / RGB / CMYK (conversions) and roles, proportion rule |
 | 07 | Typography | Condor Extended specimen, weights, usage; Syne as secondary; hierarchy table (dark slide) |
 | 08 | Graphic elements | The sparkle divider, the vertical manifesto, the plaque, the eyebrow — each demonstrated |
-| 09 | Packaging | The four dielines (Milano 01 sand / blue, Floral rose / muse) with captions and the 50 ml spec line |
-| 10 | Art direction | The four paintings with captions, imagery rules and four "do" bullets |
-| 11 | Closing | "Memories in the making." on espresso, symbol, credit line and studio logo |
+| 09–12 | Packaging, one box per slide | Milano 01 · The arches (Oat), Floral · The balustrade (Dusty Rose), Milano 01 · The clouds (Powder Blue), Floral · The muse (Dusty Rose): the dieline large on the sand ground (transparent PNG), edition name, descriptor, base colour + painting, 50 ml spec |
+| 13 | Art direction | The four paintings with captions, imagery rules and four "do" bullets |
+| 14 | Studio services | Closing slide in the studio's own carousel style: blueprint grid on espresso, rounded cards ("Thoughtfully designed. Beautifully printed.", "Let's create your next branded packaging.", vertical studio tab, "Send us your size & quantity on WhatsApp." with the four service bullets and "Start your order"), MIREA symbol, brand footer |
 
 Every element of every slide is defined once in `src/scene.ts` (positions, sizes, colours, copy) and rendered twice: to HTML/PNG previews by Chromium (`previews/`) and to Figma layers by the plugin (`figma-plugin/`). Change the copy or layout in `src/brand.ts` / `src/scene.ts` and run `npm run all`.
 
@@ -42,7 +42,7 @@ Every element of every slide is defined once in `src/scene.ts` (positions, sizes
 | `figma-plugin/mirea-brand-guidelines/` | **The plugin** — `manifest.json`, `code.js` (compiled), `code.ts` (bundled source), `ui.html`. Import this folder's manifest in Figma Desktop. |
 | `assets/logo/` | The five MIREA logos as clean SVG (absolute M/L/C/Z paths, 4× PDF points), extracted from `mira.pdf` pages 2–6, plus `logo-manifest.json`. Fill `#6A4937` as in the artboards; the plugin recolours them. |
 | `assets/images/` | The four paintings from the packaging PDF (1600 px JPEG): `balustrade`, `arches`, `muse`, `clouds`. |
-| `assets/packaging/` | Dieline renders: the four "Casa de Perfumes" assets (`milano-01-sand`, `floral-rose-balustrade`, `milano-01-blue`, `floral-rose-muse`) and the four "Eau de Parfum" artboards (`edp-*`). |
+| `assets/packaging/` | Dieline renders: the four "Casa de Perfumes" assets as PNG with transparent surroundings (`milano-01-sand`, `floral-rose-balustrade`, `milano-01-blue`, `floral-rose-muse`; the white page around the die shape is removed so the box sits on the slide colour) and the four "Eau de Parfum" artboards as JPEG (`edp-*`). |
 | `previews/` | PNG of each slide at 1305 × 1631 and `contact-sheet.png`. Display face is a stand-in (see Fonts). |
 | `src/` | `brand.ts` (tokens, copy, palette), `scene.ts` (slide builder), `figma-main.ts` (plugin sandbox), `ui.html` (plugin window), `logos.gen.ts` (generated from `assets/logo`). |
 | `tools/` | `extract_logos.js` (PDF→SVG cleanup), `gen_logos_ts.js`, `build_plugin.js` (bundle + `tsc`), `render_preview.js` (Chromium previews), `mock_figma_test.js` (smoke test against a mock Plugin API). |
@@ -60,7 +60,7 @@ Every element of every slide is defined once in `src/scene.ts` (positions, sizes
 
 1. Figma Desktop → **Plugins ‹ Development ‹ Import plugin from manifest…** → `figma-plugin/mirea-brand-guidelines/manifest.json`.
 2. **Plugins ‹ Development ‹ MIREA Brand Guidelines Carousel.**
-3. In the window: slides (`1-11`), page name, studio name / handle / edition label, **Studio logo** (SVG or PNG — replaces the typographic placeholder on slides 01 and 11; SVGs are tinted to the brand colour), **Images** (downloaded from GitHub; the base URL points at this repository branch).
+3. In the window: slides (`1-14`), page name, studio name / handle / edition label, **Studio logo** (SVG or PNG — replaces the typographic placeholder on slides 01 and 11; SVGs are tinted to the brand colour), **Images** (downloaded from GitHub; the base URL points at this repository branch).
 4. **Build carousel.** Each step logs green / yellow / red; **Copy log** copies it for a bug report.
 5. Export: select the frames → Export → PNG 1× (1305 × 1631).
 
@@ -78,7 +78,8 @@ The identical plugin is published to the Figma account library (plan: *Abdulrahm
 
 - Palette (from the palette artboard): Cocoa `#7B5A41`, Sand `#E1C9AE`, Dusty Rose `#B96E64`, Powder Blue `#B9CAD0`, Espresso `#342B25`; tints Ivory `#F9F8F3`, Linen `#EAE6D6`, Nude `#ECD4B8`, Oat `#B8A47D`, Camel `#93744D`. CMYK values on slide 06 are arithmetic conversions, not press values.
 - The logo artboards use `#6A4937` for the logo; the carousel sets logos in palette Cocoa `#7B5A41` for consistency with the colour slide. Change `COLORS.cocoa` or the fill in `logo()` if you prefer the artboard brown.
-- Copy on the boxes (eyebrow, manifesto, "Every moment leaves a trace.", story, 50 ml · 1.7 fl.oz, Made in Egypt, Milano 01 / Floral, Casa de Perfumes) is reproduced as written; the guideline explanations are new.
+- Copy on the boxes (eyebrow, manifesto, "Every moment leaves a trace.", story, 50 ml · 1.7 fl.oz, Made in Egypt, Milano 01 / Floral, Casa de Perfumes) is reproduced as written; the guideline explanations are new. Edition base colours on the packaging slides are sampled from the dieline artwork (Oat `#BCA889`, Dusty Rose `#BB7C6D`, Powder Blue `#B8C9D0`).
+- The studio-services copy (slide 14) follows the studio's bag carousel: "Thoughtfully designed. Beautifully printed.", "Let's create your next branded packaging.", "Send us your size & quantity on WhatsApp.", bespoke design / paper & material selection / high-quality printing / premium finishing, "Start your order". Edit it in `COPY.services`.
 
 ## Regenerate
 
@@ -93,6 +94,5 @@ To re-extract the logos from a new PDF: `pdftocairo -svg -f N -l N file.pdf page
 
 ## Open items
 
-1. **Bag-brand reference carousel** — not received; the slide structure here is an editorial brand-guidelines sequence. Send the reference and the layout can be re-flowed to match it (one file: `src/scene.ts`).
-2. **Studio logo** — not received; typographic placeholder "THINK & TINKER STUDIO" on slides 01 and 11, replaceable from the plugin window.
-3. **Condor Extended** must be installed on the computer that runs the plugin.
+1. **Studio logo** — not received; typographic placeholder "THINK & TINKER STUDIO" on slides 01 and 11, replaceable from the plugin window.
+2. **Condor Extended** must be installed on the computer that runs the plugin.

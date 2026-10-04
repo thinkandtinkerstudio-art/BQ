@@ -9,7 +9,6 @@
 const SLIDE_W = 1305;
 const SLIDE_H = 1631;
 const MARGIN = 90;
-const SLIDE_COUNT = 11;
 const COLORS = {
     cocoa: '#7B5A41',
     sand: '#E1C9AE',
@@ -72,11 +71,12 @@ const COPY = {
         { title: 'THE EYEBROW', text: 'MEMORIES IN THE MAKING sits above the wordmark in small, widely tracked capitals.' },
     ],
     packagingIntro: 'Each edition pairs a painting with a colour from the palette. The front plaque carries the eyebrow, wordmark, sparkle and edition name; the side panel carries the manifesto and the story; the base is a solid field of the edition colour.',
+    // One slide per box. Base colours are sampled from the dieline artwork (bottom flap).
     packaging: [
-        { src: 'pack-milano-sand', title: 'MILANO 01 — SAND', text: 'Moment of new opportunities' },
-        { src: 'pack-floral-rose', title: 'FLORAL — DUSTY ROSE', text: 'Moment of soft bloom' },
-        { src: 'pack-milano-blue', title: 'MILANO 01 — POWDER BLUE', text: 'Clouds edition' },
-        { src: 'pack-floral-muse', title: 'FLORAL — THE MUSE', text: 'Dusty rose side panel' },
+        { src: 'pack-milano-sand', title: 'MILANO 01 — THE ARCHES', text: 'Moment of new opportunities', base: 'Oat', baseHex: '#BCA889', painting: 'The arches' },
+        { src: 'pack-floral-rose', title: 'FLORAL — THE BALUSTRADE', text: 'Moment of soft bloom', base: 'Dusty Rose', baseHex: '#BB7C6D', painting: 'The balustrade' },
+        { src: 'pack-milano-blue', title: 'MILANO 01 — THE CLOUDS', text: 'Moment of new opportunities', base: 'Powder Blue', baseHex: '#B8C9D0', painting: 'The clouds' },
+        { src: 'pack-floral-muse', title: 'FLORAL — THE MUSE', text: 'Moment of soft bloom', base: 'Dusty Rose', baseHex: '#BB7C6D', painting: 'The muse' },
     ],
     packagingSpec: '50 ML · 1.7 FL.OZ · MADE IN EGYPT',
     imageryIntro: 'Rococo skies, balustrades and draped silk, painted in warm greys, blush and powder blue. Light is soft and diffused; nothing is saturated. Crop generously and let the sky breathe behind the plaque. Figures appear in profile or turned away — the muse, never a portrait.',
@@ -88,6 +88,17 @@ const COPY = {
     ],
     closing: 'MEMORIES IN THE MAKING.',
     credit: 'Brand identity & packaging design by',
+    // Studio services slide (closing), after the studio's own carousel.
+    services: {
+        headlineA: 'THOUGHTFULLY DESIGNED.',
+        headlineB: 'BEAUTIFULLY PRINTED.',
+        sub: 'From the first concept to the final finish, we bring your brand to life.',
+        hook: '💬 LET\'S CREATE YOUR NEXT BRANDED PACKAGING.',
+        ask: 'SEND US YOUR SIZE & QUANTITY ON WHATSAPP.',
+        bullets: ['BESPOKE DESIGN', 'PAPER & MATERIAL SELECTION', 'HIGH-QUALITY PRINTING', 'PREMIUM FINISHING'],
+        cta: 'START YOUR ORDER',
+        footer: 'MIREA  ·  EAU DE PARFUM  ·  MEMORIES IN THE MAKING.',
+    },
 };
 // Image sources: file names inside assets/ (fetched by the plugin UI, or placeholders).
 const IMAGE_FILES = {
@@ -95,10 +106,10 @@ const IMAGE_FILES = {
     arches: 'assets/images/arches.jpg',
     muse: 'assets/images/muse.jpg',
     clouds: 'assets/images/clouds.jpg',
-    'pack-milano-sand': 'assets/packaging/milano-01-sand.jpg',
-    'pack-floral-rose': 'assets/packaging/floral-rose-balustrade.jpg',
-    'pack-milano-blue': 'assets/packaging/milano-01-blue.jpg',
-    'pack-floral-muse': 'assets/packaging/floral-rose-muse.jpg',
+    'pack-milano-sand': 'assets/packaging/milano-01-sand.png',
+    'pack-floral-rose': 'assets/packaging/floral-rose-balustrade.png',
+    'pack-milano-blue': 'assets/packaging/milano-01-blue.png',
+    'pack-floral-muse': 'assets/packaging/floral-rose-muse.png',
 };
 function hexToRgb255(hex) {
     const h = hex.replace('#', '');
@@ -207,11 +218,11 @@ function vertical(name, x, yTop, len, s, size, fill, dir, ls) {
     return text(name, cx - len / 2, cy - h / 2, len, s, 'display', size, h, fill, { align: 'center', rotate: dir, ls: ls == null ? 22 : ls });
 }
 // ── recurring furniture ──────────────────────────────────────────────────────
-function chrome(index, section, ink, muted) {
+function chrome(index, total, section, ink, muted) {
     const nn = (index < 10 ? '0' : '') + index;
     return [
         text('Header / brand', MARGIN, 64, 600, 'MIREA — BRAND GUIDELINES', 'display', 16, 20, ink, { ls: 26 }),
-        text('Header / page', SLIDE_W - MARGIN - 300, 64, 300, nn + ' / ' + SLIDE_COUNT, 'display', 16, 20, ink, { ls: 26, align: 'right' }),
+        text('Header / page', SLIDE_W - MARGIN - 300, 64, 300, nn + ' / ' + total, 'display', 16, 20, ink, { ls: 26, align: 'right' }),
         rect('Header / rule', MARGIN, 98, SLIDE_W - 2 * MARGIN, 1, muted),
         rect('Footer / rule', MARGIN, SLIDE_H - 98, SLIDE_W - 2 * MARGIN, 1, muted),
         text('Footer / eyebrow', MARGIN, SLIDE_H - 84, 600, COPY.eyebrow, 'display', 14, 20, muted, { ls: 30 }),
@@ -255,10 +266,10 @@ function studioLogo(o, x, y, h, fill, align) {
 function buildSlides(opt) {
     const o = Object.assign({}, DEFAULT_OPTIONS, opt || {});
     const C = COLORS;
-    const slides = [];
+    const builders = [];
     const CW = SLIDE_W - 2 * MARGIN; // 1125
     // 01 — Cover: the box front, as a poster ────────────────────────────────────
-    {
+    builders.push((idx, total) => {
         const n = [];
         n.push(image('Cover painting — clouds', 0, 0, SLIDE_W, SLIDE_H, 'clouds'));
         n.push(rect('Cover tint', 0, 0, SLIDE_W, SLIDE_H, C.sand, { opacity: 0.12 }));
@@ -276,16 +287,16 @@ function buildSlides(opt) {
         n.push(text('Plaque / descriptor', px, py + 580, pw, COPY.descriptor + '  ·  ' + o.edition, 'display', 15, 20, C.cocoa, { ls: 28, align: 'center' }));
         // top + bottom
         n.push(text('Cover / top label', MARGIN, 64, 600, 'BRAND GUIDELINES  —  ' + o.edition, 'display', 16, 20, C.ivory, { ls: 26 }));
-        n.push(text('Cover / page', SLIDE_W - MARGIN - 300, 64, 300, '01 / ' + SLIDE_COUNT, 'display', 16, 20, C.ivory, { ls: 26, align: 'right' }));
+        n.push(text('Cover / page', SLIDE_W - MARGIN - 300, 64, 300, (idx < 10 ? '0' : '') + idx + ' / ' + total, 'display', 16, 20, C.ivory, { ls: 26, align: 'right' }));
         n.push(rect('Cover / bottom band', 0, SLIDE_H - 230, SLIDE_W, 230, C.cocoa));
         n.push(logo('Cover / horizontal lockup', 'horizontal', MARGIN, SLIDE_H - 230 + 70, 90, C.sand));
         n.push(...studioLogo(o, SLIDE_W - MARGIN, SLIDE_H - 230 + 74, 54, C.sand, 'right'));
         n.push(text('Cover / tagline', SLIDE_W - MARGIN - 420, SLIDE_H - 230 + 158, 420, COPY.tagline, 'body', 18, 24, C.sand, { align: 'right' }));
-        slides.push({ id: '01-cover', name: '01 Cover', bg: C.sand, nodes: n });
-    }
+        return { id: '01-cover', name: '01 Cover', bg: C.sand, nodes: n };
+    });
     // 02 — The brand ─────────────────────────────────────────────────────────────
-    {
-        const n = [...chrome(2, 'THE BRAND', C.cocoa, C.oat)];
+    builders.push((idx, total) => {
+        const n = [...chrome(idx, total, 'THE BRAND', C.cocoa, C.oat)];
         n.push(...eyebrowTitle('01', 'THE BRAND', COPY.headline, 160, C.espresso, C.rose, 72, CW));
         n.push(text('Story', MARGIN, 420, 760, COPY.story, 'body', 26, 40, C.cocoa));
         n.push(logo('Symbol', 'mark', SLIDE_W - MARGIN - 230, 410, 258, C.cocoa));
@@ -303,11 +314,11 @@ function buildSlides(opt) {
         n.push(plaque('Tagline / plaque', MARGIN, 1250, CW, 190, C.ivory, 26));
         n.push(text('Tagline', MARGIN, 1300, CW, COPY.tagline, 'display', 40, 50, C.cocoa, { ls: 4, align: 'center' }));
         n.push(text('Tagline / note', MARGIN, 1366, CW, 'The tagline closes every story — sentence case, Condor Extended Regular, always with the full stop.', 'body', 17, 26, C.oat, { align: 'center' }));
-        slides.push({ id: '02-the-brand', name: '02 The brand', bg: C.sand, nodes: n });
-    }
+        return { id: '02-the-brand', name: '02 The brand', bg: C.sand, nodes: n };
+    });
     // 03 — The logo ──────────────────────────────────────────────────────────────
-    {
-        const n = [...chrome(3, 'THE LOGO', C.cocoa, C.oat)];
+    builders.push((idx, total) => {
+        const n = [...chrome(idx, total, 'THE LOGO', C.cocoa, C.oat)];
         n.push(...eyebrowTitle('02', 'THE LOGO', 'A MUSE, CROWNED IN LAUREL.', 160, C.espresso, C.rose, 72, CW));
         // stage
         const sx = MARGIN, sy = 430, sw = CW, sh = 600;
@@ -326,11 +337,11 @@ function buildSlides(opt) {
         n.push(text('Symbol / text', MARGIN, ty + 44, colW, COPY.logoSymbol, 'body', 21, 32, C.cocoa));
         n.push(text('Wordmark / label', MARGIN + colW + 60, ty, colW, 'THE WORDMARK', 'display', 16, 22, C.rose, { ls: 26 }));
         n.push(text('Wordmark / text', MARGIN + colW + 60, ty + 44, colW, COPY.logoWordmark, 'body', 21, 32, C.cocoa));
-        slides.push({ id: '03-the-logo', name: '03 The logo', bg: C.sand, nodes: n });
-    }
+        return { id: '03-the-logo', name: '03 The logo', bg: C.sand, nodes: n };
+    });
     // 04 — Logo system ───────────────────────────────────────────────────────────
-    {
-        const n = [...chrome(4, 'LOGO SYSTEM', C.cocoa, C.oat)];
+    builders.push((idx, total) => {
+        const n = [...chrome(idx, total, 'LOGO SYSTEM', C.cocoa, C.oat)];
         n.push(...eyebrowTitle('03', 'LOGO SYSTEM', 'ONE MUSE, FIVE LOCKUPS.', 160, C.espresso, C.rose, 72, CW));
         const gap = 28;
         const topY = 410, topH = 470, topW = (CW - gap) / 2;
@@ -358,11 +369,11 @@ function buildSlides(opt) {
             n.push(text('Tile ' + v.num + ' / text', tl.x + 32, tl.y + tl.h - 46, tl.w - 64, v.text, 'body', 15, 20, C.cocoa));
         });
         n.push(text('Note', MARGIN, 1372, CW, 'Use the primary lockup wherever space allows. The symbol alone needs no descriptor; the seal and badge are reserved for stamps, labels and hang tags.', 'body', 19, 28, C.oat, { align: 'center' }));
-        slides.push({ id: '04-logo-system', name: '04 Logo system', bg: C.sand, nodes: n });
-    }
+        return { id: '04-logo-system', name: '04 Logo system', bg: C.sand, nodes: n };
+    });
     // 05 — Clear space, size, colour ─────────────────────────────────────────────
-    {
-        const n = [...chrome(5, 'LOGO RULES', C.cocoa, C.oat)];
+    builders.push((idx, total) => {
+        const n = [...chrome(idx, total, 'LOGO RULES', C.cocoa, C.oat)];
         n.push(...eyebrowTitle('04', 'LOGO RULES', 'ROOM TO BREATHE.', 160, C.espresso, C.rose, 72, CW));
         // clear-space stage
         const sx = MARGIN, sy = 400, sw = 640, sh = 560;
@@ -404,11 +415,11 @@ function buildSlides(opt) {
             n.push(logo('Colour tile ' + (i + 1) + ' / lockup', 'stacked', x + (tw - 160 * a.w / a.h) / 2, ty + 48, 160, cb.fg));
             n.push(text('Colour tile ' + (i + 1) + ' / label', x, ty + th - 54, tw, cb.label, 'display', 13, 18, cb.fg, { ls: 24, align: 'center' }));
         });
-        slides.push({ id: '05-logo-rules', name: '05 Logo rules', bg: C.sand, nodes: n });
-    }
+        return { id: '05-logo-rules', name: '05 Logo rules', bg: C.sand, nodes: n };
+    });
     // 06 — Colour palette ────────────────────────────────────────────────────────
-    {
-        const n = [...chrome(6, 'COLOUR', C.cocoa, C.oat)];
+    builders.push((idx, total) => {
+        const n = [...chrome(idx, total, 'COLOUR', C.cocoa, C.oat)];
         n.push(...eyebrowTitle('05', 'COLOUR PALETTE', 'PAINTED, NOT PICKED.', 160, C.espresso, C.rose, 72, CW));
         n.push(text('Palette intro', MARGIN, 404, CW, COPY.paletteIntro, 'body', 21, 32, C.cocoa));
         const gap = 18, sw = (CW - 4 * gap) / 5, sy = 540, sh = 560;
@@ -437,12 +448,12 @@ function buildSlides(opt) {
             n.push(text('Tint ' + s.name + ' / hex', x + 20, ny + 34 + nh - 46, sw - 40, hex.toUpperCase() + '  ·  ' + s.role, 'body', 12, 17, fg));
         });
         n.push(text('Proportion note', MARGIN, 1415, CW, 'Proportion: 60 % Sand & tints  ·  25 % Cocoa  ·  10 % edition colour  ·  5 % Espresso. CMYK values are conversions — match printed colour to the approved proofs.', 'body', 15, 22, C.oat, { align: 'center' }));
-        slides.push({ id: '06-colour', name: '06 Colour palette', bg: C.sand, nodes: n });
-    }
+        return { id: '06-colour', name: '06 Colour palette', bg: C.sand, nodes: n };
+    });
     // 07 — Typography (dark slide) ───────────────────────────────────────────────
-    {
+    builders.push((idx, total) => {
         const ink = C.sand, mutedInk = C.camel;
-        const n = [...chrome(7, 'TYPOGRAPHY', ink, mutedInk)];
+        const n = [...chrome(idx, total, 'TYPOGRAPHY', ink, mutedInk)];
         n.push(...eyebrowTitle('06', 'TYPOGRAPHY', 'WIDE, CALM, CLASSICAL.', 160, C.ivory, C.rose, 72, CW));
         // primary specimen
         n.push(text('Primary / label', MARGIN, 404, 500, 'PRIMARY TYPEFACE', 'display', 16, 22, C.rose, { ls: 26 }));
@@ -478,11 +489,11 @@ function buildSlides(opt) {
             n.push(rect('Scale / rule ' + i, scaleX, y + 52, 400, 1, C.camel, { opacity: 0.5 }));
         });
         n.push(text('Type note', MARGIN, 1420, CW, 'Headlines and labels are always uppercase and tracked. Body copy is sentence case, never justified, never below 13 px / 7 pt.', 'body', 15, 22, mutedInk, { align: 'center' }));
-        slides.push({ id: '07-typography', name: '07 Typography', bg: C.cocoa, nodes: n });
-    }
+        return { id: '07-typography', name: '07 Typography', bg: C.cocoa, nodes: n };
+    });
     // 08 — Graphic elements ──────────────────────────────────────────────────────
-    {
-        const n = [...chrome(8, 'GRAPHIC ELEMENTS', C.cocoa, C.oat)];
+    builders.push((idx, total) => {
+        const n = [...chrome(idx, total, 'GRAPHIC ELEMENTS', C.cocoa, C.oat)];
         n.push(...eyebrowTitle('07', 'GRAPHIC ELEMENTS', 'SMALL GESTURES, REPEATED.', 160, C.espresso, C.rose, 72, CW));
         const gap = 28, tw = (CW - gap) / 2, th = 430, ty1 = 410, ty2 = ty1 + th + gap;
         const tiles = [
@@ -517,27 +528,27 @@ function buildSlides(opt) {
             }
         });
         n.push(text('Elements note', MARGIN, 1372, CW, 'Elements are set in Cocoa on light grounds and in Sand or Ivory on photography and dark grounds. Sparkles may be Dusty Rose on both.', 'body', 17, 25, C.oat, { align: 'center' }));
-        slides.push({ id: '08-graphic-elements', name: '08 Graphic elements', bg: C.sand, nodes: n });
-    }
-    // 09 — Packaging ─────────────────────────────────────────────────────────────
-    {
-        const n = [...chrome(9, 'PACKAGING', C.cocoa, C.oat)];
-        n.push(...eyebrowTitle('08', 'PACKAGING', 'A PAINTING FOR EVERY EDITION.', 160, C.espresso, C.rose, 72, CW));
+        return { id: '08-graphic-elements', name: '08 Graphic elements', bg: C.sand, nodes: n };
+    });
+    // 09 — Packaging: one slide per box ──────────────────────────────────────────
+    COPY.packaging.forEach((p, k) => builders.push((idx, total) => {
+        const n = [...chrome(idx, total, 'PACKAGING', C.cocoa, C.oat)];
+        n.push(...eyebrowTitle('08', 'PACKAGING  ·  ' + (k + 1) + ' / ' + COPY.packaging.length, 'A PAINTING FOR EVERY EDITION.', 160, C.espresso, C.rose, 72, CW));
         n.push(text('Packaging intro', MARGIN, 404, CW, COPY.packagingIntro, 'body', 19, 28, C.cocoa));
-        const gap = 26, tw = (CW - gap) / 2, th = 380, y1 = 520, y2 = y1 + th + 76;
-        COPY.packaging.forEach((p, i) => {
-            const x = MARGIN + (i % 2) * (tw + gap), y = i < 2 ? y1 : y2;
-            n.push(rect('Pack ' + (i + 1) + ' / ground', x, y, tw, th, C.ivory));
-            n.push(image('Pack ' + (i + 1) + ' / dieline', x + 14, y + 14, tw - 28, th - 28, p.src));
-            n.push(text('Pack ' + (i + 1) + ' / title', x, y + th + 16, tw, p.title, 'displayBold', 14, 20, C.espresso, { ls: 16 }));
-            n.push(text('Pack ' + (i + 1) + ' / text', x, y + th + 38, tw, p.text, 'body', 14, 20, C.oat));
-        });
-        n.push(text('Packaging spec', MARGIN, 1472, CW, COPY.packagingSpec, 'display', 14, 20, C.cocoa, { ls: 30, align: 'center' }));
-        slides.push({ id: '09-packaging', name: '09 Packaging', bg: C.sand, nodes: n });
-    }
+        // the box, large and centred (transparent PNG — the dieline sits straight on the sand ground)
+        const iw = 740, ih = 780, ix = (SLIDE_W - iw) / 2, iy = 500;
+        n.push(image('Box / ' + p.title, ix, iy, iw, ih, p.src));
+        // caption
+        n.push(text('Box / title', MARGIN, 1300, CW, p.title, 'displayBold', 38, 46, C.espresso, { ls: 6, align: 'center' }));
+        n.push(text('Box / text', MARGIN, 1354, CW, p.text, 'body', 26, 34, C.oat, { align: 'center' }));
+        n.push(text('Box / spec 1', MARGIN, 1410, CW, 'BASE  ' + p.base.toUpperCase() + '  ' + p.baseHex + '   ·   PAINTING  ' + p.painting.toUpperCase(), 'display', 13, 18, C.cocoa, { ls: 28, align: 'center' }));
+        n.push(text('Box / spec 2', MARGIN, 1438, CW, COPY.packagingSpec, 'display', 13, 18, C.oat, { ls: 28, align: 'center' }));
+        n.push(rect('Box / base colour bar', SLIDE_W / 2 - 60, 1478, 120, 8, p.baseHex, { radius: 4 }));
+        return { id: '09-packaging-' + (k + 1), name: '09.' + (k + 1) + ' Packaging — ' + p.title, bg: C.sand, nodes: n };
+    }));
     // 10 — Imagery / art direction ───────────────────────────────────────────────
-    {
-        const n = [...chrome(10, 'ART DIRECTION', C.cocoa, C.oat)];
+    builders.push((idx, total) => {
+        const n = [...chrome(idx, total, 'ART DIRECTION', C.cocoa, C.oat)];
         n.push(...eyebrowTitle('09', 'ART DIRECTION', 'SKIES, SILK AND STONE.', 160, C.espresso, C.rose, 72, CW));
         const gap = 22, tw = (CW - gap) / 2, th = 330, y1 = 404, y2 = y1 + th + gap;
         COPY.imagery.forEach((im, i) => {
@@ -554,27 +565,53 @@ function buildSlides(opt) {
             n.push(sparkle('Do ' + (i + 1) + ' / sparkle', x + 8, y + 12, 14, C.rose));
             n.push(text('Do ' + (i + 1), x + 30, y, CW / 2 - 40, d, 'body', 17, 24, C.cocoa));
         });
-        slides.push({ id: '10-art-direction', name: '10 Art direction', bg: C.sand, nodes: n });
-    }
-    // 11 — Closing (dark) ────────────────────────────────────────────────────────
-    {
+        return { id: '10-art-direction', name: '10 Art direction', bg: C.sand, nodes: n };
+    });
+    // 11 — Studio services (closing), after the studio's own carousel ───────────
+    builders.push((idx, total) => {
         const n = [];
-        n.push(vertical('Manifesto L', 118, 300, 1030, COPY.manifesto, 22, C.camel, -90));
-        n.push(vertical('Manifesto R', SLIDE_W - 118 - 30, 300, 1030, COPY.manifesto, 22, C.camel, 90));
-        n.push(text('Header / brand', MARGIN, 64, 600, 'MIREA — BRAND GUIDELINES', 'display', 16, 20, C.sand, { ls: 26 }));
-        n.push(text('Header / page', SLIDE_W - MARGIN - 300, 64, 300, SLIDE_COUNT + ' / ' + SLIDE_COUNT, 'display', 16, 20, C.sand, { ls: 26, align: 'right' }));
-        n.push(logo('Symbol', 'mark', SLIDE_W / 2 - 120, 330, 268, C.sand));
-        n.push(text('Closing', MARGIN + 100, 650, CW - 200, COPY.closing, 'displayBold', 64, 70, C.ivory, { ls: 4, align: 'center' }));
-        n.push(...divider('Divider', SLIDE_W / 2, 870, 300, C.camel, C.rose));
-        n.push(text('Closing / tagline', MARGIN, 916, CW, COPY.story.split('. ')[0] + '.', 'body', 22, 34, C.sand, { align: 'center' }));
-        n.push(text('Credit', MARGIN, 1180, CW, COPY.credit.toUpperCase(), 'display', 14, 20, C.camel, { ls: 30, align: 'center' }));
-        n.push(...studioLogo(o, SLIDE_W / 2, 1226, 80, C.sand, 'center'));
-        if (o.studioHandle)
-            n.push(text('Studio handle', MARGIN, 1352, CW, o.studioHandle, 'body', 18, 24, C.camel, { align: 'center' }));
-        n.push(logo('Horizontal lockup', 'horizontal', SLIDE_W / 2 - 110, SLIDE_H - 150, 80, C.sand));
-        slides.push({ id: '11-closing', name: '11 Closing', bg: C.espresso, nodes: n });
-    }
-    return slides;
+        const S = COPY.services;
+        // blueprint-paper grid
+        for (let gx = 65; gx < SLIDE_W; gx += 65)
+            n.push(rect('Grid / v ' + gx, gx, 0, 1, SLIDE_H, C.ivory, { opacity: 0.05 }));
+        for (let gy = 65; gy < SLIDE_H; gy += 65)
+            n.push(rect('Grid / h ' + gy, 0, gy, SLIDE_W, 1, C.ivory, { opacity: 0.05 }));
+        n.push(text('Header / brand', MARGIN, 64, 600, 'MIREA — BRAND GUIDELINES', 'display', 16, 20, C.camel, { ls: 26 }));
+        n.push(text('Header / page', SLIDE_W - MARGIN - 300, 64, 300, (idx < 10 ? '0' : '') + idx + ' / ' + total, 'display', 16, 20, C.camel, { ls: 26, align: 'right' }));
+        const R = 36, gap = 30;
+        // row 1
+        const y1 = 120, h1 = 580, aw = 560, bx = MARGIN + aw + gap, bw = CW - aw - gap;
+        n.push(rect('Card A', MARGIN, y1, aw, h1, C.sand, { radius: R }));
+        n.push(text('Card A / headline 1', MARGIN + 40, y1 + 48, aw - 80, S.headlineA, 'displayBold', 42, 46, C.espresso, { ls: -1 }));
+        n.push(text('Card A / headline 2', MARGIN + 40, y1 + 48 + 120, aw - 80, S.headlineB, 'displayBold', 42, 46, C.ivory, { ls: -1 }));
+        n.push(text('Card A / sub', MARGIN + 40, y1 + h1 - 130, aw - 80, S.sub, 'body', 21, 29, C.espresso));
+        n.push(rect('Card B', bx, y1, bw, h1, C.cocoa, { radius: R, opacity: 0.34 }));
+        n.push(text('Card B / hook', bx + 40, y1 + 48, bw - 80, S.hook, 'displayBold', 50, 54, C.ivory, { ls: -1 }));
+        // row 2
+        const y2 = y1 + h1 + gap, h2 = SLIDE_H - y2 - 100, tw = 190, cx = MARGIN + tw + gap, cw = CW - tw - gap;
+        n.push(rect('Tab', MARGIN, y2, tw, h2, C.cocoa, { radius: R, opacity: 0.34 }));
+        n.push({ t: 'ellipse', name: 'Tab / ring', x: MARGIN + tw / 2 - 34, y: y2 + 44, w: 68, h: 68, stroke: C.sand, strokeW: 2 });
+        n.push(sparkle('Tab / sparkle', MARGIN + tw / 2, y2 + 78, 30, C.sand));
+        const studioWords = o.studioName.trim().split(/\s+/);
+        const studioMain = studioWords.length > 1 ? studioWords.slice(0, -1).join(' ') : o.studioName;
+        n.push(vertical('Tab / studio name', MARGIN + tw / 2 - 29, y2 + 150, h2 - 200, studioMain, 44, C.ivory, -90, 4));
+        n.push(rect('Card C', cx, y2, cw, h2, C.cocoa, { radius: R, opacity: 0.34 }));
+        n.push(text('Card C / ask', cx + 44, y2 + 48, 540, S.ask, 'displayBold', 50, 54, C.ivory, { ls: -1 }));
+        n.push(logo('Card C / symbol', 'mark', cx + cw - 44 - 230, y2 + 60, 256, C.sand));
+        S.bullets.forEach((b, i) => {
+            const by = y2 + 372 + i * 46;
+            n.push({ t: 'ellipse', name: 'Card C / dot ' + (i + 1), x: cx + 44, y: by + 6, w: 14, h: 14, fill: C.sand });
+            n.push(text('Card C / bullet ' + (i + 1), cx + 76, by, cw - 120, b, 'body', 21, 28, C.ivory));
+        });
+        n.push(text('Card C / cta', cx + 44, y2 + h2 - 128, cw - 88, S.cta, 'displayBold', 46, 50, C.ivory, { ls: 0 }));
+        n.push(rect('Card C / cta underline', cx + 44, y2 + h2 - 70, 520, 4, C.sand));
+        // footer
+        n.push(text('Footer', MARGIN, SLIDE_H - 66, CW, S.footer, 'display', 13, 18, C.camel, { ls: 30, align: o.studioLogoSvg || o.studioLogoImageRatio > 0 ? 'left' : 'center' }));
+        if (o.studioLogoSvg || o.studioLogoImageRatio > 0)
+            n.push(...studioLogo(o, SLIDE_W - MARGIN, SLIDE_H - 76, 40, C.sand, 'right'));
+        return { id: '14-studio-services', name: '14 Studio services', bg: C.espresso, nodes: n };
+    });
+    return builders.map((b, i) => b(i + 1, builders.length));
 }
 // ─────────────────────────────────────────────────────────────────────────────
 // Figma plugin — sandbox side. Builds the MIREA brand-guidelines carousel

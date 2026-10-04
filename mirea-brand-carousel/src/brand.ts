@@ -6,7 +6,6 @@
 const SLIDE_W = 1305;
 const SLIDE_H = 1631;
 const MARGIN = 90;
-const SLIDE_COUNT = 11;
 
 const COLORS = {
   cocoa: '#7B5A41',
@@ -76,11 +75,12 @@ const COPY = {
     { title: 'THE EYEBROW', text: 'MEMORIES IN THE MAKING sits above the wordmark in small, widely tracked capitals.' },
   ],
   packagingIntro: 'Each edition pairs a painting with a colour from the palette. The front plaque carries the eyebrow, wordmark, sparkle and edition name; the side panel carries the manifesto and the story; the base is a solid field of the edition colour.',
+  // One slide per box. Base colours are sampled from the dieline artwork (bottom flap).
   packaging: [
-    { src: 'pack-milano-sand', title: 'MILANO 01 — SAND', text: 'Moment of new opportunities' },
-    { src: 'pack-floral-rose', title: 'FLORAL — DUSTY ROSE', text: 'Moment of soft bloom' },
-    { src: 'pack-milano-blue', title: 'MILANO 01 — POWDER BLUE', text: 'Clouds edition' },
-    { src: 'pack-floral-muse', title: 'FLORAL — THE MUSE', text: 'Dusty rose side panel' },
+    { src: 'pack-milano-sand', title: 'MILANO 01 — THE ARCHES', text: 'Moment of new opportunities', base: 'Oat', baseHex: '#BCA889', painting: 'The arches' },
+    { src: 'pack-floral-rose', title: 'FLORAL — THE BALUSTRADE', text: 'Moment of soft bloom', base: 'Dusty Rose', baseHex: '#BB7C6D', painting: 'The balustrade' },
+    { src: 'pack-milano-blue', title: 'MILANO 01 — THE CLOUDS', text: 'Moment of new opportunities', base: 'Powder Blue', baseHex: '#B8C9D0', painting: 'The clouds' },
+    { src: 'pack-floral-muse', title: 'FLORAL — THE MUSE', text: 'Moment of soft bloom', base: 'Dusty Rose', baseHex: '#BB7C6D', painting: 'The muse' },
   ],
   packagingSpec: '50 ML · 1.7 FL.OZ · MADE IN EGYPT',
   imageryIntro: 'Rococo skies, balustrades and draped silk, painted in warm greys, blush and powder blue. Light is soft and diffused; nothing is saturated. Crop generously and let the sky breathe behind the plaque. Figures appear in profile or turned away — the muse, never a portrait.',
@@ -92,6 +92,17 @@ const COPY = {
   ],
   closing: 'MEMORIES IN THE MAKING.',
   credit: 'Brand identity & packaging design by',
+  // Studio services slide (closing), after the studio's own carousel.
+  services: {
+    headlineA: 'THOUGHTFULLY DESIGNED.',
+    headlineB: 'BEAUTIFULLY PRINTED.',
+    sub: 'From the first concept to the final finish, we bring your brand to life.',
+    hook: '💬 LET\'S CREATE YOUR NEXT BRANDED PACKAGING.',
+    ask: 'SEND US YOUR SIZE & QUANTITY ON WHATSAPP.',
+    bullets: ['BESPOKE DESIGN', 'PAPER & MATERIAL SELECTION', 'HIGH-QUALITY PRINTING', 'PREMIUM FINISHING'],
+    cta: 'START YOUR ORDER',
+    footer: 'MIREA  ·  EAU DE PARFUM  ·  MEMORIES IN THE MAKING.',
+  },
 };
 
 // Image sources: file names inside assets/ (fetched by the plugin UI, or placeholders).
@@ -100,10 +111,10 @@ const IMAGE_FILES: { [key: string]: string } = {
   arches: 'assets/images/arches.jpg',
   muse: 'assets/images/muse.jpg',
   clouds: 'assets/images/clouds.jpg',
-  'pack-milano-sand': 'assets/packaging/milano-01-sand.jpg',
-  'pack-floral-rose': 'assets/packaging/floral-rose-balustrade.jpg',
-  'pack-milano-blue': 'assets/packaging/milano-01-blue.jpg',
-  'pack-floral-muse': 'assets/packaging/floral-rose-muse.jpg',
+  'pack-milano-sand': 'assets/packaging/milano-01-sand.png',
+  'pack-floral-rose': 'assets/packaging/floral-rose-balustrade.png',
+  'pack-milano-blue': 'assets/packaging/milano-01-blue.png',
+  'pack-floral-muse': 'assets/packaging/floral-rose-muse.png',
 };
 
 function hexToRgb255(hex: string): [number, number, number] {
