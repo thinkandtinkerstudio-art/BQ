@@ -85,10 +85,6 @@ function logo(name: string, id: string, x: number, y: number, h: number, fill: s
   const a = LOGOS[id]; const w = h * a.w / a.h;
   return svgNode(name, x, y, w, h, logoSvg(id, fill));
 }
-function logoByWidth(name: string, id: string, x: number, y: number, w: number, fill: string): SSvg {
-  const a = LOGOS[id]; const h = w * a.h / a.w;
-  return svgNode(name, x, y, w, h, logoSvg(id, fill));
-}
 function plaque(name: string, x: number, y: number, w: number, h: number, fill: string, r?: number): SSvg {
   const rr = r == null ? Math.min(28, w * 0.08) : r;
   return svgNode(name, x, y, w, h, svgWrap(w, h, `<path fill="${fill}" d="${plaquePath(w, h, rr)}"/>`));

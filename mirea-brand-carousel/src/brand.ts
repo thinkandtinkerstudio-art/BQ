@@ -39,8 +39,7 @@ const PALETTE_NEUTRAL: Swatch[] = [
   { key: 'camel', name: 'Camel', role: 'Secondary brown' },
 ];
 
-type FontRole = 'display' | 'displayBold' | 'body' | 'bodyMedium' | 'bodyBold';
-const FONT_FAMILIES = { display: 'Condor Extended', body: 'Syne' };
+type FontRole = 'display' | 'displayBold' | 'body' | 'bodyMedium' | 'bodyBold'; // display = Condor Extended, body = Syne
 
 const COPY = {
   brand: 'MIREA',

@@ -6,15 +6,18 @@
     "build": "node tools/gen_logos_ts.js && tsc -p tsconfig.node.json && node tools/build_plugin.js",
     "test": "node tools/mock_figma_test.js",
     "preview": "node tools/render_preview.js",
-    "all": "npm run build && npm test && npm run preview"
+    "all": "npm run build && npm test && npm run lint && npm run preview",
+    "lint": "eslint -c tools/eslint.config.mjs build/mcp/code.ts figma-plugin/mirea-brand-guidelines/code.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@figma/plugin-typings": "^1.140.0",
+    "eslint": "^9.39.5",
     "playwright": "1.56",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.71.0"
   },
   "private": true
 }

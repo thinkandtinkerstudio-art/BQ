@@ -37,7 +37,6 @@ const PALETTE_NEUTRAL = [
     { key: 'oat', name: 'Oat', role: 'Rules, captions' },
     { key: 'camel', name: 'Camel', role: 'Secondary brown' },
 ];
-const FONT_FAMILIES = { display: 'Condor Extended', body: 'Syne' };
 const COPY = {
     brand: 'MIREA',
     descriptor: 'EAU DE PARFUM',
@@ -183,11 +182,6 @@ function image(name, x, y, w, h, src, radius) {
 function logo(name, id, x, y, h, fill) {
     const a = LOGOS[id];
     const w = h * a.w / a.h;
-    return svgNode(name, x, y, w, h, logoSvg(id, fill));
-}
-function logoByWidth(name, id, x, y, w, fill) {
-    const a = LOGOS[id];
-    const h = w * a.h / a.w;
     return svgNode(name, x, y, w, h, logoSvg(id, fill));
 }
 function plaque(name, x, y, w, h, fill, r) {
@@ -594,7 +588,7 @@ function post(msg) {
     try {
         figma.ui.postMessage(msg);
     }
-    catch (e) { /* UI closed */ }
+    catch (_e) { /* UI closed */ }
 }
 function log(step, status, detail) {
     post({ type: 'log', step, status, detail: detail || '' });
@@ -648,7 +642,7 @@ async function resolveFonts() {
         try {
             await figma.loadFontAsync(fonts[k]);
         }
-        catch (e) {
+        catch (_e) {
             const fb = { family: 'Inter', style: k === 'displayBold' || k === 'bodyBold' ? 'Bold' : k === 'bodyMedium' ? 'Medium' : 'Regular' };
             await figma.loadFontAsync(fb);
             fonts[k] = fb;
@@ -769,7 +763,7 @@ function buildImage(n, ctx) {
         return r;
     }
     // Placeholder: replace the fill with the image (Fill → Image).
-    r.name = 'Photo — ' + n.src + ' — replace fill with image';
+    r.name = 'Photo — ' + n.src + ' (' + (IMAGE_FILES[n.src] || 'upload') + ') — replace fill with image';
     r.fills = [solid(COLORS.linen)];
     r.strokes = [solid(COLORS.oat)];
     r.strokeWeight = 1;
@@ -811,7 +805,7 @@ async function buildSlide(sl, ctx, x) {
     try {
         frame.setRelaunchData({ [RELAUNCH_COMMAND]: 'Rebuild the MIREA carousel' });
     }
-    catch (e) { /* optional */ }
+    catch (_e) { /* optional */ }
     return frame;
 }
 function svgRatio(svg) {
@@ -923,7 +917,7 @@ figma.showUI(__html__, { width: PANEL_WIDTH, height: 720, themeColors: true });
 try {
     figma.root.setRelaunchData({ [RELAUNCH_COMMAND]: 'Build the MIREA brand-guidelines carousel' });
 }
-catch (e) { /* optional */ }
+catch (_e) { /* optional */ }
 figma.ui.onmessage = async (message) => {
     if (message.type === 'resize') {
         figma.ui.resize(PANEL_WIDTH, Math.max(320, Math.min(900, Math.round(message.height))));
