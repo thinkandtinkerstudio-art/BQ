@@ -1,19 +1,29 @@
 {
   "brand": "ROVA SKIN",
   "sizes_mm": {
-    "portrait": { "w": 60, "h": 90 },
-    "landscape": { "w": 90, "h": 60 },
+    "portrait": {
+      "w": 60,
+      "h": 90
+    },
+    "landscape": {
+      "w": 90,
+      "h": 60
+    },
     "bleed": 3,
     "safe": 5,
     "corner_radius": 3
   },
-  "field_rotation": ["burgundy", "rose", "ivory"],
+  "field_rotation": [
+    "burgundy",
+    "rose",
+    "ivory"
+  ],
   "products": [
     {
       "id": "01-renew",
       "step": "01",
       "step_name": "RENEW",
-      "arabic": "المقشر",
+      "arabic": "المقشــــر",
       "name": "THE RENEWAL",
       "descriptor": "Overnight Peel",
       "actives": null,
@@ -26,7 +36,7 @@
       "id": "02-repair",
       "step": "02",
       "step_name": "REPAIR",
-      "arabic": "كريم السيكا",
+      "arabic": "كريـــم السيكـــا",
       "name": "CICA RECOVERY CREAM",
       "descriptor": "Soothing & Repair Cream",
       "actives": null,
@@ -39,7 +49,7 @@
       "id": "03-correct",
       "step": "03",
       "step_name": "CORRECT",
-      "arabic": "كريم التفتيح",
+      "arabic": "كريـــم التفتيـــح",
       "name": "THE CORRECTOR",
       "descriptor": "Brightening Cream",
       "actives": "TRANEXAMIC ACID · ALPHA-ARBUTIN · NIACINAMIDE",
@@ -52,7 +62,7 @@
       "id": "04-hydrate",
       "step": "04",
       "step_name": "HYDRATE",
-      "arabic": "المرطب",
+      "arabic": "المرطــــب",
       "name": "THE HYDRATOR",
       "descriptor": "Barrier Moisturizer Cream",
       "actives": "PANTHENOL · HYALURONIC ACID · GLYCERIN",
@@ -65,7 +75,7 @@
       "id": "05-glow",
       "step": "05",
       "step_name": "GLOW",
-      "arabic": "سيروم النضارة",
+      "arabic": "سيـــروم النضـــارة",
       "name": "THE GLOW",
       "descriptor": "Radiance Serum",
       "actives": "VITAMIN C · NIACINAMIDE 10% · HYALURONIC ACID",
@@ -78,7 +88,7 @@
       "id": "06-gift",
       "step": null,
       "step_name": "GIFT",
-      "arabic": "الهدية",
+      "arabic": "ملمـــع شفـــاه",
       "name": "LIP GLOSS",
       "descriptor": null,
       "actives": null,
@@ -87,5 +97,8 @@
       "size": "5 ml",
       "field": "ivory"
     }
-  ]
+  ],
+  "notes": {
+    "arabic": "Product-type names in Arabic with kashida (tatweel U+0640) for a wider, calligraphic line. Edit the strings here; the SVGs carry them as plain Arabic text."
+  }
 }

@@ -59,7 +59,7 @@ FONTS = {
     "georgia":        dict(svg=("Georgia", "normal", 400), prev=("Gelasio", "normal", 400), file="Gelasio-Regular.ttf", pdf="Georgia"),
     "georgia-italic": dict(svg=("Georgia", "italic", 400), prev=("Gelasio", "italic", 400), file="Gelasio-Italic.ttf",  pdf="Georgia-Italic"),
     "syne":           dict(svg=("Syne", "normal", 700),    prev=("Syne", "normal", 700),    file="Syne-Bold.ttf",       pdf="Syne-Bold"),
-    "amiri":          dict(svg=("Amiri", "normal", 400),   prev=("Amiri", "normal", 400),   file="Amiri-Regular.ttf",   pdf="Amiri-Regular"),
+    "amiri":          dict(svg=("Amiri", "normal", 700),   prev=("Amiri", "normal", 700),   file="Amiri-Bold.ttf",      pdf="Amiri-Bold"),
 }
 
 class Metrics:
@@ -90,7 +90,7 @@ def shape_arabic(s):
 STYLE = {
     "step":            dict(font="syne", size=5.5, track=.30, asc=1.0, desc=0.0),
     "name":            dict(font="georgia", size=13.0, track=.05, asc=1.0, desc=0.05, lh=1.22),
-    "arabic":          dict(font="amiri", size=9.0, track=0, asc=1.05, desc=0.45),
+    "arabic":          dict(font="amiri", size=9.5, track=0, asc=1.05, desc=0.45),
     "descriptor":      dict(font="georgia-italic", size=8.5, track=0, asc=1.0, desc=0.3),
     "actives":         dict(font="syne", size=5.0, track=.18, asc=1.0, desc=0.0, lh=1.6),
     "benefits_caps":   dict(font="syne", size=5.5, track=.22, asc=1.0, desc=0.0),
