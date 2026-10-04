@@ -20,6 +20,7 @@ Preview: `previews/contact-sheet.png`.
 - `stickers/portrait/` و `stickers/landscape/` — كل استيكر كملف SVG منفصل بنصوص حيّة (Georgia / Syne Bold / Amiri). افتحه مباشرة في Illustrator (File → Open) — الوحدة مليمتر والـ artboard بمقاس القص والبليد مرسوم خارجه.
 - `fonts/` — ثبّت Syne-Bold و Amiri قبل ما تفتح الملفات. Georgia موجودة في ويندوز وماك.
 - `spec/products.json` — نصوص المنتجات؛ عدّل وشغّل `python3 tools/build.py` يعيد توليد كل الملفات.
+- كل منتج له أيقونة خطية بسيطة بتعبّر عنه جوه ميدالية دائرية على الخط الفاصل: هلال ونجمة (المقشر الليلي)، ورقة سيكا جوه درع (الإصلاح)، دايرة نصها بقع ونصها صافي (توحيد اللون)، قطرة (الترطيب)، شمس (النضارة)، شفايف ولمعة (الجلوس). الأيقونات بنفس أسلوب أيقونات الهايلايت في دليل البراند (خط واحد بدون تعبئة) وموجودة منفصلة في `assets/icons/`.
 - الاسم العربي لكل منتج (نوع المنتج: المقشر، كريم السيكا، كريم التفتيح، المرطب، سيروم النضارة، ملمع شفاه) مكتوب بخط Amiri Bold مع كاشيدة (تطويل) عشان يبقى أعرض. النصوص في `spec/products.json` والكاشيدة حرف تطويل عادي (ـ) تقدر تزوده أو تقلله. الجروب اسمه `Arabic` لو عايز تشيله.
 
 ## Files
@@ -29,6 +30,7 @@ Rova-Skin-Stickers.ai / .pdf   12 artboards (pages 1–6 portrait, 7–12 landsc
 stickers/portrait/*.svg        6 × 60×90 mm, live text, 1 unit = 1 mm
 stickers/landscape/*.svg       6 × 90×60 mm
 assets/logo/                   Rova mark, ROVA wordmark, sparkle, "ROVA SKIN" stacked lockups (vector, from the brand PDF)
+assets/icons/                  the six product line icons (24 mm grid) and the same icons inside their medallion
 previews/                      300 dpi PNG of every sticker + contact sheet
 fonts/                         Syne-Bold, Amiri-Bold (+ Regular), Gelasio (OFL) — Georgia is a system font and is not shipped
 spec/products.json             the copy for the six products, field colour per product, sizes
@@ -39,7 +41,7 @@ tools/build.py                 generator (spec → SVG / PDF / AI / PNG);  tools
 
 **SVG (recommended for editing).** File → Open any file in `stickers/`. Units are millimetres, the artboard is the trim size,
 and the 3 mm bleed is drawn outside the artboard (set Document Setup → Bleed 3 mm to see it). Groups are named
-`Background`, `Watermark`, `Logo`, `Rules`, `Text`, `Arabic`, `Dieline`. Text stays live in Georgia, Georgia Italic,
+`Background`, `Watermark`, `Logo`, `Rules`, `Icon`, `Text`, `Arabic`, `Dieline`. Text stays live in Georgia, Georgia Italic,
 Syne Bold and Amiri Bold; install the fonts in `fonts/` first. The `Dieline` group holds the trim outline (`CutContour`, magenta)
 and the dashed safe area (cyan) and is not meant to print: delete it or move it to a non-printing layer.
 
@@ -60,6 +62,9 @@ so Illustrator switches to your installed Georgia on open with no reflow. Arabic
 - Georgia for the product name (caps, tracked) and the human lines (descriptor and benefits in italic); Syne Bold, letter-spaced
   and small, for labels and facts (step, actives, size). Middle dots `·` replace the bullets in the brief.
 - `ROVA SKIN` lockup = the ROVA wordmark with SKIN set like the BEAUTY CLINIC descriptor; the mark sits above it, as in the vertical label version.
+- One line icon per product in a thin medallion on the divider, drawn like the brand's highlight icons (single stroke weight,
+  round caps, never filled): moon + sparkle (overnight peel), leaf in a shield (cica repair), split circle with spots and a sparkle
+  (even tone), drop (hydration), sun (glow), lips + shine (lip gloss).
 - Arabic product-type line in Amiri Bold with kashida (tatweel) stretches so the Naskh line reads as wide as the Latin name above it.
 - Nothing but the watermark crosses the 5 mm safe area.
 

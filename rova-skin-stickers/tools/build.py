@@ -153,6 +153,107 @@ def rect(x, y, w, h, fill=None, stroke=None, sw=0, rx=0, dash=None, id=None, spo
 def group(id, children, clip=None):
     return dict(type="group", id=id, children=children, clip=clip)
 
+# --------------------------------------------------------------------------------------------- product icons
+# One line icon per product, drawn on a 24 x 24 grid in the style of the Rova highlight icons: a single stroke
+# weight, round caps, never filled (small dots excepted).  Only M / L / C / Z commands so the PDF writer can draw them.
+from math import cos, sin, tan, radians, degrees, atan2, sqrt, ceil
+K = 0.5522847498
+ICON_STROKE = 1.25           # grid units
+
+def _f(v): return f"{v:.3f}"
+
+def circle_d(cx, cy, r):
+    return (f"M{_f(cx+r)} {_f(cy)} C{_f(cx+r)} {_f(cy+K*r)} {_f(cx+K*r)} {_f(cy+r)} {_f(cx)} {_f(cy+r)} "
+            f"C{_f(cx-K*r)} {_f(cy+r)} {_f(cx-r)} {_f(cy+K*r)} {_f(cx-r)} {_f(cy)} "
+            f"C{_f(cx-r)} {_f(cy-K*r)} {_f(cx-K*r)} {_f(cy-r)} {_f(cx)} {_f(cy-r)} "
+            f"C{_f(cx+K*r)} {_f(cy-r)} {_f(cx+r)} {_f(cy-K*r)} {_f(cx+r)} {_f(cy)} Z")
+
+def arc_d(cx, cy, r, a0, a1, move=True):
+    """Circular arc a0 -> a1 (degrees, y-down so positive = clockwise) as cubic segments of <= 90 degrees."""
+    out = []; n = max(1, ceil(abs(a1 - a0) / 90)); da = (a1 - a0) / n
+    for i in range(n):
+        t0, t1 = radians(a0 + i * da), radians(a0 + (i + 1) * da)
+        k = 4 / 3 * tan((t1 - t0) / 4)
+        p0 = (cx + r * cos(t0), cy + r * sin(t0)); p3 = (cx + r * cos(t1), cy + r * sin(t1))
+        p1 = (p0[0] - k * r * sin(t0), p0[1] + k * r * cos(t0)); p2 = (p3[0] + k * r * sin(t1), p3[1] - k * r * cos(t1))
+        if i == 0 and move: out.append(f"M{_f(p0[0])} {_f(p0[1])}")
+        out.append(f"C{_f(p1[0])} {_f(p1[1])} {_f(p2[0])} {_f(p2[1])} {_f(p3[0])} {_f(p3[1])}")
+    return " ".join(out)
+
+def _sweep_through(sa, ea, through):
+    """End angle so that the arc from sa to ea passes through angle `through` (all degrees)."""
+    pos = (ea - sa) % 360; off = (through - sa) % 360
+    return sa + pos if off <= pos else sa - (360 - pos)
+
+def crescent_d(c1, r1, c2, r2):
+    """Crescent = circle 1 minus circle 2, as one closed outline."""
+    dx, dy = c2[0] - c1[0], c2[1] - c1[1]; d = sqrt(dx * dx + dy * dy)
+    a = (r1 * r1 - r2 * r2 + d * d) / (2 * d); h = sqrt(max(r1 * r1 - a * a, 0))
+    px, py = c1[0] + a * dx / d, c1[1] + a * dy / d
+    ia = (px + h * dy / d, py - h * dx / d); ib = (px - h * dy / d, py + h * dx / d)
+    ang = lambda c, p: degrees(atan2(p[1] - c[1], p[0] - c[0]))
+    away = degrees(atan2(-dy, -dx)); toward = degrees(atan2(dy, dx))
+    outer = arc_d(c1[0], c1[1], r1, ang(c1, ia), _sweep_through(ang(c1, ia), ang(c1, ib), away))
+    inner = arc_d(c2[0], c2[1], r2, ang(c2, ib), _sweep_through(ang(c2, ib), ang(c2, ia), toward + 180), move=False)
+    return outer + " " + inner + " Z"
+
+def sparkle_d(cx, cy, s, pinch=0.08):
+    """Four-point star outline; tips at distance s, waist pulled to the centre."""
+    tips = [(cx, cy - s), (cx + s, cy), (cx, cy + s), (cx - s, cy)]
+    out = [f"M{_f(tips[0][0])} {_f(tips[0][1])}"]
+    for i in range(4):
+        p0, p2 = tips[i], tips[(i + 1) % 4]
+        q = (cx + (p0[0] + p2[0] - 2 * cx) * pinch, cy + (p0[1] + p2[1] - 2 * cy) * pinch)   # quadratic control near centre
+        c1 = (p0[0] + 2 / 3 * (q[0] - p0[0]), p0[1] + 2 / 3 * (q[1] - p0[1]))
+        c2 = (p2[0] + 2 / 3 * (q[0] - p2[0]), p2[1] + 2 / 3 * (q[1] - p2[1]))
+        out.append(f"C{_f(c1[0])} {_f(c1[1])} {_f(c2[0])} {_f(c2[1])} {_f(p2[0])} {_f(p2[1])}")
+    return " ".join(out) + " Z"
+
+def dot(cx, cy, r=0.95): return dict(d=circle_d(cx, cy, r), fill=True)
+def stroke(d): return dict(d=d, fill=False)
+
+def build_icons():
+    I = {}
+    # 01 RENEW · overnight peel: crescent moon + a sparkle
+    I["renew"] = [stroke(crescent_d((11.2, 12.6), 8.0, (14.6, 10.4), 7.3)), stroke(sparkle_d(18.6, 6.2, 2.4))]
+    # 02 REPAIR · cica recovery: a leaf inside a shield
+    shield = "M12 2.9 L19.6 5.9 L19.6 11.6 C19.6 16.4 16.4 20 12 21.6 C7.6 20 4.4 16.4 4.4 11.6 L4.4 5.9 Z"
+    leaf = "M8.9 16.1 C8.6 12.2 11.2 8.6 15.6 8.3 C15.9 12.4 13.4 15.9 8.9 16.1 Z"
+    vein = "M8.9 16.1 C10.6 13.9 12.4 11.9 14.6 9.9"
+    I["repair"] = [stroke(shield), stroke(leaf), stroke(vein)]
+    # 03 CORRECT · even tone: one circle, spots on one side, clear and bright on the other
+    diag = f"M{_f(12-8*cos(radians(45)))} {_f(12+8*sin(radians(45)))} L{_f(12+8*cos(radians(45)))} {_f(12-8*sin(radians(45)))}"
+    I["correct"] = [stroke(circle_d(12, 12, 8)), stroke(diag), dot(8.3, 8.6), dot(11.4, 6.1), dot(6.4, 12.3),
+                    stroke(sparkle_d(15.4, 15.4, 2.6))]
+    # 04 HYDRATE · barrier moisturiser: a drop with a highlight
+    drop = ("M12 3.4 C12 3.4 5.6 10.7 5.6 15 C5.6 18.53 8.47 21.4 12 21.4 C15.53 21.4 18.4 18.53 18.4 15 "
+            "C18.4 10.7 12 3.4 12 3.4 Z")
+    I["hydrate"] = [stroke(drop), stroke(arc_d(12, 15, 3.7, 128, 196))]
+    # 05 GLOW · radiance serum: a sun
+    rays = [stroke(f"M{_f(12+6.4*cos(radians(a)))} {_f(12+6.4*sin(radians(a)))} L{_f(12+9*cos(radians(a)))} {_f(12+9*sin(radians(a)))}")
+            for a in range(0, 360, 45)]
+    I["glow"] = [stroke(circle_d(12, 12, 4.1))] + rays
+    # GIFT · lip gloss: lips with a shine
+    lips = ("M3.4 12.2 C6.3 8.6 9.4 8.3 12 10.3 C14.6 8.3 17.7 8.6 20.6 12.2 "
+            "C17.6 15.9 14.6 17.2 12 17.2 C9.4 17.2 6.4 15.9 3.4 12.2 Z")
+    lipline = "M3.4 12.2 C8 12.9 16 12.9 20.6 12.2"
+    I["gift"] = [stroke(lips), stroke(lipline), stroke(sparkle_d(19.4, 5.6, 2.0))]
+    return I
+
+ICONS = build_icons()
+
+def icon(name, cx, cy, size, color):
+    """Product icon centred on (cx, cy); `size` = the 24-unit grid in mm."""
+    s = size / 24
+    return dict(type="icon", name=name, x=cx - size / 2, y=cy - size / 2, s=s, color=color, sw=ICON_STROKE * s)
+
+def circle(cx, cy, r, stroke=None, sw=0.2, fill=None, id=None):
+    return dict(type="circle", cx=cx, cy=cy, r=r, stroke=stroke, sw=sw, fill=fill, id=id)
+
+def medallion(name, cx, cy, r, ink, line_col):
+    """Thin circle on the rule with the product icon inside."""
+    return [circle(cx, cy, r, stroke=line_col, sw=0.22, id="medallion"), icon(name, cx, cy, r * 1.4, ink)]
+
 # --------------------------------------------------------------------------------------------- flow block
 def flow(items, maxw):
     """items: list of (style, text, extra) -> list of lines with relative baselines, plus block height."""
@@ -221,15 +322,16 @@ def layout_portrait(p, S, sizes):
     g.append(group("Background", [rect(-bleed, -bleed, W + 2 * bleed, H + 2 * bleed, fill=bg, id="field")]))
     wmk = logo("mark", 33.5, 60.5, h=40, color=wm)
     g.append(group("Watermark", [wmk], clip=(-bleed, -bleed, W + 2 * bleed, H + 2 * bleed)))
-    lock, lock_bottom = skin_lockup(cx, 8.6, 12.0, 22.0, ink)
+    lock, lock_bottom = skin_lockup(cx, 8.0, 11.0, 21.0, ink)
     g.append(group("Logo", lock))
-    y1 = lock_bottom + 4.0
-    sp = logo("sparkle", cx - 1.1, y1 - 1.1, w=2.2, color=ln)
-    rules = [line(12, y1, cx - 3.2, y1, ln), sp, line(cx + 3.2, y1, W - 12, y1, ln), line(12, 81.0, W - 12, 81.0, ln)]
+    mr = 4.7                                           # medallion radius
+    y1 = lock_bottom + 2.2 + mr
+    rules = [line(11, y1, cx - mr - 1.6, y1, ln), line(cx + mr + 1.6, y1, W - 11, y1, ln), line(11, 81.4, W - 11, 81.4, ln)]
     g.append(group("Rules", rules))
+    g.append(group("Icon", medallion(p["icon"], cx, y1, mr, ink, ln)))
     lines, hgt = flow(content_items(p), W - 2 * safe - 2)
-    body = place_block(lines, hgt, y1 + 3.2, 81.0 - 2.6, cx, "center", ink)
-    body.append(text(cx, 85.0, p["size"], "size", ink, align="center", id="size"))
+    body = place_block(lines, hgt, y1 + mr + 2.6, 81.4 - 2.4, cx, "center", ink)
+    body.append(text(cx, 85.3, p["size"], "size", ink, align="center", id="size"))
     g.append(group("Text", [b for b in body if b["id"] != "arabic"]))
     g.append(group("Arabic", [b for b in body if b["id"] == "arabic"]))
     g.append(group("Dieline", [
@@ -249,14 +351,14 @@ def layout_landscape(p, S, sizes):
     mark_h, word_w = 11.0, 20.0
     rova_h = word_w * KIT["wordmark"]["h"] / KIT["wordmark"]["w"]
     total = mark_h + mark_h * .22 + rova_h + rova_h * .12 + rova_h * .125
-    lcx = 16.5
+    lcx = 15.5
     lock, lock_bottom = skin_lockup(lcx, (H - total) / 2, mark_h, word_w, ink)
     g.append(group("Logo", lock))
-    vx = 32.0
-    sp = logo("sparkle", vx - 1.1, H / 2 - 1.1, w=2.2, color=ln)
-    tx, tw = 37.0, W - safe - 37.0 - 1.0
-    rules = [line(vx, 11, vx, H / 2 - 3.2, ln), sp, line(vx, H / 2 + 3.2, vx, H - 11, ln), line(tx, 49.0, W - safe, 49.0, ln)]
+    vx, mr = 32.6, 4.5
+    tx, tw = 39.0, W - safe - 39.0 - 1.0
+    rules = [line(vx, 10.5, vx, H / 2 - mr - 1.6, ln), line(vx, H / 2 + mr + 1.6, vx, H - 10.5, ln), line(tx, 49.0, W - safe, 49.0, ln)]
     g.append(group("Rules", rules))
+    g.append(group("Icon", medallion(p["icon"], vx, H / 2, mr, ink, ln)))
     lines, hgt = flow(content_items(p), tw)
     body = place_block(lines, hgt, 8.5, 49.0 - 2.4, tx, "left", ink)
     body.append(text(W - safe, 53.6, p["size"], "size", ink, align="right", id="size"))
@@ -315,6 +417,18 @@ def svg_el(e, preview, defs):
         paths = "".join(f'<path d="{d}"/>' for d in KIT[e["name"]]["paths"])
         return (f'<g id="{e["name"]}" fill="{e["color"].hex}" transform="translate({fmt(e["x"])} {fmt(e["y"])}) '
                 f'scale({e["s"]:.6f})">{paths}</g>')
+    if t == "circle":
+        a = [f'cx="{fmt(e["cx"])}"', f'cy="{fmt(e["cy"])}"', f'r="{fmt(e["r"])}"', f'fill="{e["fill"].hex if e["fill"] else "none"}"']
+        if e["stroke"]: a.append(f'stroke="{e["stroke"].hex}" stroke-width="{fmt(e["sw"])}"')
+        if e.get("id"): a.append(f'id="{e["id"]}"')
+        return f'<circle {" ".join(a)}/>'
+    if t == "icon":
+        parts = []
+        for p in ICONS[e["name"]]:
+            parts.append(f'<path d="{p["d"]}" fill="{e["color"].hex}" stroke="none"/>' if p["fill"] else f'<path d="{p["d"]}"/>')
+        return (f'<g id="icon-{e["name"]}" fill="none" stroke="{e["color"].hex}" stroke-width="{ICON_STROKE}" '
+                f'stroke-linecap="round" stroke-linejoin="round" transform="translate({fmt(e["x"])} {fmt(e["y"])}) '
+                f'scale({e["s"]:.6f})">{"".join(parts)}</g>')
     if t == "text":
         return svg_text(e, preview)
     raise ValueError(t)
@@ -395,10 +509,26 @@ class Pdf:
         elif t == "line":
             c.setStrokeColor(self.col(e["color"])); c.setLineWidth(e["sw"] * MM); c.setLineCap(1)
             c.line(self.X(e["x1"]), self.Y(e["y1"]), self.X(e["x2"]), self.Y(e["y2"]))
+        elif t == "circle":
+            if e["fill"]: c.setFillColor(self.col(e["fill"]))
+            if e["stroke"]: c.setStrokeColor(self.col(e["stroke"])); c.setLineWidth(e["sw"] * MM)
+            c.circle(self.X(e["cx"]), self.Y(e["cy"]), e["r"] * MM, stroke=1 if e["stroke"] else 0, fill=1 if e["fill"] else 0)
+        elif t == "icon":
+            c.setStrokeColor(self.col(e["color"])); c.setFillColor(self.col(e["color"]))
+            c.setLineWidth(e["sw"] * MM); c.setLineCap(1); c.setLineJoin(1)
+            for part in ICONS[e["name"]]:
+                p = self._path(part["d"], e["x"], e["y"], e["s"])
+                c.drawPath(p, stroke=0 if part["fill"] else 1, fill=1 if part["fill"] else 0)
         elif t == "logo":
             c.setFillColor(self.col(e["color"]))
-            s = e["s"]; ox, oy = e["x"], e["y"]
             for d in KIT[e["name"]]["paths"]:
+                c.drawPath(self._path(d, e["x"], e["y"], e["s"]), stroke=0, fill=1)
+        elif t == "text":
+            self._text(e)
+    def _path(self, d, ox, oy, s):
+        c = self.c
+        if True:
+            if True:
                 p = c.beginPath(); cur = None
                 for cmd, a in _path_tokens(d):
                     if cmd == "M": cur = (a[0], a[1]); p.moveTo(self.X(ox + a[0] * s), self.Y(oy + a[1] * s))
@@ -409,8 +539,10 @@ class Pdf:
                         p.curveTo(self.X(ox + a[0] * s), self.Y(oy + a[1] * s), self.X(ox + a[2] * s), self.Y(oy + a[3] * s),
                                   self.X(ox + a[4] * s), self.Y(oy + a[5] * s)); cur = (a[4], a[5])
                     elif cmd == "Z": p.close()
-                c.drawPath(p, stroke=0, fill=1)
-        elif t == "text":
+                return p
+    def _text(self, e):
+        c = self.c
+        if True:
             font = FONTS[e["font"]]["pdf"]; size = e["size"]
             s = shape_arabic(e["text"]) if e["rtl"] else e["text"]
             w = M.width_mm(s, e["font"], size, e["track"])
@@ -433,6 +565,12 @@ def write_logo_assets(outdir):
     doc([logo("mark", 0, 0, h=40, color=BURGUNDY)], KIT["mark"]["w"] / KIT["mark"]["h"] * 40, 40, "rova-mark.svg", "Rova mark")
     doc([logo("wordmark", 0, 0, w=60, color=BURGUNDY)], 60, KIT["wordmark"]["h"] / KIT["wordmark"]["w"] * 60, "rova-wordmark.svg", "Rova wordmark")
     doc([logo("sparkle", 0, 0, w=10, color=BURGUNDY)], 10, 10, "rova-sparkle.svg", "Rova sparkle")
+    icons_dir = os.path.join(os.path.dirname(outdir), "icons"); os.makedirs(icons_dir, exist_ok=True)
+    for name in ICONS:
+        els = [icon(name, 12, 12, 24, BURGUNDY)]
+        open(os.path.join(icons_dir, f"icon-{name}.svg"), "w").write(svg_doc([group("Icon", els)], 24, 24, f"Rova Skin icon · {name}"))
+        els = medallion(name, 12, 12, 10, BURGUNDY, ROSE)
+        open(os.path.join(icons_dir, f"medallion-{name}.svg"), "w").write(svg_doc([group("Icon", els)], 24, 24, f"Rova Skin medallion · {name}"))
     els, bottom = skin_lockup(20, 1, 20, 36, BURGUNDY)
     doc(els, 40, bottom + 1.5, "rova-skin-stacked.svg", "Rova Skin lockup, stacked")
     els, bottom = skin_lockup(20, 1, 20, 36, IVORY)

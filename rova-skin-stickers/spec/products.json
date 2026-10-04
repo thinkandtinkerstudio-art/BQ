@@ -30,7 +30,8 @@
       "benefits": "RENEW · SMOOTH · BRIGHTEN",
       "benefits_style": "caps",
       "size": "10 g",
-      "field": "burgundy"
+      "field": "burgundy",
+      "icon": "renew"
     },
     {
       "id": "02-repair",
@@ -43,7 +44,8 @@
       "benefits": "SOOTHE · REPAIR · RESTORE",
       "benefits_style": "caps",
       "size": "50 ml",
-      "field": "rose"
+      "field": "rose",
+      "icon": "repair"
     },
     {
       "id": "03-correct",
@@ -56,7 +58,8 @@
       "benefits": "Even Tone · Radiance",
       "benefits_style": "italic",
       "size": "50 ml",
-      "field": "ivory"
+      "field": "ivory",
+      "icon": "correct"
     },
     {
       "id": "04-hydrate",
@@ -69,7 +72,8 @@
       "benefits": "Hydrate · Protect · Nourish",
       "benefits_style": "italic",
       "size": "50 ml",
-      "field": "burgundy"
+      "field": "burgundy",
+      "icon": "hydrate"
     },
     {
       "id": "05-glow",
@@ -82,7 +86,8 @@
       "benefits": "Glow · Hydrate · Radiance",
       "benefits_style": "italic",
       "size": "30 ml",
-      "field": "rose"
+      "field": "rose",
+      "icon": "glow"
     },
     {
       "id": "06-gift",
@@ -95,10 +100,12 @@
       "benefits": "NOURISH · SHINE",
       "benefits_style": "caps",
       "size": "5 ml",
-      "field": "ivory"
+      "field": "ivory",
+      "icon": "gift"
     }
   ],
   "notes": {
-    "arabic": "Product-type names in Arabic with kashida (tatweel U+0640) for a wider, calligraphic line. Edit the strings here; the SVGs carry them as plain Arabic text."
+    "arabic": "Product-type names in Arabic with kashida (tatweel U+0640) for a wider, calligraphic line. Edit the strings here; the SVGs carry them as plain Arabic text.",
+    "icons": "Line icon per product (renew: moon + sparkle, repair: leaf in shield, correct: even-tone circle, hydrate: drop, glow: sun, gift: lips + shine) drawn in tools/build.py build_icons(); exported to assets/icons."
   }
 }
