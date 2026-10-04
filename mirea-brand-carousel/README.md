@@ -46,7 +46,7 @@ Every element of every slide is defined once in `src/scene.ts` (positions, sizes
 | `previews/` | PNG of each slide at 1305 × 1631 and `contact-sheet.png`. Display face is a stand-in (see Fonts). |
 | `src/` | `brand.ts` (tokens, copy, palette), `scene.ts` (slide builder), `figma-main.ts` (plugin sandbox), `ui.html` (plugin window), `logos.gen.ts` (generated from `assets/logo`). |
 | `tools/` | `extract_logos.js` (PDF→SVG cleanup), `gen_logos_ts.js`, `build_plugin.js` (bundle + `tsc`), `render_preview.js` (Chromium previews), `mock_figma_test.js` (smoke test against a mock Plugin API). |
-| `build/mcp/` | The same plugin as `code.ts` + `ui.html` for the Figma account-library version. |
+| `build/mcp/` | The account-library version of the plugin (`code.ts` + `ui.html`). Same design code; the five logo SVGs are downloaded from this repository at run time instead of being embedded (the local plugin embeds them). |
 | `fonts/` | Syne and Archivo (SIL OFL) — used **only** for the previews. Condor Extended is not included (licensed). |
 | `downloads/` | Zips of the plugin and of the whole package. |
 
@@ -72,7 +72,7 @@ The identical plugin is published to the Figma account library (plan: *Abdulrahm
 
 <https://www.figma.com/file/new?try-tool-resource-content-id=bc0888f3-2b43-4bc8-89c1-abaf56262057&try-tool-resource-type=gen_tool&type=design&mode=design>
 
-(Add the same two `try-tool-…` query parameters to any existing file URL to open it there.)
+(Add the same two `try-tool-…` query parameters to any existing file URL to open it there.) This version downloads the logo vectors and the images from the Base URL shown in its window, so it needs internet access; the local plugin above embeds the logos.
 
 ## Brand facts used
 

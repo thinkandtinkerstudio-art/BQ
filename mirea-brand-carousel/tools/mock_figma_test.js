@@ -1,7 +1,10 @@
 // Smoke-test the compiled plugin outside Figma with a minimal mock of the Plugin API.
 // It catches runtime errors in the sandbox logic (message handling, scene → node mapping, transforms).
 const fs = require('fs'); const path = require('path'); const vm = require('vm');
-const code = fs.readFileSync(path.join(__dirname, '..', 'figma-plugin', 'mirea-brand-guidelines', 'code.js'), 'utf8');
+const variant = process.argv[2] || 'local';
+const code = fs.readFileSync(variant === 'mcp' ? path.join(__dirname, '..', 'build', 'mcp', 'code.js') : path.join(__dirname, '..', 'figma-plugin', 'mirea-brand-guidelines', 'code.js'), 'utf8');
+const logoMan = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'assets', 'logo', 'logo-manifest.json'), 'utf8'));
+const logos = {}; for (const id of Object.keys(logoMan)) logos[id] = fs.readFileSync(path.join(__dirname, '..', 'assets', 'logo', logoMan[id].file), 'utf8');
 let created = 0, texts = 0, svgs = 0, imagesCreated = 0; const logs = []; let uiMessages = [];
 function node(type) {
   const n = { type, id: String(++created), name: '', x: 0, y: 0, width: 100, height: 100, children: [], fills: [], strokes: [], opacity: 1, removed: false,
@@ -37,7 +40,7 @@ vm.runInContext(code, ctx);
 (async () => {
   const images = {}; for (const k of ['balustrade', 'arches', 'muse', 'clouds', 'pack-milano-sand', 'pack-floral-rose', 'pack-milano-blue', 'pack-floral-muse']) images[k] = new Uint8Array([1, 2, 3]);
   await figma.ui.onmessage({ type: 'build', options: { slides: [1,2,3,4,5,6,7,8,9,10,11], pageName: 'MIREA — test', studioName: 'THINK & TINKER STUDIO', studioHandle: '@x', edition: 'EDITION 01 — 2026',
-    studioLogo: { kind: 'svg', text: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100"><rect fill="#000" width="300" height="100"/></svg>' }, images } });
+    studioLogo: { kind: 'svg', text: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100"><rect fill="#000" width="300" height="100"/></svg>' }, images, logos: variant === 'mcp' ? logos : undefined } });
   // second run with no images / png logo, to exercise the placeholders and the idempotent rebuild
   await figma.ui.onmessage({ type: 'build', options: { slides: [1, 11], pageName: 'MIREA — test', studioName: 'ONEWORD', studioHandle: '', edition: '', studioLogo: { kind: 'png', bytes: new Uint8Array([9]), width: 400, height: 100 }, images: {} } });
   const errors = logs.filter((l) => l.status === 'error');
@@ -49,5 +52,5 @@ vm.runInContext(code, ctx);
   console.log('rotated text transform sample:', JSON.stringify(sample && sample.relativeTransform));
   if (errors.length) { console.error('ERRORS', errors); process.exit(1); }
   if (built.length !== 11) { console.error('expected 11 frames after idempotent rebuild'); process.exit(1); }
-  console.log('MOCK TEST OK');
+  console.log('MOCK TEST OK (' + variant + ')');
 })().catch((e) => { console.error(e); process.exit(1); });

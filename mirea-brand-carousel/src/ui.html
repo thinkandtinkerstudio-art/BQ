@@ -65,7 +65,7 @@
     <div class="check"><input type="checkbox" id="fetch" checked><label for="fetch" style="margin:0">Load the paintings and packaging renders from GitHub (needs internet)</label></div>
     <label for="base">Base URL</label>
     <input type="text" id="base" value="https://raw.githubusercontent.com/thinkandtinkerstudio-art/BQ/claude/intelligent-noether-ecvd6c/mirea-brand-carousel/">
-    <div class="hint">Off-line: photo slots become dashed placeholders named "Photo — … — replace fill with image".</div>
+    <div class="hint">Off-line: photo slots become dashed placeholders named "Photo — … — replace fill with image".__LOGO_HINT__</div>
   </fieldset>
 
   <div class="actions">
@@ -78,6 +78,7 @@
 <script>
 (function () {
   var IMAGE_FILES = __IMAGE_FILES__;
+  var LOGO_FILES = __LOGO_FILES__; // non-empty only in the build that downloads the logo artwork
   var $ = function (id) { return document.getElementById(id); };
   var logEl = $('log'), lines = {};
   function post(m) { parent.postMessage({ pluginMessage: m }, '*'); }
@@ -113,6 +114,22 @@
       }
     });
   }
+  async function fetchLogos(base) {
+    var out = {}, ids = Object.keys(LOGO_FILES);
+    if (!ids.length) return null;
+    if (base && base.slice(-1) !== '/') base += '/';
+    for (var i = 0; i < ids.length; i++) {
+      addLog('Logos', 'run', 'downloading ' + (i + 1) + ' / ' + ids.length + ' — ' + LOGO_FILES[ids[i]]);
+      try {
+        var res = await fetch(base + LOGO_FILES[ids[i]], { cache: 'force-cache' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        var txt = await res.text();
+        if (txt.indexOf('<svg') < 0) throw new Error('not an SVG');
+        out[ids[i]] = txt;
+      } catch (e) { addLog('Logos', 'error', LOGO_FILES[ids[i]] + ': ' + (e && e.message || e)); }
+    }
+    return out;
+  }
   async function fetchImages(base) {
     var out = {}, keys = Object.keys(IMAGE_FILES), ok = 0;
     if (base && base.slice(-1) !== '/') base += '/';
@@ -136,11 +153,13 @@
     var studioLogo = null;
     try { if ($('logo').files && $('logo').files[0]) studioLogo = await readFile($('logo').files[0]); }
     catch (e) { addLog('Studio logo', 'warn', e.message); }
-    var images = {};
+    var images = {}, logos = null;
+    try { logos = await fetchLogos($('base').value.trim()); } catch (e) { addLog('Logos', 'error', e.message); }
     if ($('fetch').checked) { try { images = await fetchImages($('base').value.trim()); } catch (e) { addLog('Images', 'warn', e.message); } }
-    post({ type: 'build', options: {
-      slides: slides, pageName: $('page').value.trim(), studioName: $('studio').value.trim(), studioHandle: $('handle').value.trim(),
-      edition: $('edition').value.trim(), studioLogo: studioLogo, images: images } });
+    var options = { slides: slides, pageName: $('page').value.trim(), studioName: $('studio').value.trim(), studioHandle: $('handle').value.trim(),
+      edition: $('edition').value.trim(), studioLogo: studioLogo, images: images };
+    if (logos) options.logos = logos;
+    post({ type: 'build', options: options });
   });
   $('copy').addEventListener('click', function () {
     var txt = Array.prototype.map.call(logEl.children, function (l) { return l.children[0].textContent + '\t' + l.children[1].textContent + '\t' + l.children[2].textContent; }).join('\n');

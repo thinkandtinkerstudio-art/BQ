@@ -15,6 +15,7 @@ interface BuildMessage {
   pageName: string;
   studioLogo: StudioLogoMsg;
   images: { [key: string]: Uint8Array };
+  logos?: { [id: string]: string }; // SVG text per logo id — only used by builds that load the logo artwork at run time
 }
 type UiMessage =
   | { type: 'resize'; height: number }
@@ -231,6 +232,15 @@ function monochromeSvg(svg: string): string {
 
 async function build(m: BuildMessage): Promise<void> {
   const t0 = Date.now();
+  // Logo artwork: embedded in the local build; downloaded by the plugin window in the account-library build.
+  if (m.logos) for (const id of Object.keys(m.logos)) if (LOGOS[id] && m.logos[id]) LOGOS[id].svg = m.logos[id];
+  const missing = Object.keys(LOGOS).filter((id) => !LOGOS[id].svg);
+  if (missing.length) {
+    log('Logos', 'error', 'The logo artwork could not be loaded (' + missing.join(', ') + '). Check the Base URL / internet connection and try again.');
+    post({ type: 'done' });
+    return;
+  }
+  log('Logos', 'done', Object.keys(LOGOS).length + ' lockups ready' + (LOGO_RUNTIME ? ' (downloaded)' : ' (embedded)') + '.');
   log('Fonts', 'run', 'Looking for Condor Extended and Syne…');
   const fonts = await resolveFonts();
 
